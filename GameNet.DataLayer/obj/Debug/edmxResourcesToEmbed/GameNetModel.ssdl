@@ -1,24 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="GameNetModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-  <EntityType Name="Shop">
+<Schema Namespace="GameNetModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="GameNetModelStoreContainer">
+    <EntitySet Name="Shops" EntityType="GameNetModel.Store.Shops" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Users" EntityType="GameNetModel.Store.Users" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="Shops">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="BuyCost" Type="decimal" Precision="18" Scale="0" Nullable="false" />
-    <Property Name="SellCost" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="BuyCost" Type="decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="SellCost" Type="decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="Quantity" Type="decimal" Nullable="true" />
   </EntityType>
   <EntityType Name="Users">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" Nullable="false" />
-    <Property Name="UserName" Type="nchar" MaxLength="10" Nullable="false" />
-    <Property Name="PassWord" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="UserName" Type="nchar" Nullable="false" MaxLength="10" />
+    <Property Name="PassWord" Type="nchar" Nullable="false" MaxLength="10" />
   </EntityType>
-  <EntityContainer Name="GameNetModelStoreContainer">
-    <EntitySet Name="Shop" EntityType="Self.Shop" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
-  </EntityContainer>
 </Schema>

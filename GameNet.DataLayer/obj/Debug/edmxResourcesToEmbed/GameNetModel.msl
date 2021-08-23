@@ -2,17 +2,18 @@
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="GameNetModelStoreContainer" CdmEntityContainer="GameNetEntities">
     <EntitySetMapping Name="Shops">
-      <EntityTypeMapping TypeName="GameNetModel.Shop">
-        <MappingFragment StoreEntitySet="Shop">
+      <EntityTypeMapping TypeName="IsTypeOf(GameNetModel.Shop)">
+        <MappingFragment StoreEntitySet="Shops">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="BuyCost" ColumnName="BuyCost" />
           <ScalarProperty Name="SellCost" ColumnName="SellCost" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Users">
-      <EntityTypeMapping TypeName="GameNetModel.User">
+      <EntityTypeMapping TypeName="IsTypeOf(GameNetModel.User)">
         <MappingFragment StoreEntitySet="Users">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="UserName" ColumnName="UserName" />

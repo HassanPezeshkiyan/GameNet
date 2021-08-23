@@ -19,3 +19,4 @@ D:\Personal\GameNet\GameNet.App\bin\Debug\EntityFramework.SqlServer.dll
 D:\Personal\GameNet\GameNet.App\bin\Debug\EntityFramework.SqlServer.xml
 D:\Personal\GameNet\GameNet.App\obj\Debug\GameNet.App.mainFrm.resources
 D:\Personal\GameNet\GameNet.App\obj\Debug\GameNet.App.Shoping.editShopFrm.resources
+D:\Personal\GameNet\GameNet.App\obj\Debug\GameNet.App.Shoping.shopViewFrm.resources

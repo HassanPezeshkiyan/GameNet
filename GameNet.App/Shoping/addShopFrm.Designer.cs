@@ -40,11 +40,16 @@ namespace GameNet.App.Shoping
             this.nameShop = new System.Windows.Forms.TextBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
+            this.quantityCounter = new System.Windows.Forms.NumericUpDown();
+            this.label4 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.quantityCounter)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.quantityCounter);
             this.groupBox1.Controls.Add(this.close);
             this.groupBox1.Controls.Add(this.addShopBtn);
             this.groupBox1.Controls.Add(this.sellCostTxt);
@@ -129,6 +134,22 @@ namespace GameNet.App.Shoping
             this.nameShop.Size = new System.Drawing.Size(100, 20);
             this.nameShop.TabIndex = 0;
             // 
+            // quantityCounter
+            // 
+            this.quantityCounter.Location = new System.Drawing.Point(158, 129);
+            this.quantityCounter.Name = "quantityCounter";
+            this.quantityCounter.Size = new System.Drawing.Size(57, 20);
+            this.quantityCounter.TabIndex = 2;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(268, 131);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(33, 13);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "تعداد:";
+            // 
             // addShopFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -144,6 +165,7 @@ namespace GameNet.App.Shoping
             this.Load += new System.EventHandler(this.addShopFrm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.quantityCounter)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -161,5 +183,7 @@ namespace GameNet.App.Shoping
         private System.Windows.Forms.TextBox nameShop;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.ComponentModel.BackgroundWorker backgroundWorker2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.NumericUpDown quantityCounter;
     }
 }

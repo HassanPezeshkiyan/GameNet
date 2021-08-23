@@ -36,11 +36,12 @@ namespace GameNet.App
             this.deleteShopBtn = new System.Windows.Forms.ToolStripButton();
             this.refreshBtn = new System.Windows.Forms.ToolStripButton();
             this.dgvShop = new System.Windows.Forms.DataGridView();
+            this.exitBtn = new System.Windows.Forms.Button();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NameShop = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SellCostShop = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BuyCostShop = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.exitBtn = new System.Windows.Forms.Button();
+            this.quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvShop)).BeginInit();
             this.SuspendLayout();
@@ -121,7 +122,8 @@ namespace GameNet.App
             this.Id,
             this.NameShop,
             this.SellCostShop,
-            this.BuyCostShop});
+            this.BuyCostShop,
+            this.quantity});
             this.dgvShop.Location = new System.Drawing.Point(12, 118);
             this.dgvShop.MultiSelect = false;
             this.dgvShop.Name = "dgvShop";
@@ -129,6 +131,16 @@ namespace GameNet.App
             this.dgvShop.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvShop.Size = new System.Drawing.Size(577, 153);
             this.dgvShop.TabIndex = 1;
+            // 
+            // exitBtn
+            // 
+            this.exitBtn.Location = new System.Drawing.Point(514, 289);
+            this.exitBtn.Name = "exitBtn";
+            this.exitBtn.Size = new System.Drawing.Size(75, 23);
+            this.exitBtn.TabIndex = 2;
+            this.exitBtn.Text = "خروج";
+            this.exitBtn.UseVisualStyleBackColor = true;
+            this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
             // 
             // Id
             // 
@@ -161,15 +173,12 @@ namespace GameNet.App
             this.BuyCostShop.Name = "BuyCostShop";
             this.BuyCostShop.ReadOnly = true;
             // 
-            // exitBtn
+            // quantity
             // 
-            this.exitBtn.Location = new System.Drawing.Point(514, 289);
-            this.exitBtn.Name = "exitBtn";
-            this.exitBtn.Size = new System.Drawing.Size(75, 23);
-            this.exitBtn.TabIndex = 2;
-            this.exitBtn.Text = "خروج";
-            this.exitBtn.UseVisualStyleBackColor = true;
-            this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
+            this.quantity.DataPropertyName = "Quantity";
+            this.quantity.HeaderText = "تعداد";
+            this.quantity.Name = "quantity";
+            this.quantity.ReadOnly = true;
             // 
             // ShopFrm
             // 
@@ -204,12 +213,13 @@ namespace GameNet.App
         private System.Windows.Forms.ToolStripButton addShopBtn;
         private System.Windows.Forms.ToolStripButton deleteShopBtn;
         private System.Windows.Forms.ToolStripButton editShopBtn;
+        private System.Windows.Forms.ToolStripButton refreshBtn;
+        private System.Windows.Forms.Button exitBtn;
+        private System.Windows.Forms.DataGridView dgvShop;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn NameShop;
         private System.Windows.Forms.DataGridViewTextBoxColumn SellCostShop;
         private System.Windows.Forms.DataGridViewTextBoxColumn BuyCostShop;
-        private System.Windows.Forms.ToolStripButton refreshBtn;
-        private System.Windows.Forms.Button exitBtn;
-        private System.Windows.Forms.DataGridView dgvShop;
+        private System.Windows.Forms.DataGridViewTextBoxColumn quantity;
     }
 }

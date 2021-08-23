@@ -97,6 +97,7 @@
       <DependentUpon>GameNetModel.edmx</DependentUpon>
       <LastGenOutput>GameNetModel.Context.cs</LastGenOutput>
     </Content>
+    <Content Include="GameNetModel.edmx.sql" />
     <Content Include="GameNetModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>GameNetModel.edmx</DependentUpon>

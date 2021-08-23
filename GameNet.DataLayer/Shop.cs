@@ -18,5 +18,6 @@ namespace GameNet.DataLayer
         public string Name { get; set; }
         public decimal BuyCost { get; set; }
         public decimal SellCost { get; set; }
+        public Nullable<decimal> Quantity { get; set; }
     }
 }
