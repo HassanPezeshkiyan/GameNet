@@ -30,13 +30,13 @@ namespace GameNet.App.Shoping
         private void InitializeComponent()
         {
             this.dgvViewShop = new System.Windows.Forms.DataGridView();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NameShop = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SellCostShop = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.orderQuantity = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.saveShop = new System.Windows.Forms.Button();
             this.exitBtn = new System.Windows.Forms.Button();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NameShop = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SellCostShop = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvViewShop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderQuantity)).BeginInit();
             this.SuspendLayout();
@@ -60,6 +60,30 @@ namespace GameNet.App.Shoping
             this.dgvViewShop.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvViewShop.Size = new System.Drawing.Size(417, 153);
             this.dgvViewShop.TabIndex = 2;
+            // 
+            // Id
+            // 
+            this.Id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Id.DataPropertyName = "Id";
+            this.Id.HeaderText = "id";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Id.Visible = false;
+            // 
+            // NameShop
+            // 
+            this.NameShop.DataPropertyName = "Name";
+            this.NameShop.HeaderText = "نام محصول";
+            this.NameShop.Name = "NameShop";
+            this.NameShop.ReadOnly = true;
+            // 
+            // SellCostShop
+            // 
+            this.SellCostShop.DataPropertyName = "SellCost";
+            this.SellCostShop.HeaderText = "قیمت ";
+            this.SellCostShop.Name = "SellCostShop";
+            this.SellCostShop.ReadOnly = true;
             // 
             // orderQuantity
             // 
@@ -86,6 +110,7 @@ namespace GameNet.App.Shoping
             this.saveShop.TabIndex = 5;
             this.saveShop.Text = "ثبت";
             this.saveShop.UseVisualStyleBackColor = true;
+            this.saveShop.Click += new System.EventHandler(this.saveShop_Click);
             // 
             // exitBtn
             // 
@@ -96,30 +121,6 @@ namespace GameNet.App.Shoping
             this.exitBtn.Text = "خروج";
             this.exitBtn.UseVisualStyleBackColor = true;
             this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
-            // 
-            // Id
-            // 
-            this.Id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Id.DataPropertyName = "Id";
-            this.Id.HeaderText = "id";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            this.Id.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Id.Visible = false;
-            // 
-            // NameShop
-            // 
-            this.NameShop.DataPropertyName = "Name";
-            this.NameShop.HeaderText = "نام محصول";
-            this.NameShop.Name = "NameShop";
-            this.NameShop.ReadOnly = true;
-            // 
-            // SellCostShop
-            // 
-            this.SellCostShop.DataPropertyName = "SellCost";
-            this.SellCostShop.HeaderText = "قیمت ";
-            this.SellCostShop.Name = "SellCostShop";
-            this.SellCostShop.ReadOnly = true;
             // 
             // shopViewFrm
             // 

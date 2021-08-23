@@ -391,7 +391,7 @@ namespace GameNet.App
             this.shop2Btn.TabIndex = 24;
             this.shop2Btn.Text = "انتخاب خوراکی";
             this.shop2Btn.UseVisualStyleBackColor = true;
-            this.shop2Btn.Click += new System.EventHandler(this.shop1Btn_Click);
+            this.shop2Btn.Click += new System.EventHandler(this.shop2Btn_Click);
             // 
             // cntrl2Count
             // 
@@ -534,7 +534,7 @@ namespace GameNet.App
             this.shop3Btn.TabIndex = 24;
             this.shop3Btn.Text = "انتخاب خوراکی";
             this.shop3Btn.UseVisualStyleBackColor = true;
-            this.shop3Btn.Click += new System.EventHandler(this.shop1Btn_Click);
+            this.shop3Btn.Click += new System.EventHandler(this.shop3Btn_Click);
             // 
             // cntrl3Count
             // 
@@ -677,7 +677,7 @@ namespace GameNet.App
             this.shop4Btn.TabIndex = 24;
             this.shop4Btn.Text = "انتخاب خوراکی";
             this.shop4Btn.UseVisualStyleBackColor = true;
-            this.shop4Btn.Click += new System.EventHandler(this.shop1Btn_Click);
+            this.shop4Btn.Click += new System.EventHandler(this.shop4Btn_Click);
             // 
             // cntrl4Count
             // 
@@ -820,7 +820,7 @@ namespace GameNet.App
             this.shop5Btn.TabIndex = 24;
             this.shop5Btn.Text = "انتخاب خوراکی";
             this.shop5Btn.UseVisualStyleBackColor = true;
-            this.shop5Btn.Click += new System.EventHandler(this.shop1Btn_Click);
+            this.shop5Btn.Click += new System.EventHandler(this.shop5Btn_Click);
             // 
             // cntrl5Count
             // 
@@ -963,7 +963,7 @@ namespace GameNet.App
             this.shop6Btn.TabIndex = 24;
             this.shop6Btn.Text = "انتخاب خوراکی";
             this.shop6Btn.UseVisualStyleBackColor = true;
-            this.shop6Btn.Click += new System.EventHandler(this.shop1Btn_Click);
+            this.shop6Btn.Click += new System.EventHandler(this.shop6Btn_Click);
             // 
             // cntrl6Count
             // 

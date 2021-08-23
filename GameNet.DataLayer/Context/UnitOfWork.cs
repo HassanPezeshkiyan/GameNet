@@ -12,7 +12,7 @@ namespace GameNet.DataLayer.Context
 
     {
         readonly GameNetEntities db = new GameNetEntities();
-       
+
         private IShopRepository _shopRepository;
         public IShopRepository ShopRepository
         {
@@ -23,6 +23,31 @@ namespace GameNet.DataLayer.Context
                     _shopRepository = new ShopRepository(db);
                 }
                 return _shopRepository;
+            }
+        }
+
+        private GenericRepository<Order> _orderRepository;
+        public GenericRepository<Order> OrderRepository
+        {
+            get
+            {
+                if (_orderRepository == null)
+                {
+                    _orderRepository = new GenericRepository<Order>(db);
+                }
+                return _orderRepository;
+            }
+        }
+        private IOrderRepository _order;
+        public IOrderRepository Orders
+        {
+            get 
+            {
+                if (_order == null)
+                {
+                    _order = new OrderRepository(db);
+                }
+                return _order;
             }
         }
         public void Save()

@@ -7,6 +7,7 @@
       <Diagram DiagramId="529fc9987ee24b7a8d098fe90b59eb71" Name="Diagram1">
         <EntityTypeShape EntityType="GameNetModel.Shop" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="GameNetModel.User" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GameNetModel.Order" Width="1.5" PointX="0.75" PointY="3.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
