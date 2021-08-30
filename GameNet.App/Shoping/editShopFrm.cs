@@ -49,7 +49,7 @@ namespace GameNet.App.Shoping
                     Name = nameShop.Text,
                     SellCost = Convert.ToDecimal(sellCostTxt.Text),
                     BuyCost = Convert.ToDecimal(buyCostTxt.Text),
-                    Quantity = quantityCounter.Value
+                    Quantity = (int)quantityCounter.Value
                 };
                 shoping.Id = shopId;
                 db.ShopRepository.UpdateFood(shoping);

@@ -32,6 +32,7 @@ namespace GameNet.App
             this.shopSettingBtn = new System.Windows.Forms.Button();
             this.exitBtn = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.deletShop1Btn = new System.Windows.Forms.Button();
             this.stop1Timer = new System.Windows.Forms.Button();
             this.start1Timer = new System.Windows.Forms.Button();
             this.pay1Btn = new System.Windows.Forms.Button();
@@ -46,6 +47,7 @@ namespace GameNet.App
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.deletShop2Btn = new System.Windows.Forms.Button();
             this.stop2Timer = new System.Windows.Forms.Button();
             this.start2Timer = new System.Windows.Forms.Button();
             this.pay2Btn = new System.Windows.Forms.Button();
@@ -60,6 +62,7 @@ namespace GameNet.App
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.deletShop3Btn = new System.Windows.Forms.Button();
             this.stop3Timer = new System.Windows.Forms.Button();
             this.start3Timer = new System.Windows.Forms.Button();
             this.pay3Btn = new System.Windows.Forms.Button();
@@ -74,6 +77,7 @@ namespace GameNet.App
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.deletShop4Btn = new System.Windows.Forms.Button();
             this.stop4Timer = new System.Windows.Forms.Button();
             this.start4Timer = new System.Windows.Forms.Button();
             this.pay4Btn = new System.Windows.Forms.Button();
@@ -88,6 +92,7 @@ namespace GameNet.App
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.deletShop5Btn = new System.Windows.Forms.Button();
             this.stop5Timer = new System.Windows.Forms.Button();
             this.start5Timer = new System.Windows.Forms.Button();
             this.pay5Btn = new System.Windows.Forms.Button();
@@ -102,6 +107,7 @@ namespace GameNet.App
             this.label28 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.deletShop6Btn = new System.Windows.Forms.Button();
             this.stop6Timer = new System.Windows.Forms.Button();
             this.start6Timer = new System.Windows.Forms.Button();
             this.pay6Btn = new System.Windows.Forms.Button();
@@ -151,7 +157,7 @@ namespace GameNet.App
             this.exitBtn.Name = "exitBtn";
             this.exitBtn.Size = new System.Drawing.Size(101, 39);
             this.exitBtn.TabIndex = 1;
-            this.exitBtn.Text = "خروچ";
+            this.exitBtn.Text = "خروج";
             this.exitBtn.UseVisualStyleBackColor = false;
             this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
             // 
@@ -159,6 +165,7 @@ namespace GameNet.App
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.BackColor = System.Drawing.Color.Lavender;
+            this.groupBox1.Controls.Add(this.deletShop1Btn);
             this.groupBox1.Controls.Add(this.stop1Timer);
             this.groupBox1.Controls.Add(this.start1Timer);
             this.groupBox1.Controls.Add(this.pay1Btn);
@@ -179,6 +186,16 @@ namespace GameNet.App
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "دستگاه 1";
+            // 
+            // deletShop1Btn
+            // 
+            this.deletShop1Btn.Location = new System.Drawing.Point(16, 178);
+            this.deletShop1Btn.Name = "deletShop1Btn";
+            this.deletShop1Btn.Size = new System.Drawing.Size(171, 23);
+            this.deletShop1Btn.TabIndex = 7;
+            this.deletShop1Btn.Text = "حذف بوفه";
+            this.deletShop1Btn.UseVisualStyleBackColor = true;
+            this.deletShop1Btn.Click += new System.EventHandler(this.deletShop1Btn_Click);
             // 
             // stop1Timer
             // 
@@ -302,6 +319,7 @@ namespace GameNet.App
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.BackColor = System.Drawing.Color.Lavender;
+            this.groupBox2.Controls.Add(this.deletShop2Btn);
             this.groupBox2.Controls.Add(this.stop2Timer);
             this.groupBox2.Controls.Add(this.start2Timer);
             this.groupBox2.Controls.Add(this.pay2Btn);
@@ -322,6 +340,16 @@ namespace GameNet.App
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "دستگاه 2";
+            // 
+            // deletShop2Btn
+            // 
+            this.deletShop2Btn.Location = new System.Drawing.Point(18, 178);
+            this.deletShop2Btn.Name = "deletShop2Btn";
+            this.deletShop2Btn.Size = new System.Drawing.Size(171, 23);
+            this.deletShop2Btn.TabIndex = 32;
+            this.deletShop2Btn.Text = "حذف بوفه";
+            this.deletShop2Btn.UseVisualStyleBackColor = true;
+            this.deletShop2Btn.Click += new System.EventHandler(this.deletShop2Btn_Click_1);
             // 
             // stop2Timer
             // 
@@ -445,6 +473,7 @@ namespace GameNet.App
             // 
             this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox3.BackColor = System.Drawing.Color.Lavender;
+            this.groupBox3.Controls.Add(this.deletShop3Btn);
             this.groupBox3.Controls.Add(this.stop3Timer);
             this.groupBox3.Controls.Add(this.start3Timer);
             this.groupBox3.Controls.Add(this.pay3Btn);
@@ -465,6 +494,16 @@ namespace GameNet.App
             this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "دستگاه 3";
+            // 
+            // deletShop3Btn
+            // 
+            this.deletShop3Btn.Location = new System.Drawing.Point(15, 178);
+            this.deletShop3Btn.Name = "deletShop3Btn";
+            this.deletShop3Btn.Size = new System.Drawing.Size(171, 23);
+            this.deletShop3Btn.TabIndex = 32;
+            this.deletShop3Btn.Text = "حذف بوفه";
+            this.deletShop3Btn.UseVisualStyleBackColor = true;
+            this.deletShop3Btn.Click += new System.EventHandler(this.deletShop3Btn_Click_1);
             // 
             // stop3Timer
             // 
@@ -588,6 +627,7 @@ namespace GameNet.App
             // 
             this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox4.BackColor = System.Drawing.Color.Lavender;
+            this.groupBox4.Controls.Add(this.deletShop4Btn);
             this.groupBox4.Controls.Add(this.stop4Timer);
             this.groupBox4.Controls.Add(this.start4Timer);
             this.groupBox4.Controls.Add(this.pay4Btn);
@@ -608,6 +648,16 @@ namespace GameNet.App
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "دستگاه 4";
+            // 
+            // deletShop4Btn
+            // 
+            this.deletShop4Btn.Location = new System.Drawing.Point(18, 178);
+            this.deletShop4Btn.Name = "deletShop4Btn";
+            this.deletShop4Btn.Size = new System.Drawing.Size(171, 23);
+            this.deletShop4Btn.TabIndex = 32;
+            this.deletShop4Btn.Text = "حذف بوفه";
+            this.deletShop4Btn.UseVisualStyleBackColor = true;
+            this.deletShop4Btn.Click += new System.EventHandler(this.deletShop4Btn_Click_1);
             // 
             // stop4Timer
             // 
@@ -731,6 +781,7 @@ namespace GameNet.App
             // 
             this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox5.BackColor = System.Drawing.Color.Lavender;
+            this.groupBox5.Controls.Add(this.deletShop5Btn);
             this.groupBox5.Controls.Add(this.stop5Timer);
             this.groupBox5.Controls.Add(this.start5Timer);
             this.groupBox5.Controls.Add(this.pay5Btn);
@@ -751,6 +802,16 @@ namespace GameNet.App
             this.groupBox5.TabIndex = 3;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "دستگاه 5";
+            // 
+            // deletShop5Btn
+            // 
+            this.deletShop5Btn.Location = new System.Drawing.Point(14, 187);
+            this.deletShop5Btn.Name = "deletShop5Btn";
+            this.deletShop5Btn.Size = new System.Drawing.Size(171, 23);
+            this.deletShop5Btn.TabIndex = 32;
+            this.deletShop5Btn.Text = "حذف بوفه";
+            this.deletShop5Btn.UseVisualStyleBackColor = true;
+            this.deletShop5Btn.Click += new System.EventHandler(this.deletShop5Btn_Click_1);
             // 
             // stop5Timer
             // 
@@ -874,6 +935,7 @@ namespace GameNet.App
             // 
             this.groupBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox6.BackColor = System.Drawing.Color.Lavender;
+            this.groupBox6.Controls.Add(this.deletShop6Btn);
             this.groupBox6.Controls.Add(this.stop6Timer);
             this.groupBox6.Controls.Add(this.start6Timer);
             this.groupBox6.Controls.Add(this.pay6Btn);
@@ -894,6 +956,16 @@ namespace GameNet.App
             this.groupBox6.TabIndex = 3;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "دستگاه 6";
+            // 
+            // deletShop6Btn
+            // 
+            this.deletShop6Btn.Location = new System.Drawing.Point(13, 187);
+            this.deletShop6Btn.Name = "deletShop6Btn";
+            this.deletShop6Btn.Size = new System.Drawing.Size(171, 23);
+            this.deletShop6Btn.TabIndex = 32;
+            this.deletShop6Btn.Text = "حذف بوفه";
+            this.deletShop6Btn.UseVisualStyleBackColor = true;
+            this.deletShop6Btn.Click += new System.EventHandler(this.deletShop6Btn_Click_1);
             // 
             // stop6Timer
             // 
@@ -1026,7 +1098,7 @@ namespace GameNet.App
             // 
             // datetimeLbl
             // 
-            this.datetimeLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.datetimeLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.datetimeLbl.AutoSize = true;
             this.datetimeLbl.Location = new System.Drawing.Point(12, 744);
             this.datetimeLbl.Name = "datetimeLbl";
@@ -1171,6 +1243,12 @@ namespace GameNet.App
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Button reportsBtn;
         private System.Windows.Forms.Label datetimeLbl;
+        private System.Windows.Forms.Button deletShop1Btn;
+        private System.Windows.Forms.Button deletShop2Btn;
+        private System.Windows.Forms.Button deletShop3Btn;
+        private System.Windows.Forms.Button deletShop4Btn;
+        private System.Windows.Forms.Button deletShop5Btn;
+        private System.Windows.Forms.Button deletShop6Btn;
     }
 }
 

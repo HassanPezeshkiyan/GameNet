@@ -17,7 +17,7 @@ namespace GameNet.DataLayer.Services
             db = context;
         }
 
-        public bool DeleteFood(int shopId)
+        public virtual bool DeleteFood(int shopId)
         {
             try
             {
@@ -33,7 +33,7 @@ namespace GameNet.DataLayer.Services
             }
         }
 
-        public bool DeleteFood(string nameShop)
+        public virtual bool DeleteFood(string nameShop)
         {
             try
             {
@@ -42,14 +42,14 @@ namespace GameNet.DataLayer.Services
                 DeleteFood(foodId);
                 return true;
             }
-            catch 
+            catch
             {
 
                 return false;
             }
         }
 
-        public bool DeleteFood(Shop shop)
+        public virtual bool DeleteFood(Shop shop)
         {
             try
             {
@@ -62,26 +62,26 @@ namespace GameNet.DataLayer.Services
             }
         }
 
-        public List<Shop> GetAllFood()
+        public virtual List<Shop> GetAllFood()
         {
             return db.Shops.ToList();
         }
 
-        public bool InsertFood(Shop shop)
+        public virtual bool InsertFood(Shop shop)
         {
             try
             {
                 db.Shops.Add(shop);
                 return true;
             }
-            catch 
+            catch
             {
 
                 return false;
             }
         }
 
-        public bool UpdateFood(Shop shop)
+        public virtual bool UpdateFood(Shop shop)
         {
             var local = db.Set<Shop>().Local.FirstOrDefault(n => n.Id == shop.Id);
             if (local != null)
@@ -92,10 +92,10 @@ namespace GameNet.DataLayer.Services
             return true;
         }
 
-        public Shop GetShopById(int id)
+        public virtual Shop GetShopById(int id)
         {
             return db.Shops.Find(id);
-            
+
         }
     }
 }

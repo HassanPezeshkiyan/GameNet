@@ -28,7 +28,7 @@ namespace GameNet.App.Shoping
             {
                 Shop shop = new Shop()
                 {
-                    Quantity = quantityCounter.Value,
+                    Quantity = (int)quantityCounter.Value,
                     Name = nameShop.Text,
                     SellCost = Convert.ToDecimal(sellCostTxt.Text),
                     BuyCost = Convert.ToDecimal(buyCostTxt.Text),

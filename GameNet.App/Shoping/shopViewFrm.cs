@@ -14,7 +14,16 @@ namespace GameNet.App.Shoping
 {
     public partial class shopViewFrm : Form
     {
+        /// <summary>
+        /// شماره دستگاه ثبت کننده بوفه
+        /// </summary>
         public int shopId;
+
+        /// <summary>
+        /// وضعیت ثبت / عدم ثبت خرید بوفه
+        /// </summary>
+        public int orderChecked = 0;
+
         public shopViewFrm()
         {
             InitializeComponent();
@@ -24,7 +33,6 @@ namespace GameNet.App.Shoping
             InitializeComponent();
             shopId = shopBtnId;
         }
-
         private void exitBtn_Click(object sender, EventArgs e)
         {
             Close();
@@ -54,8 +62,19 @@ namespace GameNet.App.Shoping
                     userId = shopId
                 };
                 order.amount = order.cost * order.quantity;
-                db.OrderRepository.Insert(order);
-                db.Save();
+                if (order.quantity <= shop.Quantity)
+                {
+                    shop.Quantity = (int)shop.Quantity - order.quantity;
+                    db.OrderRepository.Insert(order);
+                    db.Save();
+                    orderChecked = 1;
+                }
+                else
+                {
+                    MessageBox.Show($"!تعداد انتخابی بیش از موجودی است ", "توجه", MessageBoxButtons.OK,
+                                    MessageBoxIcon.Warning);
+                    MessageBox.Show($"تعداد موجودی: {shop.Quantity}", "!اطلاع", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
             DialogResult = DialogResult.OK;
         }
