@@ -86,7 +86,10 @@ namespace GameNet.App
                 using (UnitOfWork db = new UnitOfWork())
                 {
                     var order = db.OrderRepository.Get().Where(n => n.userId == shopId).LastOrDefault();
+                    var shop = db.ShopRepository.GetShopById((int)order.ShopId);
                     shopCostLbl1.Text = order.amount.ToString() + " " + "تومان";
+                    shop1NameLbl.Text = shop.Name.ToString() + " " + order.quantity;
+
                 }
 
                 deletShop1Btn.Enabled = true;
@@ -103,7 +106,9 @@ namespace GameNet.App
                 using (UnitOfWork db = new UnitOfWork())
                 {
                     var order = db.OrderRepository.Get().Where(n => n.userId == shopId).LastOrDefault();
+                    var shop = db.ShopRepository.GetShopById((int)order.ShopId);
                     shopCostLbl2.Text = order.amount.ToString() + " " + "تومان";
+                    shop2NameLbl.Text = shop.Name.ToString() + " " + order.quantity;
                 }
                 deletShop2Btn.Enabled = true;
             }
@@ -119,7 +124,9 @@ namespace GameNet.App
                 using (UnitOfWork db = new UnitOfWork())
                 {
                     var order = db.OrderRepository.Get().Where(n => n.userId == shopId).LastOrDefault();
+                    var shop = db.ShopRepository.GetShopById((int)order.ShopId);
                     shopCostLbl3.Text = order.amount.ToString() + " " + "تومان";
+                    shop3NameLbl.Text = shop.Name.ToString() + " " + order.quantity;
                 }
                 deletShop3Btn.Enabled = true;
             }
@@ -136,7 +143,9 @@ namespace GameNet.App
                 using (UnitOfWork db = new UnitOfWork())
                 {
                     var order = db.OrderRepository.Get().Where(n => n.userId == shopId).LastOrDefault();
+                    var shop = db.ShopRepository.GetShopById((int)order.ShopId);
                     shopCostLbl4.Text = order.amount.ToString() + " " + "تومان";
+                    shop4NameLbl.Text = shop.Name.ToString() + " " + order.quantity;
                 }
                 deletShop4Btn.Enabled = true;
             }
@@ -152,7 +161,9 @@ namespace GameNet.App
                 using (UnitOfWork db = new UnitOfWork())
                 {
                     var order = db.OrderRepository.Get().Where(n => n.userId == shopId).LastOrDefault();
+                    var shop = db.ShopRepository.GetShopById((int)order.ShopId);
                     shopCostLbl5.Text = order.amount.ToString() + " " + "تومان";
+                    shop5NameLbl.Text = shop.Name.ToString() + " " + order.quantity;
                 }
                 deletShop5Btn.Enabled = true;
             }
@@ -168,7 +179,9 @@ namespace GameNet.App
                 using (UnitOfWork db = new UnitOfWork())
                 {
                     var order = db.OrderRepository.Get().Where(n => n.userId == shopId).LastOrDefault();
+                    var shop = db.ShopRepository.GetShopById((int)order.ShopId);
                     shopCostLbl6.Text = order.amount.ToString() + " " + "تومان";
+                    shop6NameLbl.Text = shop.Name.ToString() + " " + order.quantity;
                 }
                 deletShop6Btn.Enabled = true;
             }
@@ -187,8 +200,8 @@ namespace GameNet.App
             using (UnitOfWork db = new UnitOfWork())
             {
                 var order = db.OrderRepository.Get().Where(n => n.userId == 1).LastOrDefault();
-
-                if (order != null && Shoping1 == true && MessageBox.Show($"آیا از حذف {order.amount} مطمئن هستید ؟", "توجه", MessageBoxButtons.YesNo,
+                var shop = db.ShopRepository.GetShopById((int)order.ShopId);
+                if (order != null && Shoping1 == true && MessageBox.Show($"آیا از حذف {shop.Name} مطمئن هستید ؟", "توجه", MessageBoxButtons.YesNo,
                                  MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
                     db.OrderRepository.Delete(order);
@@ -197,6 +210,7 @@ namespace GameNet.App
             }
             deletShop1Btn.Enabled = false;
             shopCostLbl1.Text = "";
+            shop1NameLbl.Text = "";
         }
 
         private void deletShop2Btn_Click_1(object sender, EventArgs e)
@@ -214,6 +228,7 @@ namespace GameNet.App
             }
             deletShop2Btn.Enabled = false;
             shopCostLbl2.Text = "";
+            shop2NameLbl.Text = "";
         }
 
         private void deletShop3Btn_Click_1(object sender, EventArgs e)
@@ -231,6 +246,7 @@ namespace GameNet.App
             }
             deletShop3Btn.Enabled = false;
             shopCostLbl3.Text = "";
+            shop3NameLbl.Text = "";
         }
 
         private void deletShop4Btn_Click_1(object sender, EventArgs e)
@@ -248,6 +264,7 @@ namespace GameNet.App
             }
             deletShop4Btn.Enabled = false;
             shopCostLbl4.Text = "";
+            shop4NameLbl.Text = "";
         }
 
         private void deletShop5Btn_Click_1(object sender, EventArgs e)
@@ -265,6 +282,7 @@ namespace GameNet.App
             }
             deletShop5Btn.Enabled = false;
             shopCostLbl5.Text = "";
+            shop5NameLbl.Text = "";
         }
 
         private void deletShop6Btn_Click_1(object sender, EventArgs e)
@@ -282,6 +300,7 @@ namespace GameNet.App
             }
             deletShop6Btn.Enabled = false;
             shopCostLbl6.Text = "";
+            shop6NameLbl.Text = "";
         }
     }
 }

@@ -1,5 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="GameNetModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Invoice">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="userId" Type="int" Nullable="false" />
+    <Property Name="orderId" Type="int" Nullable="false" />
+    <Property Name="CreationDate" Type="datetime" Nullable="false" />
+    <Property Name="Result" Type="bit" Nullable="false" />
+    <Property Name="Amount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+  </EntityType>
   <EntityType Name="Order">
     <Key>
       <PropertyRef Name="Id" />
@@ -9,6 +20,7 @@
     <Property Name="quantity" Type="int" Nullable="false" />
     <Property Name="cost" Type="decimal" Precision="18" Scale="0" Nullable="false" />
     <Property Name="amount" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="ShopId" Type="int" />
   </EntityType>
   <EntityType Name="Shops">
     <Key>
@@ -18,7 +30,7 @@
     <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="BuyCost" Type="decimal" Precision="18" Scale="0" Nullable="false" />
     <Property Name="SellCost" Type="decimal" Precision="18" Scale="0" Nullable="false" />
-    <Property Name="Quantity" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="Quantity" Type="int" />
   </EntityType>
   <EntityType Name="Users">
     <Key>
@@ -28,9 +40,42 @@
     <Property Name="UserName" Type="nchar" MaxLength="10" Nullable="false" />
     <Property Name="PassWord" Type="nchar" MaxLength="10" Nullable="false" />
   </EntityType>
+  <Association Name="FK_Invoice_Invoice">
+    <End Role="Invoice" Type="Self.Invoice" Multiplicity="1" />
+    <End Role="Invoice1" Type="Self.Invoice" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Invoice">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Invoice1">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Users_Users">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="Users1" Type="Self.Users" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Users1">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="GameNetModelStoreContainer">
+    <EntitySet Name="Invoice" EntityType="Self.Invoice" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Order" EntityType="Self.Order" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Shops" EntityType="Self.Shops" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Invoice_Invoice" Association="Self.FK_Invoice_Invoice">
+      <End Role="Invoice" EntitySet="Invoice" />
+      <End Role="Invoice1" EntitySet="Invoice" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Users_Users" Association="Self.FK_Users_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Users1" EntitySet="Users" />
+    </AssociationSet>
   </EntityContainer>
 </Schema>

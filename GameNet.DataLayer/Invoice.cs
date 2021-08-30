@@ -12,13 +12,13 @@ namespace GameNet.DataLayer
     using System;
     using System.Collections.Generic;
     
-    public partial class Order
+    public partial class Invoice
     {
         public int Id { get; set; }
         public int userId { get; set; }
-        public int quantity { get; set; }
-        public decimal cost { get; set; }
-        public decimal amount { get; set; }
-        public Nullable<int> ShopId { get; set; }
+        public int orderId { get; set; }
+        public System.DateTime CreationDate { get; set; }
+        public bool Result { get; set; }
+        public decimal Amount { get; set; }
     }
 }

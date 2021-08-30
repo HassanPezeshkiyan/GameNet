@@ -66,6 +66,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GameNetModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Invoice.cs">
+      <DependentUpon>GameNetModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Order.cs">
       <DependentUpon>GameNetModel.tt</DependentUpon>
     </Compile>

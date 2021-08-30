@@ -24,9 +24,22 @@
     <EntitySetMapping Name="Orders">
       <EntityTypeMapping TypeName="GameNetModel.Order">
         <MappingFragment StoreEntitySet="Order">
+          <ScalarProperty Name="ShopId" ColumnName="ShopId" />
           <ScalarProperty Name="amount" ColumnName="amount" />
           <ScalarProperty Name="cost" ColumnName="cost" />
           <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Invoices">
+      <EntityTypeMapping TypeName="GameNetModel.Invoice">
+        <MappingFragment StoreEntitySet="Invoice">
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Result" ColumnName="Result" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          <ScalarProperty Name="orderId" ColumnName="orderId" />
           <ScalarProperty Name="userId" ColumnName="userId" />
           <ScalarProperty Name="Id" ColumnName="Id" />
         </MappingFragment>

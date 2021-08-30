@@ -57,6 +57,7 @@ namespace GameNet.App.Shoping
                 var shop = db.ShopRepository.GetShopById(int.Parse(dgvViewShop.CurrentRow.Cells[0].Value.ToString()));
                 Order order = new Order()
                 {
+                    ShopId = shop.Id,
                     quantity = (int)orderQuantity.Value,
                     cost = shop.SellCost,
                     userId = shopId

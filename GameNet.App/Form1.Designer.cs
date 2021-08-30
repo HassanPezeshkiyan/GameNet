@@ -123,6 +123,18 @@ namespace GameNet.App
             this.label35 = new System.Windows.Forms.Label();
             this.reportsBtn = new System.Windows.Forms.Button();
             this.datetimeLbl = new System.Windows.Forms.Label();
+            this.shop1NameLbl = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.shop2NameLbl = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.shop3NameLbl = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.shop4NameLbl = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.shop5NameLbl = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.shop6NameLbl = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cntrl1Count)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -165,6 +177,8 @@ namespace GameNet.App
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.BackColor = System.Drawing.Color.Lavender;
+            this.groupBox1.Controls.Add(this.label13);
+            this.groupBox1.Controls.Add(this.shop1NameLbl);
             this.groupBox1.Controls.Add(this.deletShop1Btn);
             this.groupBox1.Controls.Add(this.stop1Timer);
             this.groupBox1.Controls.Add(this.start1Timer);
@@ -182,14 +196,14 @@ namespace GameNet.App
             this.groupBox1.Location = new System.Drawing.Point(886, 70);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox1.Size = new System.Drawing.Size(200, 318);
+            this.groupBox1.Size = new System.Drawing.Size(200, 328);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "دستگاه 1";
             // 
             // deletShop1Btn
             // 
-            this.deletShop1Btn.Location = new System.Drawing.Point(16, 178);
+            this.deletShop1Btn.Location = new System.Drawing.Point(16, 187);
             this.deletShop1Btn.Name = "deletShop1Btn";
             this.deletShop1Btn.Size = new System.Drawing.Size(171, 23);
             this.deletShop1Btn.TabIndex = 7;
@@ -199,7 +213,7 @@ namespace GameNet.App
             // 
             // stop1Timer
             // 
-            this.stop1Timer.Location = new System.Drawing.Point(16, 216);
+            this.stop1Timer.Location = new System.Drawing.Point(16, 225);
             this.stop1Timer.Name = "stop1Timer";
             this.stop1Timer.Size = new System.Drawing.Size(71, 23);
             this.stop1Timer.TabIndex = 18;
@@ -208,7 +222,7 @@ namespace GameNet.App
             // 
             // start1Timer
             // 
-            this.start1Timer.Location = new System.Drawing.Point(119, 216);
+            this.start1Timer.Location = new System.Drawing.Point(119, 225);
             this.start1Timer.Name = "start1Timer";
             this.start1Timer.Size = new System.Drawing.Size(73, 23);
             this.start1Timer.TabIndex = 17;
@@ -217,7 +231,7 @@ namespace GameNet.App
             // 
             // pay1Btn
             // 
-            this.pay1Btn.Location = new System.Drawing.Point(16, 271);
+            this.pay1Btn.Location = new System.Drawing.Point(16, 280);
             this.pay1Btn.Name = "pay1Btn";
             this.pay1Btn.Size = new System.Drawing.Size(100, 23);
             this.pay1Btn.TabIndex = 16;
@@ -227,7 +241,7 @@ namespace GameNet.App
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(128, 248);
+            this.label5.Location = new System.Drawing.Point(128, 257);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(52, 13);
             this.label5.TabIndex = 12;
@@ -235,7 +249,7 @@ namespace GameNet.App
             // 
             // time1Txt
             // 
-            this.time1Txt.Location = new System.Drawing.Point(16, 245);
+            this.time1Txt.Location = new System.Drawing.Point(16, 254);
             this.time1Txt.Name = "time1Txt";
             this.time1Txt.Size = new System.Drawing.Size(100, 20);
             this.time1Txt.TabIndex = 11;
@@ -243,7 +257,7 @@ namespace GameNet.App
             // shopCostLbl1
             // 
             this.shopCostLbl1.AutoSize = true;
-            this.shopCostLbl1.Location = new System.Drawing.Point(16, 149);
+            this.shopCostLbl1.Location = new System.Drawing.Point(16, 128);
             this.shopCostLbl1.Name = "shopCostLbl1";
             this.shopCostLbl1.Size = new System.Drawing.Size(0, 13);
             this.shopCostLbl1.TabIndex = 10;
@@ -251,7 +265,7 @@ namespace GameNet.App
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(128, 149);
+            this.label4.Location = new System.Drawing.Point(128, 133);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(62, 13);
             this.label4.TabIndex = 9;
@@ -319,6 +333,8 @@ namespace GameNet.App
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.BackColor = System.Drawing.Color.Lavender;
+            this.groupBox2.Controls.Add(this.label7);
+            this.groupBox2.Controls.Add(this.shop2NameLbl);
             this.groupBox2.Controls.Add(this.deletShop2Btn);
             this.groupBox2.Controls.Add(this.stop2Timer);
             this.groupBox2.Controls.Add(this.start2Timer);
@@ -336,14 +352,14 @@ namespace GameNet.App
             this.groupBox2.Location = new System.Drawing.Point(663, 70);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox2.Size = new System.Drawing.Size(200, 318);
+            this.groupBox2.Size = new System.Drawing.Size(200, 328);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "دستگاه 2";
             // 
             // deletShop2Btn
             // 
-            this.deletShop2Btn.Location = new System.Drawing.Point(18, 178);
+            this.deletShop2Btn.Location = new System.Drawing.Point(18, 186);
             this.deletShop2Btn.Name = "deletShop2Btn";
             this.deletShop2Btn.Size = new System.Drawing.Size(171, 23);
             this.deletShop2Btn.TabIndex = 32;
@@ -353,7 +369,7 @@ namespace GameNet.App
             // 
             // stop2Timer
             // 
-            this.stop2Timer.Location = new System.Drawing.Point(13, 216);
+            this.stop2Timer.Location = new System.Drawing.Point(13, 224);
             this.stop2Timer.Name = "stop2Timer";
             this.stop2Timer.Size = new System.Drawing.Size(71, 23);
             this.stop2Timer.TabIndex = 31;
@@ -362,7 +378,7 @@ namespace GameNet.App
             // 
             // start2Timer
             // 
-            this.start2Timer.Location = new System.Drawing.Point(116, 216);
+            this.start2Timer.Location = new System.Drawing.Point(116, 224);
             this.start2Timer.Name = "start2Timer";
             this.start2Timer.Size = new System.Drawing.Size(73, 23);
             this.start2Timer.TabIndex = 30;
@@ -371,7 +387,7 @@ namespace GameNet.App
             // 
             // pay2Btn
             // 
-            this.pay2Btn.Location = new System.Drawing.Point(13, 271);
+            this.pay2Btn.Location = new System.Drawing.Point(13, 279);
             this.pay2Btn.Name = "pay2Btn";
             this.pay2Btn.Size = new System.Drawing.Size(100, 23);
             this.pay2Btn.TabIndex = 29;
@@ -381,7 +397,7 @@ namespace GameNet.App
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(125, 248);
+            this.label6.Location = new System.Drawing.Point(125, 256);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(52, 13);
             this.label6.TabIndex = 28;
@@ -389,7 +405,7 @@ namespace GameNet.App
             // 
             // time2txt
             // 
-            this.time2txt.Location = new System.Drawing.Point(13, 245);
+            this.time2txt.Location = new System.Drawing.Point(13, 253);
             this.time2txt.Name = "time2txt";
             this.time2txt.Size = new System.Drawing.Size(100, 20);
             this.time2txt.TabIndex = 27;
@@ -405,7 +421,7 @@ namespace GameNet.App
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(123, 139);
+            this.label8.Location = new System.Drawing.Point(127, 133);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(62, 13);
             this.label8.TabIndex = 25;
@@ -473,6 +489,8 @@ namespace GameNet.App
             // 
             this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox3.BackColor = System.Drawing.Color.Lavender;
+            this.groupBox3.Controls.Add(this.label25);
+            this.groupBox3.Controls.Add(this.shop3NameLbl);
             this.groupBox3.Controls.Add(this.deletShop3Btn);
             this.groupBox3.Controls.Add(this.stop3Timer);
             this.groupBox3.Controls.Add(this.start3Timer);
@@ -490,14 +508,14 @@ namespace GameNet.App
             this.groupBox3.Location = new System.Drawing.Point(443, 70);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox3.Size = new System.Drawing.Size(200, 318);
+            this.groupBox3.Size = new System.Drawing.Size(200, 328);
             this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "دستگاه 3";
             // 
             // deletShop3Btn
             // 
-            this.deletShop3Btn.Location = new System.Drawing.Point(15, 178);
+            this.deletShop3Btn.Location = new System.Drawing.Point(15, 185);
             this.deletShop3Btn.Name = "deletShop3Btn";
             this.deletShop3Btn.Size = new System.Drawing.Size(171, 23);
             this.deletShop3Btn.TabIndex = 32;
@@ -507,7 +525,7 @@ namespace GameNet.App
             // 
             // stop3Timer
             // 
-            this.stop3Timer.Location = new System.Drawing.Point(13, 216);
+            this.stop3Timer.Location = new System.Drawing.Point(13, 223);
             this.stop3Timer.Name = "stop3Timer";
             this.stop3Timer.Size = new System.Drawing.Size(71, 23);
             this.stop3Timer.TabIndex = 31;
@@ -516,7 +534,7 @@ namespace GameNet.App
             // 
             // start3Timer
             // 
-            this.start3Timer.Location = new System.Drawing.Point(116, 216);
+            this.start3Timer.Location = new System.Drawing.Point(116, 223);
             this.start3Timer.Name = "start3Timer";
             this.start3Timer.Size = new System.Drawing.Size(73, 23);
             this.start3Timer.TabIndex = 30;
@@ -525,7 +543,7 @@ namespace GameNet.App
             // 
             // pay3Btn
             // 
-            this.pay3Btn.Location = new System.Drawing.Point(13, 271);
+            this.pay3Btn.Location = new System.Drawing.Point(13, 278);
             this.pay3Btn.Name = "pay3Btn";
             this.pay3Btn.Size = new System.Drawing.Size(100, 23);
             this.pay3Btn.TabIndex = 29;
@@ -535,7 +553,7 @@ namespace GameNet.App
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(125, 248);
+            this.label12.Location = new System.Drawing.Point(125, 255);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(52, 13);
             this.label12.TabIndex = 28;
@@ -543,7 +561,7 @@ namespace GameNet.App
             // 
             // time3txt
             // 
-            this.time3txt.Location = new System.Drawing.Point(13, 245);
+            this.time3txt.Location = new System.Drawing.Point(13, 252);
             this.time3txt.Name = "time3txt";
             this.time3txt.Size = new System.Drawing.Size(100, 20);
             this.time3txt.TabIndex = 27;
@@ -559,7 +577,7 @@ namespace GameNet.App
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(123, 139);
+            this.label14.Location = new System.Drawing.Point(127, 133);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(62, 13);
             this.label14.TabIndex = 25;
@@ -627,6 +645,8 @@ namespace GameNet.App
             // 
             this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox4.BackColor = System.Drawing.Color.Lavender;
+            this.groupBox4.Controls.Add(this.label36);
+            this.groupBox4.Controls.Add(this.shop4NameLbl);
             this.groupBox4.Controls.Add(this.deletShop4Btn);
             this.groupBox4.Controls.Add(this.stop4Timer);
             this.groupBox4.Controls.Add(this.start4Timer);
@@ -644,14 +664,14 @@ namespace GameNet.App
             this.groupBox4.Location = new System.Drawing.Point(219, 70);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox4.Size = new System.Drawing.Size(200, 318);
+            this.groupBox4.Size = new System.Drawing.Size(200, 328);
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "دستگاه 4";
             // 
             // deletShop4Btn
             // 
-            this.deletShop4Btn.Location = new System.Drawing.Point(18, 178);
+            this.deletShop4Btn.Location = new System.Drawing.Point(18, 183);
             this.deletShop4Btn.Name = "deletShop4Btn";
             this.deletShop4Btn.Size = new System.Drawing.Size(171, 23);
             this.deletShop4Btn.TabIndex = 32;
@@ -661,7 +681,7 @@ namespace GameNet.App
             // 
             // stop4Timer
             // 
-            this.stop4Timer.Location = new System.Drawing.Point(13, 216);
+            this.stop4Timer.Location = new System.Drawing.Point(13, 221);
             this.stop4Timer.Name = "stop4Timer";
             this.stop4Timer.Size = new System.Drawing.Size(71, 23);
             this.stop4Timer.TabIndex = 31;
@@ -670,7 +690,7 @@ namespace GameNet.App
             // 
             // start4Timer
             // 
-            this.start4Timer.Location = new System.Drawing.Point(116, 216);
+            this.start4Timer.Location = new System.Drawing.Point(116, 221);
             this.start4Timer.Name = "start4Timer";
             this.start4Timer.Size = new System.Drawing.Size(73, 23);
             this.start4Timer.TabIndex = 30;
@@ -679,7 +699,7 @@ namespace GameNet.App
             // 
             // pay4Btn
             // 
-            this.pay4Btn.Location = new System.Drawing.Point(13, 271);
+            this.pay4Btn.Location = new System.Drawing.Point(13, 276);
             this.pay4Btn.Name = "pay4Btn";
             this.pay4Btn.Size = new System.Drawing.Size(100, 23);
             this.pay4Btn.TabIndex = 29;
@@ -689,7 +709,7 @@ namespace GameNet.App
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(125, 248);
+            this.label18.Location = new System.Drawing.Point(125, 253);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(52, 13);
             this.label18.TabIndex = 28;
@@ -697,7 +717,7 @@ namespace GameNet.App
             // 
             // time4txt
             // 
-            this.time4txt.Location = new System.Drawing.Point(13, 245);
+            this.time4txt.Location = new System.Drawing.Point(13, 250);
             this.time4txt.Name = "time4txt";
             this.time4txt.Size = new System.Drawing.Size(100, 20);
             this.time4txt.TabIndex = 27;
@@ -713,7 +733,7 @@ namespace GameNet.App
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(123, 139);
+            this.label20.Location = new System.Drawing.Point(123, 133);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(62, 13);
             this.label20.TabIndex = 25;
@@ -781,6 +801,8 @@ namespace GameNet.App
             // 
             this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox5.BackColor = System.Drawing.Color.Lavender;
+            this.groupBox5.Controls.Add(this.label38);
+            this.groupBox5.Controls.Add(this.shop5NameLbl);
             this.groupBox5.Controls.Add(this.deletShop5Btn);
             this.groupBox5.Controls.Add(this.stop5Timer);
             this.groupBox5.Controls.Add(this.start5Timer);
@@ -867,7 +889,7 @@ namespace GameNet.App
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(123, 139);
+            this.label26.Location = new System.Drawing.Point(126, 129);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(62, 13);
             this.label26.TabIndex = 25;
@@ -935,6 +957,8 @@ namespace GameNet.App
             // 
             this.groupBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox6.BackColor = System.Drawing.Color.Lavender;
+            this.groupBox6.Controls.Add(this.label40);
+            this.groupBox6.Controls.Add(this.shop6NameLbl);
             this.groupBox6.Controls.Add(this.deletShop6Btn);
             this.groupBox6.Controls.Add(this.stop6Timer);
             this.groupBox6.Controls.Add(this.start6Timer);
@@ -1021,7 +1045,7 @@ namespace GameNet.App
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(123, 139);
+            this.label32.Location = new System.Drawing.Point(123, 129);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(62, 13);
             this.label32.TabIndex = 25;
@@ -1105,6 +1129,108 @@ namespace GameNet.App
             this.datetimeLbl.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.datetimeLbl.Size = new System.Drawing.Size(0, 13);
             this.datetimeLbl.TabIndex = 6;
+            // 
+            // shop1NameLbl
+            // 
+            this.shop1NameLbl.AutoSize = true;
+            this.shop1NameLbl.Location = new System.Drawing.Point(16, 162);
+            this.shop1NameLbl.Name = "shop1NameLbl";
+            this.shop1NameLbl.Size = new System.Drawing.Size(0, 13);
+            this.shop1NameLbl.TabIndex = 19;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(91, 162);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(99, 13);
+            this.label13.TabIndex = 20;
+            this.label13.Text = "نام خوراکی و تعداد:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(90, 161);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(99, 13);
+            this.label7.TabIndex = 34;
+            this.label7.Text = "نام خوراکی و تعداد:";
+            // 
+            // shop2NameLbl
+            // 
+            this.shop2NameLbl.AutoSize = true;
+            this.shop2NameLbl.Location = new System.Drawing.Point(15, 161);
+            this.shop2NameLbl.Name = "shop2NameLbl";
+            this.shop2NameLbl.Size = new System.Drawing.Size(0, 13);
+            this.shop2NameLbl.TabIndex = 33;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(90, 160);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(99, 13);
+            this.label25.TabIndex = 34;
+            this.label25.Text = "نام خوراکی و تعداد:";
+            // 
+            // shop3NameLbl
+            // 
+            this.shop3NameLbl.AutoSize = true;
+            this.shop3NameLbl.Location = new System.Drawing.Point(15, 160);
+            this.shop3NameLbl.Name = "shop3NameLbl";
+            this.shop3NameLbl.Size = new System.Drawing.Size(0, 13);
+            this.shop3NameLbl.TabIndex = 33;
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(88, 158);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(99, 13);
+            this.label36.TabIndex = 34;
+            this.label36.Text = "نام خوراکی و تعداد:";
+            // 
+            // shop4NameLbl
+            // 
+            this.shop4NameLbl.AutoSize = true;
+            this.shop4NameLbl.Location = new System.Drawing.Point(13, 158);
+            this.shop4NameLbl.Name = "shop4NameLbl";
+            this.shop4NameLbl.Size = new System.Drawing.Size(0, 13);
+            this.shop4NameLbl.TabIndex = 33;
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(88, 161);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(99, 13);
+            this.label38.TabIndex = 34;
+            this.label38.Text = "نام خوراکی و تعداد:";
+            // 
+            // shop5NameLbl
+            // 
+            this.shop5NameLbl.AutoSize = true;
+            this.shop5NameLbl.Location = new System.Drawing.Point(13, 161);
+            this.shop5NameLbl.Name = "shop5NameLbl";
+            this.shop5NameLbl.Size = new System.Drawing.Size(0, 13);
+            this.shop5NameLbl.TabIndex = 33;
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(88, 161);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(99, 13);
+            this.label40.TabIndex = 34;
+            this.label40.Text = "نام خوراکی و تعداد:";
+            // 
+            // shop6NameLbl
+            // 
+            this.shop6NameLbl.AutoSize = true;
+            this.shop6NameLbl.Location = new System.Drawing.Point(13, 161);
+            this.shop6NameLbl.Name = "shop6NameLbl";
+            this.shop6NameLbl.Size = new System.Drawing.Size(0, 13);
+            this.shop6NameLbl.TabIndex = 33;
             // 
             // mainFrm
             // 
@@ -1249,6 +1375,18 @@ namespace GameNet.App
         private System.Windows.Forms.Button deletShop4Btn;
         private System.Windows.Forms.Button deletShop5Btn;
         private System.Windows.Forms.Button deletShop6Btn;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label shop1NameLbl;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label shop2NameLbl;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label shop3NameLbl;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label shop4NameLbl;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Label shop5NameLbl;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Label shop6NameLbl;
     }
 }
 
