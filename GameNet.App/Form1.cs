@@ -46,26 +46,22 @@ namespace GameNet.App
         /// </summary>
         public bool Shoping6;
 
-        public mainFrm()
-        {
+        public mainFrm() {
             InitializeComponent();
         }
 
-        private void mainFrm_Load(object sender, EventArgs e)
-        {
+        private void mainFrm_Load(object sender, EventArgs e) {
             datetimeLbl.Text = "زمان ورود :" + " " + DateTime.Now.ToShortTimeString();
         }
 
 
-        private void exitBtn_Click(object sender, EventArgs e)
-        {
+        private void exitBtn_Click(object sender, EventArgs e) {
 
             Close();
         }
 
 
-        private void shopSettingBtn_Click(object sender, EventArgs e)
-        {
+        private void shopSettingBtn_Click(object sender, EventArgs e) {
             ShopFrm shopFrm = new ShopFrm();
             shopFrm.ShowDialog();
         }
@@ -76,15 +72,12 @@ namespace GameNet.App
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void shop1Btn_Click(object sender, EventArgs e)
-        {
+        private void shop1Btn_Click(object sender, EventArgs e) {
             const int shopId = 1;
             shopViewFrm shopVwFrm = new shopViewFrm(shopId);
             shopVwFrm.ShowDialog();
-            if (shopVwFrm.orderChecked == 1)
-            {
-                using (UnitOfWork db = new UnitOfWork())
-                {
+            if (shopVwFrm.orderChecked == 1) {
+                using (UnitOfWork db = new UnitOfWork()) {
                     var order = db.OrderRepository.Get().Where(n => n.userId == shopId).LastOrDefault();
                     var shop = db.ShopRepository.GetShopById((int)order.ShopId);
                     shopCostLbl1.Text = order.amount.ToString() + " " + "تومان";
@@ -96,15 +89,12 @@ namespace GameNet.App
             }
             Shoping1 = true;
         }
-        private void shop2Btn_Click(object sender, EventArgs e)
-        {
+        private void shop2Btn_Click(object sender, EventArgs e) {
             const int shopId = 2;
             shopViewFrm shopVwFrm = new shopViewFrm(shopId);
             shopVwFrm.ShowDialog();
-            if (shopVwFrm.orderChecked == 1)
-            {
-                using (UnitOfWork db = new UnitOfWork())
-                {
+            if (shopVwFrm.orderChecked == 1) {
+                using (UnitOfWork db = new UnitOfWork()) {
                     var order = db.OrderRepository.Get().Where(n => n.userId == shopId).LastOrDefault();
                     var shop = db.ShopRepository.GetShopById((int)order.ShopId);
                     shopCostLbl2.Text = order.amount.ToString() + " " + "تومان";
@@ -114,15 +104,12 @@ namespace GameNet.App
             }
             Shoping2 = true;
         }
-        private void shop3Btn_Click(object sender, EventArgs e)
-        {
+        private void shop3Btn_Click(object sender, EventArgs e) {
             const int shopId = 3;
             shopViewFrm shopVwFrm = new shopViewFrm(shopId);
             shopVwFrm.ShowDialog();
-            if (shopVwFrm.orderChecked == 1)
-            {
-                using (UnitOfWork db = new UnitOfWork())
-                {
+            if (shopVwFrm.orderChecked == 1) {
+                using (UnitOfWork db = new UnitOfWork()) {
                     var order = db.OrderRepository.Get().Where(n => n.userId == shopId).LastOrDefault();
                     var shop = db.ShopRepository.GetShopById((int)order.ShopId);
                     shopCostLbl3.Text = order.amount.ToString() + " " + "تومان";
@@ -132,16 +119,13 @@ namespace GameNet.App
             }
             Shoping3 = true;
         }
-        private void shop4Btn_Click(object sender, EventArgs e)
-        {
+        private void shop4Btn_Click(object sender, EventArgs e) {
             const int shopId = 4;
             shopViewFrm shopVwFrm = new shopViewFrm(shopId);
             shopVwFrm.ShowDialog();
 
-            if (shopVwFrm.orderChecked == 1)
-            {
-                using (UnitOfWork db = new UnitOfWork())
-                {
+            if (shopVwFrm.orderChecked == 1) {
+                using (UnitOfWork db = new UnitOfWork()) {
                     var order = db.OrderRepository.Get().Where(n => n.userId == shopId).LastOrDefault();
                     var shop = db.ShopRepository.GetShopById((int)order.ShopId);
                     shopCostLbl4.Text = order.amount.ToString() + " " + "تومان";
@@ -151,15 +135,12 @@ namespace GameNet.App
             }
             Shoping4 = true;
         }
-        private void shop5Btn_Click(object sender, EventArgs e)
-        {
+        private void shop5Btn_Click(object sender, EventArgs e) {
             const int shopId = 5;
             shopViewFrm shopVwFrm = new shopViewFrm(shopId);
             shopVwFrm.ShowDialog();
-            if (shopVwFrm.orderChecked == 1)
-            {
-                using (UnitOfWork db = new UnitOfWork())
-                {
+            if (shopVwFrm.orderChecked == 1) {
+                using (UnitOfWork db = new UnitOfWork()) {
                     var order = db.OrderRepository.Get().Where(n => n.userId == shopId).LastOrDefault();
                     var shop = db.ShopRepository.GetShopById((int)order.ShopId);
                     shopCostLbl5.Text = order.amount.ToString() + " " + "تومان";
@@ -169,15 +150,12 @@ namespace GameNet.App
             }
             Shoping5 = true;
         }
-        private void shop6Btn_Click(object sender, EventArgs e)
-        {
+        private void shop6Btn_Click(object sender, EventArgs e) {
             const int shopId = 6;
             shopViewFrm shopVwFrm = new shopViewFrm(shopId);
             shopVwFrm.ShowDialog();
-            if (shopVwFrm.orderChecked == 1)
-            {
-                using (UnitOfWork db = new UnitOfWork())
-                {
+            if (shopVwFrm.orderChecked == 1) {
+                using (UnitOfWork db = new UnitOfWork()) {
                     var order = db.OrderRepository.Get().Where(n => n.userId == shopId).LastOrDefault();
                     var shop = db.ShopRepository.GetShopById((int)order.ShopId);
                     shopCostLbl6.Text = order.amount.ToString() + " " + "تومان";
@@ -194,17 +172,15 @@ namespace GameNet.App
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void deletShop1Btn_Click(object sender, EventArgs e)
-        {
+        private void deletShop1Btn_Click(object sender, EventArgs e) {
 
-            using (UnitOfWork db = new UnitOfWork())
-            {
+            using (UnitOfWork db = new UnitOfWork()) {
                 var order = db.OrderRepository.Get().Where(n => n.userId == 1).LastOrDefault();
                 var shop = db.ShopRepository.GetShopById((int)order.ShopId);
                 if (order != null && Shoping1 == true && MessageBox.Show($"آیا از حذف {shop.Name} مطمئن هستید ؟", "توجه", MessageBoxButtons.YesNo,
-                                 MessageBoxIcon.Warning) == DialogResult.Yes)
-                {
+                                 MessageBoxIcon.Warning) == DialogResult.Yes) {
                     db.OrderRepository.Delete(order);
+                    shop.Quantity += order.quantity;
                     db.Save();
                 }
             }
@@ -213,16 +189,14 @@ namespace GameNet.App
             shop1NameLbl.Text = "";
         }
 
-        private void deletShop2Btn_Click_1(object sender, EventArgs e)
-        {
-            using (UnitOfWork db = new UnitOfWork())
-            {
+        private void deletShop2Btn_Click_1(object sender, EventArgs e) {
+            using (UnitOfWork db = new UnitOfWork()) {
                 var order = db.OrderRepository.Get().Where(n => n.userId == 2).LastOrDefault();
-
-                if (order != null && Shoping2 == true && MessageBox.Show($"آیا از حذف {order.amount} مطمئن هستید ؟", "توجه", MessageBoxButtons.YesNo,
-                                 MessageBoxIcon.Warning) == DialogResult.Yes)
-                {
+                var shop = db.ShopRepository.GetShopById((int)order.ShopId);
+                if (order != null && Shoping2 == true && MessageBox.Show($"آیا از حذف {shop.Name} مطمئن هستید ؟", "توجه", MessageBoxButtons.YesNo,
+                                 MessageBoxIcon.Warning) == DialogResult.Yes) {
                     db.OrderRepository.Delete(order);
+                    shop.Quantity += order.quantity;
                     db.Save();
                 }
             }
@@ -231,16 +205,14 @@ namespace GameNet.App
             shop2NameLbl.Text = "";
         }
 
-        private void deletShop3Btn_Click_1(object sender, EventArgs e)
-        {
-            using (UnitOfWork db = new UnitOfWork())
-            {
+        private void deletShop3Btn_Click_1(object sender, EventArgs e) {
+            using (UnitOfWork db = new UnitOfWork()) {
                 var order = db.OrderRepository.Get().Where(n => n.userId == 3).LastOrDefault();
-
-                if (order != null && Shoping3 == true && MessageBox.Show($"آیا از حذف {order.amount} مطمئن هستید ؟", "توجه", MessageBoxButtons.YesNo,
-                                 MessageBoxIcon.Warning) == DialogResult.Yes)
-                {
+                var shop = db.ShopRepository.GetShopById((int)order.ShopId);
+                if (order != null && Shoping3 == true && MessageBox.Show($"آیا از حذف {shop.Name} مطمئن هستید ؟", "توجه", MessageBoxButtons.YesNo,
+                                 MessageBoxIcon.Warning) == DialogResult.Yes) {
                     db.OrderRepository.Delete(order);
+                    shop.Quantity += order.quantity;
                     db.Save();
                 }
             }
@@ -249,16 +221,14 @@ namespace GameNet.App
             shop3NameLbl.Text = "";
         }
 
-        private void deletShop4Btn_Click_1(object sender, EventArgs e)
-        {
-            using (UnitOfWork db = new UnitOfWork())
-            {
+        private void deletShop4Btn_Click_1(object sender, EventArgs e) {
+            using (UnitOfWork db = new UnitOfWork()) {
                 var order = db.OrderRepository.Get().Where(n => n.userId == 4).LastOrDefault();
-
-                if (order != null && Shoping4 == true && MessageBox.Show($"آیا از حذف {order.amount} مطمئن هستید ؟", "توجه", MessageBoxButtons.YesNo,
-                                 MessageBoxIcon.Warning) == DialogResult.Yes)
-                {
+                var shop = db.ShopRepository.GetShopById((int)order.ShopId);
+                if (order != null && Shoping4 == true && MessageBox.Show($"آیا از حذف {shop.Name} مطمئن هستید ؟", "توجه", MessageBoxButtons.YesNo,
+                                 MessageBoxIcon.Warning) == DialogResult.Yes) {
                     db.OrderRepository.Delete(order);
+                    shop.Quantity += order.quantity;
                     db.Save();
                 }
             }
@@ -267,16 +237,14 @@ namespace GameNet.App
             shop4NameLbl.Text = "";
         }
 
-        private void deletShop5Btn_Click_1(object sender, EventArgs e)
-        {
-            using (UnitOfWork db = new UnitOfWork())
-            {
+        private void deletShop5Btn_Click_1(object sender, EventArgs e) {
+            using (UnitOfWork db = new UnitOfWork()) {
                 var order = db.OrderRepository.Get().Where(n => n.userId == 5).LastOrDefault();
-
-                if (order != null && Shoping5 == true && MessageBox.Show($"آیا از حذف {order.amount} مطمئن هستید ؟", "توجه", MessageBoxButtons.YesNo,
-                                 MessageBoxIcon.Warning) == DialogResult.Yes)
-                {
+                var shop = db.ShopRepository.GetShopById((int)order.ShopId);
+                if (order != null && Shoping5 == true && MessageBox.Show($"آیا از حذف {shop.Name} مطمئن هستید ؟", "توجه", MessageBoxButtons.YesNo,
+                                 MessageBoxIcon.Warning) == DialogResult.Yes) {
                     db.OrderRepository.Delete(order);
+                    shop.Quantity += order.quantity;
                     db.Save();
                 }
             }
@@ -285,16 +253,14 @@ namespace GameNet.App
             shop5NameLbl.Text = "";
         }
 
-        private void deletShop6Btn_Click_1(object sender, EventArgs e)
-        {
-            using (UnitOfWork db = new UnitOfWork())
-            {
+        private void deletShop6Btn_Click_1(object sender, EventArgs e) {
+            using (UnitOfWork db = new UnitOfWork()) {
                 var order = db.OrderRepository.Get().Where(n => n.userId == 6).LastOrDefault();
-
-                if (order != null && Shoping6 == true && MessageBox.Show($"آیا از حذف {order.amount} مطمئن هستید ؟", "توجه", MessageBoxButtons.YesNo,
-                                 MessageBoxIcon.Warning) == DialogResult.Yes)
-                {
+                var shop = db.ShopRepository.GetShopById((int)order.ShopId);
+                if (order != null && Shoping6 == true && MessageBox.Show($"آیا از حذف {shop.Name} مطمئن هستید ؟", "توجه", MessageBoxButtons.YesNo,
+                                 MessageBoxIcon.Warning) == DialogResult.Yes) {
                     db.OrderRepository.Delete(order);
+                    shop.Quantity += order.quantity;
                     db.Save();
                 }
             }
