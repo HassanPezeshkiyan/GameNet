@@ -5,16 +5,27 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="GameNetModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Consoles">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="QuantityPriceController" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="TimePriceController" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="ConsoleType" Type="varchar" MaxLength="10" Nullable="false" />
+        </EntityType>
         <EntityType Name="Invoice">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="userId" Type="int" Nullable="false" />
-          <Property Name="orderId" Type="int" Nullable="false" />
+          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="OrderId" Type="int" Nullable="false" />
           <Property Name="CreationDate" Type="datetime" Nullable="false" />
-          <Property Name="Result" Type="bit" Nullable="false" />
           <Property Name="Amount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="ControllerQuantity" Type="int" Nullable="false" />
+          <Property Name="Time" Type="datetime" Nullable="false" />
+          <Property Name="ChargeValue" Type="decimal" Precision="18" Scale="0" />
         </EntityType>
         <EntityType Name="Order">
           <Key>
@@ -45,43 +56,12 @@
           <Property Name="UserName" Type="nchar" MaxLength="10" Nullable="false" />
           <Property Name="PassWord" Type="nchar" MaxLength="10" Nullable="false" />
         </EntityType>
-        <Association Name="FK_Invoice_Invoice">
-          <End Role="Invoice" Type="Self.Invoice" Multiplicity="1" />
-          <End Role="Invoice1" Type="Self.Invoice" Multiplicity="0..1" />
-          <ReferentialConstraint>
-            <Principal Role="Invoice">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Invoice1">
-              <PropertyRef Name="Id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Users_Users">
-          <End Role="Users" Type="Self.Users" Multiplicity="1" />
-          <End Role="Users1" Type="Self.Users" Multiplicity="0..1" />
-          <ReferentialConstraint>
-            <Principal Role="Users">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Users1">
-              <PropertyRef Name="Id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <EntityContainer Name="GameNetModelStoreContainer">
+          <EntitySet Name="Consoles" EntityType="Self.Consoles" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Invoice" EntityType="Self.Invoice" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Order" EntityType="Self.Order" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Shops" EntityType="Self.Shops" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK_Invoice_Invoice" Association="Self.FK_Invoice_Invoice">
-            <End Role="Invoice" EntitySet="Invoice" />
-            <End Role="Invoice1" EntitySet="Invoice" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Users_Users" Association="Self.FK_Users_Users">
-            <End Role="Users" EntitySet="Users" />
-            <End Role="Users1" EntitySet="Users" />
-          </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -109,6 +89,7 @@
           <EntitySet Name="Shops" EntityType="Self.Shop" />
           <EntitySet Name="Users" EntityType="Self.User" />
           <EntitySet Name="Orders" EntityType="GameNetModel.Order" />
+          <EntitySet Name="Consoles" EntityType="GameNetModel.Console" />
           <EntitySet Name="Invoices" EntityType="GameNetModel.Invoice" />
         </EntityContainer>
         <EntityType Name="Order">
@@ -122,17 +103,28 @@
           <Property Name="amount" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
           <Property Name="ShopId" Type="Int32" />
         </EntityType>
+        <EntityType Name="Console">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="QuantityPriceController" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="TimePriceController" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="ConsoleType" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+        </EntityType>
         <EntityType Name="Invoice">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="userId" Type="Int32" Nullable="false" />
-          <Property Name="orderId" Type="Int32" Nullable="false" />
+          <Property Name="UserId" Type="Int32" Nullable="false" />
+          <Property Name="OrderId" Type="Int32" Nullable="false" />
           <Property Name="CreationDate" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="Result" Type="Boolean" Nullable="false" />
           <Property Name="Amount" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
-          </EntityType>
+          <Property Name="ControllerQuantity" Type="Int32" Nullable="false" />
+          <Property Name="Time" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ChargeValue" Type="Decimal" Precision="18" Scale="0" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -171,14 +163,26 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="Consoles">
+            <EntityTypeMapping TypeName="GameNetModel.Console">
+              <MappingFragment StoreEntitySet="Consoles">
+                <ScalarProperty Name="ConsoleType" ColumnName="ConsoleType" />
+                <ScalarProperty Name="TimePriceController" ColumnName="TimePriceController" />
+                <ScalarProperty Name="QuantityPriceController" ColumnName="QuantityPriceController" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="Invoices">
             <EntityTypeMapping TypeName="GameNetModel.Invoice">
               <MappingFragment StoreEntitySet="Invoice">
+                <ScalarProperty Name="ChargeValue" ColumnName="ChargeValue" />
+                <ScalarProperty Name="Time" ColumnName="Time" />
+                <ScalarProperty Name="ControllerQuantity" ColumnName="ControllerQuantity" />
                 <ScalarProperty Name="Amount" ColumnName="Amount" />
-                <ScalarProperty Name="Result" ColumnName="Result" />
                 <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
-                <ScalarProperty Name="orderId" ColumnName="orderId" />
-                <ScalarProperty Name="userId" ColumnName="userId" />
+                <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>

@@ -22,6 +22,7 @@
     <EntitySet Name="Shops" EntityType="Self.Shop" />
     <EntitySet Name="Users" EntityType="Self.User" />
     <EntitySet Name="Orders" EntityType="GameNetModel.Order" />
+    <EntitySet Name="Consoles" EntityType="GameNetModel.Console" />
     <EntitySet Name="Invoices" EntityType="GameNetModel.Invoice" />
   </EntityContainer>
   <EntityType Name="Order">
@@ -35,15 +36,26 @@
     <Property Name="amount" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
     <Property Name="ShopId" Type="Int32" />
   </EntityType>
+  <EntityType Name="Console">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="QuantityPriceController" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="TimePriceController" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="ConsoleType" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
   <EntityType Name="Invoice">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="userId" Type="Int32" Nullable="false" />
-    <Property Name="orderId" Type="Int32" Nullable="false" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="OrderId" Type="Int32" Nullable="false" />
     <Property Name="CreationDate" Type="DateTime" Nullable="false" Precision="3" />
-    <Property Name="Result" Type="Boolean" Nullable="false" />
     <Property Name="Amount" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="ControllerQuantity" Type="Int32" Nullable="false" />
+    <Property Name="Time" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ChargeValue" Type="Decimal" Precision="18" Scale="0" />
   </EntityType>
 </Schema>

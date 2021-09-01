@@ -1,4 +1,5 @@
-﻿using GameNet.App.Shoping;
+﻿using GameNet.App.Settings;
+using GameNet.App.Shoping;
 using GameNet.DataLayer.Context;
 using System;
 using System.Collections.Generic;
@@ -263,10 +264,17 @@ namespace GameNet.App
                     shop.Quantity += order.quantity;
                     db.Save();
                 }
+                
             }
             deletShop6Btn.Enabled = false;
             shopCostLbl6.Text = "";
             shop6NameLbl.Text = "";
+        }
+
+
+        private void settingBtn_Click(object sender, EventArgs e) {
+            settingFrm sf = new settingFrm();
+            sf.ShowDialog();
         }
     }
 }

@@ -28,6 +28,7 @@ namespace GameNet.DataLayer
         public virtual DbSet<Shop> Shops { get; set; }
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<Order> Orders { get; set; }
+        public virtual DbSet<Console> Consoles { get; set; }
         public virtual DbSet<Invoice> Invoices { get; set; }
     }
 }

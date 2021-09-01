@@ -15,10 +15,12 @@ namespace GameNet.DataLayer
     public partial class Invoice
     {
         public int Id { get; set; }
-        public int userId { get; set; }
-        public int orderId { get; set; }
+        public int UserId { get; set; }
+        public int OrderId { get; set; }
         public System.DateTime CreationDate { get; set; }
-        public bool Result { get; set; }
         public decimal Amount { get; set; }
+        public int ControllerQuantity { get; set; }
+        public System.DateTime Time { get; set; }
+        public Nullable<decimal> ChargeValue { get; set; }
     }
 }

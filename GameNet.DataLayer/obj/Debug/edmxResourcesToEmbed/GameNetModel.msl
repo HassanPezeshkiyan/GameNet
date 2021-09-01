@@ -33,14 +33,26 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Consoles">
+      <EntityTypeMapping TypeName="GameNetModel.Console">
+        <MappingFragment StoreEntitySet="Consoles">
+          <ScalarProperty Name="ConsoleType" ColumnName="ConsoleType" />
+          <ScalarProperty Name="TimePriceController" ColumnName="TimePriceController" />
+          <ScalarProperty Name="QuantityPriceController" ColumnName="QuantityPriceController" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Invoices">
       <EntityTypeMapping TypeName="GameNetModel.Invoice">
         <MappingFragment StoreEntitySet="Invoice">
+          <ScalarProperty Name="ChargeValue" ColumnName="ChargeValue" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="ControllerQuantity" ColumnName="ControllerQuantity" />
           <ScalarProperty Name="Amount" ColumnName="Amount" />
-          <ScalarProperty Name="Result" ColumnName="Result" />
           <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
-          <ScalarProperty Name="orderId" ColumnName="orderId" />
-          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
           <ScalarProperty Name="Id" ColumnName="Id" />
         </MappingFragment>
       </EntityTypeMapping>

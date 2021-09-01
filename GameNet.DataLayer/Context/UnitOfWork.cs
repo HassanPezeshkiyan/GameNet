@@ -14,12 +14,9 @@ namespace GameNet.DataLayer.Context
         readonly GameNetEntities db = new GameNetEntities();
 
         private IShopRepository _shopRepository;
-        public IShopRepository ShopRepository
-        {
-            get
-            {
-                if (_shopRepository == null)
-                {
+        public IShopRepository ShopRepository {
+            get {
+                if (_shopRepository == null) {
                     _shopRepository = new ShopRepository(db);
                 }
                 return _shopRepository;
@@ -27,35 +24,36 @@ namespace GameNet.DataLayer.Context
         }
 
         private GenericRepository<Order> _orderRepository;
-        public GenericRepository<Order> OrderRepository
-        {
-            get
-            {
-                if (_orderRepository == null)
-                {
+        public GenericRepository<Order> OrderRepository {
+            get {
+                if (_orderRepository == null) {
                     _orderRepository = new GenericRepository<Order>(db);
                 }
                 return _orderRepository;
             }
         }
         private IOrderRepository _order;
-        public IOrderRepository Orders
-        {
-            get 
-            {
-                if (_order == null)
-                {
+        public IOrderRepository Orders {
+            get {
+                if (_order == null) {
                     _order = new OrderRepository(db);
                 }
                 return _order;
             }
         }
-        public void Save()
-        {
+        private IConsoleRepository _console;
+        public IConsoleRepository Console {
+            get {
+                if (_console == null) {
+                    _console = new ConsoleRepository(db);
+                }
+                return _console;
+            }
+        }
+        public void Save() {
             db.SaveChanges();
         }
-        public void Dispose()
-        {
+        public void Dispose() {
             db.Dispose();
         }
     }

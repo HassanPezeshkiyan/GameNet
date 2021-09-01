@@ -68,6 +68,18 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Settings\editFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\editFrm.Designer.cs">
+      <DependentUpon>editFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\settingFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\settingFrm.Designer.cs">
+      <DependentUpon>settingFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Shoping\editShopFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +125,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Settings\editFrm.resx">
+      <DependentUpon>editFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\settingFrm.resx">
+      <DependentUpon>settingFrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Shoping\editShopFrm.resx">
       <DependentUpon>editShopFrm.cs</DependentUpon>
     </EmbeddedResource>
