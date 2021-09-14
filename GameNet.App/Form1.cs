@@ -53,6 +53,12 @@ namespace GameNet.App
 
         private void mainFrm_Load(object sender, EventArgs e) {
             datetimeLbl.Text = "زمان ورود :" + " " + DateTime.Now.ToShortTimeString();
+            deletShop1Btn.Enabled = false;
+            deletShop2Btn.Enabled = false;
+            deletShop3Btn.Enabled = false;
+            deletShop4Btn.Enabled = false;
+            deletShop5Btn.Enabled = false;
+            deletShop6Btn.Enabled = false;
         }
 
 
@@ -264,7 +270,7 @@ namespace GameNet.App
                     shop.Quantity += order.quantity;
                     db.Save();
                 }
-                
+
             }
             deletShop6Btn.Enabled = false;
             shopCostLbl6.Text = "";

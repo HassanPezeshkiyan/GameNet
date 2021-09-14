@@ -27,12 +27,11 @@ namespace GameNet.App.Settings
         /// </summary>
         private void InitializeComponent() {
             this.dgvConsole = new System.Windows.Forms.DataGridView();
-            this.editConsoleBtn = new System.Windows.Forms.Button();
-            this.updateBtn = new System.Windows.Forms.Button();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quantityPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.timePrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.consoleType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.editConsoleBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsole)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,31 +47,11 @@ namespace GameNet.App.Settings
             this.quantityPrice,
             this.timePrice,
             this.consoleType});
-            this.dgvConsole.Location = new System.Drawing.Point(12, 77);
+            this.dgvConsole.Location = new System.Drawing.Point(12, 37);
             this.dgvConsole.Name = "dgvConsole";
             this.dgvConsole.ReadOnly = true;
-            this.dgvConsole.Size = new System.Drawing.Size(776, 241);
+            this.dgvConsole.Size = new System.Drawing.Size(622, 241);
             this.dgvConsole.TabIndex = 0;
-            // 
-            // editConsoleBtn
-            // 
-            this.editConsoleBtn.Location = new System.Drawing.Point(12, 30);
-            this.editConsoleBtn.Name = "editConsoleBtn";
-            this.editConsoleBtn.Size = new System.Drawing.Size(178, 23);
-            this.editConsoleBtn.TabIndex = 1;
-            this.editConsoleBtn.Text = "ویرایش دستگاه";
-            this.editConsoleBtn.UseVisualStyleBackColor = true;
-            this.editConsoleBtn.Click += new System.EventHandler(this.editConsoleBtn_Click);
-            // 
-            // updateBtn
-            // 
-            this.updateBtn.Location = new System.Drawing.Point(206, 30);
-            this.updateBtn.Name = "updateBtn";
-            this.updateBtn.Size = new System.Drawing.Size(178, 23);
-            this.updateBtn.TabIndex = 2;
-            this.updateBtn.Text = "به روزرسانی";
-            this.updateBtn.UseVisualStyleBackColor = true;
-            this.updateBtn.Click += new System.EventHandler(this.updateBtn_Click);
             // 
             // id
             // 
@@ -102,12 +81,21 @@ namespace GameNet.App.Settings
             this.consoleType.Name = "consoleType";
             this.consoleType.ReadOnly = true;
             // 
+            // editConsoleBtn
+            // 
+            this.editConsoleBtn.Location = new System.Drawing.Point(12, 8);
+            this.editConsoleBtn.Name = "editConsoleBtn";
+            this.editConsoleBtn.Size = new System.Drawing.Size(119, 23);
+            this.editConsoleBtn.TabIndex = 1;
+            this.editConsoleBtn.Text = "ویرایش دستگاه";
+            this.editConsoleBtn.UseVisualStyleBackColor = true;
+            this.editConsoleBtn.Click += new System.EventHandler(this.editConsoleBtn_Click);
+            // 
             // settingFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 328);
-            this.Controls.Add(this.updateBtn);
+            this.ClientSize = new System.Drawing.Size(645, 286);
             this.Controls.Add(this.editConsoleBtn);
             this.Controls.Add(this.dgvConsole);
             this.MaximizeBox = false;
@@ -127,7 +115,6 @@ namespace GameNet.App.Settings
 
         private System.Windows.Forms.DataGridView dgvConsole;
         private System.Windows.Forms.Button editConsoleBtn;
-        private System.Windows.Forms.Button updateBtn;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantityPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn timePrice;

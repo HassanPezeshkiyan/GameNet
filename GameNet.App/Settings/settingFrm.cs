@@ -13,16 +13,17 @@ namespace GameNet.App.Settings
 {
     public partial class settingFrm : Form
     {
-        public UnitOfWork db = new UnitOfWork();
+
         public settingFrm() {
             InitializeComponent();
         }
 
         private void settingFrm_Load(object sender, EventArgs e) {
             BindGrid();
+            editConsoleBtn.Enabled = false;
         }
         void BindGrid() {
-            using (db) {
+            using (UnitOfWork db = new UnitOfWork()) {
                 dgvConsole.AutoGenerateColumns = false;
                 dgvConsole.DataSource = db.Console.GetAll();
             }

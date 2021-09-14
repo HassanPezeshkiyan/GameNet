@@ -8,7 +8,7 @@ using System.Data.Entity;
 
 namespace GameNet.DataLayer.Services
 {
-     public class ConsoleRepository:IConsoleRepository
+    public class ConsoleRepository : IConsoleRepository
     {
         private readonly GameNetEntities db;
 
@@ -33,6 +33,10 @@ namespace GameNet.DataLayer.Services
         public List<Console> GetAll() {
 
             return db.Consoles.ToList();
+        }
+
+        public Console GetConsoleById(int consoleId) {
+            return db.Consoles.Find(consoleId);
         }
     }
 }

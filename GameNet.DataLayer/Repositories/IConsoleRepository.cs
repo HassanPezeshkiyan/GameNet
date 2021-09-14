@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace GameNet.DataLayer.Repositories
 {
-   public interface IConsoleRepository
+    public interface IConsoleRepository
     {
-       bool Edit(Console console);
+        bool Edit(Console console);
         List<Console> GetAll();
-    }
+        Console GetConsoleById(int consoleId);
+     }
 }

@@ -3,7 +3,6 @@ using GameNet.DataLayer.Context;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -21,14 +20,15 @@ namespace GameNet.App.Settings
         }
 
         private void editFrm_Load(object sender, EventArgs e) {
-            using (db) {
 
-                var console = db.Console.GetAll().Where(n => n.Id == consoleId).FirstOrDefault();
+
+            var console = db.Console.GetConsoleById(consoleId);
                 consoleGroupBox.Text = "دستگاه شماره :" + consoleId.ToString();
                 quantityPriceTxt.Text = console.QuantityPriceController.ToString();
                 timePriceTxt.Text = console.TimePriceController.ToString();
-                typeCombo.Text = console.ConsoleType.ToString();                                
-            }
+                typeCombo.Text = console.ConsoleType.ToString();
+
+          
 
         }
 
@@ -37,7 +37,21 @@ namespace GameNet.App.Settings
         }
 
         private void saveBtn_Click(object sender, EventArgs e) {
+
+
+            using (db) {
+                DataLayer.Console console = new DataLayer.Console()
+                {
+                    ConsoleType = typeCombo.Text,
+                    QuantityPriceController = Convert.ToDecimal(quantityPriceTxt.Text),
+                    TimePriceController = Convert.ToDecimal(timePriceTxt.Text),
+                };
+                console.Id = consoleId;
+                db.Console.Edit(console);
+                db.Save();
+            }
             
+            DialogResult = DialogResult.OK;
         }
     }
 }
