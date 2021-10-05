@@ -47,7 +47,6 @@ namespace GameNet.App
             this.shop1Btn = new System.Windows.Forms.Button();
             this.cntrl1Count = new System.Windows.Forms.NumericUpDown();
             this.charge1Cost = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -66,7 +65,6 @@ namespace GameNet.App
             this.shop2Btn = new System.Windows.Forms.Button();
             this.cntrl2Count = new System.Windows.Forms.NumericUpDown();
             this.charge2txt = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -85,7 +83,6 @@ namespace GameNet.App
             this.shop3Btn = new System.Windows.Forms.Button();
             this.cntrl3Count = new System.Windows.Forms.NumericUpDown();
             this.charge3txt = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
@@ -104,7 +101,6 @@ namespace GameNet.App
             this.shop4Btn = new System.Windows.Forms.Button();
             this.cntrl4Count = new System.Windows.Forms.NumericUpDown();
             this.charge4txt = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
@@ -123,7 +119,6 @@ namespace GameNet.App
             this.shop5Btn = new System.Windows.Forms.Button();
             this.cntrl5Count = new System.Windows.Forms.NumericUpDown();
             this.charge5txt = new System.Windows.Forms.TextBox();
-            this.label27 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
@@ -142,7 +137,6 @@ namespace GameNet.App
             this.shop6Btn = new System.Windows.Forms.Button();
             this.cntrl6Count = new System.Windows.Forms.NumericUpDown();
             this.charge6txt = new System.Windows.Forms.TextBox();
-            this.label33 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
             this.reportsBtn = new System.Windows.Forms.Button();
@@ -205,7 +199,6 @@ namespace GameNet.App
             this.groupBox1.Controls.Add(this.shop1Btn);
             this.groupBox1.Controls.Add(this.cntrl1Count);
             this.groupBox1.Controls.Add(this.charge1Cost);
-            this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(876, 70);
@@ -219,7 +212,7 @@ namespace GameNet.App
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(120, 306);
+            this.label19.Location = new System.Drawing.Point(122, 281);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(81, 13);
             this.label19.TabIndex = 21;
@@ -228,7 +221,7 @@ namespace GameNet.App
             // console1Check
             // 
             this.console1Check.AutoSize = true;
-            this.console1Check.Location = new System.Drawing.Point(6, 305);
+            this.console1Check.Location = new System.Drawing.Point(16, 280);
             this.console1Check.Name = "console1Check";
             this.console1Check.Size = new System.Drawing.Size(99, 17);
             this.console1Check.TabIndex = 7;
@@ -254,9 +247,9 @@ namespace GameNet.App
             // 
             // deletShop1Btn
             // 
-            this.deletShop1Btn.Location = new System.Drawing.Point(16, 187);
+            this.deletShop1Btn.Location = new System.Drawing.Point(16, 102);
             this.deletShop1Btn.Name = "deletShop1Btn";
-            this.deletShop1Btn.Size = new System.Drawing.Size(171, 23);
+            this.deletShop1Btn.Size = new System.Drawing.Size(87, 23);
             this.deletShop1Btn.TabIndex = 7;
             this.deletShop1Btn.Text = "حذف بوفه";
             this.deletShop1Btn.UseVisualStyleBackColor = true;
@@ -264,7 +257,7 @@ namespace GameNet.App
             // 
             // stop1Timer
             // 
-            this.stop1Timer.Location = new System.Drawing.Point(16, 225);
+            this.stop1Timer.Location = new System.Drawing.Point(124, 215);
             this.stop1Timer.Name = "stop1Timer";
             this.stop1Timer.Size = new System.Drawing.Size(71, 23);
             this.stop1Timer.TabIndex = 18;
@@ -273,7 +266,7 @@ namespace GameNet.App
             // 
             // start1Timer
             // 
-            this.start1Timer.Location = new System.Drawing.Point(119, 225);
+            this.start1Timer.Location = new System.Drawing.Point(122, 186);
             this.start1Timer.Name = "start1Timer";
             this.start1Timer.Size = new System.Drawing.Size(73, 23);
             this.start1Timer.TabIndex = 17;
@@ -282,9 +275,9 @@ namespace GameNet.App
             // 
             // pay1Btn
             // 
-            this.pay1Btn.Location = new System.Drawing.Point(16, 280);
+            this.pay1Btn.Location = new System.Drawing.Point(114, 301);
             this.pay1Btn.Name = "pay1Btn";
-            this.pay1Btn.Size = new System.Drawing.Size(100, 23);
+            this.pay1Btn.Size = new System.Drawing.Size(84, 23);
             this.pay1Btn.TabIndex = 16;
             this.pay1Btn.Text = "تسویه";
             this.pay1Btn.UseVisualStyleBackColor = true;
@@ -292,7 +285,7 @@ namespace GameNet.App
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(128, 257);
+            this.label5.Location = new System.Drawing.Point(138, 250);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(52, 13);
             this.label5.TabIndex = 12;
@@ -300,7 +293,7 @@ namespace GameNet.App
             // 
             // time1Txt
             // 
-            this.time1Txt.Location = new System.Drawing.Point(16, 254);
+            this.time1Txt.Location = new System.Drawing.Point(16, 247);
             this.time1Txt.Name = "time1Txt";
             this.time1Txt.Size = new System.Drawing.Size(100, 20);
             this.time1Txt.TabIndex = 11;
@@ -324,9 +317,9 @@ namespace GameNet.App
             // 
             // shop1Btn
             // 
-            this.shop1Btn.Location = new System.Drawing.Point(16, 102);
+            this.shop1Btn.Location = new System.Drawing.Point(111, 102);
             this.shop1Btn.Name = "shop1Btn";
-            this.shop1Btn.Size = new System.Drawing.Size(100, 23);
+            this.shop1Btn.Size = new System.Drawing.Size(87, 23);
             this.shop1Btn.TabIndex = 8;
             this.shop1Btn.Text = "انتخاب خوراکی";
             this.shop1Btn.UseVisualStyleBackColor = true;
@@ -334,14 +327,14 @@ namespace GameNet.App
             // 
             // cntrl1Count
             // 
-            this.cntrl1Count.Location = new System.Drawing.Point(16, 65);
+            this.cntrl1Count.Location = new System.Drawing.Point(17, 63);
             this.cntrl1Count.Maximum = new decimal(new int[] {
             4,
             0,
             0,
             0});
             this.cntrl1Count.Name = "cntrl1Count";
-            this.cntrl1Count.Size = new System.Drawing.Size(73, 20);
+            this.cntrl1Count.Size = new System.Drawing.Size(99, 20);
             this.cntrl1Count.TabIndex = 7;
             // 
             // charge1Cost
@@ -351,19 +344,10 @@ namespace GameNet.App
             this.charge1Cost.Size = new System.Drawing.Size(100, 20);
             this.charge1Cost.TabIndex = 6;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(159, 107);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(31, 13);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "بوفه:";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(135, 72);
+            this.label2.Location = new System.Drawing.Point(136, 65);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(59, 13);
             this.label2.TabIndex = 4;
@@ -399,7 +383,6 @@ namespace GameNet.App
             this.groupBox2.Controls.Add(this.shop2Btn);
             this.groupBox2.Controls.Add(this.cntrl2Count);
             this.groupBox2.Controls.Add(this.charge2txt);
-            this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Location = new System.Drawing.Point(653, 70);
@@ -518,9 +501,9 @@ namespace GameNet.App
             // 
             // shop2Btn
             // 
-            this.shop2Btn.Location = new System.Drawing.Point(22, 102);
+            this.shop2Btn.Location = new System.Drawing.Point(114, 102);
             this.shop2Btn.Name = "shop2Btn";
-            this.shop2Btn.Size = new System.Drawing.Size(100, 23);
+            this.shop2Btn.Size = new System.Drawing.Size(87, 23);
             this.shop2Btn.TabIndex = 24;
             this.shop2Btn.Text = "انتخاب خوراکی";
             this.shop2Btn.UseVisualStyleBackColor = true;
@@ -544,15 +527,6 @@ namespace GameNet.App
             this.charge2txt.Name = "charge2txt";
             this.charge2txt.Size = new System.Drawing.Size(100, 20);
             this.charge2txt.TabIndex = 22;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(167, 107);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(31, 13);
-            this.label9.TabIndex = 21;
-            this.label9.Text = "بوفه:";
             // 
             // label10
             // 
@@ -593,7 +567,6 @@ namespace GameNet.App
             this.groupBox3.Controls.Add(this.shop3Btn);
             this.groupBox3.Controls.Add(this.cntrl3Count);
             this.groupBox3.Controls.Add(this.charge3txt);
-            this.groupBox3.Controls.Add(this.label15);
             this.groupBox3.Controls.Add(this.label16);
             this.groupBox3.Controls.Add(this.label17);
             this.groupBox3.Location = new System.Drawing.Point(433, 70);
@@ -712,9 +685,9 @@ namespace GameNet.App
             // 
             // shop3Btn
             // 
-            this.shop3Btn.Location = new System.Drawing.Point(11, 102);
+            this.shop3Btn.Location = new System.Drawing.Point(103, 102);
             this.shop3Btn.Name = "shop3Btn";
-            this.shop3Btn.Size = new System.Drawing.Size(100, 23);
+            this.shop3Btn.Size = new System.Drawing.Size(87, 23);
             this.shop3Btn.TabIndex = 24;
             this.shop3Btn.Text = "انتخاب خوراکی";
             this.shop3Btn.UseVisualStyleBackColor = true;
@@ -738,15 +711,6 @@ namespace GameNet.App
             this.charge3txt.Name = "charge3txt";
             this.charge3txt.Size = new System.Drawing.Size(100, 20);
             this.charge3txt.TabIndex = 22;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(158, 107);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(31, 13);
-            this.label15.TabIndex = 21;
-            this.label15.Text = "بوفه:";
             // 
             // label16
             // 
@@ -787,7 +751,6 @@ namespace GameNet.App
             this.groupBox4.Controls.Add(this.shop4Btn);
             this.groupBox4.Controls.Add(this.cntrl4Count);
             this.groupBox4.Controls.Add(this.charge4txt);
-            this.groupBox4.Controls.Add(this.label21);
             this.groupBox4.Controls.Add(this.label22);
             this.groupBox4.Controls.Add(this.label23);
             this.groupBox4.Location = new System.Drawing.Point(209, 70);
@@ -906,9 +869,9 @@ namespace GameNet.App
             // 
             // shop4Btn
             // 
-            this.shop4Btn.Location = new System.Drawing.Point(12, 102);
+            this.shop4Btn.Location = new System.Drawing.Point(108, 102);
             this.shop4Btn.Name = "shop4Btn";
-            this.shop4Btn.Size = new System.Drawing.Size(100, 23);
+            this.shop4Btn.Size = new System.Drawing.Size(86, 23);
             this.shop4Btn.TabIndex = 24;
             this.shop4Btn.Text = "انتخاب خوراکی";
             this.shop4Btn.UseVisualStyleBackColor = true;
@@ -932,15 +895,6 @@ namespace GameNet.App
             this.charge4txt.Name = "charge4txt";
             this.charge4txt.Size = new System.Drawing.Size(100, 20);
             this.charge4txt.TabIndex = 22;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(156, 107);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(31, 13);
-            this.label21.TabIndex = 21;
-            this.label21.Text = "بوفه:";
             // 
             // label22
             // 
@@ -981,7 +935,6 @@ namespace GameNet.App
             this.groupBox5.Controls.Add(this.shop5Btn);
             this.groupBox5.Controls.Add(this.cntrl5Count);
             this.groupBox5.Controls.Add(this.charge5txt);
-            this.groupBox5.Controls.Add(this.label27);
             this.groupBox5.Controls.Add(this.label28);
             this.groupBox5.Controls.Add(this.label29);
             this.groupBox5.Location = new System.Drawing.Point(876, 423);
@@ -1100,9 +1053,9 @@ namespace GameNet.App
             // 
             // shop5Btn
             // 
-            this.shop5Btn.Location = new System.Drawing.Point(11, 92);
+            this.shop5Btn.Location = new System.Drawing.Point(100, 92);
             this.shop5Btn.Name = "shop5Btn";
-            this.shop5Btn.Size = new System.Drawing.Size(100, 23);
+            this.shop5Btn.Size = new System.Drawing.Size(87, 23);
             this.shop5Btn.TabIndex = 24;
             this.shop5Btn.Text = "انتخاب خوراکی";
             this.shop5Btn.UseVisualStyleBackColor = true;
@@ -1126,15 +1079,6 @@ namespace GameNet.App
             this.charge5txt.Name = "charge5txt";
             this.charge5txt.Size = new System.Drawing.Size(100, 20);
             this.charge5txt.TabIndex = 22;
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(154, 97);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(31, 13);
-            this.label27.TabIndex = 21;
-            this.label27.Text = "بوفه:";
             // 
             // label28
             // 
@@ -1175,7 +1119,6 @@ namespace GameNet.App
             this.groupBox6.Controls.Add(this.shop6Btn);
             this.groupBox6.Controls.Add(this.cntrl6Count);
             this.groupBox6.Controls.Add(this.charge6txt);
-            this.groupBox6.Controls.Add(this.label33);
             this.groupBox6.Controls.Add(this.label34);
             this.groupBox6.Controls.Add(this.label35);
             this.groupBox6.Location = new System.Drawing.Point(653, 423);
@@ -1294,9 +1237,9 @@ namespace GameNet.App
             // 
             // shop6Btn
             // 
-            this.shop6Btn.Location = new System.Drawing.Point(11, 92);
+            this.shop6Btn.Location = new System.Drawing.Point(99, 92);
             this.shop6Btn.Name = "shop6Btn";
-            this.shop6Btn.Size = new System.Drawing.Size(100, 23);
+            this.shop6Btn.Size = new System.Drawing.Size(96, 23);
             this.shop6Btn.TabIndex = 24;
             this.shop6Btn.Text = "انتخاب خوراکی";
             this.shop6Btn.UseVisualStyleBackColor = true;
@@ -1320,15 +1263,6 @@ namespace GameNet.App
             this.charge6txt.Name = "charge6txt";
             this.charge6txt.Size = new System.Drawing.Size(100, 20);
             this.charge6txt.TabIndex = 22;
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(154, 97);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(31, 13);
-            this.label33.TabIndex = 21;
-            this.label33.Text = "بوفه:";
             // 
             // label34
             // 
@@ -1441,7 +1375,6 @@ namespace GameNet.App
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button shop1Btn;
@@ -1464,7 +1397,6 @@ namespace GameNet.App
         private System.Windows.Forms.Button shop2Btn;
         private System.Windows.Forms.NumericUpDown cntrl2Count;
         private System.Windows.Forms.TextBox charge2txt;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button stop3Timer;
@@ -1477,7 +1409,6 @@ namespace GameNet.App
         private System.Windows.Forms.Button shop3Btn;
         private System.Windows.Forms.NumericUpDown cntrl3Count;
         private System.Windows.Forms.TextBox charge3txt;
-        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Button stop4Timer;
@@ -1490,7 +1421,6 @@ namespace GameNet.App
         private System.Windows.Forms.Button shop4Btn;
         private System.Windows.Forms.NumericUpDown cntrl4Count;
         private System.Windows.Forms.TextBox charge4txt;
-        private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Button stop5Timer;
@@ -1503,7 +1433,6 @@ namespace GameNet.App
         private System.Windows.Forms.Button shop5Btn;
         private System.Windows.Forms.NumericUpDown cntrl5Count;
         private System.Windows.Forms.TextBox charge5txt;
-        private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Button stop6Timer;
@@ -1516,7 +1445,6 @@ namespace GameNet.App
         private System.Windows.Forms.Button shop6Btn;
         private System.Windows.Forms.NumericUpDown cntrl6Count;
         private System.Windows.Forms.TextBox charge6txt;
-        private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Button reportsBtn;

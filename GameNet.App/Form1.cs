@@ -59,6 +59,7 @@ namespace GameNet.App
             deletShop4Btn.Enabled = false;
             deletShop5Btn.Enabled = false;
             deletShop6Btn.Enabled = false;
+            
         }
 
 
@@ -81,7 +82,8 @@ namespace GameNet.App
         /// <param name="e"></param>
         private void shop1Btn_Click(object sender, EventArgs e) {
             const int shopId = 1;
-            shopViewFrm shopVwFrm = new shopViewFrm(shopId);
+            shopViewFrm shopVwFrm = new shopViewFrm();
+            shopVwFrm.shopId = shopId;
             shopVwFrm.ShowDialog();
             if (shopVwFrm.orderChecked == 1) {
                 using (UnitOfWork db = new UnitOfWork()) {
@@ -89,16 +91,15 @@ namespace GameNet.App
                     var shop = db.ShopRepository.GetShopById((int)order.ShopId);
                     shopCostLbl1.Text = order.amount.ToString() + " " + "تومان";
                     shop1NameLbl.Text = shop.Name.ToString() + " " + order.quantity;
-
                 }
-
+                Shoping1 = true;
                 deletShop1Btn.Enabled = true;
             }
-            Shoping1 = true;
         }
         private void shop2Btn_Click(object sender, EventArgs e) {
             const int shopId = 2;
-            shopViewFrm shopVwFrm = new shopViewFrm(shopId);
+            shopViewFrm shopVwFrm = new shopViewFrm();
+            shopVwFrm.shopId = shopId;
             shopVwFrm.ShowDialog();
             if (shopVwFrm.orderChecked == 1) {
                 using (UnitOfWork db = new UnitOfWork()) {
@@ -107,13 +108,14 @@ namespace GameNet.App
                     shopCostLbl2.Text = order.amount.ToString() + " " + "تومان";
                     shop2NameLbl.Text = shop.Name.ToString() + " " + order.quantity;
                 }
+                Shoping2 = true;
                 deletShop2Btn.Enabled = true;
             }
-            Shoping2 = true;
         }
         private void shop3Btn_Click(object sender, EventArgs e) {
             const int shopId = 3;
-            shopViewFrm shopVwFrm = new shopViewFrm(shopId);
+            shopViewFrm shopVwFrm = new shopViewFrm();
+            shopVwFrm.shopId = shopId;
             shopVwFrm.ShowDialog();
             if (shopVwFrm.orderChecked == 1) {
                 using (UnitOfWork db = new UnitOfWork()) {
@@ -122,13 +124,14 @@ namespace GameNet.App
                     shopCostLbl3.Text = order.amount.ToString() + " " + "تومان";
                     shop3NameLbl.Text = shop.Name.ToString() + " " + order.quantity;
                 }
+                Shoping3 = true;
                 deletShop3Btn.Enabled = true;
             }
-            Shoping3 = true;
         }
         private void shop4Btn_Click(object sender, EventArgs e) {
             const int shopId = 4;
-            shopViewFrm shopVwFrm = new shopViewFrm(shopId);
+            shopViewFrm shopVwFrm = new shopViewFrm();
+            shopVwFrm.shopId = shopId;
             shopVwFrm.ShowDialog();
 
             if (shopVwFrm.orderChecked == 1) {
@@ -138,13 +141,14 @@ namespace GameNet.App
                     shopCostLbl4.Text = order.amount.ToString() + " " + "تومان";
                     shop4NameLbl.Text = shop.Name.ToString() + " " + order.quantity;
                 }
+                Shoping4 = true;
                 deletShop4Btn.Enabled = true;
             }
-            Shoping4 = true;
         }
         private void shop5Btn_Click(object sender, EventArgs e) {
             const int shopId = 5;
-            shopViewFrm shopVwFrm = new shopViewFrm(shopId);
+            shopViewFrm shopVwFrm = new shopViewFrm();
+            shopVwFrm.shopId = shopId;
             shopVwFrm.ShowDialog();
             if (shopVwFrm.orderChecked == 1) {
                 using (UnitOfWork db = new UnitOfWork()) {
@@ -153,13 +157,14 @@ namespace GameNet.App
                     shopCostLbl5.Text = order.amount.ToString() + " " + "تومان";
                     shop5NameLbl.Text = shop.Name.ToString() + " " + order.quantity;
                 }
+                Shoping5 = true;
                 deletShop5Btn.Enabled = true;
             }
-            Shoping5 = true;
         }
         private void shop6Btn_Click(object sender, EventArgs e) {
             const int shopId = 6;
-            shopViewFrm shopVwFrm = new shopViewFrm(shopId);
+            shopViewFrm shopVwFrm = new shopViewFrm();
+            shopVwFrm.shopId = shopId;
             shopVwFrm.ShowDialog();
             if (shopVwFrm.orderChecked == 1) {
                 using (UnitOfWork db = new UnitOfWork()) {
@@ -168,9 +173,9 @@ namespace GameNet.App
                     shopCostLbl6.Text = order.amount.ToString() + " " + "تومان";
                     shop6NameLbl.Text = shop.Name.ToString() + " " + order.quantity;
                 }
+                Shoping6 = true;
                 deletShop6Btn.Enabled = true;
             }
-            Shoping6 = true;
         }
 
 
@@ -282,6 +287,8 @@ namespace GameNet.App
             settingFrm sf = new settingFrm();
             sf.ShowDialog();
         }
+
+       
     }
 }
 

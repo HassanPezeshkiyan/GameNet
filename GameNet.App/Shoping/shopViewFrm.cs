@@ -27,10 +27,10 @@ namespace GameNet.App.Shoping
         public shopViewFrm() {
             InitializeComponent();
         }
-        public shopViewFrm(int shopBtnId) {
-            InitializeComponent();
-            shopId = shopBtnId;
-        }
+        //public shopViewFrm(int shopBtnId) {
+        //    InitializeComponent();
+        //    shopId = shopBtnId;
+        //}
         private void exitBtn_Click(object sender, EventArgs e) {
             Close();
         }
@@ -61,6 +61,7 @@ namespace GameNet.App.Shoping
                         db.OrderRepository.Insert(order);
                         db.Save();
                         orderChecked = 1;
+                        DialogResult = DialogResult.OK;
                     }
                     else {
                         MessageBox.Show($"!تعداد انتخابی بیش از موجودی است ", "توجه", MessageBoxButtons.OK,
@@ -68,11 +69,13 @@ namespace GameNet.App.Shoping
                         MessageBox.Show($"تعداد موجودی: {shop.Quantity}", "!اطلاع", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
-                MessageBox.Show($"!موردی را انتخاب کنید", "توجه", MessageBoxButtons.OK,
-                                        MessageBoxIcon.Warning);
+                else {
+                    MessageBox.Show($"!موردی را انتخاب کنید", "توجه", MessageBoxButtons.OK,
+                                            MessageBoxIcon.Warning);
+                }
 
             }
-            DialogResult = DialogResult.OK;
+           
         }
     }
 }
