@@ -22,3 +22,4 @@ D:\Personal\GameNet\GameNet.App\obj\Debug\GameNet.App.Shoping.editShopFrm.resour
 D:\Personal\GameNet\GameNet.App\obj\Debug\GameNet.App.Shoping.shopViewFrm.resources
 D:\Personal\GameNet\GameNet.App\obj\Debug\GameNet.App.Settings.settingFrm.resources
 D:\Personal\GameNet\GameNet.App\obj\Debug\GameNet.App.Settings.editConsoleFrm.resources
+D:\Personal\GameNet\GameNet.App\obj\Debug\GameNet.App.StartConsole.FrmStart.resources

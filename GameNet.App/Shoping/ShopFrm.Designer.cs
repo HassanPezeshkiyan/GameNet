@@ -36,12 +36,12 @@ namespace GameNet.App
             this.deleteShopBtn = new System.Windows.Forms.ToolStripButton();
             this.refreshBtn = new System.Windows.Forms.ToolStripButton();
             this.dgvShop = new System.Windows.Forms.DataGridView();
-            this.exitBtn = new System.Windows.Forms.Button();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NameShop = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SellCostShop = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BuyCostShop = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.exitBtn = new System.Windows.Forms.Button();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvShop)).BeginInit();
             this.SuspendLayout();
@@ -56,7 +56,7 @@ namespace GameNet.App
             this.refreshBtn});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(601, 115);
+            this.toolStrip1.Size = new System.Drawing.Size(818, 115);
             this.toolStrip1.Stretch = true;
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
@@ -124,23 +124,14 @@ namespace GameNet.App
             this.SellCostShop,
             this.BuyCostShop,
             this.quantity});
-            this.dgvShop.Location = new System.Drawing.Point(12, 118);
+            this.dgvShop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dgvShop.Location = new System.Drawing.Point(0, 115);
             this.dgvShop.MultiSelect = false;
             this.dgvShop.Name = "dgvShop";
             this.dgvShop.ReadOnly = true;
             this.dgvShop.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dgvShop.Size = new System.Drawing.Size(577, 153);
+            this.dgvShop.Size = new System.Drawing.Size(818, 153);
             this.dgvShop.TabIndex = 1;
-            // 
-            // exitBtn
-            // 
-            this.exitBtn.Location = new System.Drawing.Point(514, 289);
-            this.exitBtn.Name = "exitBtn";
-            this.exitBtn.Size = new System.Drawing.Size(75, 23);
-            this.exitBtn.TabIndex = 2;
-            this.exitBtn.Text = "خروج";
-            this.exitBtn.UseVisualStyleBackColor = true;
-            this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
             // 
             // Id
             // 
@@ -180,13 +171,24 @@ namespace GameNet.App
             this.quantity.Name = "quantity";
             this.quantity.ReadOnly = true;
             // 
+            // exitBtn
+            // 
+            this.exitBtn.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.exitBtn.Location = new System.Drawing.Point(12, 280);
+            this.exitBtn.Name = "exitBtn";
+            this.exitBtn.Size = new System.Drawing.Size(75, 23);
+            this.exitBtn.TabIndex = 2;
+            this.exitBtn.Text = "خروج";
+            this.exitBtn.UseVisualStyleBackColor = true;
+            this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
+            // 
             // ShopFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Beige;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(601, 324);
+            this.ClientSize = new System.Drawing.Size(818, 315);
             this.Controls.Add(this.exitBtn);
             this.Controls.Add(this.dgvShop);
             this.Controls.Add(this.toolStrip1);
@@ -196,7 +198,7 @@ namespace GameNet.App
             this.Name = "ShopFrm";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "بوفه";
             this.TransparencyKey = System.Drawing.Color.Red;
             this.Load += new System.EventHandler(this.ShopFrm_Load);

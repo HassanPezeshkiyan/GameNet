@@ -112,6 +112,12 @@
     <Compile Include="Shoping\shopViewFrm.Designer.cs">
       <DependentUpon>shopViewFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="StartConsole\FrmStart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StartConsole\FrmStart.Designer.cs">
+      <DependentUpon>FrmStart.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -142,6 +148,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Shoping\shopViewFrm.resx">
       <DependentUpon>shopViewFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartConsole\FrmStart.resx">
+      <DependentUpon>FrmStart.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
