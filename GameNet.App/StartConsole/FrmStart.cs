@@ -15,5 +15,9 @@ namespace GameNet.App.StartConsole
         public FrmStart() {
             InitializeComponent();
         }
+
+        private void btnClose_Click(object sender, EventArgs e) {
+            Close();
+        }
     }
 }

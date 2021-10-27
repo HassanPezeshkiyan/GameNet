@@ -1,4 +1,5 @@
-﻿using GameNet.App.Settings;
+﻿using GameNet.App.Login;
+using GameNet.App.Settings;
 using GameNet.App.Shoping;
 using GameNet.App.StartConsole;
 using GameNet.DataLayer.Context;
@@ -61,11 +62,20 @@ namespace GameNet.App
             //deletShop4Btn.Enabled = false;
             //deletShop5Btn.Enabled = false;
             //deletShop6Btn.Enabled = false;
-
+            this.Hide();
+            LoginFrm frmLogin = new LoginFrm();
+            if (frmLogin.ShowDialog() == DialogResult.OK) {
+                this.Show();
+            }
+            else {
+                Application.Exit();
+            }
+            
+            labelUserName.Text = frmLogin.userName;
         }
         private Form activeForm = null;
         private void openChildForm(Form childForm) {
-            if (activeForm != null) 
+            if (activeForm != null)
                 activeForm.Close();
             activeForm = childForm;
             childForm.TopLevel = false;
@@ -78,7 +88,7 @@ namespace GameNet.App
 
         }
         private void shopSettingBtn_Click(object sender, EventArgs e) {
-          
+
             openChildForm(new ShopFrm());
         }
 

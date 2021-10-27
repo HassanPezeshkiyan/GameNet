@@ -48,17 +48,20 @@ namespace GameNet.App.Shoping
             this.dgvViewShop.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvViewShop.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
             this.dgvViewShop.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dgvViewShop.ColumnHeadersHeight = 30;
             this.dgvViewShop.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvViewShop.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
             this.NameShop,
             this.SellCostShop});
-            this.dgvViewShop.Location = new System.Drawing.Point(14, 12);
+            this.dgvViewShop.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvViewShop.Location = new System.Drawing.Point(0, 0);
+            this.dgvViewShop.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.dgvViewShop.MultiSelect = false;
             this.dgvViewShop.Name = "dgvViewShop";
             this.dgvViewShop.ReadOnly = true;
             this.dgvViewShop.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dgvViewShop.Size = new System.Drawing.Size(417, 153);
+            this.dgvViewShop.Size = new System.Drawing.Size(738, 432);
             this.dgvViewShop.TabIndex = 2;
             // 
             // Id
@@ -87,52 +90,68 @@ namespace GameNet.App.Shoping
             // 
             // orderQuantity
             // 
-            this.orderQuantity.Location = new System.Drawing.Point(59, 174);
+            this.orderQuantity.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.orderQuantity.Location = new System.Drawing.Point(94, 332);
+            this.orderQuantity.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.orderQuantity.Name = "orderQuantity";
-            this.orderQuantity.Size = new System.Drawing.Size(69, 20);
+            this.orderQuantity.Size = new System.Drawing.Size(115, 31);
             this.orderQuantity.TabIndex = 3;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(11, 176);
+            this.label1.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label1.Location = new System.Drawing.Point(46, 334);
+            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label1.Size = new System.Drawing.Size(33, 13);
+            this.label1.Size = new System.Drawing.Size(38, 24);
             this.label1.TabIndex = 4;
             this.label1.Text = "تعداد:";
             // 
             // saveShop
             // 
-            this.saveShop.Location = new System.Drawing.Point(14, 200);
+            this.saveShop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(209)))), ((int)(((byte)(161)))));
+            this.saveShop.FlatAppearance.BorderSize = 0;
+            this.saveShop.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.saveShop.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.saveShop.Location = new System.Drawing.Point(18, 375);
+            this.saveShop.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.saveShop.Name = "saveShop";
-            this.saveShop.Size = new System.Drawing.Size(75, 23);
+            this.saveShop.Size = new System.Drawing.Size(114, 36);
             this.saveShop.TabIndex = 5;
             this.saveShop.Text = "ثبت";
-            this.saveShop.UseVisualStyleBackColor = true;
+            this.saveShop.UseVisualStyleBackColor = false;
             this.saveShop.Click += new System.EventHandler(this.saveShop_Click);
             // 
             // exitBtn
             // 
-            this.exitBtn.Location = new System.Drawing.Point(356, 200);
+            this.exitBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(82)))), ((int)(((byte)(83)))));
+            this.exitBtn.FlatAppearance.BorderSize = 0;
+            this.exitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.exitBtn.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.exitBtn.Location = new System.Drawing.Point(610, 375);
+            this.exitBtn.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.exitBtn.Name = "exitBtn";
-            this.exitBtn.Size = new System.Drawing.Size(75, 23);
+            this.exitBtn.Size = new System.Drawing.Size(114, 36);
             this.exitBtn.TabIndex = 6;
             this.exitBtn.Text = "خروج";
-            this.exitBtn.UseVisualStyleBackColor = true;
+            this.exitBtn.UseVisualStyleBackColor = false;
             this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
             // 
             // shopViewFrm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(443, 234);
+            this.ClientSize = new System.Drawing.Size(738, 432);
             this.ControlBox = false;
             this.Controls.Add(this.exitBtn);
             this.Controls.Add(this.saveShop);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.orderQuantity);
             this.Controls.Add(this.dgvViewShop);
+            this.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Name = "shopViewFrm";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;

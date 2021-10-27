@@ -80,11 +80,16 @@
     <Compile Include="Repositories\IInvoiceRepository.cs" />
     <Compile Include="Repositories\IOrderRepository.cs" />
     <Compile Include="Repositories\IShopRepository.cs" />
+    <Compile Include="Repositories\IUserRepository.cs" />
     <Compile Include="Services\ConsoleRepository.cs" />
     <Compile Include="Services\GenericRepository.cs" />
     <Compile Include="Services\OrderRepository.cs" />
     <Compile Include="Services\ShopRepository.cs" />
+    <Compile Include="Services\UserRepository.cs" />
     <Compile Include="Shop.cs">
+      <DependentUpon>GameNetModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagram.cs">
       <DependentUpon>GameNetModel.tt</DependentUpon>
     </Compile>
     <Compile Include="User.cs">

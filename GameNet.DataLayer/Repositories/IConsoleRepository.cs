@@ -9,7 +9,7 @@ namespace GameNet.DataLayer.Repositories
     public interface IConsoleRepository
     {
         bool Edit(Console console);
-        List<Console> GetAll();
+        Task<List<Console>> GetAll();
         Console GetConsoleById(int consoleId);
      }
 }

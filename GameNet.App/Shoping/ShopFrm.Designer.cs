@@ -56,7 +56,7 @@ namespace GameNet.App
             this.refreshBtn});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(818, 115);
+            this.toolStrip1.Size = new System.Drawing.Size(633, 103);
             this.toolStrip1.Stretch = true;
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
@@ -64,7 +64,7 @@ namespace GameNet.App
             // addShopBtn
             // 
             this.addShopBtn.AutoSize = false;
-            this.addShopBtn.Font = new System.Drawing.Font("Segoe UI Emoji", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addShopBtn.Font = new System.Drawing.Font("B Nazanin", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.addShopBtn.Image = ((System.Drawing.Image)(resources.GetObject("addShopBtn.Image")));
             this.addShopBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.addShopBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -77,6 +77,7 @@ namespace GameNet.App
             // editShopBtn
             // 
             this.editShopBtn.AutoSize = false;
+            this.editShopBtn.Font = new System.Drawing.Font("B Nazanin", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.editShopBtn.Image = ((System.Drawing.Image)(resources.GetObject("editShopBtn.Image")));
             this.editShopBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.editShopBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -89,6 +90,7 @@ namespace GameNet.App
             // deleteShopBtn
             // 
             this.deleteShopBtn.AutoSize = false;
+            this.deleteShopBtn.Font = new System.Drawing.Font("B Nazanin", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.deleteShopBtn.Image = ((System.Drawing.Image)(resources.GetObject("deleteShopBtn.Image")));
             this.deleteShopBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.deleteShopBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -101,6 +103,7 @@ namespace GameNet.App
             // refreshBtn
             // 
             this.refreshBtn.AutoSize = false;
+            this.refreshBtn.Font = new System.Drawing.Font("B Nazanin", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.refreshBtn.Image = ((System.Drawing.Image)(resources.GetObject("refreshBtn.Image")));
             this.refreshBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.refreshBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -117,6 +120,7 @@ namespace GameNet.App
             this.dgvShop.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvShop.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
             this.dgvShop.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dgvShop.ColumnHeadersHeight = 30;
             this.dgvShop.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvShop.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
@@ -124,13 +128,13 @@ namespace GameNet.App
             this.SellCostShop,
             this.BuyCostShop,
             this.quantity});
-            this.dgvShop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dgvShop.Location = new System.Drawing.Point(0, 115);
+            this.dgvShop.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvShop.Location = new System.Drawing.Point(0, 103);
             this.dgvShop.MultiSelect = false;
             this.dgvShop.Name = "dgvShop";
             this.dgvShop.ReadOnly = true;
             this.dgvShop.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dgvShop.Size = new System.Drawing.Size(818, 153);
+            this.dgvShop.Size = new System.Drawing.Size(633, 249);
             this.dgvShop.TabIndex = 1;
             // 
             // Id
@@ -173,28 +177,32 @@ namespace GameNet.App
             // 
             // exitBtn
             // 
-            this.exitBtn.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.exitBtn.Location = new System.Drawing.Point(12, 280);
+            this.exitBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.exitBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(82)))), ((int)(((byte)(83)))));
+            this.exitBtn.FlatAppearance.BorderSize = 0;
+            this.exitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exitBtn.Font = new System.Drawing.Font("B Nazanin", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.exitBtn.Location = new System.Drawing.Point(16, 302);
             this.exitBtn.Name = "exitBtn";
-            this.exitBtn.Size = new System.Drawing.Size(75, 23);
+            this.exitBtn.Size = new System.Drawing.Size(111, 38);
             this.exitBtn.TabIndex = 2;
             this.exitBtn.Text = "خروج";
-            this.exitBtn.UseVisualStyleBackColor = true;
+            this.exitBtn.UseVisualStyleBackColor = false;
             this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
             // 
             // ShopFrm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Beige;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(818, 315);
+            this.ClientSize = new System.Drawing.Size(633, 352);
             this.Controls.Add(this.exitBtn);
             this.Controls.Add(this.dgvShop);
             this.Controls.Add(this.toolStrip1);
-            this.Font = new System.Drawing.Font("MV Boli", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("B Nazanin", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.Name = "ShopFrm";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;

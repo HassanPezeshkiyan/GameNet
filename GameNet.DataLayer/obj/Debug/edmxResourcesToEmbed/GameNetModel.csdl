@@ -17,6 +17,7 @@
     <Property Name="Id" Type="Int32" Nullable="false" />
     <Property Name="UserName" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
     <Property Name="PassWord" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="FullName" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
   </EntityType>
   <EntityContainer Name="GameNetEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Shops" EntityType="Self.Shop" />
@@ -24,6 +25,7 @@
     <EntitySet Name="Orders" EntityType="GameNetModel.Order" />
     <EntitySet Name="Consoles" EntityType="GameNetModel.Console" />
     <EntitySet Name="Invoices" EntityType="GameNetModel.Invoice" />
+    <EntitySet Name="sysdiagrams" EntityType="GameNetModel.sysdiagram" />
   </EntityContainer>
   <EntityType Name="Order">
     <Key>
@@ -57,5 +59,15 @@
     <Property Name="ControllerQuantity" Type="Int32" Nullable="false" />
     <Property Name="Time" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="ChargeValue" Type="Decimal" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
   </EntityType>
 </Schema>

@@ -8,8 +8,9 @@
         <EntityTypeShape EntityType="GameNetModel.Shop" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="GameNetModel.User" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="GameNetModel.Order" Width="1.5" PointX="0.75" PointY="3.75" />
-        <EntityTypeShape EntityType="GameNetModel.Console" Width="1.5" PointX="5.375" PointY="4.75" />
-        <EntityTypeShape EntityType="GameNetModel.Invoice" Width="1.5" PointX="5.375" PointY="0.75" />
+        <EntityTypeShape EntityType="GameNetModel.Console" Width="2.125" PointX="5.375" PointY="4.75" />
+        <EntityTypeShape EntityType="GameNetModel.Invoice" Width="2" PointX="5.75" PointY="0.75" />
+        <EntityTypeShape EntityType="GameNetModel.sysdiagram" Width="1.5" PointX="0.75" PointY="6.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

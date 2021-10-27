@@ -27,6 +27,7 @@ namespace GameNet.App.StartConsole
         /// </summary>
         private void InitializeComponent() {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnClose = new System.Windows.Forms.Button();
             this.label19 = new System.Windows.Forms.Label();
             this.console1Check = new System.Windows.Forms.CheckBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -52,6 +53,7 @@ namespace GameNet.App.StartConsole
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.BackColor = System.Drawing.Color.Lavender;
+            this.groupBox1.Controls.Add(this.btnClose);
             this.groupBox1.Controls.Add(this.label19);
             this.groupBox1.Controls.Add(this.console1Check);
             this.groupBox1.Controls.Add(this.label13);
@@ -69,6 +71,7 @@ namespace GameNet.App.StartConsole
             this.groupBox1.Controls.Add(this.charge1Cost);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Font = new System.Drawing.Font("B Nazanin", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.groupBox1.Location = new System.Drawing.Point(17, 13);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
@@ -79,13 +82,24 @@ namespace GameNet.App.StartConsole
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "دستگاه 1";
             // 
+            // btnClose
+            // 
+            this.btnClose.Location = new System.Drawing.Point(8, 370);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(112, 28);
+            this.btnClose.TabIndex = 22;
+            this.btnClose.Text = "بستن";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // label19
             // 
             this.label19.AutoSize = true;
             this.label19.Location = new System.Drawing.Point(163, 346);
             this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(81, 13);
+            this.label19.Size = new System.Drawing.Size(84, 20);
             this.label19.TabIndex = 21;
             this.label19.Text = "وضعیت دستگاه:";
             // 
@@ -95,7 +109,7 @@ namespace GameNet.App.StartConsole
             this.console1Check.Location = new System.Drawing.Point(21, 345);
             this.console1Check.Margin = new System.Windows.Forms.Padding(4);
             this.console1Check.Name = "console1Check";
-            this.console1Check.Size = new System.Drawing.Size(99, 17);
+            this.console1Check.Size = new System.Drawing.Size(97, 24);
             this.console1Check.TabIndex = 7;
             this.console1Check.Text = "فعال / غیرفعال";
             this.console1Check.UseVisualStyleBackColor = true;
@@ -103,10 +117,10 @@ namespace GameNet.App.StartConsole
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(121, 199);
+            this.label13.Location = new System.Drawing.Point(167, 188);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(99, 13);
+            this.label13.Size = new System.Drawing.Size(97, 20);
             this.label13.TabIndex = 20;
             this.label13.Text = "نام خوراکی و تعداد:";
             // 
@@ -116,7 +130,7 @@ namespace GameNet.App.StartConsole
             this.shop1NameLbl.Location = new System.Drawing.Point(21, 199);
             this.shop1NameLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.shop1NameLbl.Name = "shop1NameLbl";
-            this.shop1NameLbl.Size = new System.Drawing.Size(0, 13);
+            this.shop1NameLbl.Size = new System.Drawing.Size(0, 20);
             this.shop1NameLbl.TabIndex = 19;
             // 
             // deletShop1Btn
@@ -165,7 +179,7 @@ namespace GameNet.App.StartConsole
             this.label5.Location = new System.Drawing.Point(184, 308);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(52, 13);
+            this.label5.Size = new System.Drawing.Size(57, 20);
             this.label5.TabIndex = 12;
             this.label5.Text = "مدت زمان:";
             // 
@@ -174,7 +188,7 @@ namespace GameNet.App.StartConsole
             this.time1Txt.Location = new System.Drawing.Point(21, 304);
             this.time1Txt.Margin = new System.Windows.Forms.Padding(4);
             this.time1Txt.Name = "time1Txt";
-            this.time1Txt.Size = new System.Drawing.Size(132, 20);
+            this.time1Txt.Size = new System.Drawing.Size(132, 28);
             this.time1Txt.TabIndex = 11;
             // 
             // shopCostLbl1
@@ -183,22 +197,22 @@ namespace GameNet.App.StartConsole
             this.shopCostLbl1.Location = new System.Drawing.Point(21, 158);
             this.shopCostLbl1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.shopCostLbl1.Name = "shopCostLbl1";
-            this.shopCostLbl1.Size = new System.Drawing.Size(0, 13);
+            this.shopCostLbl1.Size = new System.Drawing.Size(0, 20);
             this.shopCostLbl1.TabIndex = 10;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(171, 164);
+            this.label4.Location = new System.Drawing.Point(202, 158);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(62, 13);
+            this.label4.Size = new System.Drawing.Size(62, 20);
             this.label4.TabIndex = 9;
             this.label4.Text = "هزینه بوفه :";
             // 
             // shop1Btn
             // 
-            this.shop1Btn.Location = new System.Drawing.Point(148, 126);
+            this.shop1Btn.Location = new System.Drawing.Point(152, 126);
             this.shop1Btn.Margin = new System.Windows.Forms.Padding(4);
             this.shop1Btn.Name = "shop1Btn";
             this.shop1Btn.Size = new System.Drawing.Size(116, 28);
@@ -216,7 +230,7 @@ namespace GameNet.App.StartConsole
             0,
             0});
             this.cntrl1Count.Name = "cntrl1Count";
-            this.cntrl1Count.Size = new System.Drawing.Size(132, 20);
+            this.cntrl1Count.Size = new System.Drawing.Size(132, 28);
             this.cntrl1Count.TabIndex = 7;
             // 
             // charge1Cost
@@ -224,7 +238,7 @@ namespace GameNet.App.StartConsole
             this.charge1Cost.Location = new System.Drawing.Point(21, 37);
             this.charge1Cost.Margin = new System.Windows.Forms.Padding(4);
             this.charge1Cost.Name = "charge1Cost";
-            this.charge1Cost.Size = new System.Drawing.Size(132, 20);
+            this.charge1Cost.Size = new System.Drawing.Size(132, 28);
             this.charge1Cost.TabIndex = 6;
             // 
             // label2
@@ -233,7 +247,7 @@ namespace GameNet.App.StartConsole
             this.label2.Location = new System.Drawing.Point(181, 80);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 13);
+            this.label2.Size = new System.Drawing.Size(64, 20);
             this.label2.TabIndex = 4;
             this.label2.Text = "تعداد دسته:";
             // 
@@ -244,7 +258,7 @@ namespace GameNet.App.StartConsole
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label1.Size = new System.Drawing.Size(36, 13);
+            this.label1.Size = new System.Drawing.Size(37, 20);
             this.label1.TabIndex = 3;
             this.label1.Text = "شارژ: ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -254,10 +268,14 @@ namespace GameNet.App.StartConsole
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(310, 433);
+            this.ControlBox = false;
             this.Controls.Add(this.groupBox1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmStart";
+            this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "FrmStart";
+            this.Text = "شروع دستگاه";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cntrl1Count)).EndInit();
@@ -285,5 +303,6 @@ namespace GameNet.App.StartConsole
         private System.Windows.Forms.TextBox charge1Cost;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnClose;
     }
 }
