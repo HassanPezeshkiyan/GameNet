@@ -41,39 +41,49 @@ namespace GameNet.DataLayer.Context
                 return _order;
             }
         }
-        private IConsoleRepository _console;
-        public IConsoleRepository Console {
+        private GenericRepository<Console> _console;
+        public GenericRepository<Console> Console {
             get {
                 if (_console == null) {
-                    _console = new ConsoleRepository(db);
+                    _console = new GenericRepository<Console>(db);
                 }
                 return _console;
             }
         }
-        private GenericRepository<User> _user;
-        public GenericRepository<User> User {
+        private IConsoleRepository _consolee;
+        public IConsoleRepository Consolee {
             get {
-                if (_user == null) {
-                    _user = new GenericRepository<User>(db) ;
+                if (_consolee == null) {
+                    _consolee = new ConsoleRepository(db);
                 }
-                return _user;
+                return _consolee;
             }
         }
-        private IUserRepository _users;
-        public IUserRepository Users {
-            get {
-                if (_users == null) {
-                    _users = new UserRepository(db);
-                }
-                return _users;
+    
+    private GenericRepository<User> _user;
+    public GenericRepository<User> User {
+        get {
+            if (_user == null) {
+                _user = new GenericRepository<User>(db);
             }
-        }
-        public void Save() {
-            db.SaveChanges();
-        }
-        public void Dispose() {
-            db.Dispose();
+            return _user;
         }
     }
+    private IUserRepository _users;
+    public IUserRepository Users {
+        get {
+            if (_users == null) {
+                _users = new UserRepository(db);
+            }
+            return _users;
+        }
+    }
+    public void Save() {
+        db.SaveChanges();
+    }
+    public void Dispose() {
+        db.Dispose();
+    }
+}
 }
 

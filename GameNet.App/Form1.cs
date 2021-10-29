@@ -311,7 +311,9 @@ namespace GameNet.App
 
 
         private void settingBtn_Click(object sender, EventArgs e) {
-            openChildForm(new settingFrm(), panelContainer, DockStyle.Top);
+            //openChildForm(new settingFrm(), panelContainer, DockStyle.Top);
+            settingFrm settingFrm = new settingFrm();
+            settingFrm.Show();
         }
 
         private void btnEditProfile_Click(object sender, EventArgs e) {

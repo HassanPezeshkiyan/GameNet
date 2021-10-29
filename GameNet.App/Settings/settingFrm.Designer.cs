@@ -26,10 +26,15 @@ namespace GameNet.App.Settings
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelMain = new System.Windows.Forms.Panel();
             this.dgvConsole = new System.Windows.Forms.DataGridView();
             this.exitBtn = new System.Windows.Forms.Button();
             this.editConsoleBtn = new System.Windows.Forms.Button();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantityPriceController = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.timepricecontroller = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.consoleType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsole)).BeginInit();
             this.SuspendLayout();
@@ -49,7 +54,21 @@ namespace GameNet.App.Settings
             // 
             this.dgvConsole.AllowUserToAddRows = false;
             this.dgvConsole.AllowUserToDeleteRows = false;
+            this.dgvConsole.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvConsole.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvConsole.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvConsole.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id,
+            this.quantityPriceController,
+            this.timepricecontroller,
+            this.consoleType});
             this.dgvConsole.Dock = System.Windows.Forms.DockStyle.Top;
             this.dgvConsole.Location = new System.Drawing.Point(0, 0);
             this.dgvConsole.Name = "dgvConsole";
@@ -67,7 +86,7 @@ namespace GameNet.App.Settings
             this.exitBtn.TabIndex = 6;
             this.exitBtn.Text = "خروج";
             this.exitBtn.UseVisualStyleBackColor = true;
-            this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click_1);
+            this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
             // 
             // editConsoleBtn
             // 
@@ -79,6 +98,35 @@ namespace GameNet.App.Settings
             this.editConsoleBtn.TabIndex = 5;
             this.editConsoleBtn.Text = "ویرایش دستگاه";
             this.editConsoleBtn.UseVisualStyleBackColor = true;
+            this.editConsoleBtn.Click += new System.EventHandler(this.editConsoleBtn_Click);
+            // 
+            // id
+            // 
+            this.id.DataPropertyName = "Id";
+            this.id.HeaderText = "شناسه";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            // 
+            // quantityPriceController
+            // 
+            this.quantityPriceController.DataPropertyName = "QuantityPriceController";
+            this.quantityPriceController.HeaderText = "قیمت دسته ";
+            this.quantityPriceController.Name = "quantityPriceController";
+            this.quantityPriceController.ReadOnly = true;
+            // 
+            // timepricecontroller
+            // 
+            this.timepricecontroller.DataPropertyName = "TimePriceController";
+            this.timepricecontroller.HeaderText = "قیمت زمان";
+            this.timepricecontroller.Name = "timepricecontroller";
+            this.timepricecontroller.ReadOnly = true;
+            // 
+            // consoleType
+            // 
+            this.consoleType.DataPropertyName = "ConsoleType";
+            this.consoleType.HeaderText = "نوع دستگاه";
+            this.consoleType.Name = "consoleType";
+            this.consoleType.ReadOnly = true;
             // 
             // settingFrm
             // 
@@ -106,5 +154,9 @@ namespace GameNet.App.Settings
         private System.Windows.Forms.Button exitBtn;
         private System.Windows.Forms.Button editConsoleBtn;
         private System.Windows.Forms.DataGridView dgvConsole;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn quantityPriceController;
+        private System.Windows.Forms.DataGridViewTextBoxColumn timepricecontroller;
+        private System.Windows.Forms.DataGridViewTextBoxColumn consoleType;
     }
 }

@@ -22,7 +22,7 @@ namespace GameNet.App.Settings
         private void editFrm_Load(object sender, EventArgs e) {
 
 
-            var console = db.Console.GetConsoleById(consoleId);
+            var console = db.Console.GetById(consoleId);
                 consoleGroupBox.Text = "دستگاه شماره :" + consoleId.ToString();
                 quantityPriceTxt.Text = console.QuantityPriceController.ToString();
                 timePriceTxt.Text = console.TimePriceController.ToString();
@@ -47,7 +47,7 @@ namespace GameNet.App.Settings
                     TimePriceController = Convert.ToDecimal(timePriceTxt.Text),
                 };
                 console.Id = consoleId;
-                db.Console.Edit(console);
+                db.Console.Update(console);
                 db.Save();
             }
             

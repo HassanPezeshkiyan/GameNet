@@ -30,10 +30,10 @@ namespace GameNet.DataLayer.Services
             }
         }
 
-        public async Task<List<Console>> GetAll() {
+        public List<Console> GetAll() {
 
-            var list = await db.Consoles.ToListAsync();
-            return list;
+            return db.Consoles.ToList();
+
         }
 
         public Console GetConsoleById(int consoleId) {

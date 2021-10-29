@@ -36,13 +36,13 @@ namespace GameNet.App
             this.panelMain = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
             this.panelItems = new System.Windows.Forms.Panel();
+            this.btnStart = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.btnEditProfile = new System.Windows.Forms.Button();
             this.labelUserName = new System.Windows.Forms.Label();
             this.pictureBoxUser = new System.Windows.Forms.PictureBox();
             this.panelContainer = new System.Windows.Forms.Panel();
             this.panelConsoles = new System.Windows.Forms.Panel();
-            this.btnStart = new System.Windows.Forms.Button();
             this.panelMain.SuspendLayout();
             this.panelItems.SuspendLayout();
             this.panelLogo.SuspendLayout();
@@ -146,8 +146,28 @@ namespace GameNet.App
             this.panelItems.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelItems.Location = new System.Drawing.Point(0, 216);
             this.panelItems.Name = "panelItems";
-            this.panelItems.Size = new System.Drawing.Size(259, 195);
+            this.panelItems.Size = new System.Drawing.Size(259, 192);
             this.panelItems.TabIndex = 10;
+            // 
+            // btnStart
+            // 
+            this.btnStart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            this.btnStart.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnStart.FlatAppearance.BorderSize = 0;
+            this.btnStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStart.Font = new System.Drawing.Font("B Nazanin", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.btnStart.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnStart.Location = new System.Drawing.Point(0, 138);
+            this.btnStart.Margin = new System.Windows.Forms.Padding(4);
+            this.btnStart.Name = "btnStart";
+            this.btnStart.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
+            this.btnStart.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnStart.Size = new System.Drawing.Size(259, 51);
+            this.btnStart.TabIndex = 8;
+            this.btnStart.Text = "شروع";
+            this.btnStart.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnStart.UseVisualStyleBackColor = false;
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
             // panelLogo
             // 
@@ -206,37 +226,17 @@ namespace GameNet.App
             this.panelContainer.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelContainer.Location = new System.Drawing.Point(0, 0);
             this.panelContainer.Name = "panelContainer";
-            this.panelContainer.Size = new System.Drawing.Size(1027, 354);
+            this.panelContainer.Size = new System.Drawing.Size(1027, 428);
             this.panelContainer.TabIndex = 9;
             // 
             // panelConsoles
             // 
             this.panelConsoles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(47)))), ((int)(((byte)(62)))));
             this.panelConsoles.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelConsoles.Location = new System.Drawing.Point(0, 354);
+            this.panelConsoles.Location = new System.Drawing.Point(0, 428);
             this.panelConsoles.Name = "panelConsoles";
-            this.panelConsoles.Size = new System.Drawing.Size(1027, 513);
+            this.panelConsoles.Size = new System.Drawing.Size(1027, 439);
             this.panelConsoles.TabIndex = 10;
-            // 
-            // btnStart
-            // 
-            this.btnStart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            this.btnStart.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnStart.FlatAppearance.BorderSize = 0;
-            this.btnStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStart.Font = new System.Drawing.Font("B Nazanin", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.btnStart.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnStart.Location = new System.Drawing.Point(0, 138);
-            this.btnStart.Margin = new System.Windows.Forms.Padding(4);
-            this.btnStart.Name = "btnStart";
-            this.btnStart.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
-            this.btnStart.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnStart.Size = new System.Drawing.Size(259, 51);
-            this.btnStart.TabIndex = 8;
-            this.btnStart.Text = "شروع";
-            this.btnStart.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnStart.UseVisualStyleBackColor = false;
-            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
             // mainFrm
             // 

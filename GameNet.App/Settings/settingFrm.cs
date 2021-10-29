@@ -17,20 +17,15 @@ namespace GameNet.App.Settings
         public settingFrm() {
             InitializeComponent();
         }
-
-        private void settingFrm_Load(object sender, EventArgs e) {
-            BindGrid();
-            editConsoleBtn.Enabled = false;
-        }
         void BindGrid() {
             using (UnitOfWork db = new UnitOfWork()) {
                 dgvConsole.AutoGenerateColumns = false;
-                dgvConsole.DataSource = db.Console.GetAll();
+                dgvConsole.DataSource = db.Consolee.GetAll();
             }
         }
 
-        private void updateBtn_Click(object sender, EventArgs e) {
-            BindGrid();
+        private void settingFrm_Load(object sender, EventArgs e) {
+            BindGrid();         
         }
 
         private void editConsoleBtn_Click(object sender, EventArgs e) {
@@ -39,13 +34,13 @@ namespace GameNet.App.Settings
                 editConsoleFrm edit = new editConsoleFrm();
                 edit.consoleId = consoleId;
                 if (edit.ShowDialog() == DialogResult.OK) {
-                    BindGrid();
+                    //BindGrid();
                 }
             }
         }
 
     
-        private void exitBtn_Click_1(object sender, EventArgs e) {
+        private void exitBtn_Click(object sender, EventArgs e) {
             Close();
         }
     }
