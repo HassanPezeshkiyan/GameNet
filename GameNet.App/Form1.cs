@@ -51,11 +51,11 @@ namespace GameNet.App
         int userId = 0;
         public mainFrm() {
             InitializeComponent();
-            
+
         }
 
         private void mainFrm_Load(object sender, EventArgs e) {
-            datetimeLbl.Text = "زمان ورود :" + " " + DateTime.Now.ToShortTimeString();
+            
             //deletShop1Btn.Enabled = false;
             //deletShop2Btn.Enabled = false;
             //deletShop3Btn.Enabled = false;
@@ -70,27 +70,36 @@ namespace GameNet.App
             else {
                 Application.Exit();
             }
-            
+
             labelUserName.Text = frmLogin.userName;
             userId = frmLogin.userId;
         }
         private Form activeForm = null;
-        private void openChildForm(Form childForm) {
+        private void openChildForm(Form childForm, Panel panel, DockStyle dockStyle) {
             if (activeForm != null)
                 activeForm.Close();
             activeForm = childForm;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
-            childForm.Dock = DockStyle.Top;
-            panelContainer.Controls.Add(childForm);
-            panelContainer.Tag = childForm;
+            childForm.Dock = dockStyle;
+            panel.Controls.Add(childForm);
+            panel.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
 
         }
+        //private void openChildFormConsoles(Form childForm, Panel panel, DockStyle dockStyle) {
+        //    childForm.TopLevel = false;
+        //    childForm.FormBorderStyle = FormBorderStyle.None;
+        //    childForm.Dock = dockStyle;
+        //    panel.Controls.Add(childForm);
+        //    panel.Tag = childForm;
+        //    childForm.Show();
+
+        //}
         private void shopSettingBtn_Click(object sender, EventArgs e) {
 
-            openChildForm(new ShopFrm());
+            openChildForm(new ShopFrm(), panelContainer, DockStyle.Top);
         }
 
         /// <summary>
@@ -302,19 +311,25 @@ namespace GameNet.App
 
 
         private void settingBtn_Click(object sender, EventArgs e) {
-            openChildForm(new settingFrm());
-        }
-
-        private void btnStart_Click(object sender, EventArgs e) {
-            FrmStart frmStart = new FrmStart();
-            frmStart.ShowDialog();
+            openChildForm(new settingFrm(), panelContainer, DockStyle.Top);
         }
 
         private void btnEditProfile_Click(object sender, EventArgs e) {
             EditInfoFrm editform = new EditInfoFrm();
             editform.userId = userId;
             editform.ShowDialog();
-          
+
+        }
+
+        private void btnClose_Click(object sender, EventArgs e) {
+            Application.Exit();
+        }
+
+       
+
+        private void btnStart_Click(object sender, EventArgs e) {
+            FrmStart frmStart = new FrmStart();
+            frmStart.Show();
         }
     }
 }

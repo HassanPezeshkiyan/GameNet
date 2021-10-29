@@ -33,16 +33,16 @@ namespace GameNet.App
             this.shopSettingBtn = new System.Windows.Forms.Button();
             this.reportsBtn = new System.Windows.Forms.Button();
             this.settingBtn = new System.Windows.Forms.Button();
-            this.datetimeLbl = new System.Windows.Forms.Label();
             this.panelMain = new System.Windows.Forms.Panel();
+            this.btnClose = new System.Windows.Forms.Button();
             this.panelItems = new System.Windows.Forms.Panel();
-            this.btnStart = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.btnEditProfile = new System.Windows.Forms.Button();
             this.labelUserName = new System.Windows.Forms.Label();
             this.pictureBoxUser = new System.Windows.Forms.PictureBox();
             this.panelContainer = new System.Windows.Forms.Panel();
             this.panelConsoles = new System.Windows.Forms.Panel();
+            this.btnStart = new System.Windows.Forms.Button();
             this.panelMain.SuspendLayout();
             this.panelItems.SuspendLayout();
             this.panelLogo.SuspendLayout();
@@ -61,6 +61,7 @@ namespace GameNet.App
             this.shopSettingBtn.Margin = new System.Windows.Forms.Padding(4);
             this.shopSettingBtn.Name = "shopSettingBtn";
             this.shopSettingBtn.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
+            this.shopSettingBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.shopSettingBtn.Size = new System.Drawing.Size(259, 51);
             this.shopSettingBtn.TabIndex = 0;
             this.shopSettingBtn.Text = "تنظیمات بوفه";
@@ -80,6 +81,7 @@ namespace GameNet.App
             this.reportsBtn.Margin = new System.Windows.Forms.Padding(4);
             this.reportsBtn.Name = "reportsBtn";
             this.reportsBtn.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
+            this.reportsBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.reportsBtn.Size = new System.Drawing.Size(259, 45);
             this.reportsBtn.TabIndex = 4;
             this.reportsBtn.Text = "گزارشات";
@@ -98,6 +100,7 @@ namespace GameNet.App
             this.settingBtn.Margin = new System.Windows.Forms.Padding(4);
             this.settingBtn.Name = "settingBtn";
             this.settingBtn.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
+            this.settingBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.settingBtn.Size = new System.Drawing.Size(259, 42);
             this.settingBtn.TabIndex = 7;
             this.settingBtn.Text = "تنظیمات دستگاه";
@@ -105,33 +108,33 @@ namespace GameNet.App
             this.settingBtn.UseVisualStyleBackColor = false;
             this.settingBtn.Click += new System.EventHandler(this.settingBtn_Click);
             // 
-            // datetimeLbl
-            // 
-            this.datetimeLbl.AutoSize = true;
-            this.datetimeLbl.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.datetimeLbl.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.datetimeLbl.Location = new System.Drawing.Point(0, 705);
-            this.datetimeLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.datetimeLbl.Name = "datetimeLbl";
-            this.datetimeLbl.Padding = new System.Windows.Forms.Padding(0, 0, 0, 30);
-            this.datetimeLbl.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.datetimeLbl.Size = new System.Drawing.Size(0, 47);
-            this.datetimeLbl.TabIndex = 6;
-            this.datetimeLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // panelMain
             // 
-            this.panelMain.AutoScroll = true;
             this.panelMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(39)))), ((int)(((byte)(46)))));
+            this.panelMain.Controls.Add(this.btnClose);
             this.panelMain.Controls.Add(this.panelItems);
-            this.panelMain.Controls.Add(this.datetimeLbl);
             this.panelMain.Controls.Add(this.panelLogo);
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelMain.Location = new System.Drawing.Point(834, 0);
+            this.panelMain.Location = new System.Drawing.Point(1027, 0);
             this.panelMain.Margin = new System.Windows.Forms.Padding(4);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(259, 752);
+            this.panelMain.Size = new System.Drawing.Size(259, 867);
             this.panelMain.TabIndex = 8;
+            // 
+            // btnClose
+            // 
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(43)))));
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnClose.Font = new System.Drawing.Font("B Nazanin", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.btnClose.Location = new System.Drawing.Point(158, 822);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(89, 33);
+            this.btnClose.TabIndex = 0;
+            this.btnClose.Text = "خروج";
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // panelItems
             // 
@@ -145,25 +148,6 @@ namespace GameNet.App
             this.panelItems.Name = "panelItems";
             this.panelItems.Size = new System.Drawing.Size(259, 195);
             this.panelItems.TabIndex = 10;
-            // 
-            // btnStart
-            // 
-            this.btnStart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            this.btnStart.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnStart.FlatAppearance.BorderSize = 0;
-            this.btnStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStart.Font = new System.Drawing.Font("B Nazanin", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.btnStart.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnStart.Location = new System.Drawing.Point(0, 138);
-            this.btnStart.Margin = new System.Windows.Forms.Padding(4);
-            this.btnStart.Name = "btnStart";
-            this.btnStart.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
-            this.btnStart.Size = new System.Drawing.Size(259, 51);
-            this.btnStart.TabIndex = 8;
-            this.btnStart.Text = "شروع";
-            this.btnStart.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnStart.UseVisualStyleBackColor = false;
-            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
             // panelLogo
             // 
@@ -197,10 +181,11 @@ namespace GameNet.App
             // 
             // labelUserName
             // 
-            this.labelUserName.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.labelUserName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelUserName.AutoSize = true;
             this.labelUserName.Location = new System.Drawing.Point(152, 106);
             this.labelUserName.Name = "labelUserName";
+            this.labelUserName.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.labelUserName.Size = new System.Drawing.Size(0, 32);
             this.labelUserName.TabIndex = 1;
             this.labelUserName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -221,17 +206,37 @@ namespace GameNet.App
             this.panelContainer.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelContainer.Location = new System.Drawing.Point(0, 0);
             this.panelContainer.Name = "panelContainer";
-            this.panelContainer.Size = new System.Drawing.Size(834, 438);
+            this.panelContainer.Size = new System.Drawing.Size(1027, 354);
             this.panelContainer.TabIndex = 9;
             // 
             // panelConsoles
             // 
             this.panelConsoles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(47)))), ((int)(((byte)(62)))));
             this.panelConsoles.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelConsoles.Location = new System.Drawing.Point(0, 438);
+            this.panelConsoles.Location = new System.Drawing.Point(0, 354);
             this.panelConsoles.Name = "panelConsoles";
-            this.panelConsoles.Size = new System.Drawing.Size(834, 314);
+            this.panelConsoles.Size = new System.Drawing.Size(1027, 513);
             this.panelConsoles.TabIndex = 10;
+            // 
+            // btnStart
+            // 
+            this.btnStart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            this.btnStart.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnStart.FlatAppearance.BorderSize = 0;
+            this.btnStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStart.Font = new System.Drawing.Font("B Nazanin", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.btnStart.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnStart.Location = new System.Drawing.Point(0, 138);
+            this.btnStart.Margin = new System.Windows.Forms.Padding(4);
+            this.btnStart.Name = "btnStart";
+            this.btnStart.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
+            this.btnStart.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnStart.Size = new System.Drawing.Size(259, 51);
+            this.btnStart.TabIndex = 8;
+            this.btnStart.Text = "شروع";
+            this.btnStart.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnStart.UseVisualStyleBackColor = false;
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
             // mainFrm
             // 
@@ -239,20 +244,23 @@ namespace GameNet.App
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1093, 752);
+            this.ClientSize = new System.Drawing.Size(1286, 867);
             this.Controls.Add(this.panelConsoles);
             this.Controls.Add(this.panelContainer);
             this.Controls.Add(this.panelMain);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "mainFrm";
-            this.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "صفحه اصلی";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.mainFrm_Load);
             this.panelMain.ResumeLayout(false);
-            this.panelMain.PerformLayout();
             this.panelItems.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             this.panelLogo.PerformLayout();
@@ -266,16 +274,16 @@ namespace GameNet.App
         private System.Windows.Forms.Button shopSettingBtn;
         private System.Windows.Forms.Button reportsBtn;
         private System.Windows.Forms.Button settingBtn;
-        private System.Windows.Forms.Label datetimeLbl;
         private System.Windows.Forms.Panel panelMain;
         private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.PictureBox pictureBoxUser;
         private System.Windows.Forms.Panel panelItems;
         private System.Windows.Forms.Label labelUserName;
         private System.Windows.Forms.Button btnEditProfile;
-        private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.Panel panelContainer;
         private System.Windows.Forms.Panel panelConsoles;
+        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button btnStart;
     }
 }
 

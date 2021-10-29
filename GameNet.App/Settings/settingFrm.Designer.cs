@@ -27,9 +27,9 @@ namespace GameNet.App.Settings
         /// </summary>
         private void InitializeComponent() {
             this.panelMain = new System.Windows.Forms.Panel();
+            this.dgvConsole = new System.Windows.Forms.DataGridView();
             this.exitBtn = new System.Windows.Forms.Button();
             this.editConsoleBtn = new System.Windows.Forms.Button();
-            this.dgvConsole = new System.Windows.Forms.DataGridView();
             this.panelMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsole)).BeginInit();
             this.SuspendLayout();
@@ -42,14 +42,26 @@ namespace GameNet.App.Settings
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMain.Location = new System.Drawing.Point(0, 0);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(552, 257);
+            this.panelMain.Size = new System.Drawing.Size(633, 352);
             this.panelMain.TabIndex = 4;
+            // 
+            // dgvConsole
+            // 
+            this.dgvConsole.AllowUserToAddRows = false;
+            this.dgvConsole.AllowUserToDeleteRows = false;
+            this.dgvConsole.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvConsole.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dgvConsole.Location = new System.Drawing.Point(0, 0);
+            this.dgvConsole.Name = "dgvConsole";
+            this.dgvConsole.ReadOnly = true;
+            this.dgvConsole.Size = new System.Drawing.Size(633, 255);
+            this.dgvConsole.TabIndex = 7;
             // 
             // exitBtn
             // 
             this.exitBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.exitBtn.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.exitBtn.Location = new System.Drawing.Point(413, 206);
+            this.exitBtn.Location = new System.Drawing.Point(494, 301);
             this.exitBtn.Name = "exitBtn";
             this.exitBtn.Size = new System.Drawing.Size(127, 34);
             this.exitBtn.TabIndex = 6;
@@ -61,30 +73,18 @@ namespace GameNet.App.Settings
             // 
             this.editConsoleBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.editConsoleBtn.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.editConsoleBtn.Location = new System.Drawing.Point(413, 166);
+            this.editConsoleBtn.Location = new System.Drawing.Point(494, 261);
             this.editConsoleBtn.Name = "editConsoleBtn";
             this.editConsoleBtn.Size = new System.Drawing.Size(127, 34);
             this.editConsoleBtn.TabIndex = 5;
             this.editConsoleBtn.Text = "ویرایش دستگاه";
             this.editConsoleBtn.UseVisualStyleBackColor = true;
             // 
-            // dgvConsole
-            // 
-            this.dgvConsole.AllowUserToAddRows = false;
-            this.dgvConsole.AllowUserToDeleteRows = false;
-            this.dgvConsole.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvConsole.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dgvConsole.Location = new System.Drawing.Point(0, 0);
-            this.dgvConsole.Name = "dgvConsole";
-            this.dgvConsole.ReadOnly = true;
-            this.dgvConsole.Size = new System.Drawing.Size(552, 150);
-            this.dgvConsole.TabIndex = 7;
-            // 
             // settingFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(552, 257);
+            this.ClientSize = new System.Drawing.Size(633, 352);
             this.Controls.Add(this.panelMain);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
