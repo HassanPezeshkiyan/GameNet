@@ -81,7 +81,7 @@ namespace GameNet.App.Shoping
             this.quantityCounter.Location = new System.Drawing.Point(115, 134);
             this.quantityCounter.Name = "quantityCounter";
             this.quantityCounter.Size = new System.Drawing.Size(100, 31);
-            this.quantityCounter.TabIndex = 8;
+            this.quantityCounter.TabIndex = 3;
             // 
             // close
             // 
@@ -91,7 +91,7 @@ namespace GameNet.App.Shoping
             this.close.Location = new System.Drawing.Point(20, 171);
             this.close.Name = "close";
             this.close.Size = new System.Drawing.Size(75, 32);
-            this.close.TabIndex = 6;
+            this.close.TabIndex = 5;
             this.close.Text = "انصراف";
             this.close.UseVisualStyleBackColor = false;
             this.close.Click += new System.EventHandler(this.close_Click);
@@ -104,24 +104,24 @@ namespace GameNet.App.Shoping
             this.editShopBtn.Location = new System.Drawing.Point(241, 171);
             this.editShopBtn.Name = "editShopBtn";
             this.editShopBtn.Size = new System.Drawing.Size(75, 32);
-            this.editShopBtn.TabIndex = 1;
+            this.editShopBtn.TabIndex = 4;
             this.editShopBtn.Text = "ثبت";
             this.editShopBtn.UseVisualStyleBackColor = false;
             this.editShopBtn.Click += new System.EventHandler(this.editShopBtn_Click);
             // 
             // sellCostTxt
             // 
-            this.sellCostTxt.Location = new System.Drawing.Point(115, 97);
+            this.sellCostTxt.Location = new System.Drawing.Point(20, 97);
             this.sellCostTxt.Name = "sellCostTxt";
-            this.sellCostTxt.Size = new System.Drawing.Size(100, 31);
-            this.sellCostTxt.TabIndex = 5;
+            this.sellCostTxt.Size = new System.Drawing.Size(195, 31);
+            this.sellCostTxt.TabIndex = 2;
             // 
             // buyCostTxt
             // 
-            this.buyCostTxt.Location = new System.Drawing.Point(115, 62);
+            this.buyCostTxt.Location = new System.Drawing.Point(20, 62);
             this.buyCostTxt.Name = "buyCostTxt";
-            this.buyCostTxt.Size = new System.Drawing.Size(100, 31);
-            this.buyCostTxt.TabIndex = 4;
+            this.buyCostTxt.Size = new System.Drawing.Size(195, 31);
+            this.buyCostTxt.TabIndex = 1;
             // 
             // label3
             // 
@@ -152,9 +152,9 @@ namespace GameNet.App.Shoping
             // 
             // nameShop
             // 
-            this.nameShop.Location = new System.Drawing.Point(115, 28);
+            this.nameShop.Location = new System.Drawing.Point(20, 28);
             this.nameShop.Name = "nameShop";
-            this.nameShop.Size = new System.Drawing.Size(100, 31);
+            this.nameShop.Size = new System.Drawing.Size(195, 31);
             this.nameShop.TabIndex = 0;
             // 
             // editShopFrm

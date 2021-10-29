@@ -26,11 +26,11 @@ namespace GameNet.App.Settings
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelMain = new System.Windows.Forms.Panel();
-            this.dgvConsole = new System.Windows.Forms.DataGridView();
             this.exitBtn = new System.Windows.Forms.Button();
             this.editConsoleBtn = new System.Windows.Forms.Button();
+            this.dgvConsole = new System.Windows.Forms.DataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quantityPriceController = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.timepricecontroller = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,64 +41,70 @@ namespace GameNet.App.Settings
             // 
             // panelMain
             // 
-            this.panelMain.Controls.Add(this.dgvConsole);
             this.panelMain.Controls.Add(this.exitBtn);
             this.panelMain.Controls.Add(this.editConsoleBtn);
+            this.panelMain.Controls.Add(this.dgvConsole);
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMain.Location = new System.Drawing.Point(0, 0);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(633, 352);
+            this.panelMain.Size = new System.Drawing.Size(797, 338);
             this.panelMain.TabIndex = 4;
+            // 
+            // exitBtn
+            // 
+            this.exitBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.exitBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
+            this.exitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.exitBtn.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.exitBtn.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.exitBtn.Location = new System.Drawing.Point(646, 292);
+            this.exitBtn.Name = "exitBtn";
+            this.exitBtn.Size = new System.Drawing.Size(127, 34);
+            this.exitBtn.TabIndex = 9;
+            this.exitBtn.Text = "خروج";
+            this.exitBtn.UseVisualStyleBackColor = false;
+            this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click_1);
+            // 
+            // editConsoleBtn
+            // 
+            this.editConsoleBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.editConsoleBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.editConsoleBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.editConsoleBtn.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.editConsoleBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.editConsoleBtn.Location = new System.Drawing.Point(646, 252);
+            this.editConsoleBtn.Name = "editConsoleBtn";
+            this.editConsoleBtn.Size = new System.Drawing.Size(127, 34);
+            this.editConsoleBtn.TabIndex = 8;
+            this.editConsoleBtn.Text = "ویرایش دستگاه";
+            this.editConsoleBtn.UseVisualStyleBackColor = false;
+            this.editConsoleBtn.Click += new System.EventHandler(this.editConsoleBtn_Click_1);
             // 
             // dgvConsole
             // 
             this.dgvConsole.AllowUserToAddRows = false;
             this.dgvConsole.AllowUserToDeleteRows = false;
             this.dgvConsole.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvConsole.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvConsole.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvConsole.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvConsole.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
             this.quantityPriceController,
             this.timepricecontroller,
             this.consoleType});
-            this.dgvConsole.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dgvConsole.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvConsole.Location = new System.Drawing.Point(0, 0);
             this.dgvConsole.Name = "dgvConsole";
             this.dgvConsole.ReadOnly = true;
-            this.dgvConsole.Size = new System.Drawing.Size(633, 255);
+            this.dgvConsole.Size = new System.Drawing.Size(797, 338);
             this.dgvConsole.TabIndex = 7;
-            // 
-            // exitBtn
-            // 
-            this.exitBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.exitBtn.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.exitBtn.Location = new System.Drawing.Point(494, 301);
-            this.exitBtn.Name = "exitBtn";
-            this.exitBtn.Size = new System.Drawing.Size(127, 34);
-            this.exitBtn.TabIndex = 6;
-            this.exitBtn.Text = "خروج";
-            this.exitBtn.UseVisualStyleBackColor = true;
-            this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
-            // 
-            // editConsoleBtn
-            // 
-            this.editConsoleBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.editConsoleBtn.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.editConsoleBtn.Location = new System.Drawing.Point(494, 261);
-            this.editConsoleBtn.Name = "editConsoleBtn";
-            this.editConsoleBtn.Size = new System.Drawing.Size(127, 34);
-            this.editConsoleBtn.TabIndex = 5;
-            this.editConsoleBtn.Text = "ویرایش دستگاه";
-            this.editConsoleBtn.UseVisualStyleBackColor = true;
-            this.editConsoleBtn.Click += new System.EventHandler(this.editConsoleBtn_Click);
             // 
             // id
             // 
@@ -132,7 +138,7 @@ namespace GameNet.App.Settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(633, 352);
+            this.ClientSize = new System.Drawing.Size(797, 338);
             this.Controls.Add(this.panelMain);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -151,12 +157,12 @@ namespace GameNet.App.Settings
         #endregion
 
         private System.Windows.Forms.Panel panelMain;
-        private System.Windows.Forms.Button exitBtn;
-        private System.Windows.Forms.Button editConsoleBtn;
         private System.Windows.Forms.DataGridView dgvConsole;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantityPriceController;
         private System.Windows.Forms.DataGridViewTextBoxColumn timepricecontroller;
         private System.Windows.Forms.DataGridViewTextBoxColumn consoleType;
+        private System.Windows.Forms.Button exitBtn;
+        private System.Windows.Forms.Button editConsoleBtn;
     }
 }

@@ -99,7 +99,7 @@ namespace GameNet.App
         //}
         private void shopSettingBtn_Click(object sender, EventArgs e) {
 
-            openChildForm(new ShopFrm(), panelContainer, DockStyle.Top);
+            openChildForm(new ShopFrm(), panelContainer, DockStyle.Fill);
         }
 
         /// <summary>
@@ -311,9 +311,8 @@ namespace GameNet.App
 
 
         private void settingBtn_Click(object sender, EventArgs e) {
-            //openChildForm(new settingFrm(), panelContainer, DockStyle.Top);
-            settingFrm settingFrm = new settingFrm();
-            settingFrm.Show();
+            openChildForm(new settingFrm(), panelContainer, DockStyle.Fill);
+
         }
 
         private void btnEditProfile_Click(object sender, EventArgs e) {

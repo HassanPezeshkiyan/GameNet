@@ -34,7 +34,6 @@ namespace GameNet.App
             this.reportsBtn = new System.Windows.Forms.Button();
             this.settingBtn = new System.Windows.Forms.Button();
             this.panelMain = new System.Windows.Forms.Panel();
-            this.btnClose = new System.Windows.Forms.Button();
             this.panelItems = new System.Windows.Forms.Panel();
             this.btnStart = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
@@ -111,7 +110,6 @@ namespace GameNet.App
             // panelMain
             // 
             this.panelMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(39)))), ((int)(((byte)(46)))));
-            this.panelMain.Controls.Add(this.btnClose);
             this.panelMain.Controls.Add(this.panelItems);
             this.panelMain.Controls.Add(this.panelLogo);
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Right;
@@ -120,21 +118,6 @@ namespace GameNet.App
             this.panelMain.Name = "panelMain";
             this.panelMain.Size = new System.Drawing.Size(259, 867);
             this.panelMain.TabIndex = 8;
-            // 
-            // btnClose
-            // 
-            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(43)))));
-            this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnClose.Font = new System.Drawing.Font("B Nazanin", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.btnClose.Location = new System.Drawing.Point(158, 822);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(89, 33);
-            this.btnClose.TabIndex = 0;
-            this.btnClose.Text = "خروج";
-            this.btnClose.UseVisualStyleBackColor = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // panelItems
             // 
@@ -224,6 +207,7 @@ namespace GameNet.App
             // 
             this.panelContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(47)))), ((int)(((byte)(62)))));
             this.panelContainer.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelContainer.Font = new System.Drawing.Font("B Nazanin", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.panelContainer.Location = new System.Drawing.Point(0, 0);
             this.panelContainer.Name = "panelContainer";
             this.panelContainer.Size = new System.Drawing.Size(1027, 428);
@@ -249,16 +233,13 @@ namespace GameNet.App
             this.Controls.Add(this.panelContainer);
             this.Controls.Add(this.panelMain);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "mainFrm";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "صفحه اصلی";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.mainFrm_Load);
             this.panelMain.ResumeLayout(false);
             this.panelItems.ResumeLayout(false);
@@ -282,7 +263,6 @@ namespace GameNet.App
         private System.Windows.Forms.Button btnEditProfile;
         private System.Windows.Forms.Panel panelContainer;
         private System.Windows.Forms.Panel panelConsoles;
-        private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnStart;
     }
 }

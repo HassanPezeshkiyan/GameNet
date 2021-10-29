@@ -30,6 +30,7 @@ namespace GameNet.App
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ShopFrm));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.addShopBtn = new System.Windows.Forms.ToolStripButton();
             this.editShopBtn = new System.Windows.Forms.ToolStripButton();
@@ -49,6 +50,7 @@ namespace GameNet.App
             // toolStrip1
             // 
             this.toolStrip1.AutoSize = false;
+            this.toolStrip1.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addShopBtn,
             this.editShopBtn,
@@ -64,7 +66,7 @@ namespace GameNet.App
             // addShopBtn
             // 
             this.addShopBtn.AutoSize = false;
-            this.addShopBtn.Font = new System.Drawing.Font("B Nazanin", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.addShopBtn.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.addShopBtn.Image = ((System.Drawing.Image)(resources.GetObject("addShopBtn.Image")));
             this.addShopBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.addShopBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -77,7 +79,7 @@ namespace GameNet.App
             // editShopBtn
             // 
             this.editShopBtn.AutoSize = false;
-            this.editShopBtn.Font = new System.Drawing.Font("B Nazanin", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.editShopBtn.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.editShopBtn.Image = ((System.Drawing.Image)(resources.GetObject("editShopBtn.Image")));
             this.editShopBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.editShopBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -90,7 +92,7 @@ namespace GameNet.App
             // deleteShopBtn
             // 
             this.deleteShopBtn.AutoSize = false;
-            this.deleteShopBtn.Font = new System.Drawing.Font("B Nazanin", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.deleteShopBtn.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.deleteShopBtn.Image = ((System.Drawing.Image)(resources.GetObject("deleteShopBtn.Image")));
             this.deleteShopBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.deleteShopBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -103,7 +105,7 @@ namespace GameNet.App
             // refreshBtn
             // 
             this.refreshBtn.AutoSize = false;
-            this.refreshBtn.Font = new System.Drawing.Font("B Nazanin", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.refreshBtn.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.refreshBtn.Image = ((System.Drawing.Image)(resources.GetObject("refreshBtn.Image")));
             this.refreshBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.refreshBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -120,6 +122,14 @@ namespace GameNet.App
             this.dgvShop.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvShop.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
             this.dgvShop.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvShop.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvShop.ColumnHeadersHeight = 30;
             this.dgvShop.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvShop.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -181,7 +191,7 @@ namespace GameNet.App
             this.exitBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(82)))), ((int)(((byte)(83)))));
             this.exitBtn.FlatAppearance.BorderSize = 0;
             this.exitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exitBtn.Font = new System.Drawing.Font("B Nazanin", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.exitBtn.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.exitBtn.Location = new System.Drawing.Point(16, 302);
             this.exitBtn.Name = "exitBtn";
             this.exitBtn.Size = new System.Drawing.Size(111, 38);

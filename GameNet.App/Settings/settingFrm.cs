@@ -29,6 +29,19 @@ namespace GameNet.App.Settings
         }
 
         private void editConsoleBtn_Click(object sender, EventArgs e) {
+          
+        }
+
+    
+        private void exitBtn_Click(object sender, EventArgs e) {
+            Close();
+        }
+
+        private void exitBtn_Click_1(object sender, EventArgs e) {
+            Close();
+        }
+
+        private void editConsoleBtn_Click_1(object sender, EventArgs e) {
             if (dgvConsole.CurrentRow != null) {
                 int consoleId = int.Parse(dgvConsole.CurrentRow.Cells[0].Value.ToString());
                 editConsoleFrm edit = new editConsoleFrm();
@@ -37,11 +50,6 @@ namespace GameNet.App.Settings
                     //BindGrid();
                 }
             }
-        }
-
-    
-        private void exitBtn_Click(object sender, EventArgs e) {
-            Close();
         }
     }
 }
