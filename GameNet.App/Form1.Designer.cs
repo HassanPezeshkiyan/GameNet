@@ -193,6 +193,7 @@ namespace GameNet.App
             this.btnEditProfile.TabIndex = 8;
             this.btnEditProfile.Text = "ویرایش ";
             this.btnEditProfile.UseVisualStyleBackColor = false;
+            this.btnEditProfile.Click += new System.EventHandler(this.btnEditProfile_Click);
             // 
             // labelUserName
             // 

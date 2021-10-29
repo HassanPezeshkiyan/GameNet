@@ -51,6 +51,7 @@ namespace GameNet.App.Login
             this.textBoxPassword.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.textBoxPassword.Size = new System.Drawing.Size(218, 31);
             this.textBoxPassword.TabIndex = 1;
+            this.textBoxPassword.UseSystemPasswordChar = true;
             // 
             // label1
             // 

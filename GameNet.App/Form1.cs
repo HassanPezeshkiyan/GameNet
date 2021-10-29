@@ -48,10 +48,10 @@ namespace GameNet.App
         /// چک کردن خرید ثبت شده 6 
         /// </summary>
         public bool Shoping6;
-
+        int userId = 0;
         public mainFrm() {
             InitializeComponent();
-            labelUserName.Text = "محمد محمدی";
+            
         }
 
         private void mainFrm_Load(object sender, EventArgs e) {
@@ -72,6 +72,7 @@ namespace GameNet.App
             }
             
             labelUserName.Text = frmLogin.userName;
+            userId = frmLogin.userId;
         }
         private Form activeForm = null;
         private void openChildForm(Form childForm) {
@@ -307,6 +308,13 @@ namespace GameNet.App
         private void btnStart_Click(object sender, EventArgs e) {
             FrmStart frmStart = new FrmStart();
             frmStart.ShowDialog();
+        }
+
+        private void btnEditProfile_Click(object sender, EventArgs e) {
+            EditInfoFrm editform = new EditInfoFrm();
+            editform.userId = userId;
+            editform.ShowDialog();
+          
         }
     }
 }

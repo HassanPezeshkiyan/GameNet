@@ -14,6 +14,7 @@ namespace GameNet.App.Login
     public partial class LoginFrm : Form
     {
         public string userName = null;
+        public int userId = 0;
 
         UnitOfWork db = new UnitOfWork();
         public LoginFrm() {
@@ -25,6 +26,7 @@ namespace GameNet.App.Login
                 try {
                     var user = db.Users.GetUserByUserName(textBoxUserName.Text.ToString());
                     userName = user.FullName;
+                    userId = user.Id;
                     if (textBoxPassword.Text == user.PassWord.TrimEnd()) {
                         DialogResult = DialogResult.OK;
                     }
