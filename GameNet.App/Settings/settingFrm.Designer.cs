@@ -30,31 +30,28 @@ namespace GameNet.App.Settings
             this.exitBtn = new System.Windows.Forms.Button();
             this.editConsoleBtn = new System.Windows.Forms.Button();
             this.dgvConsole = new System.Windows.Forms.DataGridView();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantityPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.timePrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.consoleType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsole)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMain
             // 
+            this.panelMain.Controls.Add(this.dgvConsole);
             this.panelMain.Controls.Add(this.exitBtn);
             this.panelMain.Controls.Add(this.editConsoleBtn);
-            this.panelMain.Controls.Add(this.dgvConsole);
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMain.Location = new System.Drawing.Point(0, 0);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(552, 334);
+            this.panelMain.Size = new System.Drawing.Size(552, 257);
             this.panelMain.TabIndex = 4;
             // 
             // exitBtn
             // 
-            this.exitBtn.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.exitBtn.Location = new System.Drawing.Point(413, 298);
+            this.exitBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.exitBtn.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.exitBtn.Location = new System.Drawing.Point(413, 206);
             this.exitBtn.Name = "exitBtn";
-            this.exitBtn.Size = new System.Drawing.Size(127, 23);
+            this.exitBtn.Size = new System.Drawing.Size(127, 34);
             this.exitBtn.TabIndex = 6;
             this.exitBtn.Text = "خروج";
             this.exitBtn.UseVisualStyleBackColor = true;
@@ -62,10 +59,11 @@ namespace GameNet.App.Settings
             // 
             // editConsoleBtn
             // 
-            this.editConsoleBtn.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.editConsoleBtn.Location = new System.Drawing.Point(413, 266);
+            this.editConsoleBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.editConsoleBtn.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.editConsoleBtn.Location = new System.Drawing.Point(413, 166);
             this.editConsoleBtn.Name = "editConsoleBtn";
-            this.editConsoleBtn.Size = new System.Drawing.Size(127, 26);
+            this.editConsoleBtn.Size = new System.Drawing.Size(127, 34);
             this.editConsoleBtn.TabIndex = 5;
             this.editConsoleBtn.Text = "ویرایش دستگاه";
             this.editConsoleBtn.UseVisualStyleBackColor = true;
@@ -74,54 +72,19 @@ namespace GameNet.App.Settings
             // 
             this.dgvConsole.AllowUserToAddRows = false;
             this.dgvConsole.AllowUserToDeleteRows = false;
-            this.dgvConsole.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvConsole.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvConsole.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvConsole.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id,
-            this.quantityPrice,
-            this.timePrice,
-            this.consoleType});
             this.dgvConsole.Dock = System.Windows.Forms.DockStyle.Top;
             this.dgvConsole.Location = new System.Drawing.Point(0, 0);
             this.dgvConsole.Name = "dgvConsole";
             this.dgvConsole.ReadOnly = true;
-            this.dgvConsole.Size = new System.Drawing.Size(552, 241);
-            this.dgvConsole.TabIndex = 4;
-            // 
-            // id
-            // 
-            this.id.DataPropertyName = "Id";
-            this.id.HeaderText = "شناسه";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            // 
-            // quantityPrice
-            // 
-            this.quantityPrice.DataPropertyName = "QuantityPriceController";
-            this.quantityPrice.HeaderText = "قیمت براساس تعداد دسته";
-            this.quantityPrice.Name = "quantityPrice";
-            this.quantityPrice.ReadOnly = true;
-            // 
-            // timePrice
-            // 
-            this.timePrice.DataPropertyName = "TimePriceController";
-            this.timePrice.HeaderText = "قیمت براساس زمان";
-            this.timePrice.Name = "timePrice";
-            this.timePrice.ReadOnly = true;
-            // 
-            // consoleType
-            // 
-            this.consoleType.DataPropertyName = "ConsoleType";
-            this.consoleType.HeaderText = "نوع دستگاه";
-            this.consoleType.Name = "consoleType";
-            this.consoleType.ReadOnly = true;
+            this.dgvConsole.Size = new System.Drawing.Size(552, 150);
+            this.dgvConsole.TabIndex = 7;
             // 
             // settingFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(552, 334);
+            this.ClientSize = new System.Drawing.Size(552, 257);
             this.Controls.Add(this.panelMain);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -143,9 +106,5 @@ namespace GameNet.App.Settings
         private System.Windows.Forms.Button exitBtn;
         private System.Windows.Forms.Button editConsoleBtn;
         private System.Windows.Forms.DataGridView dgvConsole;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn quantityPrice;
-        private System.Windows.Forms.DataGridViewTextBoxColumn timePrice;
-        private System.Windows.Forms.DataGridViewTextBoxColumn consoleType;
     }
 }
