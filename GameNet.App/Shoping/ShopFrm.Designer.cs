@@ -30,7 +30,6 @@ namespace GameNet.App
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ShopFrm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.addShopBtn = new System.Windows.Forms.ToolStripButton();
             this.editShopBtn = new System.Windows.Forms.ToolStripButton();
@@ -122,14 +121,6 @@ namespace GameNet.App
             this.dgvShop.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvShop.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
             this.dgvShop.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvShop.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvShop.ColumnHeadersHeight = 30;
             this.dgvShop.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvShop.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -187,14 +178,14 @@ namespace GameNet.App
             // 
             // exitBtn
             // 
-            this.exitBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.exitBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(82)))), ((int)(((byte)(83)))));
+            this.exitBtn.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.exitBtn.FlatAppearance.BorderSize = 0;
             this.exitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exitBtn.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.exitBtn.Location = new System.Drawing.Point(16, 302);
+            this.exitBtn.Location = new System.Drawing.Point(0, 314);
             this.exitBtn.Name = "exitBtn";
-            this.exitBtn.Size = new System.Drawing.Size(111, 38);
+            this.exitBtn.Size = new System.Drawing.Size(633, 38);
             this.exitBtn.TabIndex = 2;
             this.exitBtn.Text = "خروج";
             this.exitBtn.UseVisualStyleBackColor = false;

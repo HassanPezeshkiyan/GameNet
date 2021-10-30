@@ -28,28 +28,19 @@ namespace GameNet.App.Settings
             BindGrid();         
         }
 
-        private void editConsoleBtn_Click(object sender, EventArgs e) {
-          
-        }
-
-    
-        private void exitBtn_Click(object sender, EventArgs e) {
-            Close();
-        }
-
-        private void exitBtn_Click_1(object sender, EventArgs e) {
-            Close();
-        }
-
-        private void editConsoleBtn_Click_1(object sender, EventArgs e) {
+        private void btnEdit_Click(object sender, EventArgs e) {
             if (dgvConsole.CurrentRow != null) {
                 int consoleId = int.Parse(dgvConsole.CurrentRow.Cells[0].Value.ToString());
                 editConsoleFrm edit = new editConsoleFrm();
                 edit.consoleId = consoleId;
                 if (edit.ShowDialog() == DialogResult.OK) {
-                    //BindGrid();
+                    BindGrid();
                 }
             }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e) {
+            Close();
         }
     }
 }

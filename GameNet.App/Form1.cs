@@ -55,7 +55,7 @@ namespace GameNet.App
         }
 
         private void mainFrm_Load(object sender, EventArgs e) {
-            
+
             //deletShop1Btn.Enabled = false;
             //deletShop2Btn.Enabled = false;
             //deletShop3Btn.Enabled = false;
@@ -322,13 +322,8 @@ namespace GameNet.App
 
         }
 
-        private void btnClose_Click(object sender, EventArgs e) {
-            Application.Exit();
-        }
-
-       
-
-        private void btnStart_Click(object sender, EventArgs e) {
+      
+        private void btnStartConsole_Click(object sender, EventArgs e) {
             FrmStart frmStart = new FrmStart();
             frmStart.Show();
         }
