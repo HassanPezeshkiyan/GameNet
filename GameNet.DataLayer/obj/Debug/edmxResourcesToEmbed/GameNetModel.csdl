@@ -1,42 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="GameNetModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-  <EntityType Name="Shop">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="BuyCost" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
-    <Property Name="SellCost" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
-    <Property Name="Quantity" Type="Int32" Nullable="true" />
-  </EntityType>
-  <EntityType Name="User">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="Int32" Nullable="false" />
-    <Property Name="UserName" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
-    <Property Name="PassWord" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
-    <Property Name="FullName" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
-  </EntityType>
   <EntityContainer Name="GameNetEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="Shops" EntityType="Self.Shop" />
-    <EntitySet Name="Users" EntityType="Self.User" />
-    <EntitySet Name="Orders" EntityType="GameNetModel.Order" />
+    <EntitySet Name="sysdiagrams" EntityType="GameNetModel.sysdiagram" />
     <EntitySet Name="Consoles" EntityType="GameNetModel.Console" />
     <EntitySet Name="Invoices" EntityType="GameNetModel.Invoice" />
-    <EntitySet Name="sysdiagrams" EntityType="GameNetModel.sysdiagram" />
+    <EntitySet Name="Orders" EntityType="GameNetModel.Order" />
+    <EntitySet Name="Shops" EntityType="GameNetModel.Shop" />
+    <EntitySet Name="Users" EntityType="GameNetModel.User" />
+    <EntitySet Name="Customers" EntityType="GameNetModel.Customer" />
   </EntityContainer>
-  <EntityType Name="Order">
+  <EntityType Name="sysdiagram">
     <Key>
-      <PropertyRef Name="Id" />
+      <PropertyRef Name="diagram_id" />
     </Key>
-    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="userId" Type="Int32" Nullable="false" />
-    <Property Name="quantity" Type="Int32" Nullable="false" />
-    <Property Name="cost" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
-    <Property Name="amount" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
-    <Property Name="ShopId" Type="Int32" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
   </EntityType>
   <EntityType Name="Console">
     <Key>
@@ -52,22 +33,51 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="CustomerId" Type="Int32" Nullable="false" />
     <Property Name="OrderId" Type="Int32" Nullable="false" />
     <Property Name="CreationDate" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="Amount" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
     <Property Name="ControllerQuantity" Type="Int32" Nullable="false" />
-    <Property Name="Time" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Time" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="ChargeValue" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="ConsoleId" Type="Int32" Nullable="false" />
   </EntityType>
-  <EntityType Name="sysdiagram">
+  <EntityType Name="Order">
     <Key>
-      <PropertyRef Name="diagram_id" />
+      <PropertyRef Name="Id" />
     </Key>
-    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
-    <Property Name="principal_id" Type="Int32" Nullable="false" />
-    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="version" Type="Int32" />
-    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ConsoleId" Type="Int32" Nullable="false" />
+    <Property Name="quantity" Type="Int32" Nullable="false" />
+    <Property Name="cost" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="amount" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="ShopId" Type="Int32" />
+    <Property Name="CustomerId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Shop">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BuyCost" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="SellCost" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="Quantity" Type="Int32" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="PassWord" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="FullName" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ConsoleId" Type="Int32" Nullable="false" />
   </EntityType>
 </Schema>

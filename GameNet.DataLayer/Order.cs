@@ -15,10 +15,11 @@ namespace GameNet.DataLayer
     public partial class Order
     {
         public int Id { get; set; }
-        public int userId { get; set; }
+        public int ConsoleId { get; set; }
         public int quantity { get; set; }
         public decimal cost { get; set; }
         public decimal amount { get; set; }
         public Nullable<int> ShopId { get; set; }
+        public int CustomerId { get; set; }
     }
 }

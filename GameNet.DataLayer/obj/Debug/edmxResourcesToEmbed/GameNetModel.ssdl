@@ -9,29 +9,38 @@
     <Property Name="TimePriceController" Type="decimal" Precision="18" Scale="0" Nullable="false" />
     <Property Name="ConsoleType" Type="varchar" MaxLength="10" Nullable="false" />
   </EntityType>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ConsoleId" Type="int" Nullable="false" />
+  </EntityType>
   <EntityType Name="Invoice">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="CustomerId" Type="int" Nullable="false" />
     <Property Name="OrderId" Type="int" Nullable="false" />
     <Property Name="CreationDate" Type="datetime" Nullable="false" />
     <Property Name="Amount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
     <Property Name="ControllerQuantity" Type="int" Nullable="false" />
-    <Property Name="Time" Type="datetime" Nullable="false" />
+    <Property Name="Time" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="ChargeValue" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="ConsoleId" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Order">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="userId" Type="int" Nullable="false" />
+    <Property Name="ConsoleId" Type="int" Nullable="false" />
     <Property Name="quantity" Type="int" Nullable="false" />
     <Property Name="cost" Type="decimal" Precision="18" Scale="0" Nullable="false" />
     <Property Name="amount" Type="decimal" Precision="18" Scale="0" Nullable="false" />
     <Property Name="ShopId" Type="int" />
+    <Property Name="CustomerId" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Shops">
     <Key>
@@ -64,6 +73,7 @@
   </EntityType>
   <EntityContainer Name="GameNetModelStoreContainer">
     <EntitySet Name="Consoles" EntityType="Self.Consoles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Invoice" EntityType="Self.Invoice" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Order" EntityType="Self.Order" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Shops" EntityType="Self.Shops" Schema="dbo" store:Type="Tables" />

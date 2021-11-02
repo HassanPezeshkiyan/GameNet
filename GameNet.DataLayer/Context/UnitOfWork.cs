@@ -59,31 +59,40 @@ namespace GameNet.DataLayer.Context
                 return _consolee;
             }
         }
-    
-    private GenericRepository<User> _user;
-    public GenericRepository<User> User {
-        get {
-            if (_user == null) {
-                _user = new GenericRepository<User>(db);
+
+        private GenericRepository<User> _user;
+        public GenericRepository<User> User {
+            get {
+                if (_user == null) {
+                    _user = new GenericRepository<User>(db);
+                }
+                return _user;
             }
-            return _user;
+        }
+        private IUserRepository _users;
+        public IUserRepository Users {
+            get {
+                if (_users == null) {
+                    _users = new UserRepository(db);
+                }
+                return _users;
+            }
+        }
+        private GenericRepository<Customer> _customer;
+        public GenericRepository<Customer> Customer {
+            get {
+                if (_customer == null) {
+                    _customer = new GenericRepository<Customer>(db);
+                }
+                return _customer;
+            }
+        }
+        public void Save() {
+            db.SaveChanges();
+        }
+        public void Dispose() {
+            db.Dispose();
         }
     }
-    private IUserRepository _users;
-    public IUserRepository Users {
-        get {
-            if (_users == null) {
-                _users = new UserRepository(db);
-            }
-            return _users;
-        }
-    }
-    public void Save() {
-        db.SaveChanges();
-    }
-    public void Dispose() {
-        db.Dispose();
-    }
-}
 }
 

@@ -5,12 +5,13 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="529fc9987ee24b7a8d098fe90b59eb71" Name="Diagram1">
-        <EntityTypeShape EntityType="GameNetModel.Shop" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="GameNetModel.User" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="GameNetModel.Order" Width="1.5" PointX="0.75" PointY="3.75" />
-        <EntityTypeShape EntityType="GameNetModel.Console" Width="2.125" PointX="5.375" PointY="4.75" />
-        <EntityTypeShape EntityType="GameNetModel.Invoice" Width="2" PointX="5.75" PointY="0.75" />
         <EntityTypeShape EntityType="GameNetModel.sysdiagram" Width="1.5" PointX="0.75" PointY="6.75" />
+        <EntityTypeShape EntityType="GameNetModel.Console" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="GameNetModel.Invoice" Width="1.5" PointX="3.75" PointY="3.75" />
+        <EntityTypeShape EntityType="GameNetModel.Order" Width="1.5" PointX="5.75" PointY="0.75" />
+        <EntityTypeShape EntityType="GameNetModel.Shop" Width="1.5" PointX="0.75" PointY="3.75" />
+        <EntityTypeShape EntityType="GameNetModel.User" Width="1.5" PointX="5.75" PointY="4.75" />
+        <EntityTypeShape EntityType="GameNetModel.Customer" Width="1.5" PointX="3.375" PointY="7.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
