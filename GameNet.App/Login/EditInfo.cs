@@ -53,10 +53,14 @@ namespace GameNet.App.Login
         }
 
         private void checkBoxShowPass_CheckedChanged(object sender, EventArgs e) {
-
-            textBoxPassword.UseSystemPasswordChar = false;
-            textBoxConfirmPassword.UseSystemPasswordChar = false;
-
+            if (textBoxPassword.UseSystemPasswordChar) {
+                textBoxPassword.UseSystemPasswordChar = false;
+                textBoxConfirmPassword.UseSystemPasswordChar = false;
+            }
+            else {
+                textBoxPassword.UseSystemPasswordChar = true;
+                textBoxConfirmPassword.UseSystemPasswordChar = true;
+            }
         }
     }
 }

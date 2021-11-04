@@ -213,7 +213,7 @@ namespace GameNet.App.StartConsole
 
 
         ////////////////////////////////////////
-        UnitOfWork db = new UnitOfWork();
+        
 
         /// <summary>
         /// pay button
@@ -236,11 +236,11 @@ namespace GameNet.App.StartConsole
             shopForm.customerId = customerId;
             shopForm.ShowDialog();
             if (shopForm.DialogResult == DialogResult.OK) {
-                using (db) {
+                using (UnitOfWork db = new UnitOfWork()) {
                     var order = db.OrderRepository.Get()
                         .Where(n => n.CustomerId == customerId);
                     var orderCost = order.Select(n => n.amount).Sum();
-                    shopCostLbl1.Text = order.ToString();
+                    shopCostLbl1.Text = orderCost.ToString();
                     var shopIds = order.Select(n => n.ShopId);
                     foreach (var item in shopIds) {
                         var shop = db.ShopRepository.GetShopById((int)item);
@@ -269,6 +269,15 @@ namespace GameNet.App.StartConsole
         private void shop6Btn_Click(object sender, EventArgs e) {
 
         }
+
+        private void FrmStart_FormClosing(object sender, FormClosingEventArgs e) {
+            MessageBox.Show(@"
+آیا از خروج مطمئن هستید؟
+در صورت خروج اطلاعات ذخیره نمی شوند
+
+","اخطار",MessageBoxButtons.OKCancel);
+        }
+
         /// <summary>
         /// end shoping
         /// </summary>

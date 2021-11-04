@@ -43,13 +43,22 @@ namespace GameNet.App.Shoping
             BindGrid();
 
         }
+        void BindListBox() {
+            listBoxOrder.DataSource = orderListBox.ToList();
+            listBoxOrder.DisplayMember = "value";
+            listBoxOrder.ValueMember = "key";
+        }
 
         private void saveShop_Click(object sender, EventArgs e) {
+            if (orderChecked == 1) {
 
-            DialogResult = DialogResult.OK;
+                DialogResult = DialogResult.OK;
+            }
+
         }
 
         Dictionary<int, string> orderListBox = new Dictionary<int, string>();
+
         private void addShop_Click(object sender, EventArgs e) {
             if (orderQuantity.Value > 0) {
                 using (UnitOfWork db = new UnitOfWork()) {
@@ -69,9 +78,7 @@ namespace GameNet.App.Shoping
                         db.Save();
                         orderChecked = 1;
                         orderListBox[order.Id] = shop.Name;
-                        listBoxOrder.DataSource = new BindingSource(orderListBox, null);
-                        listBoxOrder.DisplayMember = "value";
-                        listBoxOrder.ValueMember = "key";
+                        BindListBox();
                     }
                     else {
                         MessageBox.Show($"!تعداد انتخابی بیش از موجودی است ", "توجه", MessageBoxButtons.OK,
@@ -85,19 +92,24 @@ namespace GameNet.App.Shoping
                                         MessageBoxIcon.Warning);
             }
         }
-
         private void deleteShopBtn_Click(object sender, EventArgs e) {
-            using (UnitOfWork db = new UnitOfWork()) {
-                var orderId = listBoxOrder.SelectedValue;
-                if (MessageBox.Show("از حذف خوراکی مطمئن هستید؟", "اخطار", MessageBoxButtons.YesNo) == DialogResult.Yes) {
-                    db.OrderRepository.Delete(orderId);
-                    db.Save();
-                    orderListBox.Remove((int)orderId);
-                    listBoxOrder.Items.Remove(orderId);
-                    listBoxOrder.DataSource = new BindingSource(orderListBox, null);
-                }
+            if (orderListBox.Count != 0) {
 
+                using (UnitOfWork db = new UnitOfWork()) {
+                    var orderId = listBoxOrder.SelectedValue;
+                    var order = db.OrderRepository.GetById(orderId);
+                    if (MessageBox.Show("از حذف خوراکی مطمئن هستید؟", "اخطار", MessageBoxButtons.YesNo) == DialogResult.Yes) {
+                        db.OrderRepository.Delete(orderId);
+                        var shop = db.ShopRepository.GetShopById(order.ShopId.Value);
+                        shop.Quantity += order.quantity;
+                        db.ShopRepository.UpdateFood(shop);
+                        db.Save();
+                        orderListBox.Remove((int)orderId);
+                        listBoxOrder.Items.Remove(orderId);
+                    }
+                }
             }
+            BindListBox();
         }
     }
 

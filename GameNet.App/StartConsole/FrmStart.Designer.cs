@@ -1743,6 +1743,7 @@ namespace GameNet.App.StartConsole
             this.RightToLeftLayout = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "شروع دستگاه";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmStart_FormClosing);
             this.Load += new System.EventHandler(this.FrmStart_Load);
             this.panel1.ResumeLayout(false);
             this.groupBoxConsole6.ResumeLayout(false);
