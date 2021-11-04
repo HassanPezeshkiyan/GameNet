@@ -15,6 +15,7 @@ namespace GameNet.App.Shoping
     public partial class editShopFrm : Form
     {
         readonly UnitOfWork db = new UnitOfWork();
+        public int roleId;
         public editShopFrm()
         {
             InitializeComponent();
@@ -22,7 +23,9 @@ namespace GameNet.App.Shoping
         public int shopId = 0;
         private void editShopFrm_Load(object sender, EventArgs e)
         {
-
+            buyCostTxt.Enabled = false;
+            sellCostTxt.Enabled = false;
+            nameShop.Enabled = false;
             var shop = db.ShopRepository.GetShopById(shopId);
             nameShop.Text = shop.Name;
             buyCostTxt.Text = shop.BuyCost.ToString();

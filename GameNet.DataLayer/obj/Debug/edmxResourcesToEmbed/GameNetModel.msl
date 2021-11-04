@@ -64,6 +64,7 @@
     <EntitySetMapping Name="Users">
       <EntityTypeMapping TypeName="GameNetModel.User">
         <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="Role" ColumnName="Role" />
           <ScalarProperty Name="FullName" ColumnName="FullName" />
           <ScalarProperty Name="PassWord" ColumnName="PassWord" />
           <ScalarProperty Name="UserName" ColumnName="UserName" />

@@ -16,7 +16,7 @@ namespace GameNet.App.Login
     {
         public string userName = null;
         public int userId = 0;
-
+        public int roleId;
         UnitOfWork db = new UnitOfWork();
         public LoginFrm() {
             InitializeComponent();
@@ -29,6 +29,12 @@ namespace GameNet.App.Login
                 DialogResult = DialogResult.OK;
                 userName = user.FullName;
                 userId = user.Id;
+                if (user.Role.TrimEnd() == "Admin") {
+                    roleId = 1;
+                }
+                else {
+                    roleId = 2;
+                }
                 db.Dispose();
             }
             else {

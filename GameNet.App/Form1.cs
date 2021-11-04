@@ -49,6 +49,7 @@ namespace GameNet.App
         /// </summary>
         public bool Shoping6;
         int userId = 0;
+        int roleId;
         public mainFrm() {
             InitializeComponent();
 
@@ -65,7 +66,12 @@ namespace GameNet.App
             this.Hide();
             LoginFrm frmLogin = new LoginFrm();
             if (frmLogin.ShowDialog() == DialogResult.OK) {
+                roleId = frmLogin.roleId;
                 this.Show();
+                if (roleId == 2) {
+                    reportsBtn.Enabled = false;
+                    settingBtn.Enabled = false;
+                }
             }
             else {
                 Application.Exit();
@@ -98,8 +104,10 @@ namespace GameNet.App
 
         //}
         private void shopSettingBtn_Click(object sender, EventArgs e) {
+            ShopFrm shopFrm = new ShopFrm();
+            shopFrm.roleId = roleId;
+            openChildForm(shopFrm, panelContainer, DockStyle.Fill);
 
-            openChildForm(new ShopFrm(), panelContainer, DockStyle.Fill);
         }
 
         /// <summary>
@@ -322,7 +330,7 @@ namespace GameNet.App
 
         }
 
-      
+
         private void btnStartConsole_Click(object sender, EventArgs e) {
             FrmStart frmStart = new FrmStart();
             frmStart.Show();
