@@ -23,6 +23,8 @@ namespace GameNet.App.Shoping
         private void addShopBtn_Click(object sender, EventArgs e)
         {
 
+            try
+            {
 
             using (db)
             {
@@ -38,6 +40,12 @@ namespace GameNet.App.Shoping
             }
             DialogResult = DialogResult.OK;
         
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void close_Click(object sender, EventArgs e)

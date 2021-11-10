@@ -214,7 +214,21 @@
   <ItemGroup>
     <None Include="Resources\playicon.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\149309-200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\game-controller-1400688-1189016.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reportIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settingIcon1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

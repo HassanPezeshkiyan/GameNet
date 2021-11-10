@@ -23,27 +23,39 @@ namespace GameNet.App.Login
         }
 
         private void btnLogin_Click(object sender, EventArgs e) {
-
-            var user = db.Users.GetUserByUserName(textBoxUserName.Text.ToString());
-            if (user != null && textBoxPassword.Text == user.PassWord.TrimEnd()) {
-                DialogResult = DialogResult.OK;
-                userName = user.FullName;
-                userId = user.Id;
-                if (user.Role.TrimEnd() == "Admin") {
-                    roleId = 1;
+            try
+            {
+                var user = db.Users.GetUserByUserName(textBoxUserName.Text.ToString());
+                if (user != null && textBoxPassword.Text == user.PassWord.TrimEnd())
+                {
+                    DialogResult = DialogResult.OK;
+                    userName = user.FullName;
+                    userId = user.Id;
+                    if (user.Role.TrimEnd() == "Admin")
+                    {
+                        roleId = 1;
+                    }
+                    else
+                    {
+                        roleId = 2;
+                    }
+                    db.Dispose();
                 }
-                else {
-                    roleId = 2;
-                }
-                db.Dispose();
-            }
-            else {
-                var result = MessageBox.Show("نام کاربری یا رمز عبور اشتباه است", "اخطار", MessageBoxButtons.RetryCancel);
-                if (result == DialogResult.Retry)
-                    textBoxUserName.Text = "";
+                else
+                {
+                    var result = MessageBox.Show("نام کاربری یا رمز عبور اشتباه است", "اخطار", MessageBoxButtons.RetryCancel);
+                    if (result == DialogResult.Retry)
+                        textBoxUserName.Text = "";
                     textBoxPassword.Text = "";
-                textBoxUserName.Focus();
+                    textBoxUserName.Focus();
+                }
             }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+            
         }
         private void btnClose_Click(object sender, EventArgs e) {
             Close();

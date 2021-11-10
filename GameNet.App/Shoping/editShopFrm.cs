@@ -43,23 +43,31 @@ namespace GameNet.App.Shoping
 
         private void editShopBtn_Click(object sender, EventArgs e)
         {
+            try
+            {
+                using (db)
+                {
 
-            using (db)
+                    Shop shoping = new Shop()
+                    {
+                        Name = nameShop.Text,
+                        SellCost = Convert.ToDecimal(sellCostTxt.Text),
+                        BuyCost = Convert.ToDecimal(buyCostTxt.Text),
+                        Quantity = (int)quantityCounter.Value
+                    };
+                    shoping.Id = shopId;
+                    db.ShopRepository.UpdateFood(shoping);
+                    db.Save();
+                }
+
+                DialogResult = DialogResult.OK;
+            }
+            catch (Exception ex)
             {
 
-                Shop shoping = new Shop()
-                {
-                    Name = nameShop.Text,
-                    SellCost = Convert.ToDecimal(sellCostTxt.Text),
-                    BuyCost = Convert.ToDecimal(buyCostTxt.Text),
-                    Quantity = (int)quantityCounter.Value
-                };
-                shoping.Id = shopId;
-                db.ShopRepository.UpdateFood(shoping);
-                db.Save();
+                MessageBox.Show(ex.Message);
             }
-
-            DialogResult = DialogResult.OK;
+            
         }
 
     }

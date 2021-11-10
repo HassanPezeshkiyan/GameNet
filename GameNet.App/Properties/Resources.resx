@@ -124,6 +124,9 @@
   <data name="619VqPA8vDL._SL1024_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\619VqPA8vDL._SL1024_.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="playicon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\playicon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="glenn_carstens_peters_0woyPEJQ7jc_unsplash" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\glenn-carstens-peters-0woyPEJQ7jc-unsplash.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -139,7 +142,19 @@
   <data name="eduardo_soares_QsYXYSwV3NU_unsplash" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\eduardo-soares-QsYXYSwV3NU-unsplash.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="playicon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\playicon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="149309-200" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\149309-200.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="game-controller-1400688-1189016" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\game-controller-1400688-1189016.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="play" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\play.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="reportIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\reportIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="settingIcon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\settingIcon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

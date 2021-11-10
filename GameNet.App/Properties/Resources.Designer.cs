@@ -63,6 +63,16 @@ namespace GameNet.App.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _149309_200 {
+            get {
+                object obj = ResourceManager.GetObject("149309-200", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _619VqPA8vDL__SL1024_ {
             get {
                 object obj = ResourceManager.GetObject("619VqPA8vDL._SL1024_", resourceCulture);
@@ -76,6 +86,16 @@ namespace GameNet.App.Properties {
         internal static System.Drawing.Bitmap eduardo_soares_QsYXYSwV3NU_unsplash {
             get {
                 object obj = ResourceManager.GetObject("eduardo_soares_QsYXYSwV3NU_unsplash", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap game_controller_1400688_1189016 {
+            get {
+                object obj = ResourceManager.GetObject("game-controller-1400688-1189016", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +133,39 @@ namespace GameNet.App.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap play {
+            get {
+                object obj = ResourceManager.GetObject("play", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap playicon {
             get {
                 object obj = ResourceManager.GetObject("playicon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap reportIcon {
+            get {
+                object obj = ResourceManager.GetObject("reportIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap settingIcon1 {
+            get {
+                object obj = ResourceManager.GetObject("settingIcon1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

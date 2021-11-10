@@ -14,44 +14,66 @@ namespace GameNet.App.Settings
     public partial class editConsoleFrm : Form
     {
         public int consoleId;
-        public readonly UnitOfWork db = new UnitOfWork();
-        public editConsoleFrm() {
+
+        public editConsoleFrm()
+        {
             InitializeComponent();
         }
 
-        private void editFrm_Load(object sender, EventArgs e) {
-
-
-            var console = db.Console.GetById(consoleId);
-                consoleGroupBox.Text = "دستگاه شماره :" + consoleId.ToString();
-                quantityPriceTxt.Text = console.QuantityPriceController.ToString();
-                timePriceTxt.Text = console.TimePriceController.ToString();
-                typeCombo.Text = console.ConsoleType.ToString();
-
-          
+        private void editFrm_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                using (UnitOfWork db = new UnitOfWork())
+                {
+                    var console = db.Console.GetById(consoleId);
+                    consoleGroupBox.Text = "دستگاه شماره :" + consoleId.ToString();
+                    quantityPriceTxt.Text = console.QuantityPriceController.ToString();
+                    timePriceTxt.Text = console.TimePriceController.ToString();
+                    typeCombo.Text = console.ConsoleType.ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
         }
 
-        private void closeBtn_Click(object sender, EventArgs e) {
+
+
+
+        private void closeBtn_Click(object sender, EventArgs e)
+        {
             Close();
         }
 
-        private void saveBtn_Click(object sender, EventArgs e) {
+        private void saveBtn_Click(object sender, EventArgs e)
+        {
 
-
-            using (db) {
-                DataLayer.Console console = new DataLayer.Console()
+            try
+            {
+                using (UnitOfWork db = new UnitOfWork())
                 {
-                    ConsoleType = typeCombo.Text,
-                    QuantityPriceController = Convert.ToDecimal(quantityPriceTxt.Text),
-                    TimePriceController = Convert.ToDecimal(timePriceTxt.Text),
-                };
-                console.Id = consoleId;
-                db.Console.Update(console);
-                db.Save();
+                    DataLayer.Console console = new DataLayer.Console()
+                    {
+                        ConsoleType = typeCombo.Text,
+                        QuantityPriceController = Convert.ToDecimal(quantityPriceTxt.Text),
+                        TimePriceController = Convert.ToDecimal(timePriceTxt.Text),
+                    };
+                    console.Id = consoleId;
+                    db.Console.Update(console);
+                    db.Save();
+                }
+
+                DialogResult = DialogResult.OK;
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
             }
             
-            DialogResult = DialogResult.OK;
         }
     }
 }

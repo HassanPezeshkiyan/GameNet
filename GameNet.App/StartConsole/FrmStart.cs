@@ -22,7 +22,7 @@ namespace GameNet.App.StartConsole
         Stopwatch stopWatch4;
         Stopwatch stopWatch5;
         Stopwatch stopWatch6;
-        int customerId;
+        public UnitOfWork db = new UnitOfWork();
 
         public FrmStart() {
             InitializeComponent();
@@ -78,7 +78,7 @@ namespace GameNet.App.StartConsole
                     break;
 
             }
-            customerId = frmChoose.customerId;
+            
         }
 
 
@@ -223,6 +223,8 @@ namespace GameNet.App.StartConsole
         private void pay1Btn_Click(object sender, EventArgs e) {
             stopWatch1.Stop();
             string[] timeValue = time1Txt.Text.Split(':');
+            groupBoxConsole1.Visible = false;
+
         }
         /// <summary>
         /// shoping
@@ -233,12 +235,12 @@ namespace GameNet.App.StartConsole
         private void shop1Btn_Click(object sender, EventArgs e) {
             shopViewFrm shopForm = new shopViewFrm();
             shopForm.consoleId = 1;
-            shopForm.customerId = customerId;
+            var id = db.Customer.Get().Where(n => n.ConsoleId == shopForm.consoleId).Select(n => n.Id).Last();
             shopForm.ShowDialog();
             if (shopForm.DialogResult == DialogResult.OK) {
-                using (UnitOfWork db = new UnitOfWork()) {
+                using (db) {
                     var order = db.OrderRepository.Get()
-                        .Where(n => n.CustomerId == customerId);
+                        .Where(n => n.CustomerId == id);
                     var orderCost = order.Select(n => n.amount).Sum();
                     shopCostLbl1.Text = orderCost.ToString();
                     var shopIds = order.Select(n => n.ShopId);
@@ -251,7 +253,9 @@ namespace GameNet.App.StartConsole
         }
 
         private void shop2Btn_Click(object sender, EventArgs e) {
-
+            shopViewFrm shopForm = new shopViewFrm();
+            shopForm.consoleId = 2;
+            var id = db.Customer.Get().Where(n => n.ConsoleId == shopForm.consoleId).Select(n => n.Id).Last();
         }
 
         private void shop3Btn_Click(object sender, EventArgs e) {
@@ -276,6 +280,10 @@ namespace GameNet.App.StartConsole
 در صورت خروج اطلاعات ذخیره نمی شوند
 
 ","اخطار",MessageBoxButtons.OKCancel);
+        }
+
+        private void deletShop1Btn_Click(object sender, EventArgs e) {
+
         }
 
         /// <summary>

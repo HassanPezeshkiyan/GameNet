@@ -17,25 +17,23 @@ namespace GameNet.App.StartConsole
         public FrmChooseConsole() {
             InitializeComponent();
         }
-        public int customerId;
         public int selectedConsole = 0;
         UnitOfWork db = new UnitOfWork();
         private void buttonSelect_Click(object sender, EventArgs e) {
             selectedConsole = int.Parse(numericUpDownConsole.Value.ToString());
             using (db) {
-                Customer customer = new Customer() {
-                    
+                Customer customer = new Customer()
+                {
                     ConsoleId = selectedConsole
                 };
                 try {
                     db.Customer.Insert(customer);
                     db.Save();
-                    customerId = customer.Id;
                     DialogResult = DialogResult.OK;
                 }
-                catch  {
+                catch {
 
-                    
+
                 }
             }
         }

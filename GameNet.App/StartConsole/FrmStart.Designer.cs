@@ -1494,6 +1494,7 @@ namespace GameNet.App.StartConsole
             this.deletShop1Btn.TabIndex = 7;
             this.deletShop1Btn.Text = "حذف بوفه";
             this.deletShop1Btn.UseVisualStyleBackColor = false;
+            this.deletShop1Btn.Click += new System.EventHandler(this.deletShop1Btn_Click);
             // 
             // stop1Timer
             // 
