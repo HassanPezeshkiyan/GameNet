@@ -21,5 +21,6 @@ namespace GameNet.DataLayer
         public decimal amount { get; set; }
         public Nullable<int> ShopId { get; set; }
         public int CustomerId { get; set; }
+        public string ShopName { get; set; }
     }
 }

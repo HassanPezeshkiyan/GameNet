@@ -40,6 +40,7 @@
     <EntitySetMapping Name="Orders">
       <EntityTypeMapping TypeName="GameNetModel.Order">
         <MappingFragment StoreEntitySet="Order">
+          <ScalarProperty Name="ShopName" ColumnName="ShopName" />
           <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
           <ScalarProperty Name="ShopId" ColumnName="ShopId" />
           <ScalarProperty Name="amount" ColumnName="amount" />

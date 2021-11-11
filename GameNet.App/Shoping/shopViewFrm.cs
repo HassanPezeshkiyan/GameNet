@@ -24,33 +24,41 @@ namespace GameNet.App.Shoping
         /// وضعیت ثبت / عدم ثبت خرید بوفه
         /// </summary>
         public int orderChecked = 0;
-        public shopViewFrm() {
+        public shopViewFrm()
+        {
             InitializeComponent();
 
         }
 
-        private void exitBtn_Click(object sender, EventArgs e) {
+        private void exitBtn_Click(object sender, EventArgs e)
+        {
             Close();
         }
-        void BindGrid() {
-            using (UnitOfWork db = new UnitOfWork()) {
+        void BindGrid()
+        {
+            using (UnitOfWork db = new UnitOfWork())
+            {
                 dgvViewShop.AutoGenerateColumns = false;
                 dgvViewShop.DataSource = db.ShopRepository.GetAllFood();
             }
         }
 
-        private void shopViewFrm_Load(object sender, EventArgs e) {
+        private void shopViewFrm_Load(object sender, EventArgs e)
+        {
             BindGrid();
 
         }
-        void BindListBox() {
+        void BindListBox()
+        {
             listBoxOrder.DataSource = orderListBox.ToList();
             listBoxOrder.DisplayMember = "value";
             listBoxOrder.ValueMember = "key";
         }
 
-        private void saveShop_Click(object sender, EventArgs e) {
-            if (orderChecked == 1) {
+        private void saveShop_Click(object sender, EventArgs e)
+        {
+            if (orderChecked == 1)
+            {
 
                 DialogResult = DialogResult.OK;
             }
@@ -59,8 +67,10 @@ namespace GameNet.App.Shoping
 
         Dictionary<int, string> orderListBox = new Dictionary<int, string>();
 
-        private void addShop_Click(object sender, EventArgs e) {
-            if (orderQuantity.Value > 0) {
+        private void addShop_Click(object sender, EventArgs e)
+        {
+            if (orderQuantity.Value > 0)
+            {
                 try
                 {
                     using (UnitOfWork db = new UnitOfWork())
@@ -74,7 +84,8 @@ namespace GameNet.App.Shoping
                                 quantity = (int)orderQuantity.Value,
                                 cost = shop.SellCost,
                                 ConsoleId = consoleId,
-                                CustomerId = customerId
+                                CustomerId = customerId,
+                                ShopName = shop.Name
                             };
                             order.amount = order.cost * order.quantity;
                             shop.Quantity = (int)shop.Quantity - order.quantity;
@@ -97,15 +108,18 @@ namespace GameNet.App.Shoping
 
                     MessageBox.Show(ex.Message);
                 }
-                
+
             }
-            else {
+            else
+            {
                 MessageBox.Show($"!موردی را انتخاب کنید", "توجه", MessageBoxButtons.OK,
                                         MessageBoxIcon.Warning);
             }
         }
-        private void deleteShopBtn_Click(object sender, EventArgs e) {
-            if (orderListBox.Count != 0) {
+        private void deleteShopBtn_Click(object sender, EventArgs e)
+        {
+            if (orderListBox.Count != 0)
+            {
                 try
                 {
                     using (UnitOfWork db = new UnitOfWork())
@@ -123,14 +137,14 @@ namespace GameNet.App.Shoping
                             listBoxOrder.Items.Remove(orderId);
                         }
                     }
-            BindListBox();
+                    BindListBox();
                 }
                 catch (Exception ex)
                 {
 
                     MessageBox.Show(ex.Message);
                 }
-                
+
             }
         }
     }

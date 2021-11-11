@@ -26,3 +26,4 @@ D:\Personal\GameNet\GameNet.App\obj\Debug\GameNet.App.StartConsole.FrmStart.reso
 D:\Personal\GameNet\GameNet.App\obj\Debug\GameNet.App.Login.LoginFrm.resources
 D:\Personal\GameNet\GameNet.App\obj\Debug\GameNet.App.Login.EditInfoFrm.resources
 D:\Personal\GameNet\GameNet.App\obj\Debug\GameNet.App.StartConsole.FrmChooseConsole.resources
+D:\Personal\GameNet\GameNet.App\obj\Debug\GameNet.App.Shoping.DeleteShopFrm.resources

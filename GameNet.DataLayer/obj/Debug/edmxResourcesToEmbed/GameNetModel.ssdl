@@ -41,6 +41,7 @@
     <Property Name="amount" Type="decimal" Precision="18" Scale="0" Nullable="false" />
     <Property Name="ShopId" Type="int" />
     <Property Name="CustomerId" Type="int" Nullable="false" />
+    <Property Name="ShopName" Type="nvarchar" MaxLength="10" />
   </EntityType>
   <EntityType Name="Shops">
     <Key>
