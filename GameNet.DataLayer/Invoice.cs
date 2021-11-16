@@ -21,7 +21,7 @@ namespace GameNet.DataLayer
         public decimal Amount { get; set; }
         public int ControllerQuantity { get; set; }
         public string Time { get; set; }
-        public Nullable<decimal> ChargeValue { get; set; }
+        public decimal ChargeValue { get; set; }
         public int ConsoleId { get; set; }
     }
 }

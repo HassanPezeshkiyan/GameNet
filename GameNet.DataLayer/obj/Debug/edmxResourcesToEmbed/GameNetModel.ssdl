@@ -27,10 +27,18 @@
     <Property Name="Amount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
     <Property Name="ControllerQuantity" Type="int" Nullable="false" />
     <Property Name="Time" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="ChargeValue" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="ChargeValue" Type="decimal" Precision="18" Scale="0" Nullable="false" />
     <Property Name="ConsoleId" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Order">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CustomerId" Type="int" Nullable="false" />
+    <Property Name="FinalCost" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OrderItems">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
@@ -39,9 +47,10 @@
     <Property Name="quantity" Type="int" Nullable="false" />
     <Property Name="cost" Type="decimal" Precision="18" Scale="0" Nullable="false" />
     <Property Name="amount" Type="decimal" Precision="18" Scale="0" Nullable="false" />
-    <Property Name="ShopId" Type="int" />
+    <Property Name="ShopId" Type="int" Nullable="false" />
     <Property Name="CustomerId" Type="int" Nullable="false" />
-    <Property Name="ShopName" Type="nvarchar" MaxLength="10" />
+    <Property Name="ShopName" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="OrderId" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Shops">
     <Key>
@@ -78,6 +87,7 @@
     <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Invoice" EntityType="Self.Invoice" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Order" EntityType="Self.Order" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OrderItems" EntityType="Self.OrderItems" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Shops" EntityType="Self.Shops" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />

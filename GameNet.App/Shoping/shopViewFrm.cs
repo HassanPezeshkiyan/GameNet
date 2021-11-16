@@ -78,7 +78,7 @@ namespace GameNet.App.Shoping
                         var shop = db.ShopRepository.GetShopById(int.Parse(dgvViewShop.CurrentRow.Cells[0].Value.ToString()));
                         if (shop.Quantity >= orderQuantity.Value)
                         {
-                            Order order = new Order()
+                            OrderItem order = new OrderItem()
                             {
                                 ShopId = shop.Id,
                                 quantity = (int)orderQuantity.Value,
@@ -129,7 +129,7 @@ namespace GameNet.App.Shoping
                         if (MessageBox.Show("از حذف خوراکی مطمئن هستید؟", "اخطار", MessageBoxButtons.YesNo) == DialogResult.Yes)
                         {
                             db.OrderRepository.Delete(orderId);
-                            var shop = db.ShopRepository.GetShopById(order.ShopId.Value);
+                            var shop = db.ShopRepository.GetShopById(order.ShopId);
                             shop.Quantity += order.quantity;
                             db.ShopRepository.UpdateFood(shop);
                             db.Save();

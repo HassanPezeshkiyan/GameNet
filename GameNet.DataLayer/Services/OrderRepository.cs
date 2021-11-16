@@ -21,7 +21,7 @@ namespace GameNet.DataLayer.Services
         public decimal calAmount(int orderId)
         {
 
-            var orderDetail = db.Orders.Find(orderId);
+            var orderDetail = db.OrderItems.Find(orderId);
 
             return orderDetail.cost * orderDetail.quantity;
         }

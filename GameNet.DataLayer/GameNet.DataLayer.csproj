@@ -78,6 +78,9 @@
     <Compile Include="Order.cs">
       <DependentUpon>GameNetModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="OrderItem.cs">
+      <DependentUpon>GameNetModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\IConsoleRepository.cs" />
     <Compile Include="Repositories\ICustomer.cs" />

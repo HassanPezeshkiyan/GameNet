@@ -1,24 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="GameNetModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityContainer Name="GameNetEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="sysdiagrams" EntityType="GameNetModel.sysdiagram" />
     <EntitySet Name="Consoles" EntityType="GameNetModel.Console" />
+    <EntitySet Name="Customers" EntityType="GameNetModel.Customer" />
     <EntitySet Name="Invoices" EntityType="GameNetModel.Invoice" />
     <EntitySet Name="Orders" EntityType="GameNetModel.Order" />
+    <EntitySet Name="OrderItems" EntityType="GameNetModel.OrderItem" />
     <EntitySet Name="Shops" EntityType="GameNetModel.Shop" />
+    <EntitySet Name="sysdiagrams" EntityType="GameNetModel.sysdiagram" />
     <EntitySet Name="Users" EntityType="GameNetModel.User" />
-    <EntitySet Name="Customers" EntityType="GameNetModel.Customer" />
   </EntityContainer>
-  <EntityType Name="sysdiagram">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
-    <Property Name="principal_id" Type="Int32" Nullable="false" />
-    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="version" Type="Int32" />
-    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
-  </EntityType>
   <EntityType Name="Console">
     <Key>
       <PropertyRef Name="Id" />
@@ -27,6 +18,13 @@
     <Property Name="QuantityPriceController" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
     <Property Name="TimePriceController" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
     <Property Name="ConsoleType" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ConsoleId" Type="Int32" Nullable="false" />
   </EntityType>
   <EntityType Name="Invoice">
     <Key>
@@ -39,10 +37,18 @@
     <Property Name="Amount" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
     <Property Name="ControllerQuantity" Type="Int32" Nullable="false" />
     <Property Name="Time" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="ChargeValue" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="ChargeValue" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
     <Property Name="ConsoleId" Type="Int32" Nullable="false" />
   </EntityType>
   <EntityType Name="Order">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CustomerId" Type="Int32" Nullable="false" />
+    <Property Name="FinalCost" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="OrderItem">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
@@ -51,9 +57,10 @@
     <Property Name="quantity" Type="Int32" Nullable="false" />
     <Property Name="cost" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
     <Property Name="amount" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
-    <Property Name="ShopId" Type="Int32" />
+    <Property Name="ShopId" Type="Int32" Nullable="false" />
     <Property Name="CustomerId" Type="Int32" Nullable="false" />
-    <Property Name="ShopName" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="ShopName" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="OrderId" Type="Int32" Nullable="false" />
   </EntityType>
   <EntityType Name="Shop">
     <Key>
@@ -65,21 +72,24 @@
     <Property Name="SellCost" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
     <Property Name="Quantity" Type="Int32" />
   </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
   <EntityType Name="User">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="UserName" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
     <Property Name="PassWord" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
     <Property Name="FullName" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
     <Property Name="Role" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
-  </EntityType>
-  <EntityType Name="Customer">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="ConsoleId" Type="Int32" Nullable="false" />
   </EntityType>
 </Schema>

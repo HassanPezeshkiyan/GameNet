@@ -23,11 +23,11 @@ namespace GameNet.DataLayer.Context
             }
         }
 
-        private GenericRepository<Order> _orderRepository;
-        public GenericRepository<Order> OrderRepository {
+        private GenericRepository<OrderItem> _orderRepository;
+        public GenericRepository<OrderItem> OrderRepository {
             get {
                 if (_orderRepository == null) {
-                    _orderRepository = new GenericRepository<Order>(db);
+                    _orderRepository = new GenericRepository<OrderItem>(db);
                 }
                 return _orderRepository;
             }
