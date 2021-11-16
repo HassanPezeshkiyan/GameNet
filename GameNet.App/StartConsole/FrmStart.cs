@@ -380,6 +380,7 @@ namespace GameNet.App.StartConsole
                                 shop1NameLbl.Text += or.ShopName + " ";
                             }
                         }
+                        shopCostLbl1.Text = order.Select(n => n.amount).Sum().ToString();
                     }
                 }
             }
