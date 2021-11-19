@@ -31,6 +31,7 @@ namespace GameNet.App.StartConsole
             groupBoxConsole6.Visible = false;
 
         }
+        public FrmChooseConsole frmChoose = new FrmChooseConsole();
 
         private void btnClose_Click(object sender, EventArgs e)
         {
@@ -46,6 +47,7 @@ namespace GameNet.App.StartConsole
             stopWatch5 = new Stopwatch();
             stopWatch6 = new Stopwatch();
 
+
         }
         private void FrmStart_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -58,49 +60,47 @@ namespace GameNet.App.StartConsole
 
         private void buttonSelectConsole_Click(object sender, EventArgs e)
         {
-            FrmChooseConsole frmChoose = new FrmChooseConsole();
-            frmChoose.ShowDialog();
-            if (DialogResult == DialogResult.OK)
-            {
-                frmChoose.Close();
-            }
-            switch (frmChoose.selectedConsole)
-            {
-                default:
-                    break;
-                case 1:
-                    groupBoxConsole1.Visible = true;
-                    break;
-                case 2:
-                    groupBoxConsole2.Visible = true;
-                    break;
-                case 3:
-                    groupBoxConsole3.Visible = true;
-                    break;
-                case 4:
-                    groupBoxConsole4.Visible = true;
-                    break;
-                case 5:
-                    groupBoxConsole5.Visible = true;
-                    break;
-                case 6:
-                    groupBoxConsole6.Visible = true;
-                    break;
 
+            frmChoose.ShowDialog();
+            frmChoose.indexselected.Add(frmChoose.selectedConsole);
+            if (frmChoose.DialogResult == DialogResult.OK)
+            {
+                frmChoose.Hide();
+                switch (frmChoose.selectedConsole)
+                {
+                    default:
+                        break;
+                    case 1:
+                        groupBoxConsole1.Visible = true;
+                        break;
+                    case 2:
+                        groupBoxConsole2.Visible = true;
+                        break;
+                    case 3:
+                        groupBoxConsole3.Visible = true;
+                        break;
+                    case 4:
+                        groupBoxConsole4.Visible = true;
+                        break;
+                    case 5:
+                        groupBoxConsole5.Visible = true;
+                        break;
+                    case 6:
+                        groupBoxConsole6.Visible = true;
+                        break;
+
+                }
             }
+
 
         }
 
 
-        /// <summary>
-        /// timer controller
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        #region timercontroller
         private void timer1_Tick(object sender, EventArgs e)
         {
             time1Txt.Text = string.Format("{0:hh\\:mm\\:ss}", stopWatch1.Elapsed);
-            
+
         }
         private void timer2_Tick(object sender, EventArgs e)
         {
@@ -122,20 +122,9 @@ namespace GameNet.App.StartConsole
         {
             time6Txt.Text = string.Format("{0:hh\\:mm\\:ss}", stopWatch6.Elapsed);
         }
-        /// <summary>
-        /// end of timer controller
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        ///
+        #endregion
 
-        /////////////////////////////////////////
-
-        /// <summary>
-        /// clock start
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        #region starttimer
         private void start1Timer_Click(object sender, EventArgs e)
         {
             stopWatch1.Start();
@@ -161,22 +150,9 @@ namespace GameNet.App.StartConsole
         {
             stopWatch6.Start();
         }
+        #endregion
 
-        /// <summary>
-        /// end of clock start
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-
-
-        //////////////////////////////////////////
-
-
-        /// <summary>
-        /// clock stop
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        #region stoptimer
         private void stop1Timer_Click(object sender, EventArgs e)
         {
             stopWatch1.Stop();
@@ -201,21 +177,9 @@ namespace GameNet.App.StartConsole
         {
             stopWatch6.Stop();
         }
-        /// <summary>
-        /// end of clock stop
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        #endregion
 
-
-        /////////////////////////////////////////
-
-
-        /// <summary>
-        /// clock reset
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        #region resettimer
         private void reset1Timer_Click(object sender, EventArgs e)
         {
             stopWatch1.Reset();
@@ -240,21 +204,10 @@ namespace GameNet.App.StartConsole
         {
             stopWatch6.Reset();
         }
-        /// <summary>
-        /// end of clock reset
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        #endregion
 
 
-        ////////////////////////////////////////
-
-
-        /// <summary>
-        /// pay button
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        #region pay
         private void pay1Btn_Click(object sender, EventArgs e)
         {
             int consoleId = 1;
@@ -293,13 +246,9 @@ namespace GameNet.App.StartConsole
             }
 
         }
+        #endregion
 
-        /// <summary>
-        /// shoping
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-
+        #region shoping
         private void shop1Btn_Click(object sender, EventArgs e)
         {
             shopViewFrm shopForm = new shopViewFrm();
@@ -336,38 +285,173 @@ namespace GameNet.App.StartConsole
 
         private void shop2Btn_Click(object sender, EventArgs e)
         {
-            
+            shopViewFrm shopForm = new shopViewFrm();
+            shopForm.consoleId = 2;
+            try
+            {
+                using (UnitOfWork db = new UnitOfWork())
+                {
+                    var id = db.Customer.Get().Where(n => n.ConsoleId == shopForm.consoleId).Select(n => n.Id).Last();
+                    shopForm.customerId = id;
+                    shopForm.ShowDialog();
+                    if (shopForm.DialogResult == DialogResult.OK)
+                    {
+                        var order = db.OrderRepository.Get()
+                            .Where(n => n.CustomerId == id);
+                        var orderCost = order.Select(n => n.amount).Sum();
+                        shopCostLbl2.Text = orderCost.ToString();
+                        var shopIds = order.Select(n => n.ShopId);
+                        foreach (var item in shopIds)
+                        {
+                            var shop = db.ShopRepository.GetShopById((int)item);
+                            shop2NameLbl.Text += "," + shop.Name;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void shop3Btn_Click(object sender, EventArgs e)
         {
+            shopViewFrm shopForm = new shopViewFrm();
+            shopForm.consoleId = 3;
+            try
+            {
+                using (UnitOfWork db = new UnitOfWork())
+                {
+                    var id = db.Customer.Get().Where(n => n.ConsoleId == shopForm.consoleId).Select(n => n.Id).Last();
+                    shopForm.customerId = id;
+                    shopForm.ShowDialog();
+                    if (shopForm.DialogResult == DialogResult.OK)
+                    {
+                        var order = db.OrderRepository.Get()
+                            .Where(n => n.CustomerId == id);
+                        var orderCost = order.Select(n => n.amount).Sum();
+                        shopCostLbl3.Text = orderCost.ToString();
+                        var shopIds = order.Select(n => n.ShopId);
+                        foreach (var item in shopIds)
+                        {
+                            var shop = db.ShopRepository.GetShopById((int)item);
+                            shop3NameLbl.Text += "," + shop.Name;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
 
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void shop4Btn_Click(object sender, EventArgs e)
         {
+            shopViewFrm shopForm = new shopViewFrm();
+            shopForm.consoleId = 4;
+            try
+            {
+                using (UnitOfWork db = new UnitOfWork())
+                {
+                    var id = db.Customer.Get().Where(n => n.ConsoleId == shopForm.consoleId).Select(n => n.Id).Last();
+                    shopForm.customerId = id;
+                    shopForm.ShowDialog();
+                    if (shopForm.DialogResult == DialogResult.OK)
+                    {
+                        var order = db.OrderRepository.Get()
+                            .Where(n => n.CustomerId == id);
+                        var orderCost = order.Select(n => n.amount).Sum();
+                        shopCostLbl4.Text = orderCost.ToString();
+                        var shopIds = order.Select(n => n.ShopId);
+                        foreach (var item in shopIds)
+                        {
+                            var shop = db.ShopRepository.GetShopById((int)item);
+                            shop4NameLbl.Text += "," + shop.Name;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
 
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void shop5Btn_Click(object sender, EventArgs e)
         {
+            shopViewFrm shopForm = new shopViewFrm();
+            shopForm.consoleId = 5;
+            try
+            {
+                using (UnitOfWork db = new UnitOfWork())
+                {
+                    var id = db.Customer.Get().Where(n => n.ConsoleId == shopForm.consoleId).Select(n => n.Id).Last();
+                    shopForm.customerId = id;
+                    shopForm.ShowDialog();
+                    if (shopForm.DialogResult == DialogResult.OK)
+                    {
+                        var order = db.OrderRepository.Get()
+                            .Where(n => n.CustomerId == id);
+                        var orderCost = order.Select(n => n.amount).Sum();
+                        shopCostLbl5.Text = orderCost.ToString();
+                        var shopIds = order.Select(n => n.ShopId);
+                        foreach (var item in shopIds)
+                        {
+                            var shop = db.ShopRepository.GetShopById((int)item);
+                            shop5NameLbl.Text += "," + shop.Name;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
 
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void shop6Btn_Click(object sender, EventArgs e)
         {
+            shopViewFrm shopForm = new shopViewFrm();
+            shopForm.consoleId = 6;
+            try
+            {
+                using (UnitOfWork db = new UnitOfWork())
+                {
+                    var id = db.Customer.Get().Where(n => n.ConsoleId == shopForm.consoleId).Select(n => n.Id).Last();
+                    shopForm.customerId = id;
+                    shopForm.ShowDialog();
+                    if (shopForm.DialogResult == DialogResult.OK)
+                    {
+                        var order = db.OrderRepository.Get()
+                            .Where(n => n.CustomerId == id);
+                        var orderCost = order.Select(n => n.amount).Sum();
+                        shopCostLbl6.Text = orderCost.ToString();
+                        var shopIds = order.Select(n => n.ShopId);
+                        foreach (var item in shopIds)
+                        {
+                            var shop = db.ShopRepository.GetShopById((int)item);
+                            shop6NameLbl.Text += "," + shop.Name;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
 
+                MessageBox.Show(ex.Message);
+            }
         }
+        #endregion
 
-        /// <summary>
-        /// end shoping
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-
+        #region deleteshop
         private void deletShop1Btn_Click(object sender, EventArgs e)
         {
-
             DeleteShopFrm deleteShopFrm = new DeleteShopFrm();
             try
             {
@@ -412,5 +496,243 @@ namespace GameNet.App.StartConsole
                 MessageBox.Show(ex.Message);
             }
         }
+
+
+        private void deletShop2Btn_Click(object sender, EventArgs e)
+        {
+            DeleteShopFrm deleteShopFrm = new DeleteShopFrm();
+            try
+            {
+                using (UnitOfWork db = new UnitOfWork())
+                {
+                    var id = db.Customer.Get()
+                        .Where(n => n.ConsoleId == 2)
+                        .Select(n => n.Id)
+                        .Last();
+                    var order = db.OrderRepository
+                        .Get()
+                        .Where(n => n.CustomerId == id);
+                    deleteShopFrm.orders = order;
+                }
+                deleteShopFrm.ShowDialog();
+                if (deleteShopFrm.DialogResult == DialogResult.OK)
+                {
+                    using (UnitOfWork db = new UnitOfWork())
+                    {
+
+                        var id = db.Customer.Get()
+                            .Where(n => n.ConsoleId == 2)
+                            .Select(n => n.Id)
+                            .Last();
+                        var order = db.OrderRepository
+                            .Get()
+                            .Where(n => n.CustomerId == id);
+                        {
+                            shop2NameLbl.Text = "";
+                            foreach (var or in order)
+                            {
+                                shop2NameLbl.Text += or.ShopName + " ";
+                            }
+                        }
+                        shopCostLbl2.Text = order.Select(n => n.amount).Sum().ToString();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void deletShop3Btn_Click(object sender, EventArgs e)
+        {
+            DeleteShopFrm deleteShopFrm = new DeleteShopFrm();
+            try
+            {
+                using (UnitOfWork db = new UnitOfWork())
+                {
+                    var id = db.Customer.Get()
+                        .Where(n => n.ConsoleId == 3)
+                        .Select(n => n.Id)
+                        .Last();
+                    var order = db.OrderRepository
+                        .Get()
+                        .Where(n => n.CustomerId == id);
+                    deleteShopFrm.orders = order;
+                }
+                deleteShopFrm.ShowDialog();
+                if (deleteShopFrm.DialogResult == DialogResult.OK)
+                {
+                    using (UnitOfWork db = new UnitOfWork())
+                    {
+
+                        var id = db.Customer.Get()
+                            .Where(n => n.ConsoleId == 3)
+                            .Select(n => n.Id)
+                            .Last();
+                        var order = db.OrderRepository
+                            .Get()
+                            .Where(n => n.CustomerId == id);
+                        {
+                            shop3NameLbl.Text = "";
+                            foreach (var or in order)
+                            {
+                                shop3NameLbl.Text += or.ShopName + " ";
+                            }
+                        }
+                        shopCostLbl3.Text = order.Select(n => n.amount).Sum().ToString();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void deletShop4Btn_Click(object sender, EventArgs e)
+        {
+            DeleteShopFrm deleteShopFrm = new DeleteShopFrm();
+            try
+            {
+                using (UnitOfWork db = new UnitOfWork())
+                {
+                    var id = db.Customer.Get()
+                        .Where(n => n.ConsoleId == 4)
+                        .Select(n => n.Id)
+                        .Last();
+                    var order = db.OrderRepository
+                        .Get()
+                        .Where(n => n.CustomerId == id);
+                    deleteShopFrm.orders = order;
+                }
+                deleteShopFrm.ShowDialog();
+                if (deleteShopFrm.DialogResult == DialogResult.OK)
+                {
+                    using (UnitOfWork db = new UnitOfWork())
+                    {
+
+                        var id = db.Customer.Get()
+                            .Where(n => n.ConsoleId == 4)
+                            .Select(n => n.Id)
+                            .Last();
+                        var order = db.OrderRepository
+                            .Get()
+                            .Where(n => n.CustomerId == id);
+                        {
+                            shop4NameLbl.Text = "";
+                            foreach (var or in order)
+                            {
+                                shop4NameLbl.Text += or.ShopName + " ";
+                            }
+                        }
+                        shopCostLbl4.Text = order.Select(n => n.amount).Sum().ToString();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void deletShop5Btn_Click(object sender, EventArgs e)
+        {
+            DeleteShopFrm deleteShopFrm = new DeleteShopFrm();
+            try
+            {
+                using (UnitOfWork db = new UnitOfWork())
+                {
+                    var id = db.Customer.Get()
+                        .Where(n => n.ConsoleId == 5)
+                        .Select(n => n.Id)
+                        .Last();
+                    var order = db.OrderRepository
+                        .Get()
+                        .Where(n => n.CustomerId == id);
+                    deleteShopFrm.orders = order;
+                }
+                deleteShopFrm.ShowDialog();
+                if (deleteShopFrm.DialogResult == DialogResult.OK)
+                {
+                    using (UnitOfWork db = new UnitOfWork())
+                    {
+
+                        var id = db.Customer.Get()
+                            .Where(n => n.ConsoleId == 5)
+                            .Select(n => n.Id)
+                            .Last();
+                        var order = db.OrderRepository
+                            .Get()
+                            .Where(n => n.CustomerId == id);
+                        {
+                            shop5NameLbl.Text = "";
+                            foreach (var or in order)
+                            {
+                                shop5NameLbl.Text += or.ShopName + " ";
+                            }
+                        }
+                        shopCostLbl5.Text = order.Select(n => n.amount).Sum().ToString();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void deletShop6Btn_Click(object sender, EventArgs e)
+        {
+            DeleteShopFrm deleteShopFrm = new DeleteShopFrm();
+            try
+            {
+                using (UnitOfWork db = new UnitOfWork())
+                {
+                    var id = db.Customer.Get()
+                        .Where(n => n.ConsoleId == 6)
+                        .Select(n => n.Id)
+                        .Last();
+                    var order = db.OrderRepository
+                        .Get()
+                        .Where(n => n.CustomerId == id);
+                    deleteShopFrm.orders = order;
+                }
+                deleteShopFrm.ShowDialog();
+                if (deleteShopFrm.DialogResult == DialogResult.OK)
+                {
+                    using (UnitOfWork db = new UnitOfWork())
+                    {
+
+                        var id = db.Customer.Get()
+                            .Where(n => n.ConsoleId == 6)
+                            .Select(n => n.Id)
+                            .Last();
+                        var order = db.OrderRepository
+                            .Get()
+                            .Where(n => n.CustomerId == id);
+                        {
+                            shop6NameLbl.Text = "";
+                            foreach (var or in order)
+                            {
+                                shop6NameLbl.Text += or.ShopName + " ";
+                            }
+                        }
+                        shopCostLbl6.Text = order.Select(n => n.amount).Sum().ToString();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+        }
+        #endregion
+
     }
 }

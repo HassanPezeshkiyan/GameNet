@@ -292,6 +292,7 @@ namespace GameNet.App.StartConsole
             this.deletShop6Btn.TabIndex = 7;
             this.deletShop6Btn.Text = "حذف بوفه";
             this.deletShop6Btn.UseVisualStyleBackColor = false;
+            this.deletShop6Btn.Click += new System.EventHandler(this.deletShop6Btn_Click);
             // 
             // stop6Timer
             // 
@@ -533,6 +534,7 @@ namespace GameNet.App.StartConsole
             this.deletShop5Btn.TabIndex = 7;
             this.deletShop5Btn.Text = "حذف بوفه";
             this.deletShop5Btn.UseVisualStyleBackColor = false;
+            this.deletShop5Btn.Click += new System.EventHandler(this.deletShop5Btn_Click);
             // 
             // stop5Timer
             // 
@@ -774,6 +776,7 @@ namespace GameNet.App.StartConsole
             this.deletShop4Btn.TabIndex = 7;
             this.deletShop4Btn.Text = "حذف بوفه";
             this.deletShop4Btn.UseVisualStyleBackColor = false;
+            this.deletShop4Btn.Click += new System.EventHandler(this.deletShop4Btn_Click);
             // 
             // stop4Timer
             // 
@@ -1015,6 +1018,7 @@ namespace GameNet.App.StartConsole
             this.deletShop3Btn.TabIndex = 7;
             this.deletShop3Btn.Text = "حذف بوفه";
             this.deletShop3Btn.UseVisualStyleBackColor = false;
+            this.deletShop3Btn.Click += new System.EventHandler(this.deletShop3Btn_Click);
             // 
             // stop3Timer
             // 
@@ -1255,6 +1259,7 @@ namespace GameNet.App.StartConsole
             this.deletShop2Btn.TabIndex = 7;
             this.deletShop2Btn.Text = "حذف بوفه";
             this.deletShop2Btn.UseVisualStyleBackColor = false;
+            this.deletShop2Btn.Click += new System.EventHandler(this.deletShop2Btn_Click);
             // 
             // stop2Timer
             // 

@@ -14,32 +14,55 @@ namespace GameNet.App.StartConsole
 {
     public partial class FrmChooseConsole : Form
     {
-        public FrmChooseConsole() {
+        public FrmChooseConsole()
+        {
             InitializeComponent();
         }
-        public int selectedConsole = 0;
-        UnitOfWork db = new UnitOfWork();
-        private void buttonSelect_Click(object sender, EventArgs e) {
+        public int selectedConsole;
+        public List<int> indexselected = new List<int>() { 0};
+
+        
+        private void buttonSelect_Click(object sender, EventArgs e)
+        {
             selectedConsole = int.Parse(numericUpDownConsole.Value.ToString());
-            using (db) {
-                Customer customer = new Customer()
+            bool test = indexselected.Contains(selectedConsole);
+            if (!test)
+            {
+                using (UnitOfWork db = new UnitOfWork())
                 {
-                    ConsoleId = selectedConsole
-                };
-                try {
-                    db.Customer.Insert(customer);
-                    db.Save();
-                    DialogResult = DialogResult.OK;
-                }
-                catch {
+                    Customer customer = new Customer()
+                    {
+                        ConsoleId = selectedConsole
+                    };
+                    try
+                    {
+                        db.Customer.Insert(customer);
+                        db.Save();
+                        DialogResult = DialogResult.OK;
+                    }
+                    catch (Exception ex)
+                    {
 
 
+                    }
                 }
+            }
+            else
+            {
+                MessageBox.Show("");
             }
         }
 
-        private void buttonClose_Click(object sender, EventArgs e) {
+
+
+        private void buttonClose_Click(object sender, EventArgs e)
+        {
             Close();
+        }
+
+        private void FrmChooseConsole_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
