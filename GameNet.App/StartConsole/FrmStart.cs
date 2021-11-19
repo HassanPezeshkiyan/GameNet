@@ -1,15 +1,11 @@
-﻿using GameNet.App.Shoping;
+﻿using GameNet.App.Invoicing;
+using GameNet.App.Shoping;
 using GameNet.DataLayer;
 using GameNet.DataLayer.Context;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GameNet.App.StartConsole
@@ -104,7 +100,7 @@ namespace GameNet.App.StartConsole
         private void timer1_Tick(object sender, EventArgs e)
         {
             time1Txt.Text = string.Format("{0:hh\\:mm\\:ss}", stopWatch1.Elapsed);
-
+            
         }
         private void timer2_Tick(object sender, EventArgs e)
         {
@@ -143,6 +139,7 @@ namespace GameNet.App.StartConsole
         private void start1Timer_Click(object sender, EventArgs e)
         {
             stopWatch1.Start();
+
         }
         private void start2Timer_Click(object sender, EventArgs e)
         {
@@ -260,9 +257,40 @@ namespace GameNet.App.StartConsole
         /// <param name="e"></param>
         private void pay1Btn_Click(object sender, EventArgs e)
         {
+            int consoleId = 1;
+            int customerId;
+            using (UnitOfWork db = new UnitOfWork())
+            {
+                customerId = db.Customer.Get().Where(n => n.ConsoleId == consoleId).Select(n => n.Id).Last();
+                var orders = db.OrderRepository.Get().Where(n => n.CustomerId == customerId);
+                var finalCostOfShop = orders.Select(n => n.amount).Sum();
+                Order order = new Order()
+                {
+                    CustomerId = customerId,
+                    FinalCost = finalCostOfShop
+                };
+                db.Order.Insert(order);
+                db.Save();
+
+            }
             stopWatch1.Stop();
-            string[] timeValue = time1Txt.Text.Split(':');
+            string timeValue = time1Txt.Text;
             groupBoxConsole1.Visible = false;
+            InvoiceFrm invoiceFrm = new InvoiceFrm();
+            invoiceFrm.customerId = customerId;
+            invoiceFrm.timeValue = timeValue;
+            invoiceFrm.chargeValue = charge1Cost.Text;
+            invoiceFrm.consoleId = consoleId;
+            invoiceFrm.controllerCount = int.Parse(cntrl1Count.Value.ToString());
+            invoiceFrm.ShowDialog();
+            if (invoiceFrm.DialogResult == DialogResult.OK)
+            {
+
+            }
+            else
+            {
+                groupBoxConsole1.Visible = true;
+            }
 
         }
 
@@ -308,13 +336,7 @@ namespace GameNet.App.StartConsole
 
         private void shop2Btn_Click(object sender, EventArgs e)
         {
-            shopViewFrm shopForm = new shopViewFrm();
-            shopForm.consoleId = 2;
-            using (UnitOfWork db = new UnitOfWork())
-            {
-
-                var id = db.Customer.Get().Where(n => n.ConsoleId == shopForm.consoleId).Select(n => n.Id).Last();
-            }
+            
         }
 
         private void shop3Btn_Click(object sender, EventArgs e)
@@ -337,12 +359,12 @@ namespace GameNet.App.StartConsole
 
         }
 
-
         /// <summary>
         /// end shoping
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
+
         private void deletShop1Btn_Click(object sender, EventArgs e)
         {
 

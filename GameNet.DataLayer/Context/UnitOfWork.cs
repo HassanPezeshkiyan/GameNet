@@ -14,46 +14,72 @@ namespace GameNet.DataLayer.Context
         readonly GameNetEntities db = new GameNetEntities();
 
         private IShopRepository _shopRepository;
-        public IShopRepository ShopRepository {
-            get {
-                if (_shopRepository == null) {
+        public IShopRepository ShopRepository
+        {
+            get
+            {
+                if (_shopRepository == null)
+                {
                     _shopRepository = new ShopRepository(db);
                 }
                 return _shopRepository;
             }
         }
-
+        private GenericRepository<Shop> _shop;
+        public GenericRepository<Shop> Shop
+        {
+            get
+            {
+                if (_shop == null)
+                {
+                    _shop = new GenericRepository<Shop>(db);
+                }
+                return _shop;
+            }
+        }
         private GenericRepository<OrderItem> _orderRepository;
-        public GenericRepository<OrderItem> OrderRepository {
-            get {
-                if (_orderRepository == null) {
+        public GenericRepository<OrderItem> OrderRepository
+        {
+            get
+            {
+                if (_orderRepository == null)
+                {
                     _orderRepository = new GenericRepository<OrderItem>(db);
                 }
                 return _orderRepository;
             }
         }
-        private IOrderRepository _order;
-        public IOrderRepository Orders {
-            get {
-                if (_order == null) {
-                    _order = new OrderRepository(db);
+        private IOrderRepository _orders;
+        public IOrderRepository Orders
+        {
+            get
+            {
+                if (_orders == null)
+                {
+                    _orders = new OrderRepository(db);
                 }
-                return _order;
+                return _orders;
             }
         }
         private GenericRepository<Console> _console;
-        public GenericRepository<Console> Console {
-            get {
-                if (_console == null) {
+        public GenericRepository<Console> Console
+        {
+            get
+            {
+                if (_console == null)
+                {
                     _console = new GenericRepository<Console>(db);
                 }
                 return _console;
             }
         }
         private IConsoleRepository _consolee;
-        public IConsoleRepository Consolee {
-            get {
-                if (_consolee == null) {
+        public IConsoleRepository Consolee
+        {
+            get
+            {
+                if (_consolee == null)
+                {
                     _consolee = new ConsoleRepository(db);
                 }
                 return _consolee;
@@ -61,36 +87,74 @@ namespace GameNet.DataLayer.Context
         }
 
         private GenericRepository<User> _user;
-        public GenericRepository<User> User {
-            get {
-                if (_user == null) {
+        public GenericRepository<User> User
+        {
+            get
+            {
+                if (_user == null)
+                {
                     _user = new GenericRepository<User>(db);
                 }
                 return _user;
             }
         }
         private IUserRepository _users;
-        public IUserRepository Users {
-            get {
-                if (_users == null) {
+        public IUserRepository Users
+        {
+            get
+            {
+                if (_users == null)
+                {
                     _users = new UserRepository(db);
                 }
                 return _users;
             }
         }
         private GenericRepository<Customer> _customer;
-        public GenericRepository<Customer> Customer {
-            get {
-                if (_customer == null) {
+        public GenericRepository<Customer> Customer
+        {
+            get
+            {
+                if (_customer == null)
+                {
                     _customer = new GenericRepository<Customer>(db);
                 }
                 return _customer;
             }
         }
-        public void Save() {
+        private GenericRepository<Order> _order;
+        public GenericRepository<Order> Order
+        {
+            get
+            {
+                if (_order == null)
+                {
+                    _order = new GenericRepository<Order>(db);
+                }
+                return _order;
+            }
+        }
+        private GenericRepository<Invoice> _invoice;
+        public GenericRepository<Invoice> Invoice
+        {
+            get
+            {
+                if (_invoice == null)
+                {
+                    _invoice = new GenericRepository<Invoice>(db);
+
+                }
+                return _invoice;
+
+            }
+
+        }
+        public void Save()
+        {
             db.SaveChanges();
         }
-        public void Dispose() {
+        public void Dispose()
+        {
             db.Dispose();
         }
     }

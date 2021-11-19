@@ -19,21 +19,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Invoices">
-      <EntityTypeMapping TypeName="GameNetModel.Invoice">
-        <MappingFragment StoreEntitySet="Invoice">
-          <ScalarProperty Name="ConsoleId" ColumnName="ConsoleId" />
-          <ScalarProperty Name="ChargeValue" ColumnName="ChargeValue" />
-          <ScalarProperty Name="Time" ColumnName="Time" />
-          <ScalarProperty Name="ControllerQuantity" ColumnName="ControllerQuantity" />
-          <ScalarProperty Name="Amount" ColumnName="Amount" />
-          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
-          <ScalarProperty Name="OrderId" ColumnName="OrderId" />
-          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
-          <ScalarProperty Name="Id" ColumnName="Id" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="Orders">
       <EntityTypeMapping TypeName="GameNetModel.Order">
         <MappingFragment StoreEntitySet="Order">
@@ -87,6 +72,21 @@
           <ScalarProperty Name="FullName" ColumnName="FullName" />
           <ScalarProperty Name="PassWord" ColumnName="PassWord" />
           <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Invoices">
+      <EntityTypeMapping TypeName="GameNetModel.Invoice">
+        <MappingFragment StoreEntitySet="Invoice">
+          <ScalarProperty Name="ConsoleId" ColumnName="ConsoleId" />
+          <ScalarProperty Name="ChargeValue" ColumnName="ChargeValue" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="ControllerQuantity" ColumnName="ControllerQuantity" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
           <ScalarProperty Name="Id" ColumnName="Id" />
         </MappingFragment>
       </EntityTypeMapping>

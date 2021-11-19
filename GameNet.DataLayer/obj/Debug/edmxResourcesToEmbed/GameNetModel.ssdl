@@ -24,7 +24,7 @@
     <Property Name="CustomerId" Type="int" Nullable="false" />
     <Property Name="OrderId" Type="int" Nullable="false" />
     <Property Name="CreationDate" Type="datetime" Nullable="false" />
-    <Property Name="Amount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Amount" Type="decimal" Precision="18" Scale="0" Nullable="false" />
     <Property Name="ControllerQuantity" Type="int" Nullable="false" />
     <Property Name="Time" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="ChargeValue" Type="decimal" Precision="18" Scale="0" Nullable="false" />
@@ -50,7 +50,7 @@
     <Property Name="ShopId" Type="int" Nullable="false" />
     <Property Name="CustomerId" Type="int" Nullable="false" />
     <Property Name="ShopName" Type="nvarchar" MaxLength="10" Nullable="false" />
-    <Property Name="OrderId" Type="int" Nullable="false" />
+    <Property Name="OrderId" Type="int" />
   </EntityType>
   <EntityType Name="Shops">
     <Key>

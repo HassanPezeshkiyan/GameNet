@@ -37,9 +37,11 @@ namespace GameNet.App.Shoping
             {
                 using (UnitOfWork db = new UnitOfWork())
                 {
+                    var shop = db.Shop.Get().Where(n => n.Name == listedOrders[index].ShopName).First();
                     var customerOrders = db.OrderRepository.Get().Where(n => n.CustomerId == customerId);
                     var selectedOrder = customerOrders.Where(n => n.ShopName == listedOrders[index].ShopName).First();
                     db.OrderRepository.Delete(selectedOrder);
+                    shop.Quantity += selectedOrder.quantity;
                     db.Save();
                     DialogResult = DialogResult.OK;
                 }

@@ -22,6 +22,6 @@ namespace GameNet.DataLayer
         public int ShopId { get; set; }
         public int CustomerId { get; set; }
         public string ShopName { get; set; }
-        public int OrderId { get; set; }
+        public Nullable<int> OrderId { get; set; }
     }
 }

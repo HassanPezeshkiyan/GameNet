@@ -27,11 +27,11 @@ namespace GameNet.DataLayer
     
         public virtual DbSet<Console> Consoles { get; set; }
         public virtual DbSet<Customer> Customers { get; set; }
-        public virtual DbSet<Invoice> Invoices { get; set; }
         public virtual DbSet<Order> Orders { get; set; }
         public virtual DbSet<OrderItem> OrderItems { get; set; }
         public virtual DbSet<Shop> Shops { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<Invoice> Invoices { get; set; }
     }
 }
