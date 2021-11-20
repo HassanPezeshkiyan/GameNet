@@ -335,6 +335,7 @@ namespace GameNet.App.StartConsole
             this.pay6Btn.TabIndex = 16;
             this.pay6Btn.Text = "تسویه";
             this.pay6Btn.UseVisualStyleBackColor = false;
+            this.pay6Btn.Click += new System.EventHandler(this.pay6Btn_Click);
             // 
             // label26
             // 
@@ -577,6 +578,7 @@ namespace GameNet.App.StartConsole
             this.pay5Btn.TabIndex = 16;
             this.pay5Btn.Text = "تسویه";
             this.pay5Btn.UseVisualStyleBackColor = false;
+            this.pay5Btn.Click += new System.EventHandler(this.pay5Btn_Click);
             // 
             // label34
             // 
@@ -819,6 +821,7 @@ namespace GameNet.App.StartConsole
             this.pay4Btn.TabIndex = 16;
             this.pay4Btn.Text = "تسویه";
             this.pay4Btn.UseVisualStyleBackColor = false;
+            this.pay4Btn.Click += new System.EventHandler(this.pay4Btn_Click);
             // 
             // label42
             // 
@@ -1061,6 +1064,7 @@ namespace GameNet.App.StartConsole
             this.pay3Btn.TabIndex = 16;
             this.pay3Btn.Text = "تسویه";
             this.pay3Btn.UseVisualStyleBackColor = false;
+            this.pay3Btn.Click += new System.EventHandler(this.pay3Btn_Click);
             // 
             // label17
             // 
@@ -1302,6 +1306,7 @@ namespace GameNet.App.StartConsole
             this.pay2Btn.TabIndex = 16;
             this.pay2Btn.Text = "تسویه";
             this.pay2Btn.UseVisualStyleBackColor = false;
+            this.pay2Btn.Click += new System.EventHandler(this.pay2Btn_Click);
             // 
             // label8
             // 

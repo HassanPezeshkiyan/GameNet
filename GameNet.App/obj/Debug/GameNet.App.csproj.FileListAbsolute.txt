@@ -28,3 +28,7 @@ D:\Personal\GameNet\GameNet.App\obj\Debug\GameNet.App.Login.EditInfoFrm.resource
 D:\Personal\GameNet\GameNet.App\obj\Debug\GameNet.App.StartConsole.FrmChooseConsole.resources
 D:\Personal\GameNet\GameNet.App\obj\Debug\GameNet.App.Shoping.DeleteShopFrm.resources
 D:\Personal\GameNet\GameNet.App\obj\Debug\GameNet.App.Invoicing.InvoiceFrm.resources
+D:\Personal\GameNet\GameNet.App\bin\Debug\GameNet.App.exe.manifest
+D:\Personal\GameNet\GameNet.App\bin\Debug\GameNet.App.application
+D:\Personal\GameNet\GameNet.App\obj\Debug\GameNet.App.exe.manifest
+D:\Personal\GameNet\GameNet.App\obj\Debug\GameNet.App.application

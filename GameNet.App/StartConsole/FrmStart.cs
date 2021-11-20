@@ -207,46 +207,7 @@ namespace GameNet.App.StartConsole
         #endregion
 
 
-        #region pay
-        private void pay1Btn_Click(object sender, EventArgs e)
-        {
-            int consoleId = 1;
-            int customerId;
-            using (UnitOfWork db = new UnitOfWork())
-            {
-                customerId = db.Customer.Get().Where(n => n.ConsoleId == consoleId).Select(n => n.Id).Last();
-                var orders = db.OrderRepository.Get().Where(n => n.CustomerId == customerId);
-                var finalCostOfShop = orders.Select(n => n.amount).Sum();
-                Order order = new Order()
-                {
-                    CustomerId = customerId,
-                    FinalCost = finalCostOfShop
-                };
-                db.Order.Insert(order);
-                db.Save();
-
-            }
-            stopWatch1.Stop();
-            string timeValue = time1Txt.Text;
-            groupBoxConsole1.Visible = false;
-            InvoiceFrm invoiceFrm = new InvoiceFrm();
-            invoiceFrm.customerId = customerId;
-            invoiceFrm.timeValue = timeValue;
-            invoiceFrm.chargeValue = charge1Cost.Text;
-            invoiceFrm.consoleId = consoleId;
-            invoiceFrm.controllerCount = int.Parse(cntrl1Count.Value.ToString());
-            invoiceFrm.ShowDialog();
-            if (invoiceFrm.DialogResult == DialogResult.OK)
-            {
-
-            }
-            else
-            {
-                groupBoxConsole1.Visible = true;
-            }
-
-        }
-        #endregion
+      
 
         #region shoping
         private void shop1Btn_Click(object sender, EventArgs e)
@@ -734,5 +695,240 @@ namespace GameNet.App.StartConsole
         }
         #endregion
 
+        #region pay
+        private void pay1Btn_Click(object sender, EventArgs e)
+        {
+            int consoleId = 1;
+            int customerId;
+            using (UnitOfWork db = new UnitOfWork())
+            {
+                customerId = db.Customer.Get().Where(n => n.ConsoleId == consoleId).Select(n => n.Id).Last();
+                var orders = db.OrderRepository.Get().Where(n => n.CustomerId == customerId);
+                var finalCostOfShop = orders.Select(n => n.amount).Sum();
+                Order order = new Order()
+                {
+                    CustomerId = customerId,
+                    FinalCost = finalCostOfShop
+                };
+                db.Order.Insert(order);
+                db.Save();
+
+            }
+            stopWatch1.Stop();
+            string timeValue = time1Txt.Text;
+            groupBoxConsole1.Visible = false;
+            InvoiceFrm invoiceFrm = new InvoiceFrm();
+            invoiceFrm.customerId = customerId;
+            invoiceFrm.timeValue = timeValue;
+            invoiceFrm.chargeValue = charge1Cost.Text;
+            invoiceFrm.consoleId = consoleId;
+            invoiceFrm.controllerCount = int.Parse(cntrl1Count.Value.ToString());
+            invoiceFrm.ShowDialog();
+            if (invoiceFrm.DialogResult == DialogResult.OK)
+            {
+
+            }
+            else
+            {
+                groupBoxConsole1.Visible = true;
+            }
+
+        }
+
+        private void pay2Btn_Click(object sender, EventArgs e)
+        {
+            int consoleId = 2;
+            int customerId;
+            using (UnitOfWork db = new UnitOfWork())
+            {
+                customerId = db.Customer.Get().Where(n => n.ConsoleId == consoleId).Select(n => n.Id).Last();
+                var orders = db.OrderRepository.Get().Where(n => n.CustomerId == customerId);
+                var finalCostOfShop = orders.Select(n => n.amount).Sum();
+                Order order = new Order()
+                {
+                    CustomerId = customerId,
+                    FinalCost = finalCostOfShop
+                };
+                db.Order.Insert(order);
+                db.Save();
+
+            }
+            stopWatch2.Stop();
+            string timeValue = time2Txt.Text;
+            groupBoxConsole2.Visible = false;
+            InvoiceFrm invoiceFrm = new InvoiceFrm();
+            invoiceFrm.customerId = customerId;
+            invoiceFrm.timeValue = timeValue;
+            invoiceFrm.chargeValue = charge2Cost.Text;
+            invoiceFrm.consoleId = consoleId;
+            invoiceFrm.controllerCount = int.Parse(cntrl2Count.Value.ToString());
+            invoiceFrm.ShowDialog();
+            if (invoiceFrm.DialogResult == DialogResult.OK)
+            {
+
+            }
+            else
+            {
+                groupBoxConsole2.Visible = true;
+            }
+
+        }
+
+        private void pay3Btn_Click(object sender, EventArgs e)
+        {
+            int consoleId = 3;
+            int customerId;
+            using (UnitOfWork db = new UnitOfWork())
+            {
+                customerId = db.Customer.Get().Where(n => n.ConsoleId == consoleId).Select(n => n.Id).Last();
+                var orders = db.OrderRepository.Get().Where(n => n.CustomerId == customerId);
+                var finalCostOfShop = orders.Select(n => n.amount).Sum();
+                Order order = new Order()
+                {
+                    CustomerId = customerId,
+                    FinalCost = finalCostOfShop
+                };
+                db.Order.Insert(order);
+                db.Save();
+
+            }
+            stopWatch3.Stop();
+            string timeValue = time3Txt.Text;
+            groupBoxConsole3.Visible = false;
+            InvoiceFrm invoiceFrm = new InvoiceFrm();
+            invoiceFrm.customerId = customerId;
+            invoiceFrm.timeValue = timeValue;
+            invoiceFrm.chargeValue = charge3Cost.Text;
+            invoiceFrm.consoleId = consoleId;
+            invoiceFrm.controllerCount = int.Parse(cntrl3Count.Value.ToString());
+            invoiceFrm.ShowDialog();
+            if (invoiceFrm.DialogResult == DialogResult.OK)
+            {
+
+            }
+            else
+            {
+                groupBoxConsole3.Visible = true;
+            }
+
+        }
+
+        private void pay4Btn_Click(object sender, EventArgs e)
+        {
+            int consoleId = 4;
+            int customerId;
+            using (UnitOfWork db = new UnitOfWork())
+            {
+                customerId = db.Customer.Get().Where(n => n.ConsoleId == consoleId).Select(n => n.Id).Last();
+                var orders = db.OrderRepository.Get().Where(n => n.CustomerId == customerId);
+                var finalCostOfShop = orders.Select(n => n.amount).Sum();
+                Order order = new Order()
+                {
+                    CustomerId = customerId,
+                    FinalCost = finalCostOfShop
+                };
+                db.Order.Insert(order);
+                db.Save();
+
+            }
+            stopWatch4.Stop();
+            string timeValue = time4Txt.Text;
+            groupBoxConsole4.Visible = false;
+            InvoiceFrm invoiceFrm = new InvoiceFrm();
+            invoiceFrm.customerId = customerId;
+            invoiceFrm.timeValue = timeValue;
+            invoiceFrm.chargeValue = charge4Cost.Text;
+            invoiceFrm.consoleId = consoleId;
+            invoiceFrm.controllerCount = int.Parse(cntrl4Count.Value.ToString());
+            invoiceFrm.ShowDialog();
+            if (invoiceFrm.DialogResult == DialogResult.OK)
+            {
+
+            }
+            else
+            {
+                groupBoxConsole4.Visible = true;
+            }
+
+        }
+
+        private void pay5Btn_Click(object sender, EventArgs e)
+        {
+            int consoleId = 5;
+            int customerId;
+            using (UnitOfWork db = new UnitOfWork())
+            {
+                customerId = db.Customer.Get().Where(n => n.ConsoleId == consoleId).Select(n => n.Id).Last();
+                var orders = db.OrderRepository.Get().Where(n => n.CustomerId == customerId);
+                var finalCostOfShop = orders.Select(n => n.amount).Sum();
+                Order order = new Order()
+                {
+                    CustomerId = customerId,
+                    FinalCost = finalCostOfShop
+                };
+                db.Order.Insert(order);
+                db.Save();
+
+            }
+            stopWatch5.Stop();
+            string timeValue = time5Txt.Text;
+            groupBoxConsole5.Visible = false;
+            InvoiceFrm invoiceFrm = new InvoiceFrm();
+            invoiceFrm.customerId = customerId;
+            invoiceFrm.timeValue = timeValue;
+            invoiceFrm.chargeValue = charge5Cost.Text;
+            invoiceFrm.consoleId = consoleId;
+            invoiceFrm.controllerCount = int.Parse(cntrl5Count.Value.ToString());
+            invoiceFrm.ShowDialog();
+            if (invoiceFrm.DialogResult == DialogResult.OK)
+            {
+
+            }
+            else
+            {
+                groupBoxConsole5.Visible = true;
+            }
+
+        }
+
+        private void pay6Btn_Click(object sender, EventArgs e)
+        {
+            int consoleId = 6;
+            int customerId;
+            using (UnitOfWork db = new UnitOfWork())
+            {
+                customerId = db.Customer.Get().Where(n => n.ConsoleId == consoleId).Select(n => n.Id).Last();
+                var orders = db.OrderRepository.Get().Where(n => n.CustomerId == customerId);
+                var finalCostOfShop = orders.Select(n => n.amount).Sum();
+                Order order = new Order()
+                {
+                    CustomerId = customerId,
+                    FinalCost = finalCostOfShop
+                };
+                db.Order.Insert(order);
+                db.Save();
+
+            }
+            stopWatch6.Stop();
+            string timeValue = time6Txt.Text;
+            groupBoxConsole6.Visible = false;
+            InvoiceFrm invoiceFrm = new InvoiceFrm();
+            invoiceFrm.customerId = customerId;
+            invoiceFrm.timeValue = timeValue;
+            invoiceFrm.chargeValue = charge6Cost.Text;
+            invoiceFrm.consoleId = consoleId;
+            invoiceFrm.controllerCount = int.Parse(cntrl6Count.Value.ToString());
+            invoiceFrm.ShowDialog();
+            if (invoiceFrm.DialogResult == DialogResult.OK)
+            {
+
+            }
+            else
+            {
+                groupBoxConsole6.Visible = true;
+            }
+
+        }
+        #endregion
     }
 }

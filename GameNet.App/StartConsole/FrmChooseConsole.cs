@@ -49,7 +49,7 @@ namespace GameNet.App.StartConsole
             }
             else
             {
-                MessageBox.Show("");
+                MessageBox.Show("دستگاه انتخابی فعال می‌باشد", "اخطار");
             }
         }
 
