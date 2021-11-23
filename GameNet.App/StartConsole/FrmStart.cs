@@ -726,7 +726,7 @@ namespace GameNet.App.StartConsole
             invoiceFrm.ShowDialog();
             if (invoiceFrm.DialogResult == DialogResult.OK)
             {
-
+                MessageBox.Show("فاکتور با موفقیت ثبت شد");
             }
             else
             {
@@ -765,7 +765,7 @@ namespace GameNet.App.StartConsole
             invoiceFrm.ShowDialog();
             if (invoiceFrm.DialogResult == DialogResult.OK)
             {
-
+                MessageBox.Show("فاکتور با موفقیت ثبت شد");
             }
             else
             {
@@ -804,7 +804,7 @@ namespace GameNet.App.StartConsole
             invoiceFrm.ShowDialog();
             if (invoiceFrm.DialogResult == DialogResult.OK)
             {
-
+                MessageBox.Show("فاکتور با موفقیت ثبت شد");
             }
             else
             {
@@ -843,7 +843,7 @@ namespace GameNet.App.StartConsole
             invoiceFrm.ShowDialog();
             if (invoiceFrm.DialogResult == DialogResult.OK)
             {
-
+                MessageBox.Show("فاکتور با موفقیت ثبت شد");
             }
             else
             {
@@ -882,7 +882,7 @@ namespace GameNet.App.StartConsole
             invoiceFrm.ShowDialog();
             if (invoiceFrm.DialogResult == DialogResult.OK)
             {
-
+                MessageBox.Show("فاکتور با موفقیت ثبت شد");
             }
             else
             {
@@ -921,7 +921,7 @@ namespace GameNet.App.StartConsole
             invoiceFrm.ShowDialog();
             if (invoiceFrm.DialogResult == DialogResult.OK)
             {
-
+                MessageBox.Show("فاکتور با موفقیت ثبت شد");
             }
             else
             {

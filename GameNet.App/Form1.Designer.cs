@@ -35,24 +35,24 @@ namespace GameNet.App
             this.settingBtn = new System.Windows.Forms.Button();
             this.panelMain = new System.Windows.Forms.Panel();
             this.panelItems = new System.Windows.Forms.Panel();
-            this.btnStartConsole = new System.Windows.Forms.Button();
-            this.panelLogo = new System.Windows.Forms.Panel();
-            this.btnEditProfile = new System.Windows.Forms.Button();
-            this.labelUserName = new System.Windows.Forms.Label();
-            this.panelContainer = new System.Windows.Forms.Panel();
-            this.panelReports = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnStartConsole = new System.Windows.Forms.Button();
+            this.panelLogo = new System.Windows.Forms.Panel();
+            this.btnEditProfile = new System.Windows.Forms.Button();
+            this.labelUserName = new System.Windows.Forms.Label();
             this.pictureBoxUser = new System.Windows.Forms.PictureBox();
+            this.panelContainer = new System.Windows.Forms.Panel();
+            this.panelReports = new System.Windows.Forms.Panel();
             this.panelMain.SuspendLayout();
             this.panelItems.SuspendLayout();
-            this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUser)).BeginInit();
             this.SuspendLayout();
             // 
@@ -144,85 +144,6 @@ namespace GameNet.App
             this.panelItems.Size = new System.Drawing.Size(259, 359);
             this.panelItems.TabIndex = 10;
             // 
-            // btnStartConsole
-            // 
-            this.btnStartConsole.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            this.btnStartConsole.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnStartConsole.FlatAppearance.BorderSize = 0;
-            this.btnStartConsole.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStartConsole.Font = new System.Drawing.Font("B Nazanin", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.btnStartConsole.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnStartConsole.Location = new System.Drawing.Point(0, 267);
-            this.btnStartConsole.Margin = new System.Windows.Forms.Padding(4);
-            this.btnStartConsole.Name = "btnStartConsole";
-            this.btnStartConsole.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
-            this.btnStartConsole.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnStartConsole.Size = new System.Drawing.Size(259, 89);
-            this.btnStartConsole.TabIndex = 8;
-            this.btnStartConsole.Text = "شروع دستگاه";
-            this.btnStartConsole.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnStartConsole.UseVisualStyleBackColor = false;
-            this.btnStartConsole.Click += new System.EventHandler(this.btnStartConsole_Click);
-            // 
-            // panelLogo
-            // 
-            this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(39)))), ((int)(((byte)(46)))));
-            this.panelLogo.Controls.Add(this.btnEditProfile);
-            this.panelLogo.Controls.Add(this.labelUserName);
-            this.panelLogo.Controls.Add(this.pictureBoxUser);
-            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelLogo.Font = new System.Drawing.Font("B Nazanin", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.panelLogo.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.panelLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(259, 216);
-            this.panelLogo.TabIndex = 9;
-            // 
-            // btnEditProfile
-            // 
-            this.btnEditProfile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.btnEditProfile.FlatAppearance.BorderSize = 0;
-            this.btnEditProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditProfile.Font = new System.Drawing.Font("B Nazanin", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.btnEditProfile.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnEditProfile.Location = new System.Drawing.Point(158, 178);
-            this.btnEditProfile.Name = "btnEditProfile";
-            this.btnEditProfile.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnEditProfile.Size = new System.Drawing.Size(89, 31);
-            this.btnEditProfile.TabIndex = 8;
-            this.btnEditProfile.Text = "ویرایش ";
-            this.btnEditProfile.UseVisualStyleBackColor = false;
-            this.btnEditProfile.Click += new System.EventHandler(this.btnEditProfile_Click);
-            // 
-            // labelUserName
-            // 
-            this.labelUserName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelUserName.AutoSize = true;
-            this.labelUserName.Location = new System.Drawing.Point(152, 106);
-            this.labelUserName.Name = "labelUserName";
-            this.labelUserName.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.labelUserName.Size = new System.Drawing.Size(0, 32);
-            this.labelUserName.TabIndex = 1;
-            this.labelUserName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // panelContainer
-            // 
-            this.panelContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(47)))), ((int)(((byte)(62)))));
-            this.panelContainer.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelContainer.Font = new System.Drawing.Font("B Nazanin", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.panelContainer.Location = new System.Drawing.Point(0, 0);
-            this.panelContainer.Name = "panelContainer";
-            this.panelContainer.Size = new System.Drawing.Size(805, 394);
-            this.panelContainer.TabIndex = 9;
-            // 
-            // panelReports
-            // 
-            this.panelReports.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelReports.Location = new System.Drawing.Point(0, 394);
-            this.panelReports.Name = "panelReports";
-            this.panelReports.Size = new System.Drawing.Size(805, 361);
-            this.panelReports.TabIndex = 10;
-            // 
             // pictureBox4
             // 
             this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -271,6 +192,68 @@ namespace GameNet.App
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             // 
+            // btnStartConsole
+            // 
+            this.btnStartConsole.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            this.btnStartConsole.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnStartConsole.FlatAppearance.BorderSize = 0;
+            this.btnStartConsole.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStartConsole.Font = new System.Drawing.Font("B Nazanin", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.btnStartConsole.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnStartConsole.Location = new System.Drawing.Point(0, 267);
+            this.btnStartConsole.Margin = new System.Windows.Forms.Padding(4);
+            this.btnStartConsole.Name = "btnStartConsole";
+            this.btnStartConsole.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
+            this.btnStartConsole.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnStartConsole.Size = new System.Drawing.Size(259, 89);
+            this.btnStartConsole.TabIndex = 8;
+            this.btnStartConsole.Text = "شروع دستگاه";
+            this.btnStartConsole.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnStartConsole.UseVisualStyleBackColor = false;
+            this.btnStartConsole.Click += new System.EventHandler(this.btnStartConsole_Click);
+            // 
+            // panelLogo
+            // 
+            this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(39)))), ((int)(((byte)(46)))));
+            this.panelLogo.Controls.Add(this.btnEditProfile);
+            this.panelLogo.Controls.Add(this.labelUserName);
+            this.panelLogo.Controls.Add(this.pictureBoxUser);
+            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelLogo.Font = new System.Drawing.Font("B Nazanin", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.panelLogo.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Name = "panelLogo";
+            this.panelLogo.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.panelLogo.Size = new System.Drawing.Size(259, 216);
+            this.panelLogo.TabIndex = 9;
+            // 
+            // btnEditProfile
+            // 
+            this.btnEditProfile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.btnEditProfile.FlatAppearance.BorderSize = 0;
+            this.btnEditProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditProfile.Font = new System.Drawing.Font("B Nazanin", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.btnEditProfile.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnEditProfile.Location = new System.Drawing.Point(158, 178);
+            this.btnEditProfile.Name = "btnEditProfile";
+            this.btnEditProfile.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btnEditProfile.Size = new System.Drawing.Size(89, 31);
+            this.btnEditProfile.TabIndex = 8;
+            this.btnEditProfile.Text = "ویرایش ";
+            this.btnEditProfile.UseVisualStyleBackColor = false;
+            this.btnEditProfile.Click += new System.EventHandler(this.btnEditProfile_Click);
+            // 
+            // labelUserName
+            // 
+            this.labelUserName.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.labelUserName.AutoSize = true;
+            this.labelUserName.Location = new System.Drawing.Point(26, 111);
+            this.labelUserName.Name = "labelUserName";
+            this.labelUserName.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.labelUserName.Size = new System.Drawing.Size(0, 32);
+            this.labelUserName.TabIndex = 1;
+            this.labelUserName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // pictureBoxUser
             // 
             this.pictureBoxUser.Dock = System.Windows.Forms.DockStyle.Right;
@@ -280,6 +263,24 @@ namespace GameNet.App
             this.pictureBoxUser.Size = new System.Drawing.Size(101, 216);
             this.pictureBoxUser.TabIndex = 0;
             this.pictureBoxUser.TabStop = false;
+            // 
+            // panelContainer
+            // 
+            this.panelContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(47)))), ((int)(((byte)(62)))));
+            this.panelContainer.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelContainer.Font = new System.Drawing.Font("B Nazanin", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.panelContainer.Location = new System.Drawing.Point(0, 0);
+            this.panelContainer.Name = "panelContainer";
+            this.panelContainer.Size = new System.Drawing.Size(805, 394);
+            this.panelContainer.TabIndex = 9;
+            // 
+            // panelReports
+            // 
+            this.panelReports.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelReports.Location = new System.Drawing.Point(0, 394);
+            this.panelReports.Name = "panelReports";
+            this.panelReports.Size = new System.Drawing.Size(805, 361);
+            this.panelReports.TabIndex = 10;
             // 
             // mainFrm
             // 
@@ -302,12 +303,12 @@ namespace GameNet.App
             this.Load += new System.EventHandler(this.mainFrm_Load);
             this.panelMain.ResumeLayout(false);
             this.panelItems.ResumeLayout(false);
-            this.panelLogo.ResumeLayout(false);
-            this.panelLogo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panelLogo.ResumeLayout(false);
+            this.panelLogo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUser)).EndInit();
             this.ResumeLayout(false);
 

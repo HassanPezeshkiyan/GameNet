@@ -39,34 +39,28 @@ namespace GameNet.App.Invoicing
             cntrlCount.Value = controllerCount;
             shopCostLbl.Text = customerOrder.Select(n => n.FinalCost).First().ToString();
         }
-        Invoice invoice;
-        public string PersianDate
-        {
-            get
-            {
-                return invoice.CreationDate.ToPersianDateTimeString();
-            }
 
-            set
-            {
-                invoice.CreationDate = value.ToEnglishDateTime();
-            }
+        string PersianDate(DateTime datetime)
+        {
+            return datetime.ToPersianDateTimeString();
         }
+
         private void PayBtn_Click(object sender, EventArgs e)
         {
             using (UnitOfWork db = new UnitOfWork())
             {
                 try
                 {
-                    invoice = new Invoice() { 
-                    ConsoleId = consoleId,
-                    ControllerQuantity = int.Parse(cntrlCount.Value.ToString()),
-                    CreationDate = DateTime.Now,
-                    CustomerId = customerId,
-                    OrderId = customerOrder.Select(n => n.Id).Single(),
-                    Time = timeTxt.Text,
-                    NCreationDate = PersianDate
-                };
+                    Invoice invoice = new Invoice()
+                    {
+                        ConsoleId = consoleId,
+                        ControllerQuantity = int.Parse(cntrlCount.Value.ToString()),
+                        CreationDate = DateTime.Now,
+                        CustomerId = customerId,
+                        OrderId = customerOrder.Select(n => n.Id).Single(),
+                        Time = timeTxt.Text,
+                    };
+                    invoice.NCreationDate = PersianDate(invoice.CreationDate);
                     var shopAmount = customerOrder.Select(n => n.FinalCost).Single();
                     var controller = db.Console.Get().Where(n => n.Id == consoleId);
                     var controllerQuantityPrice = controller.Select(n => n.QuantityPriceController).Single();
@@ -75,6 +69,7 @@ namespace GameNet.App.Invoicing
                     string[] time = timeTxt.ToString().Split(':');
                     int hour = int.Parse(time[1]);
                     int min = int.Parse(time[2]);
+                    min = min <= 0 ? min + 1 : min;
                     decimal timePrice;
                     if (min > 50)
                     {
@@ -82,6 +77,7 @@ namespace GameNet.App.Invoicing
                     }
                     if (hour >= 1)
                     {
+                        
                         timePrice = hour * controllerTimePrice + (controllerTimePrice / min);
                     }
                     else
