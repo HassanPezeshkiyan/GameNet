@@ -34,6 +34,7 @@
           <Property Name="Time" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="ChargeValue" Type="decimal" Precision="18" Scale="0" Nullable="false" />
           <Property Name="ConsoleId" Type="int" Nullable="false" />
+          <Property Name="NCreationDate" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Order">
           <Key>
@@ -192,6 +193,7 @@
           <Property Name="Time" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="ChargeValue" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
           <Property Name="ConsoleId" Type="Int32" Nullable="false" />
+          <Property Name="NCreationDate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         </Schema>
     </edmx:ConceptualModels>
@@ -277,6 +279,7 @@
           <EntitySetMapping Name="Invoices">
             <EntityTypeMapping TypeName="GameNetModel.Invoice">
               <MappingFragment StoreEntitySet="Invoice">
+                <ScalarProperty Name="NCreationDate" ColumnName="NCreationDate" />
                 <ScalarProperty Name="ConsoleId" ColumnName="ConsoleId" />
                 <ScalarProperty Name="ChargeValue" ColumnName="ChargeValue" />
                 <ScalarProperty Name="Time" ColumnName="Time" />
@@ -302,7 +305,7 @@
     <Options>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
-        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
         <DesignerProperty Name="UseLegacyProvider" Value="False" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />

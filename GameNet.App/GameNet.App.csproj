@@ -96,6 +96,7 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="infra\MyDateExtension.cs" />
     <Compile Include="Invoicing\InvoiceFrm.cs">
       <SubType>Form</SubType>
     </Compile>

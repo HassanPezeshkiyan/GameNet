@@ -29,6 +29,7 @@
     <Property Name="Time" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="ChargeValue" Type="decimal" Precision="18" Scale="0" Nullable="false" />
     <Property Name="ConsoleId" Type="int" Nullable="false" />
+    <Property Name="NCreationDate" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="Order">
     <Key>

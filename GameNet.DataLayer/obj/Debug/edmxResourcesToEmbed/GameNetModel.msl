@@ -79,6 +79,7 @@
     <EntitySetMapping Name="Invoices">
       <EntityTypeMapping TypeName="GameNetModel.Invoice">
         <MappingFragment StoreEntitySet="Invoice">
+          <ScalarProperty Name="NCreationDate" ColumnName="NCreationDate" />
           <ScalarProperty Name="ConsoleId" ColumnName="ConsoleId" />
           <ScalarProperty Name="ChargeValue" ColumnName="ChargeValue" />
           <ScalarProperty Name="Time" ColumnName="Time" />

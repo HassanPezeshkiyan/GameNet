@@ -1,4 +1,6 @@
-﻿using GameNet.DataLayer;
+﻿
+using GameNet.App.infra;
+using GameNet.DataLayer;
 using GameNet.DataLayer.Context;
 using System;
 using System.Collections.Generic;
@@ -37,23 +39,34 @@ namespace GameNet.App.Invoicing
             cntrlCount.Value = controllerCount;
             shopCostLbl.Text = customerOrder.Select(n => n.FinalCost).First().ToString();
         }
+        Invoice invoice;
+        public string PersianDate
+        {
+            get
+            {
+                return invoice.CreationDate.ToPersianDateTimeString();
+            }
 
+            set
+            {
+                invoice.CreationDate = value.ToEnglishDateTime();
+            }
+        }
         private void PayBtn_Click(object sender, EventArgs e)
         {
             using (UnitOfWork db = new UnitOfWork())
             {
                 try
                 {
-                    Invoice invoice = new Invoice()
-                    {
-
-                        ConsoleId = consoleId,
-                        ControllerQuantity = int.Parse(cntrlCount.Value.ToString()),
-                        CreationDate = DateTime.Now,
-                        CustomerId = customerId,
-                        OrderId = customerOrder.Select(n => n.Id).Single(),
-                        Time = timeTxt.Text
-                    };
+                    invoice = new Invoice() { 
+                    ConsoleId = consoleId,
+                    ControllerQuantity = int.Parse(cntrlCount.Value.ToString()),
+                    CreationDate = DateTime.Now,
+                    CustomerId = customerId,
+                    OrderId = customerOrder.Select(n => n.Id).Single(),
+                    Time = timeTxt.Text,
+                    NCreationDate = PersianDate
+                };
                     var shopAmount = customerOrder.Select(n => n.FinalCost).Single();
                     var controller = db.Console.Get().Where(n => n.Id == consoleId);
                     var controllerQuantityPrice = controller.Select(n => n.QuantityPriceController).Single();

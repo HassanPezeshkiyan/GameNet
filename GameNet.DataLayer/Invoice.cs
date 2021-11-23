@@ -23,5 +23,6 @@ namespace GameNet.DataLayer
         public string Time { get; set; }
         public decimal ChargeValue { get; set; }
         public int ConsoleId { get; set; }
+        public string NCreationDate { get; set; }
     }
 }
