@@ -2,6 +2,7 @@
 using GameNet.App.Settings;
 using GameNet.App.Shoping;
 using GameNet.App.StartConsole;
+using GameNet.DataLayer;
 using GameNet.DataLayer.Context;
 using System;
 using System.Collections.Generic;
@@ -53,7 +54,7 @@ namespace GameNet.App
         public mainFrm()
         {
             InitializeComponent();
-            panelTools.Visible = false;
+            panelReports.Visible = false;
         }
 
         private void mainFrm_Load(object sender, EventArgs e)
@@ -126,7 +127,34 @@ namespace GameNet.App
 
         private void reportsBtn_Click(object sender, EventArgs e)
         {
-            panelTools.Visible = !panelTools.Visible;
+            panelReports.Visible = !panelReports.Visible;
+        }
+
+        private void buttonSearch_Click(object sender, EventArgs e)
+        {
+            List<invoice_View_creationDate> reports = new List<invoice_View_creationDate>();
+            using (UnitOfWork db = new UnitOfWork())
+            {
+                if (maskedTextBoxStartDate.Text != "    /  /" || maskedTextBoxStartDate.Text != "    /  /")
+                {
+                    reports = db.InvoiceReports
+                    .GetAll()
+                    .Where(n => n.NCreationDate
+                    .Contains(maskedTextBoxStartDate.Text) ||
+                    n.NCreationDate
+                    .Contains(maskedTextBoxEndDate.Text))
+                    .ToList();
+
+                }
+                else
+                {
+                    reports = db.InvoiceReports
+                    .GetAll()
+                    .ToList();
+                }
+                dataGridViewReports.AutoGenerateColumns = false;
+                dataGridViewReports.DataSource = reports;
+            }
         }
     }
 }

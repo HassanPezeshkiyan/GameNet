@@ -23,9 +23,13 @@ namespace GameNet.App.Shoping
         public int shopId = 0;
         private void editShopFrm_Load(object sender, EventArgs e)
         {
-            buyCostTxt.Enabled = false;
-            sellCostTxt.Enabled = false;
-            nameShop.Enabled = false;
+            if (roleId == 2)
+            {
+                buyCostTxt.Enabled = false;
+                sellCostTxt.Enabled = false;
+                nameShop.Enabled = false;
+
+            }
             var shop = db.ShopRepository.GetShopById(shopId);
             nameShop.Text = shop.Name;
             buyCostTxt.Text = shop.BuyCost.ToString();
@@ -67,7 +71,7 @@ namespace GameNet.App.Shoping
 
                 MessageBox.Show(ex.Message);
             }
-            
+
         }
 
     }

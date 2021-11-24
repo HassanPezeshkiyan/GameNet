@@ -26,84 +26,77 @@ namespace GameNet.App.Invoicing
         public string timeValue;
         public int controllerCount;
         public int consoleId;
-        public IEnumerable<Order> customerOrder;
+        public int orderId;
+        public Order customerOrder;
 
         private void InvoiceFrm_Load(object sender, EventArgs e)
         {
             using (UnitOfWork db = new UnitOfWork())
             {
-                customerOrder = db.Order.Get().Where(n => n.CustomerId == customerId);
+                customerOrder = db.Order.GetById(orderId);
             }
             chargeCost.Text = chargeValue;
             timeTxt.Text = timeValue;
             cntrlCount.Value = controllerCount;
-            shopCostLbl.Text = customerOrder.Select(n => n.FinalCost).First().ToString();
+            shopCostLbl.Text = customerOrder.FinalCost.ToString();
         }
 
         string PersianDate(DateTime datetime)
         {
-            return datetime.ToPersianDateTimeString();
+            return datetime.ToPersianDateString();
         }
 
         private void PayBtn_Click(object sender, EventArgs e)
         {
             using (UnitOfWork db = new UnitOfWork())
             {
+                var console = db.Console.GetById(consoleId);
+                var shopCost = customerOrder.FinalCost;
+                Invoice invoice = new Invoice()
+                {
+                    ChargeValue = decimal.Parse(chargeValue),
+                    ConsoleId = consoleId,
+                    CustomerId = customerId,
+                    OrderId = orderId,
+                    Time = timeValue,
+                    CreationDate = DateTime.Now,
+                    ControllerQuantity = controllerCount
+                };
+                invoice.NCreationDate = PersianDate(invoice.CreationDate);
+                var splitedTime = timeValue.Split(':');
+                var hour = int.Parse(splitedTime[1]);
+                var min = int.Parse(splitedTime[2]);
+                decimal timeCost = 0;
+                if (min >= 50)
+                {
+                    hour += 1;
+                }
+                if (hour > 0 && min > 0)
+                {
+                    timeCost = (hour * console.TimePriceController) + (console.TimePriceController / 60);
+                }
+                if (min > 0 && hour == 0)
+                {
+                    timeCost = (min * (console.TimePriceController / 60));
+                }
+                if (hour > 0 && min == 0)
+                {
+                    timeCost = (hour * console.TimePriceController);
+                }
+                invoice.Amount = shopCost + Math.Round(timeCost);
                 try
                 {
-                    Invoice invoice = new Invoice()
-                    {
-                        ConsoleId = consoleId,
-                        ControllerQuantity = int.Parse(cntrlCount.Value.ToString()),
-                        CreationDate = DateTime.Now,
-                        CustomerId = customerId,
-                        OrderId = customerOrder.Select(n => n.Id).Single(),
-                        Time = timeTxt.Text,
-                    };
-                    invoice.NCreationDate = PersianDate(invoice.CreationDate);
-                    var shopAmount = customerOrder.Select(n => n.FinalCost).Single();
-                    var controller = db.Console.Get().Where(n => n.Id == consoleId);
-                    var controllerQuantityPrice = controller.Select(n => n.QuantityPriceController).Single();
-                    var controllerPrice = controllerQuantityPrice * cntrlCount.Value;
-                    var controllerTimePrice = controller.Select(n => n.TimePriceController).Single();
-                    string[] time = timeTxt.ToString().Split(':');
-                    int hour = int.Parse(time[1]);
-                    int min = int.Parse(time[2]);
-                    min = min <= 0 ? min + 1 : min;
-                    decimal timePrice;
-                    if (min > 50)
-                    {
-                        hour += 1;
-                    }
-                    if (hour >= 1)
-                    {
-                        
-                        timePrice = hour * controllerTimePrice + (controllerTimePrice / min);
-                    }
-                    else
-                    {
-                        timePrice = (controllerTimePrice * min / 60);
-                    }
-                    invoice.Amount = controllerPrice + shopAmount + timePrice;
-                    decimal chargeValue = decimal.Parse(chargeCost.Text);
-                    if (chargeValue > invoice.Amount)
-                    {
-                        MessageBox.Show($"مبلغ بستانکاری: {chargeValue - invoice.Amount}", "بستانکار");
-                    }
-                    else
-                    {
-                        MessageBox.Show($"مبلغ بدهکاری: {invoice.Amount - chargeValue}", "بدهکار");
-                    }
-                    invoice.ChargeValue = chargeValue;
                     db.Invoice.Insert(invoice);
                     db.Save();
                     DialogResult = DialogResult.OK;
                 }
                 catch (Exception ex)
                 {
+
                     MessageBox.Show(ex.Message);
                 }
             }
+
         }
 
         private void CancelBtn_Click(object sender, EventArgs e)

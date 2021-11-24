@@ -1,5 +1,3 @@
-D:\Personal\GameNet\GameNet.DataLayer\obj\Debug\GameNet.DataLayer.csproj.AssemblyReference.cache
-D:\Personal\GameNet\GameNet.DataLayer\obj\Debug\GameNet.DataLayer.csproj.CoreCompileInputs.cache
 D:\Personal\GameNet\GameNet.DataLayer\bin\Debug\GameNet.DataLayer.dll.config
 D:\Personal\GameNet\GameNet.DataLayer\bin\Debug\GameNet.DataLayer.dll
 D:\Personal\GameNet\GameNet.DataLayer\bin\Debug\GameNet.DataLayer.pdb
@@ -7,6 +5,8 @@ D:\Personal\GameNet\GameNet.DataLayer\bin\Debug\EntityFramework.dll
 D:\Personal\GameNet\GameNet.DataLayer\bin\Debug\EntityFramework.SqlServer.dll
 D:\Personal\GameNet\GameNet.DataLayer\bin\Debug\EntityFramework.xml
 D:\Personal\GameNet\GameNet.DataLayer\bin\Debug\EntityFramework.SqlServer.xml
+D:\Personal\GameNet\GameNet.DataLayer\obj\Debug\GameNet.DataLayer.csproj.AssemblyReference.cache
+D:\Personal\GameNet\GameNet.DataLayer\obj\Debug\GameNet.DataLayer.csproj.CoreCompileInputs.cache
 D:\Personal\GameNet\GameNet.DataLayer\obj\Debug\GameNet.DataLayer.csproj.CopyComplete
 D:\Personal\GameNet\GameNet.DataLayer\obj\Debug\GameNet.DataLayer.dll
 D:\Personal\GameNet\GameNet.DataLayer\obj\Debug\GameNet.DataLayer.pdb

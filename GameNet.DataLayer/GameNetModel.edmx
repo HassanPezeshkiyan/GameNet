@@ -88,6 +88,17 @@
           <Property Name="FullName" Type="nchar" MaxLength="50" />
           <Property Name="Role" Type="nvarchar" MaxLength="10" Nullable="false" />
         </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'GameNet.dbo.invoice_View_creationDate' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="invoice_View_creationDate">
+          <Key>
+            <PropertyRef Name="Amount" />
+            <PropertyRef Name="Time" />
+          </Key>
+          <Property Name="Amount" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="Time" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="NCreationDate" Type="nvarchar" MaxLength="50" />
+        </EntityType>
         <EntityContainer Name="GameNetModelStoreContainer">
           <EntitySet Name="Consoles" EntityType="Self.Consoles" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />
@@ -97,6 +108,13 @@
           <EntitySet Name="Shops" EntityType="Self.Shops" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="invoice_View_creationDate" EntityType="Self.invoice_View_creationDate" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [invoice_View_creationDate].[Amount] AS [Amount], 
+    [invoice_View_creationDate].[Time] AS [Time], 
+    [invoice_View_creationDate].[NCreationDate] AS [NCreationDate]
+    FROM [dbo].[invoice_View_creationDate] AS [invoice_View_creationDate]</DefiningQuery>
+          </EntitySet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -111,6 +129,7 @@
           <EntitySet Name="sysdiagrams" EntityType="GameNetModel.sysdiagram" />
           <EntitySet Name="Users" EntityType="GameNetModel.User" />
           <EntitySet Name="Invoices" EntityType="GameNetModel.Invoice" />
+          <EntitySet Name="invoice_View_creationDate" EntityType="GameNetModel.invoice_View_creationDate" />
         </EntityContainer>
         <EntityType Name="Console">
           <Key>
@@ -193,6 +212,15 @@
           <Property Name="Time" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="ChargeValue" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
           <Property Name="ConsoleId" Type="Int32" Nullable="false" />
+          <Property Name="NCreationDate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="invoice_View_creationDate">
+          <Key>
+            <PropertyRef Name="Amount" />
+            <PropertyRef Name="Time" />
+          </Key>
+          <Property Name="Amount" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="Time" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="NCreationDate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         </Schema>
@@ -289,6 +317,15 @@
                 <ScalarProperty Name="OrderId" ColumnName="OrderId" />
                 <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="invoice_View_creationDate">
+            <EntityTypeMapping TypeName="GameNetModel.invoice_View_creationDate">
+              <MappingFragment StoreEntitySet="invoice_View_creationDate">
+                <ScalarProperty Name="NCreationDate" ColumnName="NCreationDate" />
+                <ScalarProperty Name="Time" ColumnName="Time" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -19,9 +19,9 @@ namespace GameNet.App.StartConsole
             InitializeComponent();
         }
         public int selectedConsole;
-        public List<int> indexselected = new List<int>() { 0};
+        public List<int> indexselected = new List<int>() { 0 };
 
-        
+
         private void buttonSelect_Click(object sender, EventArgs e)
         {
             selectedConsole = int.Parse(numericUpDownConsole.Value.ToString());
@@ -39,11 +39,12 @@ namespace GameNet.App.StartConsole
                         db.Customer.Insert(customer);
                         db.Save();
                         DialogResult = DialogResult.OK;
+                        indexselected.Add(selectedConsole);
                     }
                     catch (Exception ex)
                     {
 
-
+                        MessageBox.Show(ex.Message);
                     }
                 }
             }

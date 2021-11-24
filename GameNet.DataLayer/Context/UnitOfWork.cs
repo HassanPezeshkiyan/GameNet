@@ -149,6 +149,19 @@ namespace GameNet.DataLayer.Context
             }
 
         }
+
+        private InvoiceReports _invoiceReports;
+        public InvoiceReports InvoiceReports
+        {
+            get
+            {
+                if (_invoiceReports == null)
+                {
+                    _invoiceReports = new InvoiceReports(db);
+                }
+                return _invoiceReports;
+            }
+        }
         public void Save()
         {
             db.SaveChanges();

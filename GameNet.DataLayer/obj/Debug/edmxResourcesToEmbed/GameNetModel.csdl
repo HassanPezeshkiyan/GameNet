@@ -9,6 +9,7 @@
     <EntitySet Name="sysdiagrams" EntityType="GameNetModel.sysdiagram" />
     <EntitySet Name="Users" EntityType="GameNetModel.User" />
     <EntitySet Name="Invoices" EntityType="GameNetModel.Invoice" />
+    <EntitySet Name="invoice_View_creationDate" EntityType="GameNetModel.invoice_View_creationDate" />
   </EntityContainer>
   <EntityType Name="Console">
     <Key>
@@ -91,6 +92,15 @@
     <Property Name="Time" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="ChargeValue" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
     <Property Name="ConsoleId" Type="Int32" Nullable="false" />
+    <Property Name="NCreationDate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="invoice_View_creationDate">
+    <Key>
+      <PropertyRef Name="Amount" />
+      <PropertyRef Name="Time" />
+    </Key>
+    <Property Name="Amount" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="Time" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="NCreationDate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
 </Schema>

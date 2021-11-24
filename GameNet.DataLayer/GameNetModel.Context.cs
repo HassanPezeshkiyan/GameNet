@@ -33,5 +33,6 @@ namespace GameNet.DataLayer
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<Invoice> Invoices { get; set; }
+        public virtual DbSet<invoice_View_creationDate> invoice_View_creationDate { get; set; }
     }
 }

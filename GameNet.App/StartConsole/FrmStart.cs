@@ -207,7 +207,7 @@ namespace GameNet.App.StartConsole
         #endregion
 
 
-      
+
 
         #region shoping
         private void shop1Btn_Click(object sender, EventArgs e)
@@ -700,6 +700,7 @@ namespace GameNet.App.StartConsole
         {
             int consoleId = 1;
             int customerId;
+            int orderId;
             using (UnitOfWork db = new UnitOfWork())
             {
                 customerId = db.Customer.Get().Where(n => n.ConsoleId == consoleId).Select(n => n.Id).Last();
@@ -712,7 +713,7 @@ namespace GameNet.App.StartConsole
                 };
                 db.Order.Insert(order);
                 db.Save();
-
+                orderId = order.Id;
             }
             stopWatch1.Stop();
             string timeValue = time1Txt.Text;
@@ -722,11 +723,13 @@ namespace GameNet.App.StartConsole
             invoiceFrm.timeValue = timeValue;
             invoiceFrm.chargeValue = charge1Cost.Text;
             invoiceFrm.consoleId = consoleId;
+            invoiceFrm.orderId = orderId;
             invoiceFrm.controllerCount = int.Parse(cntrl1Count.Value.ToString());
             invoiceFrm.ShowDialog();
             if (invoiceFrm.DialogResult == DialogResult.OK)
             {
                 MessageBox.Show("فاکتور با موفقیت ثبت شد");
+                frmChoose.indexselected.Remove(consoleId);
             }
             else
             {
@@ -739,6 +742,7 @@ namespace GameNet.App.StartConsole
         {
             int consoleId = 2;
             int customerId;
+            int orderId;
             using (UnitOfWork db = new UnitOfWork())
             {
                 customerId = db.Customer.Get().Where(n => n.ConsoleId == consoleId).Select(n => n.Id).Last();
@@ -751,7 +755,7 @@ namespace GameNet.App.StartConsole
                 };
                 db.Order.Insert(order);
                 db.Save();
-
+                orderId = order.Id;
             }
             stopWatch2.Stop();
             string timeValue = time2Txt.Text;
@@ -761,11 +765,13 @@ namespace GameNet.App.StartConsole
             invoiceFrm.timeValue = timeValue;
             invoiceFrm.chargeValue = charge2Cost.Text;
             invoiceFrm.consoleId = consoleId;
+            invoiceFrm.orderId = orderId;
             invoiceFrm.controllerCount = int.Parse(cntrl2Count.Value.ToString());
             invoiceFrm.ShowDialog();
             if (invoiceFrm.DialogResult == DialogResult.OK)
             {
                 MessageBox.Show("فاکتور با موفقیت ثبت شد");
+                frmChoose.indexselected.Remove(consoleId);
             }
             else
             {
@@ -778,6 +784,7 @@ namespace GameNet.App.StartConsole
         {
             int consoleId = 3;
             int customerId;
+            int orderId;
             using (UnitOfWork db = new UnitOfWork())
             {
                 customerId = db.Customer.Get().Where(n => n.ConsoleId == consoleId).Select(n => n.Id).Last();
@@ -790,7 +797,7 @@ namespace GameNet.App.StartConsole
                 };
                 db.Order.Insert(order);
                 db.Save();
-
+                orderId = order.Id;
             }
             stopWatch3.Stop();
             string timeValue = time3Txt.Text;
@@ -800,11 +807,13 @@ namespace GameNet.App.StartConsole
             invoiceFrm.timeValue = timeValue;
             invoiceFrm.chargeValue = charge3Cost.Text;
             invoiceFrm.consoleId = consoleId;
+            invoiceFrm.orderId = orderId;
             invoiceFrm.controllerCount = int.Parse(cntrl3Count.Value.ToString());
             invoiceFrm.ShowDialog();
             if (invoiceFrm.DialogResult == DialogResult.OK)
             {
                 MessageBox.Show("فاکتور با موفقیت ثبت شد");
+                frmChoose.indexselected.Remove(consoleId);
             }
             else
             {
@@ -817,6 +826,7 @@ namespace GameNet.App.StartConsole
         {
             int consoleId = 4;
             int customerId;
+            int orderId;
             using (UnitOfWork db = new UnitOfWork())
             {
                 customerId = db.Customer.Get().Where(n => n.ConsoleId == consoleId).Select(n => n.Id).Last();
@@ -829,7 +839,7 @@ namespace GameNet.App.StartConsole
                 };
                 db.Order.Insert(order);
                 db.Save();
-
+                orderId = order.Id;
             }
             stopWatch4.Stop();
             string timeValue = time4Txt.Text;
@@ -839,11 +849,13 @@ namespace GameNet.App.StartConsole
             invoiceFrm.timeValue = timeValue;
             invoiceFrm.chargeValue = charge4Cost.Text;
             invoiceFrm.consoleId = consoleId;
+            invoiceFrm.orderId = orderId;
             invoiceFrm.controllerCount = int.Parse(cntrl4Count.Value.ToString());
             invoiceFrm.ShowDialog();
             if (invoiceFrm.DialogResult == DialogResult.OK)
             {
                 MessageBox.Show("فاکتور با موفقیت ثبت شد");
+                frmChoose.indexselected.Remove(consoleId);
             }
             else
             {
@@ -856,6 +868,7 @@ namespace GameNet.App.StartConsole
         {
             int consoleId = 5;
             int customerId;
+            int orderId;
             using (UnitOfWork db = new UnitOfWork())
             {
                 customerId = db.Customer.Get().Where(n => n.ConsoleId == consoleId).Select(n => n.Id).Last();
@@ -868,7 +881,7 @@ namespace GameNet.App.StartConsole
                 };
                 db.Order.Insert(order);
                 db.Save();
-
+                orderId = order.Id;
             }
             stopWatch5.Stop();
             string timeValue = time5Txt.Text;
@@ -879,10 +892,12 @@ namespace GameNet.App.StartConsole
             invoiceFrm.chargeValue = charge5Cost.Text;
             invoiceFrm.consoleId = consoleId;
             invoiceFrm.controllerCount = int.Parse(cntrl5Count.Value.ToString());
+            invoiceFrm.orderId = orderId;
             invoiceFrm.ShowDialog();
             if (invoiceFrm.DialogResult == DialogResult.OK)
             {
                 MessageBox.Show("فاکتور با موفقیت ثبت شد");
+                frmChoose.indexselected.Remove(consoleId);
             }
             else
             {
@@ -895,6 +910,7 @@ namespace GameNet.App.StartConsole
         {
             int consoleId = 6;
             int customerId;
+            int orderId;
             using (UnitOfWork db = new UnitOfWork())
             {
                 customerId = db.Customer.Get().Where(n => n.ConsoleId == consoleId).Select(n => n.Id).Last();
@@ -907,7 +923,7 @@ namespace GameNet.App.StartConsole
                 };
                 db.Order.Insert(order);
                 db.Save();
-
+                orderId = order.Id;
             }
             stopWatch6.Stop();
             string timeValue = time6Txt.Text;
@@ -917,11 +933,13 @@ namespace GameNet.App.StartConsole
             invoiceFrm.timeValue = timeValue;
             invoiceFrm.chargeValue = charge6Cost.Text;
             invoiceFrm.consoleId = consoleId;
+            invoiceFrm.orderId = orderId;
             invoiceFrm.controllerCount = int.Parse(cntrl6Count.Value.ToString());
             invoiceFrm.ShowDialog();
             if (invoiceFrm.DialogResult == DialogResult.OK)
             {
                 MessageBox.Show("فاکتور با موفقیت ثبت شد");
+                frmChoose.indexselected.Remove(consoleId);
             }
             else
             {

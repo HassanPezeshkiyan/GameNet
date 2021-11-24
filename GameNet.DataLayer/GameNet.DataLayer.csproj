@@ -75,6 +75,9 @@
     <Compile Include="Invoice.cs">
       <DependentUpon>GameNetModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="invoice_View_creationDate.cs">
+      <DependentUpon>GameNetModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Order.cs">
       <DependentUpon>GameNetModel.tt</DependentUpon>
     </Compile>
@@ -91,6 +94,7 @@
     <Compile Include="Services\ConsoleRepository.cs" />
     <Compile Include="Services\Customer.cs" />
     <Compile Include="Services\GenericRepository.cs" />
+    <Compile Include="Services\InvoiceReports.cs" />
     <Compile Include="Services\OrderRepository.cs" />
     <Compile Include="Services\ShopRepository.cs" />
     <Compile Include="Services\UserRepository.cs" />

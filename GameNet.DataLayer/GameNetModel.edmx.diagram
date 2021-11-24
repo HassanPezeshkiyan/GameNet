@@ -13,6 +13,7 @@
         <EntityTypeShape EntityType="GameNetModel.sysdiagram" Width="1.5" PointX="6.75" PointY="0.75" />
         <EntityTypeShape EntityType="GameNetModel.User" Width="1.5" PointX="6.75" PointY="3.75" />
         <EntityTypeShape EntityType="GameNetModel.Invoice" Width="1.5" PointX="0.625" PointY="4.375" />
+        <EntityTypeShape EntityType="GameNetModel.invoice_View_creationDate" Width="1.5" PointX="3.375" PointY="7.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
