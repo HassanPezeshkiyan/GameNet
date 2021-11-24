@@ -54,14 +54,17 @@ namespace GameNet.App.Login
 
                     user.FullName = textBoxFullName.Text.Trim();
                     user.UserName = textBoxUserName.Text.Trim();
-
-                    if (textBoxPassword.Text.Trim() == textBoxConfirmPassword.Text.Trim())
+                    bool isnull = string.IsNullOrWhiteSpace(textBoxPassword.Text) ? true : false;
+                    if (!isnull)
                     {
-                        user.PassWord = textBoxPassword.Text.Trim();
-                    }
-                    else
-                    {
-                        MessageBox.Show("تکرار رمز عبور اشتباه است", "اخطار", MessageBoxButtons.OK);
+                        if (textBoxConfirmPassword.Text.Trim() == textBoxPassword.Text.Trim())
+                        {
+                            user.PassWord = textBoxPassword.Text.Trim();
+                        }
+                        else
+                        {
+                            MessageBox.Show("تکرار رمز عبور اشتباه است", "اخطار", MessageBoxButtons.OK);
+                        }
                     }
                     db.User.Update(user);
                     db.Save();

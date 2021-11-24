@@ -163,6 +163,16 @@ namespace GameNet.App.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap searchS {
+            get {
+                object obj = ResourceManager.GetObject("searchS", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap settingIcon1 {
             get {
                 object obj = ResourceManager.GetObject("settingIcon1", resourceCulture);

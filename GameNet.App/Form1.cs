@@ -50,30 +50,30 @@ namespace GameNet.App
         public bool Shoping6;
         int userId = 0;
         int roleId;
-        public mainFrm() {
+        public mainFrm()
+        {
             InitializeComponent();
-
+            panelTools.Visible = false;
         }
 
-        private void mainFrm_Load(object sender, EventArgs e) {
+        private void mainFrm_Load(object sender, EventArgs e)
+        {
 
-            //deletShop1Btn.Enabled = false;
-            //deletShop2Btn.Enabled = false;
-            //deletShop3Btn.Enabled = false;
-            //deletShop4Btn.Enabled = false;
-            //deletShop5Btn.Enabled = false;
-            //deletShop6Btn.Enabled = false;
+
             this.Hide();
             LoginFrm frmLogin = new LoginFrm();
-            if (frmLogin.ShowDialog() == DialogResult.OK) {
+            if (frmLogin.ShowDialog() == DialogResult.OK)
+            {
                 roleId = frmLogin.roleId;
                 this.Show();
-                if (roleId == 2) {
+                if (roleId == 2)
+                {
                     reportsBtn.Enabled = false;
                     settingBtn.Enabled = false;
                 }
             }
-            else {
+            else
+            {
                 Application.Exit();
             }
 
@@ -81,7 +81,8 @@ namespace GameNet.App
             userId = frmLogin.userId;
         }
         private Form activeForm = null;
-        private void openChildForm(Form childForm, Panel panel, DockStyle dockStyle) {
+        private void openChildForm(Form childForm, Panel panel, DockStyle dockStyle)
+        {
             if (activeForm != null)
                 activeForm.Close();
             activeForm = childForm;
@@ -94,27 +95,22 @@ namespace GameNet.App
             childForm.Show();
 
         }
-        //private void openChildFormConsoles(Form childForm, Panel panel, DockStyle dockStyle) {
-        //    childForm.TopLevel = false;
-        //    childForm.FormBorderStyle = FormBorderStyle.None;
-        //    childForm.Dock = dockStyle;
-        //    panel.Controls.Add(childForm);
-        //    panel.Tag = childForm;
-        //    childForm.Show();
 
-        //}
-        private void shopSettingBtn_Click(object sender, EventArgs e) {
+        private void shopSettingBtn_Click(object sender, EventArgs e)
+        {
             ShopFrm shopFrm = new ShopFrm();
             shopFrm.roleId = roleId;
             openChildForm(shopFrm, panelContainer, DockStyle.Fill);
 
         }
-        private void settingBtn_Click(object sender, EventArgs e) {
+        private void settingBtn_Click(object sender, EventArgs e)
+        {
             openChildForm(new settingFrm(), panelContainer, DockStyle.Fill);
 
         }
 
-        private void btnEditProfile_Click(object sender, EventArgs e) {
+        private void btnEditProfile_Click(object sender, EventArgs e)
+        {
             EditInfoFrm editform = new EditInfoFrm();
             editform.userId = userId;
             editform.ShowDialog();
@@ -122,9 +118,15 @@ namespace GameNet.App
         }
 
 
-        private void btnStartConsole_Click(object sender, EventArgs e) {
+        private void btnStartConsole_Click(object sender, EventArgs e)
+        {
             FrmStart frmStart = new FrmStart();
             frmStart.Show();
+        }
+
+        private void reportsBtn_Click(object sender, EventArgs e)
+        {
+            panelTools.Visible = !panelTools.Visible;
         }
     }
 }

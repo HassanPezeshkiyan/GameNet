@@ -35,25 +35,33 @@ namespace GameNet.App
             this.settingBtn = new System.Windows.Forms.Button();
             this.panelMain = new System.Windows.Forms.Panel();
             this.panelItems = new System.Windows.Forms.Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnStartConsole = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.btnEditProfile = new System.Windows.Forms.Button();
             this.labelUserName = new System.Windows.Forms.Label();
-            this.pictureBoxUser = new System.Windows.Forms.PictureBox();
             this.panelContainer = new System.Windows.Forms.Panel();
             this.panelReports = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxUser = new System.Windows.Forms.PictureBox();
+            this.panelTools = new System.Windows.Forms.Panel();
+            this.buttonSearch = new System.Windows.Forms.Button();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.label = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
             this.panelMain.SuspendLayout();
             this.panelItems.SuspendLayout();
+            this.panelLogo.SuspendLayout();
+            this.panelReports.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUser)).BeginInit();
+            this.panelTools.SuspendLayout();
             this.SuspendLayout();
             // 
             // shopSettingBtn
@@ -94,6 +102,7 @@ namespace GameNet.App
             this.reportsBtn.Text = "گزارشات";
             this.reportsBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.reportsBtn.UseVisualStyleBackColor = false;
+            this.reportsBtn.Click += new System.EventHandler(this.reportsBtn_Click);
             // 
             // settingBtn
             // 
@@ -143,54 +152,6 @@ namespace GameNet.App
             this.panelItems.Name = "panelItems";
             this.panelItems.Size = new System.Drawing.Size(259, 359);
             this.panelItems.TabIndex = 10;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox4.Image = global::GameNet.App.Properties.Resources.play;
-            this.pictureBox4.Location = new System.Drawing.Point(32, 283);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(55, 50);
-            this.pictureBox4.TabIndex = 12;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox3.Image = global::GameNet.App.Properties.Resources.reportIcon;
-            this.pictureBox3.Location = new System.Drawing.Point(32, 18);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(55, 50);
-            this.pictureBox3.TabIndex = 11;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox2.Image = global::GameNet.App.Properties.Resources._149309_200;
-            this.pictureBox2.Location = new System.Drawing.Point(32, 200);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(55, 50);
-            this.pictureBox2.TabIndex = 10;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox1.Image = global::GameNet.App.Properties.Resources.settingIcon1;
-            this.pictureBox1.Location = new System.Drawing.Point(32, 111);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(55, 50);
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
             // 
             // btnStartConsole
             // 
@@ -254,16 +215,6 @@ namespace GameNet.App
             this.labelUserName.TabIndex = 1;
             this.labelUserName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // pictureBoxUser
-            // 
-            this.pictureBoxUser.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pictureBoxUser.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxUser.Image")));
-            this.pictureBoxUser.Location = new System.Drawing.Point(158, 0);
-            this.pictureBoxUser.Name = "pictureBoxUser";
-            this.pictureBoxUser.Size = new System.Drawing.Size(101, 216);
-            this.pictureBoxUser.TabIndex = 0;
-            this.pictureBoxUser.TabStop = false;
-            // 
             // panelContainer
             // 
             this.panelContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(47)))), ((int)(((byte)(62)))));
@@ -276,11 +227,134 @@ namespace GameNet.App
             // 
             // panelReports
             // 
+            this.panelReports.Controls.Add(this.panelTools);
             this.panelReports.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelReports.Location = new System.Drawing.Point(0, 394);
             this.panelReports.Name = "panelReports";
             this.panelReports.Size = new System.Drawing.Size(805, 361);
             this.panelReports.TabIndex = 10;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox4.Image = global::GameNet.App.Properties.Resources.play;
+            this.pictureBox4.Location = new System.Drawing.Point(32, 283);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(55, 50);
+            this.pictureBox4.TabIndex = 12;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox3.Image = global::GameNet.App.Properties.Resources.reportIcon;
+            this.pictureBox3.Location = new System.Drawing.Point(32, 18);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(55, 50);
+            this.pictureBox3.TabIndex = 11;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox2.Image = global::GameNet.App.Properties.Resources._149309_200;
+            this.pictureBox2.Location = new System.Drawing.Point(32, 200);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(55, 50);
+            this.pictureBox2.TabIndex = 10;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox1.Image = global::GameNet.App.Properties.Resources.settingIcon1;
+            this.pictureBox1.Location = new System.Drawing.Point(32, 111);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(55, 50);
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBoxUser
+            // 
+            this.pictureBoxUser.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pictureBoxUser.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxUser.Image")));
+            this.pictureBoxUser.Location = new System.Drawing.Point(158, 0);
+            this.pictureBoxUser.Name = "pictureBoxUser";
+            this.pictureBoxUser.Size = new System.Drawing.Size(101, 216);
+            this.pictureBoxUser.TabIndex = 0;
+            this.pictureBoxUser.TabStop = false;
+            // 
+            // panelTools
+            // 
+            this.panelTools.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panelTools.Controls.Add(this.label1);
+            this.panelTools.Controls.Add(this.maskedTextBox2);
+            this.panelTools.Controls.Add(this.label);
+            this.panelTools.Controls.Add(this.maskedTextBox1);
+            this.panelTools.Controls.Add(this.buttonSearch);
+            this.panelTools.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTools.Location = new System.Drawing.Point(0, 0);
+            this.panelTools.Name = "panelTools";
+            this.panelTools.Size = new System.Drawing.Size(805, 72);
+            this.panelTools.TabIndex = 0;
+            // 
+            // buttonSearch
+            // 
+            this.buttonSearch.Dock = System.Windows.Forms.DockStyle.Right;
+            this.buttonSearch.FlatAppearance.BorderSize = 0;
+            this.buttonSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSearch.Image = global::GameNet.App.Properties.Resources.searchS;
+            this.buttonSearch.Location = new System.Drawing.Point(727, 0);
+            this.buttonSearch.Name = "buttonSearch";
+            this.buttonSearch.Size = new System.Drawing.Size(78, 72);
+            this.buttonSearch.TabIndex = 0;
+            this.buttonSearch.UseVisualStyleBackColor = true;
+            // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.maskedTextBox1.Location = new System.Drawing.Point(396, 25);
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(218, 23);
+            this.maskedTextBox1.TabIndex = 1;
+            // 
+            // label
+            // 
+            this.label.Dock = System.Windows.Forms.DockStyle.Right;
+            this.label.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label.Location = new System.Drawing.Point(620, 0);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(107, 72);
+            this.label.TabIndex = 2;
+            this.label.Text = "از تاریخ:";
+            this.label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label1.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label1.Location = new System.Drawing.Point(286, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(107, 72);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "تا تاریخ:";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // maskedTextBox2
+            // 
+            this.maskedTextBox2.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.maskedTextBox2.Location = new System.Drawing.Point(62, 25);
+            this.maskedTextBox2.Name = "maskedTextBox2";
+            this.maskedTextBox2.Size = new System.Drawing.Size(218, 23);
+            this.maskedTextBox2.TabIndex = 3;
             // 
             // mainFrm
             // 
@@ -303,13 +377,16 @@ namespace GameNet.App
             this.Load += new System.EventHandler(this.mainFrm_Load);
             this.panelMain.ResumeLayout(false);
             this.panelItems.ResumeLayout(false);
+            this.panelLogo.ResumeLayout(false);
+            this.panelLogo.PerformLayout();
+            this.panelReports.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panelLogo.ResumeLayout(false);
-            this.panelLogo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUser)).EndInit();
+            this.panelTools.ResumeLayout(false);
+            this.panelTools.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -332,6 +409,12 @@ namespace GameNet.App
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Panel panelReports;
+        private System.Windows.Forms.Panel panelTools;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.Button buttonSearch;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
+        private System.Windows.Forms.Label label;
     }
 }
 
