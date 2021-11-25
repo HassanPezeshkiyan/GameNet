@@ -38,6 +38,9 @@ namespace GameNet.App.Invoicing
             chargeCost.Text = chargeValue;
             timeTxt.Text = timeValue;
             cntrlCount.Value = controllerCount;
+            //chargeValue = chargeCost.Text;
+            //timeValue = timeTxt.Text;
+            //controllerCount = int.Parse(cntrlCount.Value.ToString());
             shopCostLbl.Text = customerOrder.FinalCost.ToString();
         }
 
@@ -48,9 +51,13 @@ namespace GameNet.App.Invoicing
 
         private void PayBtn_Click(object sender, EventArgs e)
         {
+            chargeValue = chargeCost.Text;
+            timeValue = timeTxt.Text;
+            controllerCount = int.Parse(cntrlCount.Value.ToString());
             using (UnitOfWork db = new UnitOfWork())
             {
                 var console = db.Console.GetById(consoleId);
+                var controllerCost = ((controllerCount) * (console.QuantityPriceController));
                 var shopCost = customerOrder.FinalCost;
                 Invoice invoice = new Invoice()
                 {
@@ -64,8 +71,8 @@ namespace GameNet.App.Invoicing
                 };
                 invoice.NCreationDate = PersianDate(invoice.CreationDate);
                 var splitedTime = timeValue.Split(':');
-                var hour = int.Parse(splitedTime[1]);
-                var min = int.Parse(splitedTime[2]);
+                var hour = int.Parse(splitedTime[0]);
+                var min = int.Parse(splitedTime[1]);
                 decimal timeCost = 0;
                 if (min >= 50)
                 {
@@ -83,7 +90,7 @@ namespace GameNet.App.Invoicing
                 {
                     timeCost = (hour * console.TimePriceController);
                 }
-                invoice.Amount = shopCost + Math.Round(timeCost);
+                invoice.Amount = shopCost + Math.Round(timeCost) + controllerCost;
                 try
                 {
                     db.Invoice.Insert(invoice);
@@ -95,6 +102,13 @@ namespace GameNet.App.Invoicing
 
                     MessageBox.Show(ex.Message);
                 }
+                var status = invoice.Amount - invoice.ChargeValue;
+                string lable = status > 0 ? "طلبکار" : "بدهکار";
+                MessageBox.Show($@"""
+                    مبلغ فاکتور: {invoice.Amount}
+                
+                    وضعیت صورت حساب: {lable}
+""", "");
             }
 
         }

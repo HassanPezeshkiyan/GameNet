@@ -19,7 +19,7 @@ namespace GameNet.App.StartConsole
         Stopwatch stopWatch5;
         Stopwatch stopWatch6;
 
-
+        
         public FrmStart()
         {
             InitializeComponent();
@@ -729,11 +729,16 @@ namespace GameNet.App.StartConsole
             if (invoiceFrm.DialogResult == DialogResult.OK)
             {
                 MessageBox.Show("فاکتور با موفقیت ثبت شد");
-                frmChoose.indexselected.Remove(consoleId);
+                var item =frmChoose.indexselected.Find(i => i == consoleId);
+                frmChoose.indexselected.Remove(item);
             }
             else
             {
                 groupBoxConsole1.Visible = true;
+                time1Txt.Text = "";
+                charge1Cost.Text = "";
+                cntrl1Count.Value = 1;
+
             }
 
         }
@@ -776,6 +781,9 @@ namespace GameNet.App.StartConsole
             else
             {
                 groupBoxConsole2.Visible = true;
+                time2Txt.Text = "";
+                charge2Cost.Text = "";
+                cntrl2Count.Value = 1;
             }
 
         }
@@ -818,6 +826,9 @@ namespace GameNet.App.StartConsole
             else
             {
                 groupBoxConsole3.Visible = true;
+                time3Txt.Text = "";
+                charge3Cost.Text = "";
+                cntrl3Count.Value = 1;
             }
 
         }
@@ -860,6 +871,9 @@ namespace GameNet.App.StartConsole
             else
             {
                 groupBoxConsole4.Visible = true;
+                time4Txt.Text = "";
+                charge4Cost.Text = "";
+                cntrl4Count.Value = 1;
             }
 
         }
@@ -902,6 +916,9 @@ namespace GameNet.App.StartConsole
             else
             {
                 groupBoxConsole5.Visible = true;
+                time5Txt.Text = "";
+                charge5Cost.Text = "";
+                cntrl5Count.Value = 1;
             }
 
         }
@@ -944,6 +961,9 @@ namespace GameNet.App.StartConsole
             else
             {
                 groupBoxConsole6.Visible = true;
+                time6Txt.Text = "";
+                charge6Cost.Text = "";
+                cntrl6Count.Value = 1;
             }
 
         }

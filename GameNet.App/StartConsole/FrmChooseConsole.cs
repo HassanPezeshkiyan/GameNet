@@ -25,33 +25,33 @@ namespace GameNet.App.StartConsole
         private void buttonSelect_Click(object sender, EventArgs e)
         {
             selectedConsole = int.Parse(numericUpDownConsole.Value.ToString());
-            bool test = indexselected.Contains(selectedConsole);
-            if (!test)
+            //bool test = indexselected.Contains(selectedConsole);
+            //if (!test)
+            //{
+            using (UnitOfWork db = new UnitOfWork())
             {
-                using (UnitOfWork db = new UnitOfWork())
+                Customer customer = new Customer()
                 {
-                    Customer customer = new Customer()
-                    {
-                        ConsoleId = selectedConsole
-                    };
-                    try
-                    {
-                        db.Customer.Insert(customer);
-                        db.Save();
-                        DialogResult = DialogResult.OK;
-                        indexselected.Add(selectedConsole);
-                    }
-                    catch (Exception ex)
-                    {
+                    ConsoleId = selectedConsole
+                };
+                try
+                {
+                    db.Customer.Insert(customer);
+                    db.Save();
+                    DialogResult = DialogResult.OK;
+                    //indexselected.Add(selectedConsole);
+                }
+                catch (Exception ex)
+                {
 
-                        MessageBox.Show(ex.Message);
-                    }
+                    MessageBox.Show(ex.Message);
                 }
             }
-            else
-            {
-                MessageBox.Show("دستگاه انتخابی فعال می‌باشد", "اخطار");
-            }
+
+            //else
+            //{
+            //    MessageBox.Show("دستگاه انتخابی فعال می‌باشد", "اخطار");
+            //}
         }
 
 
