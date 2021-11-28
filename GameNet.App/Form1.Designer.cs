@@ -47,15 +47,21 @@ namespace GameNet.App
             this.panelContainer = new System.Windows.Forms.Panel();
             this.panelReports = new System.Windows.Forms.Panel();
             this.dataGridViewReports = new System.Windows.Forms.DataGridView();
-            this.amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.time = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelTools = new System.Windows.Forms.Panel();
+            this.maskedTextBoxEndTime = new System.Windows.Forms.MaskedTextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.maskedTextBoxStartTime = new System.Windows.Forms.MaskedTextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.maskedTextBoxEndDate = new System.Windows.Forms.MaskedTextBox();
             this.label = new System.Windows.Forms.Label();
             this.maskedTextBoxStartDate = new System.Windows.Forms.MaskedTextBox();
             this.buttonSearch = new System.Windows.Forms.Button();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.time = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelMain.SuspendLayout();
             this.panelItems.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -305,8 +311,10 @@ namespace GameNet.App
             this.dataGridViewReports.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewReports.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewReports.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.amount,
+            this.id,
+            this.customerid,
             this.time,
+            this.amount,
             this.date});
             this.dataGridViewReports.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewReports.Location = new System.Drawing.Point(0, 72);
@@ -315,30 +323,13 @@ namespace GameNet.App
             this.dataGridViewReports.Size = new System.Drawing.Size(805, 289);
             this.dataGridViewReports.TabIndex = 1;
             // 
-            // amount
-            // 
-            this.amount.DataPropertyName = "Amount";
-            this.amount.HeaderText = "مبلغ";
-            this.amount.Name = "amount";
-            this.amount.ReadOnly = true;
-            // 
-            // time
-            // 
-            this.time.DataPropertyName = "Time";
-            this.time.HeaderText = "مدت زمان";
-            this.time.Name = "time";
-            this.time.ReadOnly = true;
-            // 
-            // date
-            // 
-            this.date.DataPropertyName = "NCreationDate";
-            this.date.HeaderText = "تاریخ";
-            this.date.Name = "date";
-            this.date.ReadOnly = true;
-            // 
             // panelTools
             // 
             this.panelTools.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panelTools.Controls.Add(this.maskedTextBoxEndTime);
+            this.panelTools.Controls.Add(this.label3);
+            this.panelTools.Controls.Add(this.maskedTextBoxStartTime);
+            this.panelTools.Controls.Add(this.label2);
             this.panelTools.Controls.Add(this.label1);
             this.panelTools.Controls.Add(this.maskedTextBoxEndDate);
             this.panelTools.Controls.Add(this.label);
@@ -350,13 +341,57 @@ namespace GameNet.App
             this.panelTools.Size = new System.Drawing.Size(805, 72);
             this.panelTools.TabIndex = 0;
             // 
+            // maskedTextBoxEndTime
+            // 
+            this.maskedTextBoxEndTime.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.maskedTextBoxEndTime.Location = new System.Drawing.Point(146, 25);
+            this.maskedTextBoxEndTime.Mask = "00:00";
+            this.maskedTextBoxEndTime.Name = "maskedTextBoxEndTime";
+            this.maskedTextBoxEndTime.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.maskedTextBoxEndTime.Size = new System.Drawing.Size(72, 23);
+            this.maskedTextBoxEndTime.TabIndex = 8;
+            this.maskedTextBoxEndTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label3.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label3.Location = new System.Drawing.Point(224, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(63, 72);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "تا ساعت:";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // maskedTextBoxStartTime
+            // 
+            this.maskedTextBoxStartTime.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.maskedTextBoxStartTime.Location = new System.Drawing.Point(293, 24);
+            this.maskedTextBoxStartTime.Mask = "00:00";
+            this.maskedTextBoxStartTime.Name = "maskedTextBoxStartTime";
+            this.maskedTextBoxStartTime.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.maskedTextBoxStartTime.Size = new System.Drawing.Size(72, 23);
+            this.maskedTextBoxStartTime.TabIndex = 6;
+            this.maskedTextBoxStartTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label2.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label2.Location = new System.Drawing.Point(371, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(63, 72);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "از ساعت:";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label1.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label1.Location = new System.Drawing.Point(286, 0);
+            this.label1.Location = new System.Drawing.Point(519, 1);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(107, 72);
+            this.label1.Size = new System.Drawing.Size(63, 72);
             this.label1.TabIndex = 4;
             this.label1.Text = "تا تاریخ:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -364,11 +399,11 @@ namespace GameNet.App
             // maskedTextBoxEndDate
             // 
             this.maskedTextBoxEndDate.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.maskedTextBoxEndDate.Location = new System.Drawing.Point(62, 25);
+            this.maskedTextBoxEndDate.Location = new System.Drawing.Point(441, 25);
             this.maskedTextBoxEndDate.Mask = "0000/00/00";
             this.maskedTextBoxEndDate.Name = "maskedTextBoxEndDate";
             this.maskedTextBoxEndDate.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.maskedTextBoxEndDate.Size = new System.Drawing.Size(218, 23);
+            this.maskedTextBoxEndDate.Size = new System.Drawing.Size(72, 23);
             this.maskedTextBoxEndDate.TabIndex = 3;
             this.maskedTextBoxEndDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -376,9 +411,9 @@ namespace GameNet.App
             // 
             this.label.Dock = System.Windows.Forms.DockStyle.Right;
             this.label.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label.Location = new System.Drawing.Point(620, 0);
+            this.label.Location = new System.Drawing.Point(664, 0);
             this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(107, 72);
+            this.label.Size = new System.Drawing.Size(63, 72);
             this.label.TabIndex = 2;
             this.label.Text = "از تاریخ:";
             this.label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -386,11 +421,11 @@ namespace GameNet.App
             // maskedTextBoxStartDate
             // 
             this.maskedTextBoxStartDate.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.maskedTextBoxStartDate.Location = new System.Drawing.Point(396, 25);
+            this.maskedTextBoxStartDate.Location = new System.Drawing.Point(586, 25);
             this.maskedTextBoxStartDate.Mask = "0000/00/00";
             this.maskedTextBoxStartDate.Name = "maskedTextBoxStartDate";
             this.maskedTextBoxStartDate.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.maskedTextBoxStartDate.Size = new System.Drawing.Size(218, 23);
+            this.maskedTextBoxStartDate.Size = new System.Drawing.Size(72, 23);
             this.maskedTextBoxStartDate.TabIndex = 1;
             this.maskedTextBoxStartDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -406,6 +441,41 @@ namespace GameNet.App
             this.buttonSearch.TabIndex = 0;
             this.buttonSearch.UseVisualStyleBackColor = true;
             this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
+            // 
+            // id
+            // 
+            this.id.DataPropertyName = "Id";
+            this.id.HeaderText = "شناسه فاکتور";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            // 
+            // customerid
+            // 
+            this.customerid.DataPropertyName = "CustomerId";
+            this.customerid.HeaderText = "شناسه مشتری";
+            this.customerid.Name = "customerid";
+            this.customerid.ReadOnly = true;
+            // 
+            // time
+            // 
+            this.time.DataPropertyName = "Time";
+            this.time.HeaderText = "مدت زمان";
+            this.time.Name = "time";
+            this.time.ReadOnly = true;
+            // 
+            // amount
+            // 
+            this.amount.DataPropertyName = "Amount";
+            this.amount.HeaderText = "مبلغ";
+            this.amount.Name = "amount";
+            this.amount.ReadOnly = true;
+            // 
+            // date
+            // 
+            this.date.DataPropertyName = "NCreationDate";
+            this.date.HeaderText = "تاریخ";
+            this.date.Name = "date";
+            this.date.ReadOnly = true;
             // 
             // mainFrm
             // 
@@ -468,8 +538,14 @@ namespace GameNet.App
         private System.Windows.Forms.MaskedTextBox maskedTextBoxEndDate;
         private System.Windows.Forms.Label label;
         private System.Windows.Forms.DataGridView dataGridViewReports;
-        private System.Windows.Forms.DataGridViewTextBoxColumn amount;
+        private System.Windows.Forms.MaskedTextBox maskedTextBoxEndTime;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.MaskedTextBox maskedTextBoxStartTime;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn customerid;
         private System.Windows.Forms.DataGridViewTextBoxColumn time;
+        private System.Windows.Forms.DataGridViewTextBoxColumn amount;
         private System.Windows.Forms.DataGridViewTextBoxColumn date;
     }
 }

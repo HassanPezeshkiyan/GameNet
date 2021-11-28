@@ -701,6 +701,8 @@ namespace GameNet.App.StartConsole
             int consoleId = 1;
             int customerId;
             int orderId;
+            bool failedInvoice = false;
+            InvoiceFrm invoiceFrm = new InvoiceFrm();
             using (UnitOfWork db = new UnitOfWork())
             {
                 customerId = db.Customer.Get().Where(n => n.ConsoleId == consoleId).Select(n => n.Id).Last();
@@ -718,14 +720,17 @@ namespace GameNet.App.StartConsole
             stopWatch1.Stop();
             string timeValue = time1Txt.Text;
             groupBoxConsole1.Visible = false;
-            InvoiceFrm invoiceFrm = new InvoiceFrm();
-            invoiceFrm.customerId = customerId;
-            invoiceFrm.timeValue = timeValue;
-            invoiceFrm.chargeValue = charge1Cost.Text;
-            invoiceFrm.consoleId = consoleId;
-            invoiceFrm.orderId = orderId;
-            invoiceFrm.controllerCount = int.Parse(cntrl1Count.Value.ToString());
-            invoiceFrm.ShowDialog();
+            if (!failedInvoice)
+            {
+                invoiceFrm.customerId = customerId;
+                invoiceFrm.timeValue = timeValue;
+                invoiceFrm.chargeValue = charge1Cost.Text;
+                invoiceFrm.consoleId = consoleId;
+                invoiceFrm.orderId = orderId;
+                invoiceFrm.controllerCount = int.Parse(cntrl1Count.Value.ToString());
+                invoiceFrm.ShowDialog();
+            }
+           checkdialog:
             if (invoiceFrm.DialogResult == DialogResult.OK)
             {
                 MessageBox.Show("فاکتور با موفقیت ثبت شد");
@@ -734,11 +739,18 @@ namespace GameNet.App.StartConsole
                 time1Txt.Text = "";
                 charge1Cost.Text = "";
                 cntrl1Count.Value = 1;
+                failedInvoice = false;
+                groupBoxConsole1.Visible = false;
             }
             else
             {
                 groupBoxConsole1.Visible = true;
+                failedInvoice = true;
+                invoiceFrm.ShowDialog();
+                goto checkdialog;
             }
+
+
 
         }
 
@@ -783,7 +795,7 @@ namespace GameNet.App.StartConsole
             else
             {
                 groupBoxConsole2.Visible = true;
-                
+
             }
 
         }
@@ -829,7 +841,7 @@ namespace GameNet.App.StartConsole
             else
             {
                 groupBoxConsole3.Visible = true;
-                
+
             }
 
         }
@@ -875,7 +887,7 @@ namespace GameNet.App.StartConsole
             else
             {
                 groupBoxConsole4.Visible = true;
-               
+
             }
 
         }
@@ -921,7 +933,7 @@ namespace GameNet.App.StartConsole
             else
             {
                 groupBoxConsole5.Visible = true;
-               
+
             }
 
         }
@@ -967,7 +979,7 @@ namespace GameNet.App.StartConsole
             else
             {
                 groupBoxConsole6.Visible = true;
-                
+
             }
 
         }

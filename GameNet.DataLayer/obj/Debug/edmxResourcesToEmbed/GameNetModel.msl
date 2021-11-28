@@ -95,6 +95,9 @@
     <EntitySetMapping Name="invoice_View_creationDate">
       <EntityTypeMapping TypeName="GameNetModel.invoice_View_creationDate">
         <MappingFragment StoreEntitySet="invoice_View_creationDate">
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="NCreationDate" ColumnName="NCreationDate" />
           <ScalarProperty Name="Time" ColumnName="Time" />
           <ScalarProperty Name="Amount" ColumnName="Amount" />

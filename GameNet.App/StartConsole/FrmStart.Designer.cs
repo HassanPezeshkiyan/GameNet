@@ -399,9 +399,19 @@ namespace GameNet.App.StartConsole
             0,
             0,
             0});
+            this.cntrl6Count.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.cntrl6Count.Name = "cntrl6Count";
             this.cntrl6Count.Size = new System.Drawing.Size(227, 31);
             this.cntrl6Count.TabIndex = 7;
+            this.cntrl6Count.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // charge6Cost
             // 
@@ -642,9 +652,19 @@ namespace GameNet.App.StartConsole
             0,
             0,
             0});
+            this.cntrl5Count.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.cntrl5Count.Name = "cntrl5Count";
             this.cntrl5Count.Size = new System.Drawing.Size(227, 31);
             this.cntrl5Count.TabIndex = 7;
+            this.cntrl5Count.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // charge5Cost
             // 
@@ -885,9 +905,19 @@ namespace GameNet.App.StartConsole
             0,
             0,
             0});
+            this.cntrl4Count.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.cntrl4Count.Name = "cntrl4Count";
             this.cntrl4Count.Size = new System.Drawing.Size(227, 31);
             this.cntrl4Count.TabIndex = 7;
+            this.cntrl4Count.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // charge4Cost
             // 
@@ -1128,9 +1158,19 @@ namespace GameNet.App.StartConsole
             0,
             0,
             0});
+            this.cntrl3Count.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.cntrl3Count.Name = "cntrl3Count";
             this.cntrl3Count.Size = new System.Drawing.Size(227, 31);
             this.cntrl3Count.TabIndex = 7;
+            this.cntrl3Count.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // charge3Cost
             // 
@@ -1369,9 +1409,19 @@ namespace GameNet.App.StartConsole
             0,
             0,
             0});
+            this.cntrl2Count.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.cntrl2Count.Name = "cntrl2Count";
             this.cntrl2Count.Size = new System.Drawing.Size(227, 31);
             this.cntrl2Count.TabIndex = 7;
+            this.cntrl2Count.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // charge2Cost
             // 
@@ -1610,9 +1660,19 @@ namespace GameNet.App.StartConsole
             0,
             0,
             0});
+            this.cntrl1Count.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.cntrl1Count.Name = "cntrl1Count";
             this.cntrl1Count.Size = new System.Drawing.Size(227, 31);
             this.cntrl1Count.TabIndex = 7;
+            this.cntrl1Count.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // charge1Cost
             // 

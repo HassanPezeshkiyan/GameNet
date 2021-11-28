@@ -1,4 +1,5 @@
-﻿using GameNet.App.Login;
+﻿using GameNet.App.infra;
+using GameNet.App.Login;
 using GameNet.App.Settings;
 using GameNet.App.Shoping;
 using GameNet.App.StartConsole;
@@ -135,6 +136,7 @@ namespace GameNet.App
             List<invoice_View_creationDate> reports = new List<invoice_View_creationDate>();
             using (UnitOfWork db = new UnitOfWork())
             {
+                var query = db.InvoiceReports.GetAll();
                 //if ( || )
                 //{
                 //    reports = db.InvoiceReports
@@ -152,18 +154,36 @@ namespace GameNet.App
                 //    .GetAll()
                 //    .ToList();
                 //}
+                //var starthour = maskedTextBoxStartTime.Text.Split(':')[0];
+                //var endthour = maskedTextBoxEndTime.Text.Split(':')[0];
+                //var startmin = maskedTextBoxStartTime.Text.Split(':')[1];
+                //var endmin = maskedTextBoxEndTime.Text.Split(':')[1];
+                reports = query.ToList();
                 if (maskedTextBoxStartDate.Text != "    /  /")
                 {
-                    reports = db.InvoiceReports.GetAllByFilter(maskedTextBoxStartDate.Text, maskedTextBoxEndDate.Text);
+                    var startDate = Convert.ToDateTime(maskedTextBoxStartDate.Text);
+                    startDate = MyDateExtension.ToMiladi(startDate);
+                    reports = query.Where(n => n.CreationDate >= startDate).ToList();
                 }
                 if (maskedTextBoxEndDate.Text != "    /  /")
                 {
-                    reports = db.InvoiceReports.GetAllByFilter(maskedTextBoxStartDate.Text, maskedTextBoxEndDate.Text);
+                    var EndDate = Convert.ToDateTime(maskedTextBoxEndDate.Text);
+                    EndDate = MyDateExtension.ToMiladi(EndDate);
+                    reports = query.Where(n => n.CreationDate <= EndDate).ToList();
                 }
-                else
+                if (maskedTextBoxStartTime.Text != "  :")
                 {
-                    reports = db.InvoiceReports.GetAll().ToList();
+                    var startTime = Convert.ToDateTime((maskedTextBoxStartDate.Text) + " " + (maskedTextBoxStartTime.Text));
+                    startTime = MyDateExtension.ToMiladi(startTime);
+                    reports = query.Where(n => n.CreationDate >= startTime).ToList();
                 }
+                if (maskedTextBoxEndTime.Text != "  :")
+                {
+                    var endTime = Convert.ToDateTime((maskedTextBoxEndDate.Text) + " " + (maskedTextBoxEndTime.Text));
+                    endTime = MyDateExtension.ToMiladi(endTime);
+                    reports = query.Where(n => n.CreationDate <= endTime).ToList();
+                }
+
                 dataGridViewReports.AutoGenerateColumns = false;
                 dataGridViewReports.DataSource = reports;
             }

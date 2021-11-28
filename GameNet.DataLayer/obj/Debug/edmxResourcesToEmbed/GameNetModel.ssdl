@@ -87,12 +87,18 @@
 warning 6002: The table/view 'GameNet.dbo.invoice_View_creationDate' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="invoice_View_creationDate">
     <Key>
-      <PropertyRef Name="Amount" />
+      <PropertyRef Name="Id" />
       <PropertyRef Name="Time" />
+      <PropertyRef Name="Amount" />
+      <PropertyRef Name="CustomerId" />
+      <PropertyRef Name="CreationDate" />
     </Key>
-    <Property Name="Amount" Type="decimal" Precision="18" Scale="0" Nullable="false" />
-    <Property Name="Time" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="NCreationDate" Type="nvarchar" MaxLength="50" />
+    <Property Name="Time" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Amount" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="CustomerId" Type="int" Nullable="false" />
+    <Property Name="CreationDate" Type="datetime" Nullable="false" />
   </EntityType>
   <EntityContainer Name="GameNetModelStoreContainer">
     <EntitySet Name="Consoles" EntityType="Self.Consoles" Schema="dbo" store:Type="Tables" />
@@ -105,9 +111,12 @@ warning 6002: The table/view 'GameNet.dbo.invoice_View_creationDate' does not ha
     <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="invoice_View_creationDate" EntityType="Self.invoice_View_creationDate" store:Type="Views" store:Schema="dbo">
       <DefiningQuery>SELECT 
-    [invoice_View_creationDate].[Amount] AS [Amount], 
+    [invoice_View_creationDate].[Id] AS [Id], 
+    [invoice_View_creationDate].[NCreationDate] AS [NCreationDate], 
     [invoice_View_creationDate].[Time] AS [Time], 
-    [invoice_View_creationDate].[NCreationDate] AS [NCreationDate]
+    [invoice_View_creationDate].[Amount] AS [Amount], 
+    [invoice_View_creationDate].[CustomerId] AS [CustomerId], 
+    [invoice_View_creationDate].[CreationDate] AS [CreationDate]
     FROM [dbo].[invoice_View_creationDate] AS [invoice_View_creationDate]</DefiningQuery>
     </EntitySet>
   </EntityContainer>

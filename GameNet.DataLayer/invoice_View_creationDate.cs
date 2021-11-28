@@ -17,5 +17,8 @@ namespace GameNet.DataLayer
         public decimal Amount { get; set; }
         public string Time { get; set; }
         public string NCreationDate { get; set; }
+        public int Id { get; set; }
+        public int CustomerId { get; set; }
+        public System.DateTime CreationDate { get; set; }
     }
 }

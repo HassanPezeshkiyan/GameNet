@@ -46,7 +46,7 @@ namespace GameNet.App.Invoicing
 
         string PersianDate(DateTime datetime)
         {
-            return datetime.ToPersianDateString();
+            return datetime.ToPersianDateTimeString();
         }
 
         private void PayBtn_Click(object sender, EventArgs e)
@@ -113,22 +113,23 @@ namespace GameNet.App.Invoicing
                         db.Invoice.Insert(invoice);
                         db.Save();
                         DialogResult = DialogResult.OK;
-                    }
-                    catch (Exception ex)
-                    {
+                        var status = invoice.Amount - invoice.ChargeValue;
+                        string lable = status > 0 ? "طلبکار" : "بدهکار";
 
-                        MessageBox.Show(ex.Message);
-                    }
-                    var status = invoice.Amount - invoice.ChargeValue;
-                    string lable = status > 0 ? "طلبکار" : "بدهکار";
-
-                    MessageBox.Show($@"""
+                        MessageBox.Show($@"""
                     مبلغ فاکتور: {invoice.Amount}
                 
                     وضعیت صورت حساب: {lable}
 
                     مبلغ وضعیت: {status}
 """, "");
+                    }
+                    catch (Exception ex)
+                    {
+
+                        MessageBox.Show(ex.Message);
+                    }
+                    
                 }
 
             }
