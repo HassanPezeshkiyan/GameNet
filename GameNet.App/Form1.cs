@@ -135,22 +135,34 @@ namespace GameNet.App
             List<invoice_View_creationDate> reports = new List<invoice_View_creationDate>();
             using (UnitOfWork db = new UnitOfWork())
             {
-                if (maskedTextBoxStartDate.Text != "    /  /" || maskedTextBoxStartDate.Text != "    /  /")
-                {
-                    reports = db.InvoiceReports
-                    .GetAll()
-                    .Where(n => n.NCreationDate
-                    .Contains(maskedTextBoxStartDate.Text) ||
-                    n.NCreationDate
-                    .Contains(maskedTextBoxEndDate.Text))
-                    .ToList();
+                //if ( || )
+                //{
+                //    reports = db.InvoiceReports
+                //    .GetAll()
+                //    .Where(n => n.NCreationDate
+                //    .Contains(maskedTextBoxStartDate.Text) ||
+                //    n.NCreationDate
+                //    .Contains(maskedTextBoxEndDate.Text))
+                //    .ToList();
 
+                //}
+                //else
+                //{
+                //    reports = db.InvoiceReports
+                //    .GetAll()
+                //    .ToList();
+                //}
+                if (maskedTextBoxStartDate.Text != "    /  /")
+                {
+                    reports = db.InvoiceReports.GetAllByFilter(maskedTextBoxStartDate.Text, maskedTextBoxEndDate.Text);
+                }
+                if (maskedTextBoxEndDate.Text != "    /  /")
+                {
+                    reports = db.InvoiceReports.GetAllByFilter(maskedTextBoxStartDate.Text, maskedTextBoxEndDate.Text);
                 }
                 else
                 {
-                    reports = db.InvoiceReports
-                    .GetAll()
-                    .ToList();
+                    reports = db.InvoiceReports.GetAll().ToList();
                 }
                 dataGridViewReports.AutoGenerateColumns = false;
                 dataGridViewReports.DataSource = reports;

@@ -10,3 +10,15 @@ D:\Personal\GameNet\GameNet.DataLayer\obj\Debug\GameNet.DataLayer.csproj.CoreCom
 D:\Personal\GameNet\GameNet.DataLayer\obj\Debug\GameNet.DataLayer.csproj.CopyComplete
 D:\Personal\GameNet\GameNet.DataLayer\obj\Debug\GameNet.DataLayer.dll
 D:\Personal\GameNet\GameNet.DataLayer\obj\Debug\GameNet.DataLayer.pdb
+D:\Personal\clonedGameNetMine\GameNet\GameNet.DataLayer\bin\Debug\GameNet.DataLayer.dll.config
+D:\Personal\clonedGameNetMine\GameNet\GameNet.DataLayer\bin\Debug\GameNet.DataLayer.dll
+D:\Personal\clonedGameNetMine\GameNet\GameNet.DataLayer\bin\Debug\GameNet.DataLayer.pdb
+D:\Personal\clonedGameNetMine\GameNet\GameNet.DataLayer\bin\Debug\EntityFramework.dll
+D:\Personal\clonedGameNetMine\GameNet\GameNet.DataLayer\bin\Debug\EntityFramework.SqlServer.dll
+D:\Personal\clonedGameNetMine\GameNet\GameNet.DataLayer\bin\Debug\EntityFramework.xml
+D:\Personal\clonedGameNetMine\GameNet\GameNet.DataLayer\bin\Debug\EntityFramework.SqlServer.xml
+D:\Personal\clonedGameNetMine\GameNet\GameNet.DataLayer\obj\Debug\GameNet.DataLayer.csproj.AssemblyReference.cache
+D:\Personal\clonedGameNetMine\GameNet\GameNet.DataLayer\obj\Debug\GameNet.DataLayer.csproj.CoreCompileInputs.cache
+D:\Personal\clonedGameNetMine\GameNet\GameNet.DataLayer\obj\Debug\GameNet.DataLayer.csproj.CopyComplete
+D:\Personal\clonedGameNetMine\GameNet\GameNet.DataLayer\obj\Debug\GameNet.DataLayer.dll
+D:\Personal\clonedGameNetMine\GameNet\GameNet.DataLayer\obj\Debug\GameNet.DataLayer.pdb

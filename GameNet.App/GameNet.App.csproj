@@ -226,7 +226,6 @@
     <EmbeddedResource Include="StartConsole\FrmStart.resx">
       <DependentUpon>FrmStart.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="GameNet.App_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

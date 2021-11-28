@@ -51,66 +51,87 @@ namespace GameNet.App.Invoicing
 
         private void PayBtn_Click(object sender, EventArgs e)
         {
-            chargeValue = chargeCost.Text;
             timeValue = timeTxt.Text;
-            controllerCount = int.Parse(cntrlCount.Value.ToString());
-            using (UnitOfWork db = new UnitOfWork())
+            bool timeNotChecked = timeValue == "00:00:00";
+            if (timeNotChecked)
             {
-                var console = db.Console.GetById(consoleId);
-                var controllerCost = ((controllerCount) * (console.QuantityPriceController));
-                var shopCost = customerOrder.FinalCost;
-                Invoice invoice = new Invoice()
+                if (MessageBox.Show("زمان را وارد نکردید", "اخطار", MessageBoxButtons.AbortRetryIgnore) == DialogResult.Ignore)
                 {
-                    ChargeValue = decimal.Parse(chargeValue),
-                    ConsoleId = consoleId,
-                    CustomerId = customerId,
-                    OrderId = orderId,
-                    Time = timeValue,
-                    CreationDate = DateTime.Now,
-                    ControllerQuantity = controllerCount
-                };
-                invoice.NCreationDate = PersianDate(invoice.CreationDate);
-                var splitedTime = timeValue.Split(':');
-                var hour = int.Parse(splitedTime[0]);
-                var min = int.Parse(splitedTime[1]);
-                decimal timeCost = 0;
-                if (min >= 50)
-                {
-                    hour += 1;
+                    timeNotChecked = false;
                 }
-                if (hour > 0 && min > 0)
+                else
                 {
-                    timeCost = (hour * console.TimePriceController) + (console.TimePriceController / 60);
+                    timeValue = timeTxt.Text;
                 }
-                if (min > 0 && hour == 0)
-                {
-                    timeCost = (min * (console.TimePriceController / 60));
-                }
-                if (hour > 0 && min == 0)
-                {
-                    timeCost = (hour * console.TimePriceController);
-                }
-                invoice.Amount = shopCost + Math.Round(timeCost) + controllerCost;
-                try
-                {
-                    db.Invoice.Insert(invoice);
-                    db.Save();
-                    DialogResult = DialogResult.OK;
-                }
-                catch (Exception ex)
-                {
+                
+            }
+            if(!timeNotChecked)
+            {
 
-                    MessageBox.Show(ex.Message);
-                }
-                var status = invoice.Amount - invoice.ChargeValue;
-                string lable = status > 0 ? "طلبکار" : "بدهکار";
-                MessageBox.Show($@"""
+                chargeValue = chargeCost.Text;
+                controllerCount = int.Parse(cntrlCount.Value.ToString());
+                using (UnitOfWork db = new UnitOfWork())
+                {
+                    var console = db.Console.GetById(consoleId);
+                    var controllerCost = ((controllerCount) * (console.QuantityPriceController));
+                    var shopCost = customerOrder.FinalCost;
+
+                    Invoice invoice = new Invoice()
+                    {
+                        ChargeValue = !string.IsNullOrEmpty(chargeValue) ? decimal.Parse(chargeValue) : 0,
+                        ConsoleId = consoleId,
+                        CustomerId = customerId,
+                        OrderId = orderId,
+                        Time = timeValue,
+                        CreationDate = DateTime.Now,
+                        ControllerQuantity = controllerCount
+                    };
+                    invoice.NCreationDate = PersianDate(invoice.CreationDate);
+                    var splitedTime = timeValue.Split(':');
+                    var hour = int.Parse(splitedTime[0]);
+                    var min = int.Parse(splitedTime[1]);
+                    decimal timeCost = 0;
+                    if (min >= 50)
+                    {
+                        hour += 1;
+                    }
+                    if (hour > 0 && min > 0)
+                    {
+                        timeCost = (hour * console.TimePriceController) + (console.TimePriceController / 60);
+                    }
+                    if (min > 0 && hour == 0)
+                    {
+                        timeCost = (min * (console.TimePriceController / 60));
+                    }
+                    if (hour > 0 && min == 0)
+                    {
+                        timeCost = (hour * console.TimePriceController);
+                    }
+                    invoice.Amount = shopCost + Math.Round(timeCost) + controllerCost;
+                    try
+                    {
+                        db.Invoice.Insert(invoice);
+                        db.Save();
+                        DialogResult = DialogResult.OK;
+                    }
+                    catch (Exception ex)
+                    {
+
+                        MessageBox.Show(ex.Message);
+                    }
+                    var status = invoice.Amount - invoice.ChargeValue;
+                    string lable = status > 0 ? "طلبکار" : "بدهکار";
+
+                    MessageBox.Show($@"""
                     مبلغ فاکتور: {invoice.Amount}
                 
                     وضعیت صورت حساب: {lable}
-""", "");
-            }
 
+                    مبلغ وضعیت: {status}
+""", "");
+                }
+
+            }
         }
 
         private void CancelBtn_Click(object sender, EventArgs e)

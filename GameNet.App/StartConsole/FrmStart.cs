@@ -19,7 +19,7 @@ namespace GameNet.App.StartConsole
         Stopwatch stopWatch5;
         Stopwatch stopWatch6;
 
-        
+
         public FrmStart()
         {
             InitializeComponent();
@@ -729,16 +729,15 @@ namespace GameNet.App.StartConsole
             if (invoiceFrm.DialogResult == DialogResult.OK)
             {
                 MessageBox.Show("فاکتور با موفقیت ثبت شد");
-                var item =frmChoose.indexselected.Find(i => i == consoleId);
+                var item = frmChoose.indexselected.Find(i => i == consoleId);
                 frmChoose.indexselected.Remove(item);
+                time1Txt.Text = "";
+                charge1Cost.Text = "";
+                cntrl1Count.Value = 1;
             }
             else
             {
                 groupBoxConsole1.Visible = true;
-                time1Txt.Text = "";
-                charge1Cost.Text = "";
-                cntrl1Count.Value = 1;
-
             }
 
         }
@@ -777,13 +776,14 @@ namespace GameNet.App.StartConsole
             {
                 MessageBox.Show("فاکتور با موفقیت ثبت شد");
                 frmChoose.indexselected.Remove(consoleId);
+                time2Txt.Text = "";
+                charge2Cost.Text = "";
+                cntrl2Count.Value = 1;
             }
             else
             {
                 groupBoxConsole2.Visible = true;
-                time2Txt.Text = "";
-                charge2Cost.Text = "";
-                cntrl2Count.Value = 1;
+                
             }
 
         }
@@ -822,13 +822,14 @@ namespace GameNet.App.StartConsole
             {
                 MessageBox.Show("فاکتور با موفقیت ثبت شد");
                 frmChoose.indexselected.Remove(consoleId);
+                time3Txt.Text = "";
+                charge3Cost.Text = "";
+                cntrl3Count.Value = 1;
             }
             else
             {
                 groupBoxConsole3.Visible = true;
-                time3Txt.Text = "";
-                charge3Cost.Text = "";
-                cntrl3Count.Value = 1;
+                
             }
 
         }
@@ -867,13 +868,14 @@ namespace GameNet.App.StartConsole
             {
                 MessageBox.Show("فاکتور با موفقیت ثبت شد");
                 frmChoose.indexselected.Remove(consoleId);
+                time4Txt.Text = "";
+                charge4Cost.Text = "";
+                cntrl4Count.Value = 1;
             }
             else
             {
                 groupBoxConsole4.Visible = true;
-                time4Txt.Text = "";
-                charge4Cost.Text = "";
-                cntrl4Count.Value = 1;
+               
             }
 
         }
@@ -912,13 +914,14 @@ namespace GameNet.App.StartConsole
             {
                 MessageBox.Show("فاکتور با موفقیت ثبت شد");
                 frmChoose.indexselected.Remove(consoleId);
+                time5Txt.Text = "";
+                charge5Cost.Text = "";
+                cntrl5Count.Value = 1;
             }
             else
             {
                 groupBoxConsole5.Visible = true;
-                time5Txt.Text = "";
-                charge5Cost.Text = "";
-                cntrl5Count.Value = 1;
+               
             }
 
         }
@@ -957,13 +960,14 @@ namespace GameNet.App.StartConsole
             {
                 MessageBox.Show("فاکتور با موفقیت ثبت شد");
                 frmChoose.indexselected.Remove(consoleId);
+                time6Txt.Text = "";
+                charge6Cost.Text = "";
+                cntrl6Count.Value = 1;
             }
             else
             {
                 groupBoxConsole6.Visible = true;
-                time6Txt.Text = "";
-                charge6Cost.Text = "";
-                cntrl6Count.Value = 1;
+                
             }
 
         }
