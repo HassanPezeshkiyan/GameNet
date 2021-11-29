@@ -31,8 +31,6 @@ namespace GameNet.App.StartConsole
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBoxConsole6 = new System.Windows.Forms.GroupBox();
             this.reset6Timer = new System.Windows.Forms.Button();
-            this.label23 = new System.Windows.Forms.Label();
-            this.console6Check = new System.Windows.Forms.CheckBox();
             this.label24 = new System.Windows.Forms.Label();
             this.shop6NameLbl = new System.Windows.Forms.Label();
             this.deletShop6Btn = new System.Windows.Forms.Button();
@@ -50,8 +48,6 @@ namespace GameNet.App.StartConsole
             this.label30 = new System.Windows.Forms.Label();
             this.groupBoxConsole5 = new System.Windows.Forms.GroupBox();
             this.reset5Timer = new System.Windows.Forms.Button();
-            this.label31 = new System.Windows.Forms.Label();
-            this.console5Check = new System.Windows.Forms.CheckBox();
             this.label32 = new System.Windows.Forms.Label();
             this.shop5NameLbl = new System.Windows.Forms.Label();
             this.deletShop5Btn = new System.Windows.Forms.Button();
@@ -69,8 +65,6 @@ namespace GameNet.App.StartConsole
             this.label38 = new System.Windows.Forms.Label();
             this.groupBoxConsole4 = new System.Windows.Forms.GroupBox();
             this.reset4Timer = new System.Windows.Forms.Button();
-            this.label39 = new System.Windows.Forms.Label();
-            this.console4Check = new System.Windows.Forms.CheckBox();
             this.label40 = new System.Windows.Forms.Label();
             this.shop4NameLbl = new System.Windows.Forms.Label();
             this.deletShop4Btn = new System.Windows.Forms.Button();
@@ -88,8 +82,6 @@ namespace GameNet.App.StartConsole
             this.label46 = new System.Windows.Forms.Label();
             this.groupBoxConsole3 = new System.Windows.Forms.GroupBox();
             this.reset3Timer = new System.Windows.Forms.Button();
-            this.label14 = new System.Windows.Forms.Label();
-            this.console3Check = new System.Windows.Forms.CheckBox();
             this.label15 = new System.Windows.Forms.Label();
             this.shop3NameLbl = new System.Windows.Forms.Label();
             this.deletShop3Btn = new System.Windows.Forms.Button();
@@ -107,8 +99,6 @@ namespace GameNet.App.StartConsole
             this.label22 = new System.Windows.Forms.Label();
             this.groupBoxConsole2 = new System.Windows.Forms.GroupBox();
             this.reset2Timer = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.console2Check = new System.Windows.Forms.CheckBox();
             this.label6 = new System.Windows.Forms.Label();
             this.shop2NameLbl = new System.Windows.Forms.Label();
             this.deletShop2Btn = new System.Windows.Forms.Button();
@@ -126,8 +116,6 @@ namespace GameNet.App.StartConsole
             this.label12 = new System.Windows.Forms.Label();
             this.groupBoxConsole1 = new System.Windows.Forms.GroupBox();
             this.reset1Timer = new System.Windows.Forms.Button();
-            this.label19 = new System.Windows.Forms.Label();
-            this.console1Check = new System.Windows.Forms.CheckBox();
             this.label13 = new System.Windows.Forms.Label();
             this.shop1NameLbl = new System.Windows.Forms.Label();
             this.deletShop1Btn = new System.Windows.Forms.Button();
@@ -155,6 +143,60 @@ namespace GameNet.App.StartConsole
             this.timer4 = new System.Windows.Forms.Timer(this.components);
             this.timer5 = new System.Windows.Forms.Timer(this.components);
             this.timer6 = new System.Windows.Forms.Timer(this.components);
+            this.groupBoxConsole7 = new System.Windows.Forms.GroupBox();
+            this.reset7Timer = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.shop7NameLbl = new System.Windows.Forms.Label();
+            this.deletShop7Btn = new System.Windows.Forms.Button();
+            this.stop7Timer = new System.Windows.Forms.Button();
+            this.start7Timer = new System.Windows.Forms.Button();
+            this.pay7Btn = new System.Windows.Forms.Button();
+            this.label18 = new System.Windows.Forms.Label();
+            this.time7Txt = new System.Windows.Forms.TextBox();
+            this.shopCostLbl7 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.shop7Btn = new System.Windows.Forms.Button();
+            this.cntrl7Count = new System.Windows.Forms.NumericUpDown();
+            this.charge7Cost = new System.Windows.Forms.TextBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.groupBoxConsole8 = new System.Windows.Forms.GroupBox();
+            this.reset8Timer = new System.Windows.Forms.Button();
+            this.label43 = new System.Windows.Forms.Label();
+            this.shop8NameLbl = new System.Windows.Forms.Label();
+            this.deletShop8Btn = new System.Windows.Forms.Button();
+            this.stop8Timer = new System.Windows.Forms.Button();
+            this.start8Timer = new System.Windows.Forms.Button();
+            this.pay8Btn = new System.Windows.Forms.Button();
+            this.label49 = new System.Windows.Forms.Label();
+            this.time8Txt = new System.Windows.Forms.TextBox();
+            this.shopCostLbl8 = new System.Windows.Forms.Label();
+            this.label51 = new System.Windows.Forms.Label();
+            this.shop8Btn = new System.Windows.Forms.Button();
+            this.cntrl8Count = new System.Windows.Forms.NumericUpDown();
+            this.charge8Cost = new System.Windows.Forms.TextBox();
+            this.label52 = new System.Windows.Forms.Label();
+            this.label53 = new System.Windows.Forms.Label();
+            this.groupBoxConsole9 = new System.Windows.Forms.GroupBox();
+            this.reset9Timer = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.shop9NameLbl = new System.Windows.Forms.Label();
+            this.deletShop9Btn = new System.Windows.Forms.Button();
+            this.stop9Timer = new System.Windows.Forms.Button();
+            this.start9Timer = new System.Windows.Forms.Button();
+            this.pay9Btn = new System.Windows.Forms.Button();
+            this.label14 = new System.Windows.Forms.Label();
+            this.time9Txt = new System.Windows.Forms.TextBox();
+            this.shopCostLbl9 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.shop9Btn = new System.Windows.Forms.Button();
+            this.cntrl9Count = new System.Windows.Forms.NumericUpDown();
+            this.charge9Cost = new System.Windows.Forms.TextBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.timer7 = new System.Windows.Forms.Timer(this.components);
+            this.timer8 = new System.Windows.Forms.Timer(this.components);
+            this.timer9 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.groupBoxConsole6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cntrl6Count)).BeginInit();
@@ -172,11 +214,20 @@ namespace GameNet.App.StartConsole
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBoxConsole7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cntrl7Count)).BeginInit();
+            this.groupBoxConsole8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cntrl8Count)).BeginInit();
+            this.groupBoxConsole9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cntrl9Count)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(60)))), ((int)(((byte)(117)))));
+            this.panel1.Controls.Add(this.groupBoxConsole9);
+            this.panel1.Controls.Add(this.groupBoxConsole8);
+            this.panel1.Controls.Add(this.groupBoxConsole7);
             this.panel1.Controls.Add(this.groupBoxConsole6);
             this.panel1.Controls.Add(this.groupBoxConsole5);
             this.panel1.Controls.Add(this.groupBoxConsole4);
@@ -187,7 +238,7 @@ namespace GameNet.App.StartConsole
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1340, 854);
+            this.panel1.Size = new System.Drawing.Size(1721, 1061);
             this.panel1.TabIndex = 4;
             // 
             // groupBoxConsole6
@@ -195,8 +246,6 @@ namespace GameNet.App.StartConsole
             this.groupBoxConsole6.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.groupBoxConsole6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(47)))), ((int)(((byte)(62)))));
             this.groupBoxConsole6.Controls.Add(this.reset6Timer);
-            this.groupBoxConsole6.Controls.Add(this.label23);
-            this.groupBoxConsole6.Controls.Add(this.console6Check);
             this.groupBoxConsole6.Controls.Add(this.label24);
             this.groupBoxConsole6.Controls.Add(this.shop6NameLbl);
             this.groupBoxConsole6.Controls.Add(this.deletShop6Btn);
@@ -214,12 +263,12 @@ namespace GameNet.App.StartConsole
             this.groupBoxConsole6.Controls.Add(this.label30);
             this.groupBoxConsole6.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.groupBoxConsole6.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.groupBoxConsole6.Location = new System.Drawing.Point(14, 428);
+            this.groupBoxConsole6.Location = new System.Drawing.Point(765, 371);
             this.groupBoxConsole6.Margin = new System.Windows.Forms.Padding(4);
             this.groupBoxConsole6.Name = "groupBoxConsole6";
             this.groupBoxConsole6.Padding = new System.Windows.Forms.Padding(4);
             this.groupBoxConsole6.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBoxConsole6.Size = new System.Drawing.Size(362, 421);
+            this.groupBoxConsole6.Size = new System.Drawing.Size(362, 357);
             this.groupBoxConsole6.TabIndex = 33;
             this.groupBoxConsole6.TabStop = false;
             this.groupBoxConsole6.Text = "دستگاه 6";
@@ -238,32 +287,11 @@ namespace GameNet.App.StartConsole
             this.reset6Timer.UseVisualStyleBackColor = false;
             this.reset6Timer.Click += new System.EventHandler(this.reset6Timer_Click);
             // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(249, 319);
-            this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(89, 24);
-            this.label23.TabIndex = 21;
-            this.label23.Text = "وضعیت دستگاه:";
-            // 
-            // console6Check
-            // 
-            this.console6Check.AutoSize = true;
-            this.console6Check.Location = new System.Drawing.Point(29, 318);
-            this.console6Check.Margin = new System.Windows.Forms.Padding(4);
-            this.console6Check.Name = "console6Check";
-            this.console6Check.Size = new System.Drawing.Size(103, 28);
-            this.console6Check.TabIndex = 7;
-            this.console6Check.Text = "فعال / غیرفعال";
-            this.console6Check.UseVisualStyleBackColor = true;
-            // 
             // label24
             // 
             this.label24.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(236, 192);
+            this.label24.Location = new System.Drawing.Point(240, 190);
             this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(105, 24);
@@ -328,7 +356,7 @@ namespace GameNet.App.StartConsole
             this.pay6Btn.FlatAppearance.BorderSize = 0;
             this.pay6Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.pay6Btn.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.pay6Btn.Location = new System.Drawing.Point(29, 355);
+            this.pay6Btn.Location = new System.Drawing.Point(30, 313);
             this.pay6Btn.Margin = new System.Windows.Forms.Padding(4);
             this.pay6Btn.Name = "pay6Btn";
             this.pay6Btn.Size = new System.Drawing.Size(324, 28);
@@ -368,7 +396,7 @@ namespace GameNet.App.StartConsole
             // 
             this.label28.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(271, 162);
+            this.label28.Location = new System.Drawing.Point(275, 160);
             this.label28.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(69, 24);
@@ -448,8 +476,6 @@ namespace GameNet.App.StartConsole
             this.groupBoxConsole5.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.groupBoxConsole5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(47)))), ((int)(((byte)(62)))));
             this.groupBoxConsole5.Controls.Add(this.reset5Timer);
-            this.groupBoxConsole5.Controls.Add(this.label31);
-            this.groupBoxConsole5.Controls.Add(this.console5Check);
             this.groupBoxConsole5.Controls.Add(this.label32);
             this.groupBoxConsole5.Controls.Add(this.shop5NameLbl);
             this.groupBoxConsole5.Controls.Add(this.deletShop5Btn);
@@ -467,12 +493,12 @@ namespace GameNet.App.StartConsole
             this.groupBoxConsole5.Controls.Add(this.label38);
             this.groupBoxConsole5.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.groupBoxConsole5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.groupBoxConsole5.Location = new System.Drawing.Point(384, 428);
+            this.groupBoxConsole5.Location = new System.Drawing.Point(1135, 371);
             this.groupBoxConsole5.Margin = new System.Windows.Forms.Padding(4);
             this.groupBoxConsole5.Name = "groupBoxConsole5";
             this.groupBoxConsole5.Padding = new System.Windows.Forms.Padding(4);
             this.groupBoxConsole5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBoxConsole5.Size = new System.Drawing.Size(362, 421);
+            this.groupBoxConsole5.Size = new System.Drawing.Size(362, 357);
             this.groupBoxConsole5.TabIndex = 32;
             this.groupBoxConsole5.TabStop = false;
             this.groupBoxConsole5.Text = "دستگاه 5";
@@ -491,32 +517,11 @@ namespace GameNet.App.StartConsole
             this.reset5Timer.UseVisualStyleBackColor = false;
             this.reset5Timer.Click += new System.EventHandler(this.reset5Timer_Click);
             // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(252, 319);
-            this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(89, 24);
-            this.label31.TabIndex = 21;
-            this.label31.Text = "وضعیت دستگاه:";
-            // 
-            // console5Check
-            // 
-            this.console5Check.AutoSize = true;
-            this.console5Check.Location = new System.Drawing.Point(29, 318);
-            this.console5Check.Margin = new System.Windows.Forms.Padding(4);
-            this.console5Check.Name = "console5Check";
-            this.console5Check.Size = new System.Drawing.Size(103, 28);
-            this.console5Check.TabIndex = 7;
-            this.console5Check.Text = "فعال / غیرفعال";
-            this.console5Check.UseVisualStyleBackColor = true;
-            // 
             // label32
             // 
             this.label32.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(239, 192);
+            this.label32.Location = new System.Drawing.Point(239, 190);
             this.label32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(105, 24);
@@ -581,7 +586,7 @@ namespace GameNet.App.StartConsole
             this.pay5Btn.FlatAppearance.BorderSize = 0;
             this.pay5Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.pay5Btn.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.pay5Btn.Location = new System.Drawing.Point(29, 355);
+            this.pay5Btn.Location = new System.Drawing.Point(29, 313);
             this.pay5Btn.Margin = new System.Windows.Forms.Padding(4);
             this.pay5Btn.Name = "pay5Btn";
             this.pay5Btn.Size = new System.Drawing.Size(324, 28);
@@ -621,7 +626,7 @@ namespace GameNet.App.StartConsole
             // 
             this.label36.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(274, 162);
+            this.label36.Location = new System.Drawing.Point(274, 160);
             this.label36.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(69, 24);
@@ -701,8 +706,6 @@ namespace GameNet.App.StartConsole
             this.groupBoxConsole4.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.groupBoxConsole4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(47)))), ((int)(((byte)(62)))));
             this.groupBoxConsole4.Controls.Add(this.reset4Timer);
-            this.groupBoxConsole4.Controls.Add(this.label39);
-            this.groupBoxConsole4.Controls.Add(this.console4Check);
             this.groupBoxConsole4.Controls.Add(this.label40);
             this.groupBoxConsole4.Controls.Add(this.shop4NameLbl);
             this.groupBoxConsole4.Controls.Add(this.deletShop4Btn);
@@ -720,12 +723,12 @@ namespace GameNet.App.StartConsole
             this.groupBoxConsole4.Controls.Add(this.label46);
             this.groupBoxConsole4.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.groupBoxConsole4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.groupBoxConsole4.Location = new System.Drawing.Point(754, 428);
+            this.groupBoxConsole4.Location = new System.Drawing.Point(25, 5);
             this.groupBoxConsole4.Margin = new System.Windows.Forms.Padding(4);
             this.groupBoxConsole4.Name = "groupBoxConsole4";
             this.groupBoxConsole4.Padding = new System.Windows.Forms.Padding(4);
             this.groupBoxConsole4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBoxConsole4.Size = new System.Drawing.Size(362, 421);
+            this.groupBoxConsole4.Size = new System.Drawing.Size(362, 363);
             this.groupBoxConsole4.TabIndex = 31;
             this.groupBoxConsole4.TabStop = false;
             this.groupBoxConsole4.Text = "دستگاه 4";
@@ -743,27 +746,6 @@ namespace GameNet.App.StartConsole
             this.reset4Timer.Text = "شروع مجدد";
             this.reset4Timer.UseVisualStyleBackColor = false;
             this.reset4Timer.Click += new System.EventHandler(this.reset4Timer_Click);
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(251, 319);
-            this.label39.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(89, 24);
-            this.label39.TabIndex = 21;
-            this.label39.Text = "وضعیت دستگاه:";
-            // 
-            // console4Check
-            // 
-            this.console4Check.AutoSize = true;
-            this.console4Check.Location = new System.Drawing.Point(29, 318);
-            this.console4Check.Margin = new System.Windows.Forms.Padding(4);
-            this.console4Check.Name = "console4Check";
-            this.console4Check.Size = new System.Drawing.Size(103, 28);
-            this.console4Check.TabIndex = 7;
-            this.console4Check.Text = "فعال / غیرفعال";
-            this.console4Check.UseVisualStyleBackColor = true;
             // 
             // label40
             // 
@@ -834,7 +816,7 @@ namespace GameNet.App.StartConsole
             this.pay4Btn.FlatAppearance.BorderSize = 0;
             this.pay4Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.pay4Btn.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.pay4Btn.Location = new System.Drawing.Point(29, 355);
+            this.pay4Btn.Location = new System.Drawing.Point(29, 313);
             this.pay4Btn.Margin = new System.Windows.Forms.Padding(4);
             this.pay4Btn.Name = "pay4Btn";
             this.pay4Btn.Size = new System.Drawing.Size(324, 28);
@@ -954,8 +936,6 @@ namespace GameNet.App.StartConsole
             this.groupBoxConsole3.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.groupBoxConsole3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(47)))), ((int)(((byte)(62)))));
             this.groupBoxConsole3.Controls.Add(this.reset3Timer);
-            this.groupBoxConsole3.Controls.Add(this.label14);
-            this.groupBoxConsole3.Controls.Add(this.console3Check);
             this.groupBoxConsole3.Controls.Add(this.label15);
             this.groupBoxConsole3.Controls.Add(this.shop3NameLbl);
             this.groupBoxConsole3.Controls.Add(this.deletShop3Btn);
@@ -973,12 +953,12 @@ namespace GameNet.App.StartConsole
             this.groupBoxConsole3.Controls.Add(this.label22);
             this.groupBoxConsole3.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.groupBoxConsole3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.groupBoxConsole3.Location = new System.Drawing.Point(14, 13);
+            this.groupBoxConsole3.Location = new System.Drawing.Point(395, 5);
             this.groupBoxConsole3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBoxConsole3.Name = "groupBoxConsole3";
             this.groupBoxConsole3.Padding = new System.Windows.Forms.Padding(4);
             this.groupBoxConsole3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBoxConsole3.Size = new System.Drawing.Size(362, 407);
+            this.groupBoxConsole3.Size = new System.Drawing.Size(362, 363);
             this.groupBoxConsole3.TabIndex = 29;
             this.groupBoxConsole3.TabStop = false;
             this.groupBoxConsole3.Text = "دستگاه 3";
@@ -996,27 +976,6 @@ namespace GameNet.App.StartConsole
             this.reset3Timer.Text = "شروع مجدد";
             this.reset3Timer.UseVisualStyleBackColor = false;
             this.reset3Timer.Click += new System.EventHandler(this.reset3Timer_Click);
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(249, 319);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(89, 24);
-            this.label14.TabIndex = 21;
-            this.label14.Text = "وضعیت دستگاه:";
-            // 
-            // console3Check
-            // 
-            this.console3Check.AutoSize = true;
-            this.console3Check.Location = new System.Drawing.Point(29, 318);
-            this.console3Check.Margin = new System.Windows.Forms.Padding(4);
-            this.console3Check.Name = "console3Check";
-            this.console3Check.Size = new System.Drawing.Size(103, 28);
-            this.console3Check.TabIndex = 7;
-            this.console3Check.Text = "فعال / غیرفعال";
-            this.console3Check.UseVisualStyleBackColor = true;
             // 
             // label15
             // 
@@ -1087,7 +1046,7 @@ namespace GameNet.App.StartConsole
             this.pay3Btn.FlatAppearance.BorderSize = 0;
             this.pay3Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.pay3Btn.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.pay3Btn.Location = new System.Drawing.Point(29, 355);
+            this.pay3Btn.Location = new System.Drawing.Point(29, 313);
             this.pay3Btn.Margin = new System.Windows.Forms.Padding(4);
             this.pay3Btn.Name = "pay3Btn";
             this.pay3Btn.Size = new System.Drawing.Size(324, 28);
@@ -1207,8 +1166,6 @@ namespace GameNet.App.StartConsole
             this.groupBoxConsole2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.groupBoxConsole2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(47)))), ((int)(((byte)(62)))));
             this.groupBoxConsole2.Controls.Add(this.reset2Timer);
-            this.groupBoxConsole2.Controls.Add(this.label3);
-            this.groupBoxConsole2.Controls.Add(this.console2Check);
             this.groupBoxConsole2.Controls.Add(this.label6);
             this.groupBoxConsole2.Controls.Add(this.shop2NameLbl);
             this.groupBoxConsole2.Controls.Add(this.deletShop2Btn);
@@ -1226,12 +1183,12 @@ namespace GameNet.App.StartConsole
             this.groupBoxConsole2.Controls.Add(this.label12);
             this.groupBoxConsole2.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.groupBoxConsole2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.groupBoxConsole2.Location = new System.Drawing.Point(384, 13);
+            this.groupBoxConsole2.Location = new System.Drawing.Point(765, 5);
             this.groupBoxConsole2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBoxConsole2.Name = "groupBoxConsole2";
             this.groupBoxConsole2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBoxConsole2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBoxConsole2.Size = new System.Drawing.Size(362, 407);
+            this.groupBoxConsole2.Size = new System.Drawing.Size(362, 363);
             this.groupBoxConsole2.TabIndex = 30;
             this.groupBoxConsole2.TabStop = false;
             this.groupBoxConsole2.Text = "دستگاه 2";
@@ -1249,27 +1206,6 @@ namespace GameNet.App.StartConsole
             this.reset2Timer.Text = "شروع مجدد";
             this.reset2Timer.UseVisualStyleBackColor = false;
             this.reset2Timer.Click += new System.EventHandler(this.reset2Timer_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(252, 319);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(89, 24);
-            this.label3.TabIndex = 21;
-            this.label3.Text = "وضعیت دستگاه:";
-            // 
-            // console2Check
-            // 
-            this.console2Check.AutoSize = true;
-            this.console2Check.Location = new System.Drawing.Point(29, 318);
-            this.console2Check.Margin = new System.Windows.Forms.Padding(4);
-            this.console2Check.Name = "console2Check";
-            this.console2Check.Size = new System.Drawing.Size(103, 28);
-            this.console2Check.TabIndex = 7;
-            this.console2Check.Text = "فعال / غیرفعال";
-            this.console2Check.UseVisualStyleBackColor = true;
             // 
             // label6
             // 
@@ -1339,7 +1275,7 @@ namespace GameNet.App.StartConsole
             this.pay2Btn.FlatAppearance.BorderSize = 0;
             this.pay2Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.pay2Btn.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.pay2Btn.Location = new System.Drawing.Point(29, 355);
+            this.pay2Btn.Location = new System.Drawing.Point(29, 313);
             this.pay2Btn.Margin = new System.Windows.Forms.Padding(4);
             this.pay2Btn.Name = "pay2Btn";
             this.pay2Btn.Size = new System.Drawing.Size(324, 28);
@@ -1458,8 +1394,6 @@ namespace GameNet.App.StartConsole
             this.groupBoxConsole1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.groupBoxConsole1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(47)))), ((int)(((byte)(62)))));
             this.groupBoxConsole1.Controls.Add(this.reset1Timer);
-            this.groupBoxConsole1.Controls.Add(this.label19);
-            this.groupBoxConsole1.Controls.Add(this.console1Check);
             this.groupBoxConsole1.Controls.Add(this.label13);
             this.groupBoxConsole1.Controls.Add(this.shop1NameLbl);
             this.groupBoxConsole1.Controls.Add(this.deletShop1Btn);
@@ -1477,12 +1411,12 @@ namespace GameNet.App.StartConsole
             this.groupBoxConsole1.Controls.Add(this.label1);
             this.groupBoxConsole1.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.groupBoxConsole1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.groupBoxConsole1.Location = new System.Drawing.Point(754, 13);
+            this.groupBoxConsole1.Location = new System.Drawing.Point(1135, 5);
             this.groupBoxConsole1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBoxConsole1.Name = "groupBoxConsole1";
             this.groupBoxConsole1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBoxConsole1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBoxConsole1.Size = new System.Drawing.Size(362, 407);
+            this.groupBoxConsole1.Size = new System.Drawing.Size(362, 363);
             this.groupBoxConsole1.TabIndex = 28;
             this.groupBoxConsole1.TabStop = false;
             this.groupBoxConsole1.Text = "دستگاه 1";
@@ -1500,27 +1434,6 @@ namespace GameNet.App.StartConsole
             this.reset1Timer.Text = "شروع مجدد";
             this.reset1Timer.UseVisualStyleBackColor = false;
             this.reset1Timer.Click += new System.EventHandler(this.reset1Timer_Click);
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(260, 319);
-            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(89, 24);
-            this.label19.TabIndex = 21;
-            this.label19.Text = "وضعیت دستگاه:";
-            // 
-            // console1Check
-            // 
-            this.console1Check.AutoSize = true;
-            this.console1Check.Location = new System.Drawing.Point(29, 318);
-            this.console1Check.Margin = new System.Windows.Forms.Padding(4);
-            this.console1Check.Name = "console1Check";
-            this.console1Check.Size = new System.Drawing.Size(103, 28);
-            this.console1Check.TabIndex = 7;
-            this.console1Check.Text = "فعال / غیرفعال";
-            this.console1Check.UseVisualStyleBackColor = true;
             // 
             // label13
             // 
@@ -1590,7 +1503,7 @@ namespace GameNet.App.StartConsole
             this.pay1Btn.FlatAppearance.BorderSize = 0;
             this.pay1Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.pay1Btn.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.pay1Btn.Location = new System.Drawing.Point(29, 355);
+            this.pay1Btn.Location = new System.Drawing.Point(29, 313);
             this.pay1Btn.Margin = new System.Windows.Forms.Padding(4);
             this.pay1Btn.Name = "pay1Btn";
             this.pay1Btn.Size = new System.Drawing.Size(324, 28);
@@ -1709,9 +1622,9 @@ namespace GameNet.App.StartConsole
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(1123, 0);
+            this.panel2.Location = new System.Drawing.Point(1504, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(217, 854);
+            this.panel2.Size = new System.Drawing.Size(217, 1061);
             this.panel2.TabIndex = 5;
             // 
             // panel4
@@ -1801,11 +1714,716 @@ namespace GameNet.App.StartConsole
             this.timer6.Enabled = true;
             this.timer6.Tick += new System.EventHandler(this.timer6_Tick);
             // 
+            // groupBoxConsole7
+            // 
+            this.groupBoxConsole7.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.groupBoxConsole7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(47)))), ((int)(((byte)(62)))));
+            this.groupBoxConsole7.Controls.Add(this.reset7Timer);
+            this.groupBoxConsole7.Controls.Add(this.label9);
+            this.groupBoxConsole7.Controls.Add(this.shop7NameLbl);
+            this.groupBoxConsole7.Controls.Add(this.deletShop7Btn);
+            this.groupBoxConsole7.Controls.Add(this.stop7Timer);
+            this.groupBoxConsole7.Controls.Add(this.start7Timer);
+            this.groupBoxConsole7.Controls.Add(this.pay7Btn);
+            this.groupBoxConsole7.Controls.Add(this.label18);
+            this.groupBoxConsole7.Controls.Add(this.time7Txt);
+            this.groupBoxConsole7.Controls.Add(this.shopCostLbl7);
+            this.groupBoxConsole7.Controls.Add(this.label27);
+            this.groupBoxConsole7.Controls.Add(this.shop7Btn);
+            this.groupBoxConsole7.Controls.Add(this.cntrl7Count);
+            this.groupBoxConsole7.Controls.Add(this.charge7Cost);
+            this.groupBoxConsole7.Controls.Add(this.label33);
+            this.groupBoxConsole7.Controls.Add(this.label35);
+            this.groupBoxConsole7.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.groupBoxConsole7.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.groupBoxConsole7.Location = new System.Drawing.Point(395, 371);
+            this.groupBoxConsole7.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBoxConsole7.Name = "groupBoxConsole7";
+            this.groupBoxConsole7.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBoxConsole7.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBoxConsole7.Size = new System.Drawing.Size(362, 357);
+            this.groupBoxConsole7.TabIndex = 34;
+            this.groupBoxConsole7.TabStop = false;
+            this.groupBoxConsole7.Text = "دستگاه 7";
+            // 
+            // reset7Timer
+            // 
+            this.reset7Timer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(128)))), ((int)(((byte)(147)))));
+            this.reset7Timer.FlatAppearance.BorderSize = 0;
+            this.reset7Timer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.reset7Timer.Location = new System.Drawing.Point(29, 229);
+            this.reset7Timer.Margin = new System.Windows.Forms.Padding(4);
+            this.reset7Timer.Name = "reset7Timer";
+            this.reset7Timer.Size = new System.Drawing.Size(97, 28);
+            this.reset7Timer.TabIndex = 23;
+            this.reset7Timer.Text = "شروع مجدد";
+            this.reset7Timer.UseVisualStyleBackColor = false;
+            this.reset7Timer.Click += new System.EventHandler(this.reset7Timer_Click);
+            // 
+            // label9
+            // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(240, 190);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(105, 24);
+            this.label9.TabIndex = 20;
+            this.label9.Text = "نام خوراکی و تعداد:";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // shop7NameLbl
+            // 
+            this.shop7NameLbl.AutoSize = true;
+            this.shop7NameLbl.Location = new System.Drawing.Point(8, 203);
+            this.shop7NameLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.shop7NameLbl.Name = "shop7NameLbl";
+            this.shop7NameLbl.Size = new System.Drawing.Size(0, 24);
+            this.shop7NameLbl.TabIndex = 19;
+            // 
+            // deletShop7Btn
+            // 
+            this.deletShop7Btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(54)))), ((int)(((byte)(22)))));
+            this.deletShop7Btn.FlatAppearance.BorderSize = 0;
+            this.deletShop7Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.deletShop7Btn.Location = new System.Drawing.Point(8, 130);
+            this.deletShop7Btn.Margin = new System.Windows.Forms.Padding(4);
+            this.deletShop7Btn.Name = "deletShop7Btn";
+            this.deletShop7Btn.Size = new System.Drawing.Size(116, 28);
+            this.deletShop7Btn.TabIndex = 7;
+            this.deletShop7Btn.Text = "حذف بوفه";
+            this.deletShop7Btn.UseVisualStyleBackColor = false;
+            this.deletShop7Btn.Click += new System.EventHandler(this.deletShop7Btn_Click);
+            // 
+            // stop7Timer
+            // 
+            this.stop7Timer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(177)))), ((int)(((byte)(44)))));
+            this.stop7Timer.FlatAppearance.BorderSize = 0;
+            this.stop7Timer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.stop7Timer.Location = new System.Drawing.Point(138, 229);
+            this.stop7Timer.Margin = new System.Windows.Forms.Padding(4);
+            this.stop7Timer.Name = "stop7Timer";
+            this.stop7Timer.Size = new System.Drawing.Size(95, 28);
+            this.stop7Timer.TabIndex = 18;
+            this.stop7Timer.Text = "توقف";
+            this.stop7Timer.UseVisualStyleBackColor = false;
+            this.stop7Timer.Click += new System.EventHandler(this.stop7Timer_Click);
+            // 
+            // start7Timer
+            // 
+            this.start7Timer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(189)))), ((int)(((byte)(50)))));
+            this.start7Timer.FlatAppearance.BorderSize = 0;
+            this.start7Timer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.start7Timer.Location = new System.Drawing.Point(243, 229);
+            this.start7Timer.Margin = new System.Windows.Forms.Padding(4);
+            this.start7Timer.Name = "start7Timer";
+            this.start7Timer.Size = new System.Drawing.Size(97, 28);
+            this.start7Timer.TabIndex = 17;
+            this.start7Timer.Text = "شروع / ادامه";
+            this.start7Timer.UseVisualStyleBackColor = false;
+            this.start7Timer.Click += new System.EventHandler(this.start7Timer_Click);
+            // 
+            // pay7Btn
+            // 
+            this.pay7Btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(64)))), ((int)(((byte)(198)))));
+            this.pay7Btn.FlatAppearance.BorderSize = 0;
+            this.pay7Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.pay7Btn.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.pay7Btn.Location = new System.Drawing.Point(29, 313);
+            this.pay7Btn.Margin = new System.Windows.Forms.Padding(4);
+            this.pay7Btn.Name = "pay7Btn";
+            this.pay7Btn.Size = new System.Drawing.Size(324, 28);
+            this.pay7Btn.TabIndex = 16;
+            this.pay7Btn.Text = "تسویه";
+            this.pay7Btn.UseVisualStyleBackColor = false;
+            this.pay7Btn.Click += new System.EventHandler(this.pay7Btn_Click);
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(276, 277);
+            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(64, 24);
+            this.label18.TabIndex = 12;
+            this.label18.Text = "مدت زمان:";
+            // 
+            // time7Txt
+            // 
+            this.time7Txt.Location = new System.Drawing.Point(29, 274);
+            this.time7Txt.Margin = new System.Windows.Forms.Padding(4);
+            this.time7Txt.Name = "time7Txt";
+            this.time7Txt.Size = new System.Drawing.Size(225, 31);
+            this.time7Txt.TabIndex = 11;
+            // 
+            // shopCostLbl7
+            // 
+            this.shopCostLbl7.AutoSize = true;
+            this.shopCostLbl7.Location = new System.Drawing.Point(8, 162);
+            this.shopCostLbl7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.shopCostLbl7.Name = "shopCostLbl7";
+            this.shopCostLbl7.Size = new System.Drawing.Size(0, 24);
+            this.shopCostLbl7.TabIndex = 10;
+            // 
+            // label27
+            // 
+            this.label27.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(275, 160);
+            this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(69, 24);
+            this.label27.TabIndex = 9;
+            this.label27.Text = "هزینه بوفه :";
+            this.label27.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // shop7Btn
+            // 
+            this.shop7Btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(122)))), ((int)(((byte)(230)))));
+            this.shop7Btn.FlatAppearance.BorderSize = 0;
+            this.shop7Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.shop7Btn.Location = new System.Drawing.Point(237, 130);
+            this.shop7Btn.Margin = new System.Windows.Forms.Padding(4);
+            this.shop7Btn.Name = "shop7Btn";
+            this.shop7Btn.Size = new System.Drawing.Size(116, 28);
+            this.shop7Btn.TabIndex = 8;
+            this.shop7Btn.Text = "انتخاب خوراکی";
+            this.shop7Btn.UseVisualStyleBackColor = false;
+            this.shop7Btn.Click += new System.EventHandler(this.shop7Btn_Click);
+            // 
+            // cntrl7Count
+            // 
+            this.cntrl7Count.Location = new System.Drawing.Point(8, 82);
+            this.cntrl7Count.Margin = new System.Windows.Forms.Padding(4);
+            this.cntrl7Count.Maximum = new decimal(new int[] {
+            4,
+            0,
+            0,
+            0});
+            this.cntrl7Count.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.cntrl7Count.Name = "cntrl7Count";
+            this.cntrl7Count.Size = new System.Drawing.Size(227, 31);
+            this.cntrl7Count.TabIndex = 7;
+            this.cntrl7Count.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // charge7Cost
+            // 
+            this.charge7Cost.Location = new System.Drawing.Point(8, 41);
+            this.charge7Cost.Margin = new System.Windows.Forms.Padding(4);
+            this.charge7Cost.Name = "charge7Cost";
+            this.charge7Cost.Size = new System.Drawing.Size(225, 31);
+            this.charge7Cost.TabIndex = 6;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(269, 84);
+            this.label33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(68, 24);
+            this.label33.TabIndex = 4;
+            this.label33.Text = "تعداد دسته:";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(296, 41);
+            this.label35.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label35.Name = "label35";
+            this.label35.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label35.Size = new System.Drawing.Size(39, 24);
+            this.label35.TabIndex = 3;
+            this.label35.Text = "شارژ: ";
+            this.label35.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // groupBoxConsole8
+            // 
+            this.groupBoxConsole8.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.groupBoxConsole8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(47)))), ((int)(((byte)(62)))));
+            this.groupBoxConsole8.Controls.Add(this.reset8Timer);
+            this.groupBoxConsole8.Controls.Add(this.label43);
+            this.groupBoxConsole8.Controls.Add(this.shop8NameLbl);
+            this.groupBoxConsole8.Controls.Add(this.deletShop8Btn);
+            this.groupBoxConsole8.Controls.Add(this.stop8Timer);
+            this.groupBoxConsole8.Controls.Add(this.start8Timer);
+            this.groupBoxConsole8.Controls.Add(this.pay8Btn);
+            this.groupBoxConsole8.Controls.Add(this.label49);
+            this.groupBoxConsole8.Controls.Add(this.time8Txt);
+            this.groupBoxConsole8.Controls.Add(this.shopCostLbl8);
+            this.groupBoxConsole8.Controls.Add(this.label51);
+            this.groupBoxConsole8.Controls.Add(this.shop8Btn);
+            this.groupBoxConsole8.Controls.Add(this.cntrl8Count);
+            this.groupBoxConsole8.Controls.Add(this.charge8Cost);
+            this.groupBoxConsole8.Controls.Add(this.label52);
+            this.groupBoxConsole8.Controls.Add(this.label53);
+            this.groupBoxConsole8.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.groupBoxConsole8.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.groupBoxConsole8.Location = new System.Drawing.Point(25, 371);
+            this.groupBoxConsole8.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBoxConsole8.Name = "groupBoxConsole8";
+            this.groupBoxConsole8.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBoxConsole8.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBoxConsole8.Size = new System.Drawing.Size(362, 357);
+            this.groupBoxConsole8.TabIndex = 34;
+            this.groupBoxConsole8.TabStop = false;
+            this.groupBoxConsole8.Text = "دستگاه 8";
+            // 
+            // reset8Timer
+            // 
+            this.reset8Timer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(128)))), ((int)(((byte)(147)))));
+            this.reset8Timer.FlatAppearance.BorderSize = 0;
+            this.reset8Timer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.reset8Timer.Location = new System.Drawing.Point(29, 229);
+            this.reset8Timer.Margin = new System.Windows.Forms.Padding(4);
+            this.reset8Timer.Name = "reset8Timer";
+            this.reset8Timer.Size = new System.Drawing.Size(97, 28);
+            this.reset8Timer.TabIndex = 23;
+            this.reset8Timer.Text = "شروع مجدد";
+            this.reset8Timer.UseVisualStyleBackColor = false;
+            this.reset8Timer.Click += new System.EventHandler(this.reset8Timer_Click);
+            // 
+            // label43
+            // 
+            this.label43.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label43.AutoSize = true;
+            this.label43.Location = new System.Drawing.Point(236, 192);
+            this.label43.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(105, 24);
+            this.label43.TabIndex = 20;
+            this.label43.Text = "نام خوراکی و تعداد:";
+            this.label43.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // shop8NameLbl
+            // 
+            this.shop8NameLbl.AutoSize = true;
+            this.shop8NameLbl.Location = new System.Drawing.Point(8, 203);
+            this.shop8NameLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.shop8NameLbl.Name = "shop8NameLbl";
+            this.shop8NameLbl.Size = new System.Drawing.Size(0, 24);
+            this.shop8NameLbl.TabIndex = 19;
+            // 
+            // deletShop8Btn
+            // 
+            this.deletShop8Btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(54)))), ((int)(((byte)(22)))));
+            this.deletShop8Btn.FlatAppearance.BorderSize = 0;
+            this.deletShop8Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.deletShop8Btn.Location = new System.Drawing.Point(8, 130);
+            this.deletShop8Btn.Margin = new System.Windows.Forms.Padding(4);
+            this.deletShop8Btn.Name = "deletShop8Btn";
+            this.deletShop8Btn.Size = new System.Drawing.Size(116, 28);
+            this.deletShop8Btn.TabIndex = 7;
+            this.deletShop8Btn.Text = "حذف بوفه";
+            this.deletShop8Btn.UseVisualStyleBackColor = false;
+            this.deletShop8Btn.Click += new System.EventHandler(this.deletShop8Btn_Click);
+            // 
+            // stop8Timer
+            // 
+            this.stop8Timer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(177)))), ((int)(((byte)(44)))));
+            this.stop8Timer.FlatAppearance.BorderSize = 0;
+            this.stop8Timer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.stop8Timer.Location = new System.Drawing.Point(138, 229);
+            this.stop8Timer.Margin = new System.Windows.Forms.Padding(4);
+            this.stop8Timer.Name = "stop8Timer";
+            this.stop8Timer.Size = new System.Drawing.Size(95, 28);
+            this.stop8Timer.TabIndex = 18;
+            this.stop8Timer.Text = "توقف";
+            this.stop8Timer.UseVisualStyleBackColor = false;
+            this.stop8Timer.Click += new System.EventHandler(this.stop8Timer_Click);
+            // 
+            // start8Timer
+            // 
+            this.start8Timer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(189)))), ((int)(((byte)(50)))));
+            this.start8Timer.FlatAppearance.BorderSize = 0;
+            this.start8Timer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.start8Timer.Location = new System.Drawing.Point(243, 229);
+            this.start8Timer.Margin = new System.Windows.Forms.Padding(4);
+            this.start8Timer.Name = "start8Timer";
+            this.start8Timer.Size = new System.Drawing.Size(97, 28);
+            this.start8Timer.TabIndex = 17;
+            this.start8Timer.Text = "شروع / ادامه";
+            this.start8Timer.UseVisualStyleBackColor = false;
+            this.start8Timer.Click += new System.EventHandler(this.start8Timer_Click);
+            // 
+            // pay8Btn
+            // 
+            this.pay8Btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(64)))), ((int)(((byte)(198)))));
+            this.pay8Btn.FlatAppearance.BorderSize = 0;
+            this.pay8Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.pay8Btn.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.pay8Btn.Location = new System.Drawing.Point(29, 313);
+            this.pay8Btn.Margin = new System.Windows.Forms.Padding(4);
+            this.pay8Btn.Name = "pay8Btn";
+            this.pay8Btn.Size = new System.Drawing.Size(324, 28);
+            this.pay8Btn.TabIndex = 16;
+            this.pay8Btn.Text = "تسویه";
+            this.pay8Btn.UseVisualStyleBackColor = false;
+            this.pay8Btn.Click += new System.EventHandler(this.pay8Btn_Click);
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Location = new System.Drawing.Point(276, 277);
+            this.label49.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(64, 24);
+            this.label49.TabIndex = 12;
+            this.label49.Text = "مدت زمان:";
+            // 
+            // time8Txt
+            // 
+            this.time8Txt.Location = new System.Drawing.Point(29, 274);
+            this.time8Txt.Margin = new System.Windows.Forms.Padding(4);
+            this.time8Txt.Name = "time8Txt";
+            this.time8Txt.Size = new System.Drawing.Size(225, 31);
+            this.time8Txt.TabIndex = 11;
+            // 
+            // shopCostLbl8
+            // 
+            this.shopCostLbl8.AutoSize = true;
+            this.shopCostLbl8.Location = new System.Drawing.Point(8, 162);
+            this.shopCostLbl8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.shopCostLbl8.Name = "shopCostLbl8";
+            this.shopCostLbl8.Size = new System.Drawing.Size(0, 24);
+            this.shopCostLbl8.TabIndex = 10;
+            // 
+            // label51
+            // 
+            this.label51.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label51.AutoSize = true;
+            this.label51.Location = new System.Drawing.Point(271, 162);
+            this.label51.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(69, 24);
+            this.label51.TabIndex = 9;
+            this.label51.Text = "هزینه بوفه :";
+            this.label51.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // shop8Btn
+            // 
+            this.shop8Btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(122)))), ((int)(((byte)(230)))));
+            this.shop8Btn.FlatAppearance.BorderSize = 0;
+            this.shop8Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.shop8Btn.Location = new System.Drawing.Point(237, 130);
+            this.shop8Btn.Margin = new System.Windows.Forms.Padding(4);
+            this.shop8Btn.Name = "shop8Btn";
+            this.shop8Btn.Size = new System.Drawing.Size(116, 28);
+            this.shop8Btn.TabIndex = 8;
+            this.shop8Btn.Text = "انتخاب خوراکی";
+            this.shop8Btn.UseVisualStyleBackColor = false;
+            this.shop8Btn.Click += new System.EventHandler(this.shop8Btn_Click);
+            // 
+            // cntrl8Count
+            // 
+            this.cntrl8Count.Location = new System.Drawing.Point(8, 82);
+            this.cntrl8Count.Margin = new System.Windows.Forms.Padding(4);
+            this.cntrl8Count.Maximum = new decimal(new int[] {
+            4,
+            0,
+            0,
+            0});
+            this.cntrl8Count.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.cntrl8Count.Name = "cntrl8Count";
+            this.cntrl8Count.Size = new System.Drawing.Size(227, 31);
+            this.cntrl8Count.TabIndex = 7;
+            this.cntrl8Count.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // charge8Cost
+            // 
+            this.charge8Cost.Location = new System.Drawing.Point(8, 41);
+            this.charge8Cost.Margin = new System.Windows.Forms.Padding(4);
+            this.charge8Cost.Name = "charge8Cost";
+            this.charge8Cost.Size = new System.Drawing.Size(225, 31);
+            this.charge8Cost.TabIndex = 6;
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.Location = new System.Drawing.Point(269, 84);
+            this.label52.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(68, 24);
+            this.label52.TabIndex = 4;
+            this.label52.Text = "تعداد دسته:";
+            // 
+            // label53
+            // 
+            this.label53.AutoSize = true;
+            this.label53.Location = new System.Drawing.Point(296, 41);
+            this.label53.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label53.Name = "label53";
+            this.label53.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label53.Size = new System.Drawing.Size(39, 24);
+            this.label53.TabIndex = 3;
+            this.label53.Text = "شارژ: ";
+            this.label53.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // groupBoxConsole9
+            // 
+            this.groupBoxConsole9.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.groupBoxConsole9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(47)))), ((int)(((byte)(62)))));
+            this.groupBoxConsole9.Controls.Add(this.reset9Timer);
+            this.groupBoxConsole9.Controls.Add(this.label3);
+            this.groupBoxConsole9.Controls.Add(this.shop9NameLbl);
+            this.groupBoxConsole9.Controls.Add(this.deletShop9Btn);
+            this.groupBoxConsole9.Controls.Add(this.stop9Timer);
+            this.groupBoxConsole9.Controls.Add(this.start9Timer);
+            this.groupBoxConsole9.Controls.Add(this.pay9Btn);
+            this.groupBoxConsole9.Controls.Add(this.label14);
+            this.groupBoxConsole9.Controls.Add(this.time9Txt);
+            this.groupBoxConsole9.Controls.Add(this.shopCostLbl9);
+            this.groupBoxConsole9.Controls.Add(this.label23);
+            this.groupBoxConsole9.Controls.Add(this.shop9Btn);
+            this.groupBoxConsole9.Controls.Add(this.cntrl9Count);
+            this.groupBoxConsole9.Controls.Add(this.charge9Cost);
+            this.groupBoxConsole9.Controls.Add(this.label31);
+            this.groupBoxConsole9.Controls.Add(this.label39);
+            this.groupBoxConsole9.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.groupBoxConsole9.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.groupBoxConsole9.Location = new System.Drawing.Point(1135, 731);
+            this.groupBoxConsole9.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBoxConsole9.Name = "groupBoxConsole9";
+            this.groupBoxConsole9.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBoxConsole9.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBoxConsole9.Size = new System.Drawing.Size(362, 326);
+            this.groupBoxConsole9.TabIndex = 35;
+            this.groupBoxConsole9.TabStop = false;
+            this.groupBoxConsole9.Text = "دستگاه 9";
+            // 
+            // reset9Timer
+            // 
+            this.reset9Timer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(128)))), ((int)(((byte)(147)))));
+            this.reset9Timer.FlatAppearance.BorderSize = 0;
+            this.reset9Timer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.reset9Timer.Location = new System.Drawing.Point(29, 200);
+            this.reset9Timer.Margin = new System.Windows.Forms.Padding(4);
+            this.reset9Timer.Name = "reset9Timer";
+            this.reset9Timer.Size = new System.Drawing.Size(97, 28);
+            this.reset9Timer.TabIndex = 23;
+            this.reset9Timer.Text = "شروع مجدد";
+            this.reset9Timer.UseVisualStyleBackColor = false;
+            this.reset9Timer.Click += new System.EventHandler(this.reset9Timer_Click);
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(236, 170);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(105, 24);
+            this.label3.TabIndex = 20;
+            this.label3.Text = "نام خوراکی و تعداد:";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // shop9NameLbl
+            // 
+            this.shop9NameLbl.AutoSize = true;
+            this.shop9NameLbl.Location = new System.Drawing.Point(8, 178);
+            this.shop9NameLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.shop9NameLbl.Name = "shop9NameLbl";
+            this.shop9NameLbl.Size = new System.Drawing.Size(0, 24);
+            this.shop9NameLbl.TabIndex = 19;
+            // 
+            // deletShop9Btn
+            // 
+            this.deletShop9Btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(54)))), ((int)(((byte)(22)))));
+            this.deletShop9Btn.FlatAppearance.BorderSize = 0;
+            this.deletShop9Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.deletShop9Btn.Location = new System.Drawing.Point(13, 105);
+            this.deletShop9Btn.Margin = new System.Windows.Forms.Padding(4);
+            this.deletShop9Btn.Name = "deletShop9Btn";
+            this.deletShop9Btn.Size = new System.Drawing.Size(116, 28);
+            this.deletShop9Btn.TabIndex = 7;
+            this.deletShop9Btn.Text = "حذف بوفه";
+            this.deletShop9Btn.UseVisualStyleBackColor = false;
+            this.deletShop9Btn.Click += new System.EventHandler(this.deletShop9Btn_Click);
+            // 
+            // stop9Timer
+            // 
+            this.stop9Timer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(177)))), ((int)(((byte)(44)))));
+            this.stop9Timer.FlatAppearance.BorderSize = 0;
+            this.stop9Timer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.stop9Timer.Location = new System.Drawing.Point(138, 200);
+            this.stop9Timer.Margin = new System.Windows.Forms.Padding(4);
+            this.stop9Timer.Name = "stop9Timer";
+            this.stop9Timer.Size = new System.Drawing.Size(95, 28);
+            this.stop9Timer.TabIndex = 18;
+            this.stop9Timer.Text = "توقف";
+            this.stop9Timer.UseVisualStyleBackColor = false;
+            this.stop9Timer.Click += new System.EventHandler(this.stop9Timer_Click);
+            // 
+            // start9Timer
+            // 
+            this.start9Timer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(189)))), ((int)(((byte)(50)))));
+            this.start9Timer.FlatAppearance.BorderSize = 0;
+            this.start9Timer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.start9Timer.Location = new System.Drawing.Point(243, 200);
+            this.start9Timer.Margin = new System.Windows.Forms.Padding(4);
+            this.start9Timer.Name = "start9Timer";
+            this.start9Timer.Size = new System.Drawing.Size(97, 28);
+            this.start9Timer.TabIndex = 17;
+            this.start9Timer.Text = "شروع / ادامه";
+            this.start9Timer.UseVisualStyleBackColor = false;
+            this.start9Timer.Click += new System.EventHandler(this.start9Timer_Click);
+            // 
+            // pay9Btn
+            // 
+            this.pay9Btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(64)))), ((int)(((byte)(198)))));
+            this.pay9Btn.FlatAppearance.BorderSize = 0;
+            this.pay9Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.pay9Btn.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.pay9Btn.Location = new System.Drawing.Point(29, 275);
+            this.pay9Btn.Margin = new System.Windows.Forms.Padding(4);
+            this.pay9Btn.Name = "pay9Btn";
+            this.pay9Btn.Size = new System.Drawing.Size(324, 28);
+            this.pay9Btn.TabIndex = 16;
+            this.pay9Btn.Text = "تسویه";
+            this.pay9Btn.UseVisualStyleBackColor = false;
+            this.pay9Btn.Click += new System.EventHandler(this.pay9Btn_Click);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(276, 239);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(64, 24);
+            this.label14.TabIndex = 12;
+            this.label14.Text = "مدت زمان:";
+            // 
+            // time9Txt
+            // 
+            this.time9Txt.Location = new System.Drawing.Point(29, 236);
+            this.time9Txt.Margin = new System.Windows.Forms.Padding(4);
+            this.time9Txt.Name = "time9Txt";
+            this.time9Txt.Size = new System.Drawing.Size(225, 31);
+            this.time9Txt.TabIndex = 11;
+            // 
+            // shopCostLbl9
+            // 
+            this.shopCostLbl9.AutoSize = true;
+            this.shopCostLbl9.Location = new System.Drawing.Point(8, 137);
+            this.shopCostLbl9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.shopCostLbl9.Name = "shopCostLbl9";
+            this.shopCostLbl9.Size = new System.Drawing.Size(0, 24);
+            this.shopCostLbl9.TabIndex = 10;
+            // 
+            // label23
+            // 
+            this.label23.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(271, 140);
+            this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(69, 24);
+            this.label23.TabIndex = 9;
+            this.label23.Text = "هزینه بوفه :";
+            this.label23.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // shop9Btn
+            // 
+            this.shop9Btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(122)))), ((int)(((byte)(230)))));
+            this.shop9Btn.FlatAppearance.BorderSize = 0;
+            this.shop9Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.shop9Btn.Location = new System.Drawing.Point(238, 105);
+            this.shop9Btn.Margin = new System.Windows.Forms.Padding(4);
+            this.shop9Btn.Name = "shop9Btn";
+            this.shop9Btn.Size = new System.Drawing.Size(116, 28);
+            this.shop9Btn.TabIndex = 8;
+            this.shop9Btn.Text = "انتخاب خوراکی";
+            this.shop9Btn.UseVisualStyleBackColor = false;
+            this.shop9Btn.Click += new System.EventHandler(this.shop9Btn_Click);
+            // 
+            // cntrl9Count
+            // 
+            this.cntrl9Count.Location = new System.Drawing.Point(13, 61);
+            this.cntrl9Count.Margin = new System.Windows.Forms.Padding(4);
+            this.cntrl9Count.Maximum = new decimal(new int[] {
+            4,
+            0,
+            0,
+            0});
+            this.cntrl9Count.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.cntrl9Count.Name = "cntrl9Count";
+            this.cntrl9Count.Size = new System.Drawing.Size(227, 31);
+            this.cntrl9Count.TabIndex = 7;
+            this.cntrl9Count.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // charge9Cost
+            // 
+            this.charge9Cost.Location = new System.Drawing.Point(13, 22);
+            this.charge9Cost.Margin = new System.Windows.Forms.Padding(4);
+            this.charge9Cost.Name = "charge9Cost";
+            this.charge9Cost.Size = new System.Drawing.Size(225, 31);
+            this.charge9Cost.TabIndex = 6;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(272, 63);
+            this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(68, 24);
+            this.label31.TabIndex = 4;
+            this.label31.Text = "تعداد دسته:";
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(298, 25);
+            this.label39.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label39.Name = "label39";
+            this.label39.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label39.Size = new System.Drawing.Size(39, 24);
+            this.label39.TabIndex = 3;
+            this.label39.Text = "شارژ: ";
+            this.label39.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // timer7
+            // 
+            this.timer7.Enabled = true;
+            this.timer7.Tick += new System.EventHandler(this.timer7_Tick);
+            // 
+            // timer8
+            // 
+            this.timer8.Enabled = true;
+            this.timer8.Tick += new System.EventHandler(this.timer8_Tick);
+            // 
+            // timer9
+            // 
+            this.timer9.Enabled = true;
+            this.timer9.Tick += new System.EventHandler(this.timer9_Tick);
+            // 
             // FrmStart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1340, 854);
+            this.ClientSize = new System.Drawing.Size(1721, 1061);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MinimizeBox = false;
@@ -1814,6 +2432,7 @@ namespace GameNet.App.StartConsole
             this.RightToLeftLayout = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "شروع دستگاه";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmStart_FormClosing);
             this.Load += new System.EventHandler(this.FrmStart_Load);
             this.panel1.ResumeLayout(false);
@@ -1840,6 +2459,15 @@ namespace GameNet.App.StartConsole
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupBoxConsole7.ResumeLayout(false);
+            this.groupBoxConsole7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cntrl7Count)).EndInit();
+            this.groupBoxConsole8.ResumeLayout(false);
+            this.groupBoxConsole8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cntrl8Count)).EndInit();
+            this.groupBoxConsole9.ResumeLayout(false);
+            this.groupBoxConsole9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cntrl9Count)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1855,8 +2483,6 @@ namespace GameNet.App.StartConsole
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.GroupBox groupBoxConsole6;
         private System.Windows.Forms.Button reset6Timer;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.CheckBox console6Check;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label shop6NameLbl;
         private System.Windows.Forms.Button deletShop6Btn;
@@ -1874,8 +2500,6 @@ namespace GameNet.App.StartConsole
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.GroupBox groupBoxConsole5;
         private System.Windows.Forms.Button reset5Timer;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.CheckBox console5Check;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label shop5NameLbl;
         private System.Windows.Forms.Button deletShop5Btn;
@@ -1893,8 +2517,6 @@ namespace GameNet.App.StartConsole
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.GroupBox groupBoxConsole4;
         private System.Windows.Forms.Button reset4Timer;
-        private System.Windows.Forms.Label label39;
-        private System.Windows.Forms.CheckBox console4Check;
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.Label shop4NameLbl;
         private System.Windows.Forms.Button deletShop4Btn;
@@ -1912,8 +2534,6 @@ namespace GameNet.App.StartConsole
         private System.Windows.Forms.Label label46;
         private System.Windows.Forms.GroupBox groupBoxConsole3;
         private System.Windows.Forms.Button reset3Timer;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.CheckBox console3Check;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label shop3NameLbl;
         private System.Windows.Forms.Button deletShop3Btn;
@@ -1931,8 +2551,6 @@ namespace GameNet.App.StartConsole
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.GroupBox groupBoxConsole2;
         private System.Windows.Forms.Button reset2Timer;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.CheckBox console2Check;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label shop2NameLbl;
         private System.Windows.Forms.Button deletShop2Btn;
@@ -1950,8 +2568,6 @@ namespace GameNet.App.StartConsole
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.GroupBox groupBoxConsole1;
         private System.Windows.Forms.Button reset1Timer;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.CheckBox console1Check;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label shop1NameLbl;
         private System.Windows.Forms.Button deletShop1Btn;
@@ -1972,5 +2588,59 @@ namespace GameNet.App.StartConsole
         private System.Windows.Forms.Timer timer4;
         private System.Windows.Forms.Timer timer5;
         private System.Windows.Forms.Timer timer6;
+        private System.Windows.Forms.GroupBox groupBoxConsole9;
+        private System.Windows.Forms.Button reset9Timer;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label shop9NameLbl;
+        private System.Windows.Forms.Button deletShop9Btn;
+        private System.Windows.Forms.Button stop9Timer;
+        private System.Windows.Forms.Button start9Timer;
+        private System.Windows.Forms.Button pay9Btn;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox time9Txt;
+        private System.Windows.Forms.Label shopCostLbl9;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Button shop9Btn;
+        private System.Windows.Forms.NumericUpDown cntrl9Count;
+        private System.Windows.Forms.TextBox charge9Cost;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.GroupBox groupBoxConsole8;
+        private System.Windows.Forms.Button reset8Timer;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.Label shop8NameLbl;
+        private System.Windows.Forms.Button deletShop8Btn;
+        private System.Windows.Forms.Button stop8Timer;
+        private System.Windows.Forms.Button start8Timer;
+        private System.Windows.Forms.Button pay8Btn;
+        private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.TextBox time8Txt;
+        private System.Windows.Forms.Label shopCostLbl8;
+        private System.Windows.Forms.Label label51;
+        private System.Windows.Forms.Button shop8Btn;
+        private System.Windows.Forms.NumericUpDown cntrl8Count;
+        private System.Windows.Forms.TextBox charge8Cost;
+        private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.Label label53;
+        private System.Windows.Forms.GroupBox groupBoxConsole7;
+        private System.Windows.Forms.Button reset7Timer;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label shop7NameLbl;
+        private System.Windows.Forms.Button deletShop7Btn;
+        private System.Windows.Forms.Button stop7Timer;
+        private System.Windows.Forms.Button start7Timer;
+        private System.Windows.Forms.Button pay7Btn;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox time7Txt;
+        private System.Windows.Forms.Label shopCostLbl7;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Button shop7Btn;
+        private System.Windows.Forms.NumericUpDown cntrl7Count;
+        private System.Windows.Forms.TextBox charge7Cost;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Timer timer7;
+        private System.Windows.Forms.Timer timer8;
+        private System.Windows.Forms.Timer timer9;
     }
 }

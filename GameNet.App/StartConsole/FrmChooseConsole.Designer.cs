@@ -77,7 +77,7 @@ namespace GameNet.App.StartConsole
             this.numericUpDownConsole.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.numericUpDownConsole.Location = new System.Drawing.Point(99, 20);
             this.numericUpDownConsole.Maximum = new decimal(new int[] {
-            6,
+            9,
             0,
             0,
             0});

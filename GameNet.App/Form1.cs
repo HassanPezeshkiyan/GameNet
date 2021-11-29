@@ -163,29 +163,42 @@ namespace GameNet.App
                 {
                     var startDate = Convert.ToDateTime(maskedTextBoxStartDate.Text);
                     startDate = MyDateExtension.ToMiladi(startDate);
+                    query = query.Where(n => n.CreationDate >= startDate);
                     reports = query.Where(n => n.CreationDate >= startDate).ToList();
                 }
                 if (maskedTextBoxEndDate.Text != "    /  /")
                 {
                     var EndDate = Convert.ToDateTime(maskedTextBoxEndDate.Text);
                     EndDate = MyDateExtension.ToMiladi(EndDate);
+                    query = query.Where(n => n.CreationDate <= EndDate);
                     reports = query.Where(n => n.CreationDate <= EndDate).ToList();
                 }
                 if (maskedTextBoxStartTime.Text != "  :")
                 {
                     var startTime = Convert.ToDateTime((maskedTextBoxStartDate.Text) + " " + (maskedTextBoxStartTime.Text));
                     startTime = MyDateExtension.ToMiladi(startTime);
+                    query = query.Where(n => n.CreationDate >= startTime);
                     reports = query.Where(n => n.CreationDate >= startTime).ToList();
                 }
                 if (maskedTextBoxEndTime.Text != "  :")
                 {
                     var endTime = Convert.ToDateTime((maskedTextBoxEndDate.Text) + " " + (maskedTextBoxEndTime.Text));
                     endTime = MyDateExtension.ToMiladi(endTime);
+                    query = query.Where(n => n.CreationDate <= endTime);
                     reports = query.Where(n => n.CreationDate <= endTime).ToList();
                 }
 
                 dataGridViewReports.AutoGenerateColumns = false;
                 dataGridViewReports.DataSource = reports;
+                var amounts = query.Select(n => n.Amount);
+                if (amounts != null)
+                {
+                    textBoxSumAmount.Text = amounts.Sum().ToString();
+                }
+                else
+                {
+                    textBoxSumAmount.Text = "0";
+                }
             }
         }
     }

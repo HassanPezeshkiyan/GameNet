@@ -29,6 +29,7 @@ namespace GameNet.App
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainFrm));
             this.shopSettingBtn = new System.Windows.Forms.Button();
             this.reportsBtn = new System.Windows.Forms.Button();
@@ -47,6 +48,11 @@ namespace GameNet.App
             this.panelContainer = new System.Windows.Forms.Panel();
             this.panelReports = new System.Windows.Forms.Panel();
             this.dataGridViewReports = new System.Windows.Forms.DataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.time = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelTools = new System.Windows.Forms.Panel();
             this.maskedTextBoxEndTime = new System.Windows.Forms.MaskedTextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -57,11 +63,9 @@ namespace GameNet.App
             this.label = new System.Windows.Forms.Label();
             this.maskedTextBoxStartDate = new System.Windows.Forms.MaskedTextBox();
             this.buttonSearch = new System.Windows.Forms.Button();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.customerid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.time = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textBoxSumAmount = new System.Windows.Forms.TextBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.label4 = new System.Windows.Forms.Label();
             this.panelMain.SuspendLayout();
             this.panelItems.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -296,6 +300,8 @@ namespace GameNet.App
             // 
             // panelReports
             // 
+            this.panelReports.Controls.Add(this.label4);
+            this.panelReports.Controls.Add(this.textBoxSumAmount);
             this.panelReports.Controls.Add(this.dataGridViewReports);
             this.panelReports.Controls.Add(this.panelTools);
             this.panelReports.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -316,12 +322,47 @@ namespace GameNet.App
             this.time,
             this.amount,
             this.date});
-            this.dataGridViewReports.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewReports.Dock = System.Windows.Forms.DockStyle.Top;
             this.dataGridViewReports.Location = new System.Drawing.Point(0, 72);
             this.dataGridViewReports.Name = "dataGridViewReports";
             this.dataGridViewReports.ReadOnly = true;
-            this.dataGridViewReports.Size = new System.Drawing.Size(805, 289);
+            this.dataGridViewReports.Size = new System.Drawing.Size(805, 254);
             this.dataGridViewReports.TabIndex = 1;
+            // 
+            // id
+            // 
+            this.id.DataPropertyName = "Id";
+            this.id.HeaderText = "شناسه فاکتور";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            // 
+            // customerid
+            // 
+            this.customerid.DataPropertyName = "CustomerId";
+            this.customerid.HeaderText = "شناسه مشتری";
+            this.customerid.Name = "customerid";
+            this.customerid.ReadOnly = true;
+            // 
+            // time
+            // 
+            this.time.DataPropertyName = "Time";
+            this.time.HeaderText = "مدت زمان";
+            this.time.Name = "time";
+            this.time.ReadOnly = true;
+            // 
+            // amount
+            // 
+            this.amount.DataPropertyName = "Amount";
+            this.amount.HeaderText = "مبلغ";
+            this.amount.Name = "amount";
+            this.amount.ReadOnly = true;
+            // 
+            // date
+            // 
+            this.date.DataPropertyName = "NCreationDate";
+            this.date.HeaderText = "تاریخ";
+            this.date.Name = "date";
+            this.date.ReadOnly = true;
             // 
             // panelTools
             // 
@@ -442,40 +483,30 @@ namespace GameNet.App
             this.buttonSearch.UseVisualStyleBackColor = true;
             this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
             // 
-            // id
+            // textBoxSumAmount
             // 
-            this.id.DataPropertyName = "Id";
-            this.id.HeaderText = "شناسه فاکتور";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
+            this.textBoxSumAmount.Location = new System.Drawing.Point(637, 331);
+            this.textBoxSumAmount.Name = "textBoxSumAmount";
+            this.textBoxSumAmount.ReadOnly = true;
+            this.textBoxSumAmount.Size = new System.Drawing.Size(115, 23);
+            this.textBoxSumAmount.TabIndex = 0;
             // 
-            // customerid
+            // contextMenuStrip1
             // 
-            this.customerid.DataPropertyName = "CustomerId";
-            this.customerid.HeaderText = "شناسه مشتری";
-            this.customerid.Name = "customerid";
-            this.customerid.ReadOnly = true;
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // time
+            // label4
             // 
-            this.time.DataPropertyName = "Time";
-            this.time.HeaderText = "مدت زمان";
-            this.time.Name = "time";
-            this.time.ReadOnly = true;
-            // 
-            // amount
-            // 
-            this.amount.DataPropertyName = "Amount";
-            this.amount.HeaderText = "مبلغ";
-            this.amount.Name = "amount";
-            this.amount.ReadOnly = true;
-            // 
-            // date
-            // 
-            this.date.DataPropertyName = "NCreationDate";
-            this.date.HeaderText = "تاریخ";
-            this.date.Name = "date";
-            this.date.ReadOnly = true;
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(47)))), ((int)(((byte)(62)))));
+            this.label4.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label4.Location = new System.Drawing.Point(758, 331);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(44, 24);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "مجموع";
             // 
             // mainFrm
             // 
@@ -506,6 +537,7 @@ namespace GameNet.App
             this.panelLogo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUser)).EndInit();
             this.panelReports.ResumeLayout(false);
+            this.panelReports.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewReports)).EndInit();
             this.panelTools.ResumeLayout(false);
             this.panelTools.PerformLayout();
@@ -547,6 +579,9 @@ namespace GameNet.App
         private System.Windows.Forms.DataGridViewTextBoxColumn time;
         private System.Windows.Forms.DataGridViewTextBoxColumn amount;
         private System.Windows.Forms.DataGridViewTextBoxColumn date;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBoxSumAmount;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
     }
 }
 
