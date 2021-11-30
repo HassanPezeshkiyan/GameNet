@@ -137,27 +137,14 @@ namespace GameNet.App
             using (UnitOfWork db = new UnitOfWork())
             {
                 var query = db.InvoiceReports.GetAll();
-                //if ( || )
-                //{
-                //    reports = db.InvoiceReports
-                //    .GetAll()
-                //    .Where(n => n.NCreationDate
-                //    .Contains(maskedTextBoxStartDate.Text) ||
-                //    n.NCreationDate
-                //    .Contains(maskedTextBoxEndDate.Text))
-                //    .ToList();
-
-                //}
-                //else
-                //{
-                //    reports = db.InvoiceReports
-                //    .GetAll()
-                //    .ToList();
-                //}
-                //var starthour = maskedTextBoxStartTime.Text.Split(':')[0];
-                //var endthour = maskedTextBoxEndTime.Text.Split(':')[0];
-                //var startmin = maskedTextBoxStartTime.Text.Split(':')[1];
-                //var endmin = maskedTextBoxEndTime.Text.Split(':')[1];
+                if (comboBoxShopOrConsole.SelectedIndex == 0)
+                {
+                    query = query.Where(n => n.ConsoleId == 0);
+                }
+                else
+                {
+                    query = query.Where(n => n.ConsoleId != 0);
+                }
                 reports = query.ToList();
                 if (maskedTextBoxStartDate.Text != "    /  /")
                 {
@@ -190,9 +177,9 @@ namespace GameNet.App
 
                 dataGridViewReports.AutoGenerateColumns = false;
                 dataGridViewReports.DataSource = reports;
-                var amounts = query.Select(n => n.Amount);
-                if (amounts != null)
+                if (query.Count()>0)
                 {
+                    var amounts = query.Select(n => n.Amount);
                     textBoxSumAmount.Text = amounts.Sum().ToString();
                 }
                 else

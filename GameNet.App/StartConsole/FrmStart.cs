@@ -1,4 +1,5 @@
-﻿using GameNet.App.Invoicing;
+﻿using GameNet.App.infra;
+using GameNet.App.Invoicing;
 using GameNet.App.Shoping;
 using GameNet.DataLayer;
 using GameNet.DataLayer.Context;
@@ -1511,6 +1512,82 @@ namespace GameNet.App.StartConsole
         }
 
         #endregion
-    
+
+        private void buttonShopOnly_Click(object sender, EventArgs e)
+        {
+            shopViewFrm shopForm = new shopViewFrm();
+            shopForm.consoleId = 0;
+            try
+            {
+
+                using (UnitOfWork db = new UnitOfWork())
+                {
+                    Customer customer = new Customer()
+                    {
+                        ConsoleId = 0
+                    };
+                    try
+                    {
+                        db.Customer.Insert(customer);
+                        db.Save();
+                    }
+                    catch (Exception ex)
+                    {
+
+                        MessageBox.Show(ex.Message);
+                    }
+                    shopForm.customerId = customer.Id;
+                    shopForm.consoleId = 0;
+                    shopForm.ShowDialog();
+                    if (shopForm.DialogResult == DialogResult.OK)
+                    {
+                        var order = db.OrderRepository.Get()
+                            .Where(n => n.CustomerId == customer.Id);
+                        var orderCost = order.Select(n => n.amount).Sum();
+                        var ordercostlbl = orderCost.ToString();
+                        string ordernamelbl = "";
+                        //shopCostLbl9.Text = orderCost.ToString();
+                        var shopIds = order.Select(n => n.ShopId);
+                        foreach (var item in shopIds)
+                        {
+                            var shop = db.ShopRepository.GetShopById((int)item);
+                            ordernamelbl += "," + shop.Name;
+                        }
+                        MessageBox.Show($@"""
+                مبلغ بوفه:  {ordercostlbl}
+                نام خوراکی ها: {ordernamelbl}
+""");
+                        Order orderCustomer = new Order()
+                        {
+                            CustomerId = customer.Id,
+                            FinalCost = orderCost
+                        };
+                        db.Order.Insert(orderCustomer);
+                        db.Save();
+                        Invoice invoice = new Invoice()
+                        {
+                            ChargeValue = 0,
+                            ConsoleId = 0,
+                            ControllerQuantity = 0,
+                            CustomerId = customer.Id,
+                            OrderId = orderCustomer.Id,
+                            Time = "00:00:00",
+                            CreationDate = DateTime.Now,
+                            Amount = orderCost
+                        };
+                        invoice.NCreationDate = MyDateExtension.ToPersianDateTimeString(invoice.CreationDate).ToString();
+                        db.Invoice.Insert(invoice);
+                        db.Save();
+                    }
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

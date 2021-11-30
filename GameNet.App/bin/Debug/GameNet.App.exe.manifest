@@ -66,14 +66,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="GameNet.App.exe" size="18122280">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="GameNet.App.exe" size="18124840">
       <assemblyIdentity name="GameNet.App" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>s+KQL4D+PsGTw3Ur/sBoBmBYK8HUKnMGL/mITm8Oops=</dsig:DigestValue>
+        <dsig:DigestValue>08IX4PLLpZ2YCVvDR1OhjJ5neYGfp2e/J3jVWpPAxjY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -85,7 +85,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>aQRQZ2KgqaqCYBJ3M+ZJhSL7abZYNtdMQUrZ6vy9ItQ=</dsig:DigestValue>
+        <dsig:DigestValue>OB7ojsrr0QdJWoj0GIO8z586zilD7oIp93VUiusvi6Q=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

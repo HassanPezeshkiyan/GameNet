@@ -73,14 +73,14 @@ namespace GameNet.App.Shoping
                         var shop = db.ShopRepository.GetShopById(int.Parse(dgvViewShop.CurrentRow.Cells[0].Value.ToString()));
                         if (shop.Quantity >= orderQuantity.Value)
                         {
-                            OrderItem order = new OrderItem()
+                            OrderItems order = new OrderItems()
                             {
                                 ShopId = shop.Id,
                                 quantity = (int)orderQuantity.Value,
                                 cost = shop.SellCost,
                                 ConsoleId = consoleId,
                                 CustomerId = customerId,
-                                ShopName = shop.Name
+                                ShopName = shop.Name,
                             };
                             order.amount = order.cost * order.quantity;
                             shop.Quantity = (int)shop.Quantity - order.quantity;

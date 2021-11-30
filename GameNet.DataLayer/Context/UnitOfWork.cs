@@ -37,14 +37,14 @@ namespace GameNet.DataLayer.Context
                 return _shop;
             }
         }
-        private GenericRepository<OrderItem> _orderRepository;
-        public GenericRepository<OrderItem> OrderRepository
+        private GenericRepository<OrderItems> _orderRepository;
+        public GenericRepository<OrderItems> OrderRepository
         {
             get
             {
                 if (_orderRepository == null)
                 {
-                    _orderRepository = new GenericRepository<OrderItem>(db);
+                    _orderRepository = new GenericRepository<OrderItems>(db);
                 }
                 return _orderRepository;
             }

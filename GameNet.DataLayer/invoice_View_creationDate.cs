@@ -20,5 +20,6 @@ namespace GameNet.DataLayer
         public int Id { get; set; }
         public int CustomerId { get; set; }
         public System.DateTime CreationDate { get; set; }
+        public int ConsoleId { get; set; }
     }
 }

@@ -12,7 +12,7 @@ namespace GameNet.DataLayer
     using System;
     using System.Collections.Generic;
     
-    public partial class OrderItem
+    public partial class OrderItems
     {
         public int Id { get; set; }
         public int ConsoleId { get; set; }
@@ -22,6 +22,5 @@ namespace GameNet.DataLayer
         public int ShopId { get; set; }
         public int CustomerId { get; set; }
         public string ShopName { get; set; }
-        public Nullable<int> OrderId { get; set; }
     }
 }

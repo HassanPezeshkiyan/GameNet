@@ -81,7 +81,7 @@
     <Compile Include="Order.cs">
       <DependentUpon>GameNetModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="OrderItem.cs">
+    <Compile Include="OrderItems.cs">
       <DependentUpon>GameNetModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />

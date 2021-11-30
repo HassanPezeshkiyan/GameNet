@@ -18,7 +18,7 @@ namespace GameNet.App.Shoping
         {
             InitializeComponent();
         }
-        public IEnumerable<OrderItem> orders;
+        public IEnumerable<OrderItems> orders;
 
         void BindListBox()
         {

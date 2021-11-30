@@ -47,13 +47,17 @@ namespace GameNet.App
             this.pictureBoxUser = new System.Windows.Forms.PictureBox();
             this.panelContainer = new System.Windows.Forms.Panel();
             this.panelReports = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBoxSumAmount = new System.Windows.Forms.TextBox();
             this.dataGridViewReports = new System.Windows.Forms.DataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.consoleORshop = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.customerid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.time = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelTools = new System.Windows.Forms.Panel();
+            this.comboBoxShopOrConsole = new System.Windows.Forms.ComboBox();
             this.maskedTextBoxEndTime = new System.Windows.Forms.MaskedTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.maskedTextBoxStartTime = new System.Windows.Forms.MaskedTextBox();
@@ -63,9 +67,7 @@ namespace GameNet.App
             this.label = new System.Windows.Forms.Label();
             this.maskedTextBoxStartDate = new System.Windows.Forms.MaskedTextBox();
             this.buttonSearch = new System.Windows.Forms.Button();
-            this.textBoxSumAmount = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.label4 = new System.Windows.Forms.Label();
             this.panelMain.SuspendLayout();
             this.panelItems.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -310,6 +312,28 @@ namespace GameNet.App
             this.panelReports.Size = new System.Drawing.Size(805, 361);
             this.panelReports.TabIndex = 10;
             // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(47)))), ((int)(((byte)(62)))));
+            this.label4.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label4.Location = new System.Drawing.Point(758, 331);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(44, 24);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "مجموع";
+            // 
+            // textBoxSumAmount
+            // 
+            this.textBoxSumAmount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxSumAmount.Location = new System.Drawing.Point(637, 331);
+            this.textBoxSumAmount.Name = "textBoxSumAmount";
+            this.textBoxSumAmount.ReadOnly = true;
+            this.textBoxSumAmount.Size = new System.Drawing.Size(115, 23);
+            this.textBoxSumAmount.TabIndex = 0;
+            // 
             // dataGridViewReports
             // 
             this.dataGridViewReports.AllowUserToAddRows = false;
@@ -318,6 +342,7 @@ namespace GameNet.App
             this.dataGridViewReports.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewReports.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
+            this.consoleORshop,
             this.customerid,
             this.time,
             this.amount,
@@ -335,6 +360,14 @@ namespace GameNet.App
             this.id.HeaderText = "شناسه فاکتور";
             this.id.Name = "id";
             this.id.ReadOnly = true;
+            // 
+            // consoleORshop
+            // 
+            this.consoleORshop.DataPropertyName = "ConsoleId";
+            this.consoleORshop.HeaderText = " ";
+            this.consoleORshop.Name = "consoleORshop";
+            this.consoleORshop.ReadOnly = true;
+            this.consoleORshop.Visible = false;
             // 
             // customerid
             // 
@@ -367,6 +400,7 @@ namespace GameNet.App
             // panelTools
             // 
             this.panelTools.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panelTools.Controls.Add(this.comboBoxShopOrConsole);
             this.panelTools.Controls.Add(this.maskedTextBoxEndTime);
             this.panelTools.Controls.Add(this.label3);
             this.panelTools.Controls.Add(this.maskedTextBoxStartTime);
@@ -381,6 +415,17 @@ namespace GameNet.App
             this.panelTools.Name = "panelTools";
             this.panelTools.Size = new System.Drawing.Size(805, 72);
             this.panelTools.TabIndex = 0;
+            // 
+            // comboBoxShopOrConsole
+            // 
+            this.comboBoxShopOrConsole.FormattingEnabled = true;
+            this.comboBoxShopOrConsole.Items.AddRange(new object[] {
+            "بوفه",
+            "دستگاه"});
+            this.comboBoxShopOrConsole.Location = new System.Drawing.Point(12, 24);
+            this.comboBoxShopOrConsole.Name = "comboBoxShopOrConsole";
+            this.comboBoxShopOrConsole.Size = new System.Drawing.Size(121, 24);
+            this.comboBoxShopOrConsole.TabIndex = 0;
             // 
             // maskedTextBoxEndTime
             // 
@@ -483,30 +528,10 @@ namespace GameNet.App
             this.buttonSearch.UseVisualStyleBackColor = true;
             this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
             // 
-            // textBoxSumAmount
-            // 
-            this.textBoxSumAmount.Location = new System.Drawing.Point(637, 331);
-            this.textBoxSumAmount.Name = "textBoxSumAmount";
-            this.textBoxSumAmount.ReadOnly = true;
-            this.textBoxSumAmount.Size = new System.Drawing.Size(115, 23);
-            this.textBoxSumAmount.TabIndex = 0;
-            // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(47)))), ((int)(((byte)(62)))));
-            this.label4.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label4.Location = new System.Drawing.Point(758, 331);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(44, 24);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "مجموع";
             // 
             // mainFrm
             // 
@@ -574,14 +599,16 @@ namespace GameNet.App
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.MaskedTextBox maskedTextBoxStartTime;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBoxSumAmount;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn consoleORshop;
         private System.Windows.Forms.DataGridViewTextBoxColumn customerid;
         private System.Windows.Forms.DataGridViewTextBoxColumn time;
         private System.Windows.Forms.DataGridViewTextBoxColumn amount;
         private System.Windows.Forms.DataGridViewTextBoxColumn date;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBoxSumAmount;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ComboBox comboBoxShopOrConsole;
     }
 }
 

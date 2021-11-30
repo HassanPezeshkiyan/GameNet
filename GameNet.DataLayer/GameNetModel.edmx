@@ -56,7 +56,6 @@
           <Property Name="ShopId" Type="int" Nullable="false" />
           <Property Name="CustomerId" Type="int" Nullable="false" />
           <Property Name="ShopName" Type="nvarchar" MaxLength="10" Nullable="false" />
-          <Property Name="OrderId" Type="int" />
         </EntityType>
         <EntityType Name="Shops">
           <Key>
@@ -97,6 +96,7 @@ warning 6002: The table/view 'GameNet.dbo.invoice_View_creationDate' does not ha
             <PropertyRef Name="Amount" />
             <PropertyRef Name="CustomerId" />
             <PropertyRef Name="CreationDate" />
+            <PropertyRef Name="ConsoleId" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="NCreationDate" Type="nvarchar" MaxLength="50" />
@@ -104,6 +104,7 @@ warning 6002: The table/view 'GameNet.dbo.invoice_View_creationDate' does not ha
           <Property Name="Amount" Type="decimal" Precision="18" Scale="0" Nullable="false" />
           <Property Name="CustomerId" Type="int" Nullable="false" />
           <Property Name="CreationDate" Type="datetime" Nullable="false" />
+          <Property Name="ConsoleId" Type="int" Nullable="false" />
         </EntityType>
         <EntityContainer Name="GameNetModelStoreContainer">
           <EntitySet Name="Consoles" EntityType="Self.Consoles" Schema="dbo" store:Type="Tables" />
@@ -121,7 +122,8 @@ warning 6002: The table/view 'GameNet.dbo.invoice_View_creationDate' does not ha
     [invoice_View_creationDate].[Time] AS [Time], 
     [invoice_View_creationDate].[Amount] AS [Amount], 
     [invoice_View_creationDate].[CustomerId] AS [CustomerId], 
-    [invoice_View_creationDate].[CreationDate] AS [CreationDate]
+    [invoice_View_creationDate].[CreationDate] AS [CreationDate], 
+    [invoice_View_creationDate].[ConsoleId] AS [ConsoleId]
     FROM [dbo].[invoice_View_creationDate] AS [invoice_View_creationDate]</DefiningQuery>
           </EntitySet>
         </EntityContainer>
@@ -133,12 +135,12 @@ warning 6002: The table/view 'GameNet.dbo.invoice_View_creationDate' does not ha
           <EntitySet Name="Consoles" EntityType="GameNetModel.Console" />
           <EntitySet Name="Customers" EntityType="GameNetModel.Customer" />
           <EntitySet Name="Orders" EntityType="GameNetModel.Order" />
-          <EntitySet Name="OrderItems" EntityType="GameNetModel.OrderItem" />
           <EntitySet Name="Shops" EntityType="GameNetModel.Shop" />
           <EntitySet Name="sysdiagrams" EntityType="GameNetModel.sysdiagram" />
           <EntitySet Name="Users" EntityType="GameNetModel.User" />
           <EntitySet Name="Invoices" EntityType="GameNetModel.Invoice" />
           <EntitySet Name="invoice_View_creationDate" EntityType="GameNetModel.invoice_View_creationDate" />
+          <EntitySet Name="OrderItems" EntityType="GameNetModel.OrderItems" />
         </EntityContainer>
         <EntityType Name="Console">
           <Key>
@@ -163,20 +165,6 @@ warning 6002: The table/view 'GameNet.dbo.invoice_View_creationDate' does not ha
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="CustomerId" Type="Int32" Nullable="false" />
           <Property Name="FinalCost" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
-        </EntityType>
-        <EntityType Name="OrderItem">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="ConsoleId" Type="Int32" Nullable="false" />
-          <Property Name="quantity" Type="Int32" Nullable="false" />
-          <Property Name="cost" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
-          <Property Name="amount" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
-          <Property Name="ShopId" Type="Int32" Nullable="false" />
-          <Property Name="CustomerId" Type="Int32" Nullable="false" />
-          <Property Name="ShopName" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
-          <Property Name="OrderId" Type="Int32" />
         </EntityType>
         <EntityType Name="Shop">
           <Key>
@@ -230,6 +218,7 @@ warning 6002: The table/view 'GameNet.dbo.invoice_View_creationDate' does not ha
             <PropertyRef Name="Id" />
             <PropertyRef Name="CustomerId" />
             <PropertyRef Name="CreationDate" />
+            <PropertyRef Name="ConsoleId" />
           </Key>
           <Property Name="Amount" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
           <Property Name="Time" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
@@ -237,6 +226,20 @@ warning 6002: The table/view 'GameNet.dbo.invoice_View_creationDate' does not ha
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="CustomerId" Type="Int32" Nullable="false" />
           <Property Name="CreationDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ConsoleId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="OrderItems">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ConsoleId" Type="Int32" Nullable="false" />
+          <Property Name="quantity" Type="Int32" Nullable="false" />
+          <Property Name="cost" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="amount" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="ShopId" Type="Int32" Nullable="false" />
+          <Property Name="CustomerId" Type="Int32" Nullable="false" />
+          <Property Name="ShopName" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
         </EntityType>
         </Schema>
     </edmx:ConceptualModels>
@@ -267,21 +270,6 @@ warning 6002: The table/view 'GameNet.dbo.invoice_View_creationDate' does not ha
               <MappingFragment StoreEntitySet="Order">
                 <ScalarProperty Name="FinalCost" ColumnName="FinalCost" />
                 <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
-                <ScalarProperty Name="Id" ColumnName="Id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="OrderItems">
-            <EntityTypeMapping TypeName="GameNetModel.OrderItem">
-              <MappingFragment StoreEntitySet="OrderItems">
-                <ScalarProperty Name="OrderId" ColumnName="OrderId" />
-                <ScalarProperty Name="ShopName" ColumnName="ShopName" />
-                <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
-                <ScalarProperty Name="ShopId" ColumnName="ShopId" />
-                <ScalarProperty Name="amount" ColumnName="amount" />
-                <ScalarProperty Name="cost" ColumnName="cost" />
-                <ScalarProperty Name="quantity" ColumnName="quantity" />
-                <ScalarProperty Name="ConsoleId" ColumnName="ConsoleId" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -338,12 +326,27 @@ warning 6002: The table/view 'GameNet.dbo.invoice_View_creationDate' does not ha
           <EntitySetMapping Name="invoice_View_creationDate">
             <EntityTypeMapping TypeName="GameNetModel.invoice_View_creationDate">
               <MappingFragment StoreEntitySet="invoice_View_creationDate">
+                <ScalarProperty Name="ConsoleId" ColumnName="ConsoleId" />
                 <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
                 <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="NCreationDate" ColumnName="NCreationDate" />
                 <ScalarProperty Name="Time" ColumnName="Time" />
                 <ScalarProperty Name="Amount" ColumnName="Amount" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OrderItems">
+            <EntityTypeMapping TypeName="GameNetModel.OrderItems">
+              <MappingFragment StoreEntitySet="OrderItems">
+                <ScalarProperty Name="ShopName" ColumnName="ShopName" />
+                <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+                <ScalarProperty Name="ShopId" ColumnName="ShopId" />
+                <ScalarProperty Name="amount" ColumnName="amount" />
+                <ScalarProperty Name="cost" ColumnName="cost" />
+                <ScalarProperty Name="quantity" ColumnName="quantity" />
+                <ScalarProperty Name="ConsoleId" ColumnName="ConsoleId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

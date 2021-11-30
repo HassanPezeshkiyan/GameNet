@@ -51,7 +51,6 @@
     <Property Name="ShopId" Type="int" Nullable="false" />
     <Property Name="CustomerId" Type="int" Nullable="false" />
     <Property Name="ShopName" Type="nvarchar" MaxLength="10" Nullable="false" />
-    <Property Name="OrderId" Type="int" />
   </EntityType>
   <EntityType Name="Shops">
     <Key>
@@ -92,6 +91,7 @@ warning 6002: The table/view 'GameNet.dbo.invoice_View_creationDate' does not ha
       <PropertyRef Name="Amount" />
       <PropertyRef Name="CustomerId" />
       <PropertyRef Name="CreationDate" />
+      <PropertyRef Name="ConsoleId" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="NCreationDate" Type="nvarchar" MaxLength="50" />
@@ -99,6 +99,7 @@ warning 6002: The table/view 'GameNet.dbo.invoice_View_creationDate' does not ha
     <Property Name="Amount" Type="decimal" Precision="18" Scale="0" Nullable="false" />
     <Property Name="CustomerId" Type="int" Nullable="false" />
     <Property Name="CreationDate" Type="datetime" Nullable="false" />
+    <Property Name="ConsoleId" Type="int" Nullable="false" />
   </EntityType>
   <EntityContainer Name="GameNetModelStoreContainer">
     <EntitySet Name="Consoles" EntityType="Self.Consoles" Schema="dbo" store:Type="Tables" />
@@ -116,7 +117,8 @@ warning 6002: The table/view 'GameNet.dbo.invoice_View_creationDate' does not ha
     [invoice_View_creationDate].[Time] AS [Time], 
     [invoice_View_creationDate].[Amount] AS [Amount], 
     [invoice_View_creationDate].[CustomerId] AS [CustomerId], 
-    [invoice_View_creationDate].[CreationDate] AS [CreationDate]
+    [invoice_View_creationDate].[CreationDate] AS [CreationDate], 
+    [invoice_View_creationDate].[ConsoleId] AS [ConsoleId]
     FROM [dbo].[invoice_View_creationDate] AS [invoice_View_creationDate]</DefiningQuery>
     </EntitySet>
   </EntityContainer>
